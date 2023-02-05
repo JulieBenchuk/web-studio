@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../styles/components/wrapper.module.scss'
+import style from '../../styles/components/wrapper.module.scss'
 
 const Wrapper: React.FC<{ children: React.ReactNode, className?: string }> = ({children, className}) => {
 
