@@ -2,7 +2,6 @@ import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import style from '../../../styles/components/header.module.scss'
-import FullButton from "../buttons/FullButton";
 import headerStyle from "@/styles/components/header.module.scss";
 import Wrapper from "@/components/common/wrapper";
 
@@ -25,7 +24,7 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
                     </div>
                 </div>
                 {isMainPage && <span className={style.currentPage}>Главная &#8226; {currentPage}</span>}
-                <FullButton className={style.button}>Заполнить анкету</FullButton>
+
             </header>
         </Wrapper>
     );
