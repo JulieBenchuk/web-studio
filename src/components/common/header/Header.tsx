@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import style from '../../../styles/components/header.module.scss'
+import FullButton from "../buttons/FullButton";
 
 const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainPage, currentPage}) => {
 
@@ -20,6 +21,7 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
                 </div>
             </div>
             {isMainPage && <span className={style.currentPage}>Главная &#8226; {currentPage}</span>}
+            <FullButton className={style.button}>Заполнить анкету</FullButton>
 
 
         </header>
