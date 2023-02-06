@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React from "react";
 import style from '../styles/Home.module.scss'
 import Header from "@/components/common/header/Header";
+import Wrapper from "@/components/common/wrapper";
 
 export default function Home() {
     return (
@@ -13,7 +14,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={style.main}>
-                <Header/>
+                <Wrapper><Header currentPage={"Разработка сайтов"}/></Wrapper>
             </main>
         </>
     )
