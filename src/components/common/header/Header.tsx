@@ -1,10 +1,15 @@
 import React from 'react';
+import Link from "next/link";
 
 const Header = () => {
     return (
-        <div>
+        <header>
+            <nav>
+                <Link href='/services'>Услуги</Link>
+                <Link href='/portfolio'>Портфолио</Link>
+            </nav>
 
-        </div>
+        </header>
     );
 };
 
