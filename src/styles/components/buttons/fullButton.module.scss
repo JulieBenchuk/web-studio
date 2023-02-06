@@ -1,0 +1,37 @@
+@import "src/styles/variables";
+
+.default {
+  font-family: 'Play', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  width: 253px;
+  height: 64px;
+  background: $bg-five;
+  border-radius: 22px;
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: $text-color-primary;
+
+  &:hover {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 253px;
+    height: 64px;
+    background: $bg-eight;
+    border: 1px solid $text-color-primary;
+    box-shadow: 0 69px 41px rgba(0, 0, 0, 0.26);
+    border-radius: 22px;
+  }
+}
