@@ -1,5 +1,13 @@
 @import "src/styles/variables";
 
+.wrapper {
+  position: absolute;
+  left: 130px;
+  right: 130px;
+  top: 40px;
+
+}
+
 .header {
   color: $text-color-primary;
   display: flex;

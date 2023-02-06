@@ -3,6 +3,7 @@ import React from "react";
 import style from '../styles/Home.module.scss'
 import Header from "@/components/common/header/Header";
 import Wrapper from "@/components/common/wrapper";
+import headerStyle from './../styles/components/header.module.scss'
 
 export default function Home() {
     return (
@@ -14,7 +15,8 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={style.main}>
-                <Wrapper><Header isMainPage={true} currentPage={"Разработка сайтов"}/></Wrapper>
+                <Wrapper className={headerStyle.wrapper}><Header isMainPage={true}
+                                                                 currentPage={"Разработка сайтов"}/></Wrapper>
             </main>
         </>
     )
