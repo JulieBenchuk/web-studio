@@ -1,0 +1,98 @@
+@import '../variables';
+@import '../mixins';
+
+.wrapper {
+  padding: 48px 130px 0;
+
+  .title {
+    @include Text-FS-FW-LH(110px, 700, 94.7%);
+    background: linear-gradient(180deg, #FFFFFF 21.38%, rgba(255, 255, 255, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 493px;
+  }
+
+  .items {
+    margin-top: 45px;
+    @include Flex-Center;
+    flex-direction: column;
+
+    .itemsBg {
+      background: rgba(43, 40, 68, 0.6);
+      border-radius: 50px;
+      width: 951px;
+      height: 980px;
+    }
+
+    .itemsMenu {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .item_first, .item_second, .item_third {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 85px;
+        padding: 56px 100px 20px;
+
+        .item_blockLeft {
+          width: 60%;
+
+          .item_title {
+            @include Text-FS-FW-LH(48px, 400, 56px);
+            text-transform: uppercase;
+            color: #F2F2F2;
+          }
+
+          .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            padding-top: 9px;
+          }
+        }
+
+        .item_blockRight {
+          margin-top: 125px;
+          text-align: right;
+          width: 35%;
+
+          .cost {
+            @include Text-FS-FW-LH(48px, 400, 56px);
+            color: #F2F2F2;
+          }
+
+          .giftBox {
+            display: flex;
+            column-gap: 8px;
+            justify-content: right;
+
+            .gift {
+              @include Text-FS-FW-LH(16px, 400, 150%);
+              color: #FFFFFF;
+            }
+          }
+
+        }
+
+      }
+
+      .item_first {
+        background: #3D0286;
+      }
+
+      .item_second {
+        background: #9A219C;
+        top: 320px
+      }
+
+      .item_third {
+        background: #2139B9;
+        top: 640px;
+      }
+    }
+
+
+  }
+}
