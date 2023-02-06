@@ -2,18 +2,34 @@
 
 .header {
   color: $text-color-primary;
+  display: flex;
+  justify-content: space-between;
 
-  .logo {
-
-  }
-
-  .currentPage {
-    span {
-
-
+  .logoBlock {
+    .logo {
+      left: 0;
+      right: 84.75%;
+      top: 0.1%;
+      bottom: 0.1%;
+      padding-bottom: 20px;
     }
 
+    .currentPage {
+
+      left: 9.03%;
+      right: 86.67%;
+      top: 1.27%;
+      bottom: 98.46%;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+      opacity: 0.4;
+
+    }
   }
+
 
   .navBlock {
     .navLinks {

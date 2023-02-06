@@ -14,7 +14,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={style.main}>
-                <Wrapper><Header currentPage={"Разработка сайтов"}/></Wrapper>
+                <Wrapper><Header isMainPage={true} currentPage={"Разработка сайтов"}/></Wrapper>
             </main>
         </>
     )
