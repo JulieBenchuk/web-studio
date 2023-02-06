@@ -3,47 +3,53 @@
 .header {
   color: $text-color-primary;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 
-  .logoBlock {
-    .logo {
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logoBlock {
       left: 0;
       right: 84.75%;
       top: 0.1%;
       bottom: 0.1%;
-      padding-bottom: 20px;
     }
 
-    .currentPage {
+    .navBlock {
+      display: flex;
 
-      left: 9.03%;
-      right: 86.67%;
-      top: 1.27%;
-      bottom: 98.46%;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 19px;
-      color: #FFFFFF;
-      opacity: 0.4;
+      a {
+        left: 68.22%;
+        right: 27.63%;
+        top: 19.35%;
+        bottom: 19.35%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        padding-right: 30px;
+        color: #FFFFFF;
+        opacity: 0.4;
 
-    }
-  }
-
-
-  .navBlock {
-    .navLinks {
-
+      }
     }
   }
 
-  .callbackBtn {
+  .currentPage {
+
+    left: 9.03%;
+    right: 86.67%;
+    top: 1.27%;
+    bottom: 98.46%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    opacity: 0.4;
+    padding-top: 20px;
 
   }
-
-
-}
-
-.headerMain {
-
 }
