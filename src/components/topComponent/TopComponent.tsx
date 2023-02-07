@@ -26,7 +26,7 @@ const TopComponent = () => {
                     </div>
                     <div className={style.consultationBlock}>
                         <div className={style.consultation}>
-                            <Image src={gift} alt={"free consultation"}/>
+                            <Image src={gift} alt={"free consultation"} className={style.gift}/>
                             <Image src={giftBckgrnd} alt={"free consultation"} className={style.background}/>
                             <p className={style.consultationText}>Заполните анкету, чтобы получить бесплатную
                                 консультацию</p>
