@@ -23,11 +23,9 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
                             <Link href='/portfolio'> Портфолио</Link>
                         </nav>
                         <LinkBtn>Заказать звонок</LinkBtn>
-                        <FullButton>Заказать звонок</FullButton>
                     </div>
                 </div>
                 {isMainPage && <span className={style.currentPage}>Главная &#8226; {currentPage}</span>}
-
             </header>
         </Wrapper>
     );
