@@ -4,6 +4,8 @@ import Image from "next/image";
 import style from '../../../styles/components/header.module.scss'
 import headerStyle from "@/styles/components/header.module.scss";
 import Wrapper from "@/components/common/wrapper";
+import LinkBtn from "@/components/common/buttons/LinkBtn";
+import FullButton from "@/components/common/buttons/FullButton";
 
 const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainPage, currentPage}) => {
 
@@ -20,7 +22,8 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
                             <Link href='/services'>Услуги</Link>
                             <Link href='/portfolio'> Портфолио</Link>
                         </nav>
-                        <div className={style.callbackBtn}>Заказать звонок</div>
+                        <LinkBtn>Заказать звонок</LinkBtn>
+                        <FullButton>Заказать звонок</FullButton>
                     </div>
                 </div>
                 {isMainPage && <span className={style.currentPage}>Главная &#8226; {currentPage}</span>}
