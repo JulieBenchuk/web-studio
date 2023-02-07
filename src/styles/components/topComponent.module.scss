@@ -84,6 +84,7 @@
           }
 
           .consultationText {
+            padding: 0 23px;
             text-align: center;
             font-style: normal;
             @include Text-FS-FW-LH(16px, 400, 123.7%);
@@ -98,7 +99,7 @@
       .buttonFillForm {
         position: absolute;
         bottom: 0;
-        right: 128px;
+        left: 300px;
       }
     }
 
