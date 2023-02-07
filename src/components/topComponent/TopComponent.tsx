@@ -7,16 +7,18 @@ import style from '../../styles/components/topComponent.module.scss'
 import FullButton from "@/components/common/buttons/FullButton";
 import gift from '../../assets/svg/giftConsultation.svg'
 import giftBckgrnd from '../../assets/svg/giftConsultBackground.svg'
+import gif from '../../assets/gif/gifMain.gif'
 
 
 const TopComponent = () => {
     return (
         <Wrapper className={style.wrapper}>
             <div className={style.topComponent}>
+
                 <div className={style.leftBlock}>
                     <Header isMainPage={false} currentPage={"Разработка сайтов"}/>
                     <div className={style.titleBlock}>
-                        <h1 className={style.title}>SELIVANS</h1>
+                        <h1 className={style.title}>SILEVANS</h1>
                     </div>
                     <div className={style.textDescription}>
                         <p className={style.text}>Веб-студия специализируется на разработке сложно-функциональных сайтов
@@ -34,7 +36,13 @@ const TopComponent = () => {
                     </div>
                     <FullButton className={style.buttonFillForm}>Заполнить анкету</FullButton>
                 </div>
-                <div className={style.rightBlock}></div>
+
+                <div className={style.rightBlock}>
+                    <div className={style.gifBlock}>
+                        <Image src={gif} alt={"gif"} height={650}/>
+                    </div>
+                </div>
+
             </div>
             <Image src={ground} alt={"ground"} width={1440} height={770} className={style.ground}/>
 

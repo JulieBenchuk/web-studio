@@ -2,16 +2,16 @@
 @import '../mixins';
 
 .wrapper {
-  background-color: #9A219C;
+  /*  background-color: #9A219C;*/
   position: relative;
-  height: 770px;
+  height: 730px;
   padding: 40px 90px;
   border: 1px solid blue;
   font-family: 'Play', sans-serif;
   color: $text-color-primary;
 
   .topComponent {
-    background-color: yellow;
+    /* background-color: yellow;*/
     border: 1px solid red;
     display: flex;
     height: 100%;
@@ -20,7 +20,7 @@
     .leftBlock {
       position: relative;
       width: 60%;
-      background-color: #5f866f;
+      /*  background-color: #5f866f;*/
       border: 1px solid white;
       height: 100%;
       display: flex;
@@ -28,12 +28,12 @@
 
       .titleBlock {
         width: 100%;
-        background-color: orange;
+        /*  background-color: orange;*/
         border: 1px solid red;
 
 
         .title {
-          padding-top: 130px;
+          padding-top: 110px;
           width: 613px;
           font-style: normal;
           @include Text-FS-FW-LH(128px, 700, 148px);
@@ -43,7 +43,7 @@
 
       .textDescription {
         width: 100%;
-        background-color: aquamarine;
+        /*  background-color: aquamarine;*/
         border: blue;
 
         .text {
@@ -57,7 +57,7 @@
       .consultationBlock {
         position: absolute;
         top: 452px;
-        background-color: #3d802a;
+        /*  background-color: #3d802a;*/
         border: #412a8f;
 
         .consultation {
@@ -72,6 +72,7 @@
           .gift {
             position: relative;
             bottom: 15px;
+            z-index: 3;
 
           }
 
@@ -80,6 +81,8 @@
             left: 0;
             border: 1px solid red;
             border-radius: 50px;
+            background-color: $bg-seven;
+            z-index: 1;
 
           }
 
@@ -90,6 +93,8 @@
             @include Text-FS-FW-LH(16px, 400, 123.7%);
             font-weight: 400;
             font-size: 16px;
+            z-index: 3;
+
 
           }
 
@@ -104,11 +109,26 @@
     }
 
     .rightBlock {
+      position: relative;
       width: 40%;
-      background-color: #36F1CD;
+      background-color: $bg-six;
       border: 1px solid green;
       height: 100%;
-      @include Flex-Center()
+      @include Flex-Center();
+      -webkit-border-top-right-radius: 200px;
+      z-index: 2;
+
+      .gifBlock {
+        @include Flex-Center();
+        position: absolute;
+        top: 80px;
+        width: 80%;
+        height: 70%;
+        background-color: cornflowerblue;
+        -webkit-border-top-right-radius: 200px;
+        overflow: hidden;
+
+      }
     }
   }
 
@@ -117,6 +137,7 @@
     top: 0;
     right: 0;
     pointer-events: none;
+    z-index: 0;
 
   }
 
