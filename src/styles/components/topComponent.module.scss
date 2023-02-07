@@ -2,6 +2,7 @@
 @import '../mixins';
 
 .wrapper {
+  position: relative;
   height: 770px;
 
   .ground {
@@ -14,4 +15,5 @@
   }
 
 }
+
 
