@@ -5,7 +5,6 @@ import style from '../../../styles/components/header.module.scss'
 import headerStyle from "@/styles/components/header.module.scss";
 import Wrapper from "@/components/common/wrapper";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
-import FullButton from "@/components/common/buttons/FullButton";
 
 const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainPage, currentPage}) => {
 
@@ -14,7 +13,7 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
             <header className={style.header}>
                 <div className={style.row}>
                     <div className={style.logoBlock}>
-                        <Image src='/Logo.svg' alt="silevans" width={180} height={30.94}/>
+                        <Image src='/Logo.svg' alt="silevans" width={180} height={31} priority={true}/>
                     </div>
 
                     <div className={style.navBlock}>
