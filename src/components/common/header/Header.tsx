@@ -2,14 +2,13 @@ import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import style from '../../../styles/components/header.module.scss'
-import headerStyle from "@/styles/components/header.module.scss";
 import Wrapper from "@/components/common/wrapper";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
 
 const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainPage, currentPage}) => {
 
     return (
-        <Wrapper className={headerStyle.wrapper}>
+        <Wrapper className={style.wrapper}>
             <header className={style.header}>
                 <div className={style.row}>
                     <div className={style.logoBlock}>

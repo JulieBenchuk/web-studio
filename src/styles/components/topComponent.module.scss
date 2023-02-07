@@ -7,15 +7,19 @@
   height: 770px;
   padding: 40px 90px;
   border: 1px solid blue;
+  font-family: 'Play', sans-serif;
+  color: $text-color-primary;
 
   .topComponent {
     background-color: yellow;
     border: 1px solid red;
     display: flex;
     height: 100%;
+    z-index: 999;
 
     .leftBlock {
-      width: 57.86%;
+      position: relative;
+      width: 60%;
       background-color: #5f866f;
       border: 1px solid white;
       height: 100%;
@@ -26,26 +30,69 @@
         width: 100%;
         background-color: orange;
         border: 1px solid red;
-        height: 50px;
+
+
+        .title {
+          padding-top: 130px;
+          width: 613px;
+          font-style: normal;
+          @include Text-FS-FW-LH(128px, 700, 148px);
+          letter-spacing: -0.025em;
+        }
       }
 
       .textDescription {
-        height: 50px;
         width: 100%;
         background-color: aquamarine;
         border: blue;
+
+        .text {
+          width: 380px;
+          height: 75px;
+          font-style: normal;
+          @include Text-FS-FW-LH(16px, 400, 123.7%);
+        }
       }
 
       .consultationBlock {
-        height: 50px;
-        width: 100%;
+        position: absolute;
+        top: 452px;
         background-color: #3d802a;
         border: #412a8f;
+
+        .consultation {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          left: 120px;
+          width: 276px;
+          height: 193px;
+
+          .background {
+            position: absolute;
+            left: 0;
+            border: 1px solid red;
+            border-radius: 50px;
+
+          }
+
+          .consultationText {
+
+
+          }
+
+        }
+      }
+
+      .buttonFillForm {
+        position: absolute;
+        bottom: 0;
+        right: 128px;
       }
     }
 
     .rightBlock {
-      width: 42.14%;
+      width: 40%;
       background-color: #36F1CD;
       border: 1px solid green;
       height: 100%;

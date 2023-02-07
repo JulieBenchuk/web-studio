@@ -2,10 +2,6 @@
 
 .wrapper {
   width: 100%;
-  /* position: absolute;
-   left: 130px;
-   right: 130px;
-   top: 40px;*/
 
 }
 
@@ -26,7 +22,6 @@
       right: 84.75%;
       top: 0.1%;
       bottom: 0.1%;
-      background-color: #36F1CD;
     }
 
     .navBlock {
@@ -34,7 +29,6 @@
       flex-direction: row;
       justify-content: end;
       align-items: center;
-      background-color: #9A219C;
       width: 100%;
 
       .navLinks {
