@@ -1,5 +1,5 @@
 import React, {ButtonHTMLAttributes, DetailedHTMLProps} from 'react';
-import style from '../../../styles/components/buttons/fullButton.module.scss'
+import style from '../../../styles/components/buttons/buttons.module.scss'
 
 const FullButton: React.FC<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement>> = ({className, children, ...restProps}) => {

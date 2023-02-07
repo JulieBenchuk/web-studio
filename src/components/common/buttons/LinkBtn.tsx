@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../../styles/components/buttons.module.scss'
+import style from '../../../styles/components/buttons/buttons.module.scss'
 
 const LinkBtn: React.FC<{ children?: React.ReactNode, onClick?: () => void, className?: string }> = ({
                                                                                                          children,
