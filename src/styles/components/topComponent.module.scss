@@ -114,6 +114,7 @@
       background-color: $bg-six;
       border: 1px solid green;
       height: 100%;
+      overflow: hidden;
       @include Flex-Center();
       -webkit-border-top-right-radius: 200px;
       z-index: 2;
