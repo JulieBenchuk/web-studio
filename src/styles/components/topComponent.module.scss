@@ -2,15 +2,62 @@
 @import '../mixins';
 
 .wrapper {
+  background-color: #9A219C;
   position: relative;
   height: 770px;
+  padding: 40px 90px;
+  border: 1px solid blue;
+
+  .topComponent {
+    background-color: yellow;
+    border: 1px solid red;
+    display: flex;
+    height: 100%;
+
+    .leftBlock {
+      width: 57.86%;
+      background-color: #5f866f;
+      border: 1px solid white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .titleBlock {
+        width: 100%;
+        background-color: orange;
+        border: 1px solid red;
+        height: 50px;
+      }
+
+      .textDescription {
+        height: 50px;
+        width: 100%;
+        background-color: aquamarine;
+        border: blue;
+      }
+
+      .consultationBlock {
+        height: 50px;
+        width: 100%;
+        background-color: #3d802a;
+        border: #412a8f;
+      }
+    }
+
+    .rightBlock {
+      width: 42.14%;
+      background-color: #36F1CD;
+      border: 1px solid green;
+      height: 100%;
+      @include Flex-Center()
+    }
+  }
 
   .ground {
     position: absolute;
     top: 0;
     right: 0;
     pointer-events: none;
-
 
   }
 

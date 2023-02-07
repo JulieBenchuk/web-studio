@@ -1,10 +1,11 @@
 @import "src/styles/variables";
 
 .wrapper {
-  position: absolute;
-  left: 130px;
-  right: 130px;
-  top: 40px;
+  width: 100%;
+  /* position: absolute;
+   left: 130px;
+   right: 130px;
+   top: 40px;*/
 
 }
 
@@ -15,34 +16,52 @@
 
   .row {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; //////maybe need delete
+
 
     .logoBlock {
       left: 0;
       right: 84.75%;
       top: 0.1%;
       bottom: 0.1%;
+      background-color: #36F1CD;
     }
 
     .navBlock {
       display: flex;
+      flex-direction: row;
+      justify-content: end;
       align-items: center;
+      background-color: #9A219C;
+      width: 100%;
 
-      a {
-        left: 68.22%;
-        right: 27.63%;
-        top: 19.35%;
-        bottom: 19.35%;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        padding-right: 30px;
-        color: #FFFFFF;
-        opacity: 0.4;
+      .navLinks {
+        display: flex;
 
+        a {
+          left: 68.22%;
+          right: 27.63%;
+          top: 19.35%;
+          bottom: 19.35%;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          padding-right: 30px;
+          color: #FFFFFF;
+          opacity: 0.4;
+
+        }
       }
+
+
+      .buttonCallback {
+        font-family: 'Play', sans-serif;
+      }
+
+
     }
   }
 

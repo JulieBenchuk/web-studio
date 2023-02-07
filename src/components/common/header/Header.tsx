@@ -17,11 +17,12 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
                     </div>
 
                     <div className={style.navBlock}>
-                        <nav>
+                        <nav className={style.navLinks}>
                             <Link href='/services'>Услуги</Link>
                             <Link href='/portfolio'> Портфолио</Link>
                         </nav>
-                        <LinkBtn>Заказать звонок</LinkBtn>
+                        <LinkBtn className={style.buttonCallback}>Заказать звонок</LinkBtn>
+
                     </div>
                 </div>
                 {isMainPage && <span className={style.currentPage}>Главная &#8226; {currentPage}</span>}
