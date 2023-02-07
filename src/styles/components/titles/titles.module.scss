@@ -1,0 +1,10 @@
+@import '../../variables';
+@import '../../mixins';
+
+.title {
+  @include Text-FS-FW-LH(110px, 700, 94.7%);
+  background: linear-gradient(180deg, $text-color-primary 21.38%, rgba(255, 255, 255, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 493px;
+}
