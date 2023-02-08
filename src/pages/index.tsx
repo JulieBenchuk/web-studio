@@ -3,6 +3,8 @@ import React from "react";
 import style from '../styles/Home.module.scss'
 import TopComponent from "@/components/topComponent/TopComponent";
 import Services from "@/components/services/Services";
+import StagesSlider from "@/components/stagesSlider/StagesSlider";
+import {Footer} from "@/components/common/footer/Footer";
 
 export default function Home() {
     return (
