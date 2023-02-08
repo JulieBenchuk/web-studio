@@ -9,6 +9,7 @@ import gift from '../../assets/svg/giftConsultation.svg'
 import giftBckgrnd from '../../assets/svg/giftConsultBackground.svg'
 import gifBackground from '../../assets/img/BigGifBackground.png'
 import gif from '../../assets/gif/gifMain.gif'
+import MainTitle from "@/components/common/Titles/MainTitle";
 
 
 const TopComponent = () => {
@@ -22,9 +23,7 @@ const TopComponent = () => {
                         <div className={style.littleGif}>
                             <Image src={gif} alt={"gif"} height={200}/>
                         </div>
-                        <div className={style.titleWrapper}>
-                            <h1 className={style.title}>SILEVANS</h1>
-                        </div>
+                        <MainTitle title={"SILEVANS"} className={style.titleWrapper}/>
                     </div>
                     <div className={style.textDescription}>
                         <p className={style.text}>Веб-студия специализируется на разработке сложно-функциональных сайтов

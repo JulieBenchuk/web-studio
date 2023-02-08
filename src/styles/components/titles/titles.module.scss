@@ -1,6 +1,12 @@
 @import '../../variables';
 @import '../../mixins';
 
+.mainTitle {
+  font-style: normal;
+  @include Text-FS-FW-LH(128px, 700, 148px);
+  letter-spacing: -0.025em;
+}
+
 .title {
   @include Text-FS-FW-LH(110px, 700, 94.7%);
   background: linear-gradient(180deg, $text-color-primary 21.38%, rgba(255, 255, 255, 0) 100%);
