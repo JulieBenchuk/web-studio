@@ -1,0 +1,121 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(240px, auto) 140px 140px;
+  column-gap: 15px;
+  grid-template-areas:
+  "contacts services1 services2"
+  ".  date date";
+  color: #FFFFFF;
+  padding: 80px 130px;
+  border-top: 1px solid #FFFFFF;
+  @media (max-width: 790px) {
+    grid-template-columns: auto auto;
+    justify-content: center;
+    grid-template-areas:
+    "contacts  services1"
+    "contacts services2"
+    "date .";
+    row-gap: 15px;
+    padding: 34px 80px;
+
+  }
+  @media (max-width: 600px) {
+    justify-content: center;
+
+    padding: 34px 40px;
+  }
+  @media (max-width: 520px) {
+    justify-content: center;
+    padding: 34px 21px;
+  }
+
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    grid-area: contacts;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    gap: 35px;
+    @media (max-width: 520px) {
+      font-size: 14px;
+      line-height: 16px;
+      a {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+
+    a {
+      display: block;
+      font-weight: 400;
+      font-size: 23px;
+      line-height: 27px;
+      text-decoration-line: underline;
+      color: #FFFFFF;
+
+    }
+
+    .logo {
+      width: 180px;
+    }
+  }
+
+  .services1 {
+    display: grid;
+    align-content: start;
+    row-gap: 12px;
+    max-width: 400px;
+    grid-area: services1;
+
+    a {
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      color: #FFFFFF;
+    }
+
+    @media (max-width: 520px) {
+      a {
+        font-size: 14px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  .services2 {
+    max-width: 400px;
+    display: grid;
+    align-content: start;
+    row-gap: 12px;
+    grid-area: services2;
+
+    a {
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      color: #FFFFFF;
+    }
+
+    @media (max-width: 520px) {
+      a {
+        font-size: 14px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  .date {
+    grid-area: date;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    @media (max-width: 520px) {
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+}
