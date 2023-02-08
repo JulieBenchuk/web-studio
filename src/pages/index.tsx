@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import React from "react";
 import style from '../styles/Home.module.scss'
-import Services from "@/components/services/Services";
+import StagesSlider from "@/components/stagesSlider/StagesSlider";
+
 
 export default function Home() {
     return (
@@ -14,8 +15,6 @@ export default function Home() {
             </Head>
             <main className={style.main}>
                 <StagesSlider/>
-                <Services/>
-                <Footer/>
             </main>
         </>
     )

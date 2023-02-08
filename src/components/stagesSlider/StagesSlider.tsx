@@ -20,7 +20,7 @@ const StagesSlider: React.FC = () => {
                     <p className={style.description}>
                         Уточняем что вы хотите получить в результате работы, какая задача стоит перед нашей командой?
                     </p>
-                    <FullButton>Заполнить Анкету</FullButton>
+                    <FullButton className={style.btn}>Заполнить Анкету</FullButton>
                 </div>
             </div>
         </Wrapper>
