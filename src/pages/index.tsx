@@ -5,6 +5,7 @@ import TopComponent from "@/components/topComponent/TopComponent";
 import Services from "@/components/services/Services";
 import StagesSlider from "@/components/stagesSlider/StagesSlider";
 import {Footer} from "@/components/common/footer/Footer";
+import RunningString from "@/components/common/RunningString";
 
 export default function Home() {
     return (
@@ -17,9 +18,10 @@ export default function Home() {
             </Head>
             <main className={style.main}>
                 <TopComponent/>
-                <StagesSlider/>
+                <RunningString/>
+                {/*   <StagesSlider/>
                 <Services/>
-                <Footer/>
+                <Footer/>*/}
             </main>
         </>
     )
