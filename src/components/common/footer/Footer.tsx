@@ -1,12 +1,16 @@
 import React from 'react';
 import styles from '../../../styles/components/footer.module.scss'
 import Link from "next/link";
+import Image from 'next/image'
+import logo from '@/../public/Logo.svg'
 
 export const Footer: React.FC = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.contacts}>
-                <div className={styles.logo}><img src='/Logo.svg' alt="silevans logo"/></div>
+                <div className={styles.logo}>
+                    <Image src={logo} alt={"silevans logo"}/>
+                </div>
                 <Link href={'tel:+79282345678'}>+7 928 234-56-78</Link>
                 <div className={styles.mail}>Стать клиентом или партнёром
                     <Link href={'mailto:hello@silevans.com'}>hello@silevans.com</Link>

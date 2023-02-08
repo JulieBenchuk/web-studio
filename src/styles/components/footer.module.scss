@@ -1,3 +1,5 @@
+@import "../mixins";
+@import "../variables";
 .wrapper {
   display: grid;
   grid-template-columns: minmax(240px, auto) 140px 140px;
@@ -5,56 +7,22 @@
   grid-template-areas:
   "contacts services1 services2"
   ".  date date";
-  color: #FFFFFF;
+  color: $text-color-primary;
   padding: 80px 130px;
-  border-top: 1px solid #FFFFFF;
-  @media (max-width: 790px) {
-    grid-template-columns: auto auto;
-    justify-content: center;
-    grid-template-areas:
-    "contacts  services1"
-    "contacts services2"
-    "date .";
-    row-gap: 15px;
-    padding: 34px 80px;
-
-  }
-  @media (max-width: 600px) {
-    justify-content: center;
-
-    padding: 34px 40px;
-  }
-  @media (max-width: 520px) {
-    justify-content: center;
-    padding: 34px 21px;
-  }
-
+  border-top: 1px solid $text-color-primary;
 
   .contacts {
     display: flex;
     flex-direction: column;
     grid-area: contacts;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    @include Text-FS-FW-LH(16px, 400, 19px);
     gap: 35px;
-    @media (max-width: 520px) {
-      font-size: 14px;
-      line-height: 16px;
-      a {
-        font-size: 16px;
-        line-height: 19px;
-      }
-    }
 
     a {
       display: block;
-      font-weight: 400;
-      font-size: 23px;
-      line-height: 27px;
+      @include Text-FS-FW-LH(23px, 400, 27px);
       text-decoration-line: underline;
-      color: #FFFFFF;
-
+      color: $text-color-primary;
     }
 
     .logo {
@@ -71,17 +39,8 @@
 
     a {
       text-decoration: none;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 28px;
-      color: #FFFFFF;
-    }
-
-    @media (max-width: 520px) {
-      a {
-        font-size: 14px;
-        line-height: 28px;
-      }
+      @include Text-FS-FW-LH(20px, 400, 28px);
+      color: $text-color-primary;
     }
   }
 
@@ -94,26 +53,64 @@
 
     a {
       text-decoration: none;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 28px;
-      color: #FFFFFF;
-    }
-
-    @media (max-width: 520px) {
-      a {
-        font-size: 14px;
-        line-height: 28px;
-      }
+      @include Text-FS-FW-LH(20px, 400, 28px);
+      color: $text-color-primary;
     }
   }
-
   .date {
     grid-area: date;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    @media (max-width: 520px) {
+    @include Text-FS-FW-LH(16px, 400, 19px);
+  }
+}
+
+@media (max-width: 790px) {
+  .wrapper {
+    grid-template-columns: auto auto;
+    justify-content: center;
+    grid-template-areas:
+    "contacts  services1"
+    "contacts services2"
+    "date .";
+    row-gap: 15px;
+    padding: 34px 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    justify-content: center;
+    padding: 34px 40px;
+  }
+}
+
+@media (max-width: 520px) {
+  .wrapper {
+    justify-content: center;
+    padding: 34px 21px;
+
+    .contacts {
+      @include Text-FS-FW-LH(14px, 400, 16px);
+      //font-size: 14px;
+      //line-height: 16px;
+
+      a {
+        @include Text-FS-FW-LH(16px, 400, 19px);
+        //font-size: 16px;
+        //line-height: 19px;
+      }
+    }
+    .services1 {
+      a {
+        @include Text-FS-FW-LH(14px, 400, 28px);
+      }
+    }
+    .services2 {
+      a {
+        @include Text-FS-FW-LH(14px, 400, 28px);
+      }
+    }
+    .date {
+      @include Text-FS-FW-LH(14px, 400, 28px);
       font-size: 14px;
       line-height: 28px;
     }
