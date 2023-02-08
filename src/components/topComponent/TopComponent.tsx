@@ -19,6 +19,9 @@ const TopComponent = () => {
                 <div className={style.leftBlock}>
                     <Header isMainPage={false} currentPage={"Разработка сайтов"}/>
                     <div className={style.titleBlock}>
+                        <div className={style.littleGif}>
+                            <Image src={gif} alt={"gif"} height={200}/>
+                        </div>
                         <h1 className={style.title}>SILEVANS</h1>
                     </div>
                     <div className={style.textDescription}>

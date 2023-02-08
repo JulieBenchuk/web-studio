@@ -22,9 +22,20 @@
       flex-direction: column;
 
       .titleBlock {
-        width: 100%;
+        background-color: #36F1CD;
+        z-index: 3;
+        position: relative;
         /*     border: 1px solid red;*/
+        .littleGif {
+          @include Flex-Center();
+          position: absolute;
+          width: 90px;
+          height: 90px;
+          background-color: red;
+          overflow: hidden;
+          -webkit-border-top-left-radius: 200px;
 
+        }
 
         .title {
           padding-top: 110px;
