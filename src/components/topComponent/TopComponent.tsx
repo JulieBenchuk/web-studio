@@ -22,7 +22,9 @@ const TopComponent = () => {
                         <div className={style.littleGif}>
                             <Image src={gif} alt={"gif"} height={200}/>
                         </div>
-                        <h1 className={style.title}>SILEVANS</h1>
+                        <div className={style.titleWrapper}>
+                            <h1 className={style.title}>SILEVANS</h1>
+                        </div>
                     </div>
                     <div className={style.textDescription}>
                         <p className={style.text}>Веб-студия специализируется на разработке сложно-функциональных сайтов

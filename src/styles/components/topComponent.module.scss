@@ -3,53 +3,53 @@
 
 .wrapper {
   position: relative;
-  padding: 40px 90px;
+  padding: 40px 90px 40px 130px;
   /*border: 1px solid blue;*/
   font-family: 'Play', sans-serif;
   color: $text-color-primary;
 
   .topComponent {
-    /* border: 1px solid red;*/
     display: flex;
     z-index: 999;
 
     .leftBlock {
       position: relative;
-      width: 60%;
-      /* border: 1px solid white;*/
-
+      width: 56%;
       display: flex;
       flex-direction: column;
 
       .titleBlock {
-        background-color: #36F1CD;
         z-index: 3;
         position: relative;
-        /*     border: 1px solid red;*/
+
         .littleGif {
           @include Flex-Center();
           position: absolute;
-          width: 90px;
-          height: 90px;
-          background-color: red;
+          bottom: 28px;
+          width: 83px;
+          height: 83px;
           overflow: hidden;
           -webkit-border-top-left-radius: 200px;
 
         }
 
-        .title {
-          padding-top: 110px;
-          width: 613px;
-          font-style: normal;
-          @include Text-FS-FW-LH(128px, 700, 148px);
-          letter-spacing: -0.025em;
+        .titleWrapper {
+          padding-left: 90px;
+
+          .title {
+            padding-top: 110px;
+            font-style: normal;
+            @include Text-FS-FW-LH(128px, 700, 148px);
+            letter-spacing: -0.025em;
+          }
         }
+
+
       }
 
       .textDescription {
         width: 100%;
-        /*  border: blue;
-  */
+
         .text {
           width: 380px;
           height: 75px;
@@ -61,7 +61,6 @@
       .consultationBlock {
         position: absolute;
         bottom: 0;
-        /*    border: #412a8f;*/
 
         .consultation {
           display: flex;
@@ -83,7 +82,6 @@
           .background {
             position: absolute;
             left: 0;
-            /* border: 1px solid red;*/
             border-radius: 50px;
             background-color: $bg-seven;
             z-index: 1;
@@ -114,9 +112,8 @@
 
     .rightBlock {
       position: relative;
-      width: 40%;
+      width: 44%;
       background-color: $bg-six;
-      /*    border: 1px solid green;*/
       height: 100%;
       overflow: hidden;
       @include Flex-Center();
