@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from "react";
 import style from '../styles/Home.module.scss'
-import Services from "@/components/services/Services";
+import StagesSlider from "@/components/stagesSlider/StagesSlider";
 
 export default function Home() {
     return (
@@ -13,7 +13,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={style.main}>
-                <Services/>
+                <StagesSlider/>
             </main>
         </>
     )
