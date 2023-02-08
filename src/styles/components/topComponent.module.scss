@@ -2,34 +2,28 @@
 @import '../mixins';
 
 .wrapper {
-  /*  background-color: #9A219C;*/
   position: relative;
-  height: 730px;
   padding: 40px 90px;
   border: 1px solid blue;
   font-family: 'Play', sans-serif;
   color: $text-color-primary;
 
   .topComponent {
-    /* background-color: yellow;*/
-    border: 1px solid red;
+    /* border: 1px solid red;*/
     display: flex;
-    height: 100%;
     z-index: 999;
 
     .leftBlock {
       position: relative;
       width: 60%;
-      /*  background-color: #5f866f;*/
-      border: 1px solid white;
-      height: 100%;
+      /* border: 1px solid white;*/
+
       display: flex;
       flex-direction: column;
 
       .titleBlock {
         width: 100%;
-        /*  background-color: orange;*/
-        border: 1px solid red;
+        /*     border: 1px solid red;*/
 
 
         .title {
@@ -43,9 +37,8 @@
 
       .textDescription {
         width: 100%;
-        /*  background-color: aquamarine;*/
-        border: blue;
-
+        /*  border: blue;
+  */
         .text {
           width: 380px;
           height: 75px;
@@ -56,18 +49,18 @@
 
       .consultationBlock {
         position: absolute;
-        top: 452px;
-        /*  background-color: #3d802a;*/
-        border: #412a8f;
+        bottom: 0;
+        /*    border: #412a8f;*/
 
         .consultation {
           display: flex;
           align-items: center;
           flex-direction: column;
           position: absolute;
-          left: 120px;
+          left: 100px;
           width: 276px;
           height: 193px;
+          bottom: 32px;
 
           .gift {
             position: relative;
@@ -79,7 +72,7 @@
           .background {
             position: absolute;
             left: 0;
-            border: 1px solid red;
+            /* border: 1px solid red;*/
             border-radius: 50px;
             background-color: $bg-seven;
             z-index: 1;
@@ -112,7 +105,7 @@
       position: relative;
       width: 40%;
       background-color: $bg-six;
-      border: 1px solid green;
+      /*    border: 1px solid green;*/
       height: 100%;
       overflow: hidden;
       @include Flex-Center();
@@ -125,9 +118,9 @@
         top: 80px;
         width: 80%;
         height: 70%;
-        background-color: cornflowerblue;
         -webkit-border-top-right-radius: 200px;
         overflow: hidden;
+        box-shadow: 20px 20px 20px 1px rgba(0, 0, 0, 0.63);
 
       }
     }
