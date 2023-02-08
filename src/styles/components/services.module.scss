@@ -4,10 +4,6 @@
 .wrapper {
   padding: 48px 130px 0;
 
-  .title {
-    
-  }
-
   .items {
     margin-top: 45px;
     @include Flex-Center;
@@ -25,12 +21,13 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      padding: 0 10px;
 
       .item_first, .item_second, .item_third {
         display: flex;
         justify-content: space-between;
         border-radius: 85px;
-        padding: 56px 100px 20px;
+        padding: 56px 80px 20px;
 
         .item_blockLeft {
           width: 50%;
@@ -87,59 +84,58 @@
 
       .item_second {
         background: #9A219C;
-        top: 320px
       }
 
       .item_third {
         background: #2139B9;
-        top: 640px;
       }
     }
 
 
   }
 
-  .blockComfort {
-    padding-top: 120px;
-    display: flex;
 
-    .blockComfort_left {
-      position: relative;
-      width: 50%;
+}
 
-      .comfort_title {
-        @include Text-FS-FW-LH(64px, 700, 97.2%);
-        color: #FFFFFF;
-        position: absolute;
-        width: 500px;
-        top: 0;
-      }
+.blockComfort {
+  margin: 0 auto;
+  height: 356px;
+  max-width: 1173px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
 
-      .rocketsImg {
-        object-fit: contain;
-        object-position: 0 26px;
-        width: 100%;
-        height: auto;
-      }
+  .rocketsImg {
+    background: url("../../assets/img/Rockets.png") no-repeat 60px 40px;
+    width: 50%;
+    background-size: 100% auto;
+    position: relative;
+
+    .comfort_title {
+      @include Text-FS-FW-LH(64px, 700, 97.2%);
+      color: #FFFFFF;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
+  }
 
-    .blockComfort_right {
-      position: relative;
-      display: flex;
-      width: 50%;
+  .circleImg {
+    background: url("../../assets/img/circle.png") no-repeat 100% 50px;
+    width: 50%;
+    position: relative;
+    background-size: 40% auto;
 
-      .comfort_description {
-        @include Text-FS-FW-LH(16px, 400, 150%);
-        color: #FFFFFF;
-      }
-
-      .circleImg {
-        object-fit: contain;
-        object-position: 0 26px;
-        width: 100%;
-        max-width: 250px;
-        height: auto;
-      }
+    .comfort_description {
+      @include Text-FS-FW-LH(16px, 400, 150%);
+      padding: 20px 0 0;
+      color: #FFFFFF;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      top: 0;
+      left: 0;
+      position: absolute;
     }
   }
 }
