@@ -7,7 +7,7 @@ import style from '../../styles/components/topComponent.module.scss'
 import FullButton from "@/components/common/buttons/FullButton";
 import gift from '../../assets/svg/giftConsultation.svg'
 import giftBckgrnd from '../../assets/svg/giftConsultBackground.svg'
-import gifBackground from '../../assets/svg/gifBackground.svg'
+import gifBackground from '../../assets/img/BigGifBackground.png'
 import gif from '../../assets/gif/gifMain.gif'
 
 
@@ -46,7 +46,7 @@ const TopComponent = () => {
                 <div className={style.rightBlock}>
                     <Image src={gifBackground} alt={"gif"} height={650}/>
                     <div className={style.gifBlock}>
-                        <Image src={gif} alt={"gif"} height={650}/>
+                        <Image src={gif} alt={"gif"} height={600}/>
                     </div>
                 </div>
 
