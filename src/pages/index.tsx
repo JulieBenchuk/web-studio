@@ -19,9 +19,9 @@ export default function Home() {
             <main className={style.main}>
                 <TopComponent/>
                 <RunningString/>
-                {/*   <StagesSlider/>
+                <StagesSlider/>
                 <Services/>
-                <Footer/>*/}
+                <Footer/>
             </main>
         </>
     )
