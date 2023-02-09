@@ -5,6 +5,9 @@
   padding: 40px 130px 120px 130px;
   color: $text-color-primary;
   display: flex;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
@@ -24,33 +27,53 @@
   }
 
   .title {
-    max-width: 765px;
+    max-width: 50%;
+    @media (max-width: 1024px) {
+      max-width: 100%;
+      text-align: center;
+    }
   }
 
   .form {
-   
+    width: 100%;
     display: flex;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 20px 0;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
 
-    .column {
+    }
+
+    .column1 {
       width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: end;
-      padding-left: 60px;
+      @media (max-width: 1024px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+      }
+      /*padding-left: 60px;*/
 
-      .name, .phone {
+      .name {
         background: $bg-seven;
         border-radius: 36.1053px;
         padding: 29px 25px;
-        min-width: 280px;
+        width: 90%;
         height: 70px;
         font-family: 'Play', sans-serif;
         font-style: normal;
         @include Text-FS-FW-LH(16px, 400, 123.7%);
         display: flex;
         align-items: center;
+        @media (max-width: 1024px) {
+          width: 460px;
+        }
+
 
         &::placeholder {
           color: rgba(255, 255, 255, 0.8);
@@ -62,10 +85,56 @@
       .description {
         font-style: normal;
         @include Text-FS-FW-LH(18px, 400, 150%);
-
+        @media (max-width: 1024px) {
+          min-width: 537px;
+          padding-bottom: 40px;
+        }
       }
 
 
+    }
+
+    .column2 {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: end;
+      @media (max-width: 1024px) {
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+      }
+
+      .phone {
+        background: $bg-seven;
+        border-radius: 36.1053px;
+        padding: 29px 25px;
+        width: 90%;
+        height: 70px;
+        font-family: 'Play', sans-serif;
+        font-style: normal;
+        @include Text-FS-FW-LH(16px, 400, 123.7%);
+        display: flex;
+        align-items: center;
+        @media (max-width: 1024px) {
+          width: 460px;
+        }
+
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.8);
+          opacity: 0.4;
+        }
+
+      }
+
+      .button {
+        @media (max-width: 1024px) {
+          margin-top: 40px;
+        }
+
+      }
     }
 
   }

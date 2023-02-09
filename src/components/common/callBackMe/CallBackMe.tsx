@@ -9,17 +9,17 @@ const CallBackMe = () => {
         <Wrapper className={style.wrapper}>
             <SmallTitle children={"Остались вопросы?"} className={style.title}/>
             <div className={style.form}>
-                <div className={style.column}>
+                <div className={style.column1}>
                     <input type="text" placeholder="Иванов Иван Иванович"
                            className={style.name}
                     />
                     <p className={style.description}>Оставьте свои контакты и наши специалисты с вами свяжутся</p>
                 </div>
-                <div className={style.column}>
+                <div className={style.column2}>
                     <input type="tel" placeholder="+7 (___) ___ __ __"
                            className={style.phone}
                     />
-                    <FullButton>Заказать звонок</FullButton>
+                    <FullButton className={style.button}>Заказать звонок</FullButton>
                 </div>
             </div>
         </Wrapper>
