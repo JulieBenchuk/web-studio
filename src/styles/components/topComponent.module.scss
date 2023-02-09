@@ -23,7 +23,10 @@
         position: relative;
 
         .littleGif {
-          @include Flex-Center();
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
           position: absolute;
           bottom: 28px;
           width: 83px;

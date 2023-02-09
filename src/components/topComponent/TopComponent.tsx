@@ -21,7 +21,7 @@ const TopComponent = () => {
                     <Header isMainPage={false} currentPage={"Разработка сайтов"}/>
                     <div className={style.titleBlock}>
                         <div className={style.littleGif}>
-                            <Image src={gif} alt={"gif"} height={200}/>
+                            <Image src={gif} alt={"gif"} height={130}/>
                         </div>
                         <MainTitle title={"SILEVANS"} className={style.titleWrapper}/>
                     </div>

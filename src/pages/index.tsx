@@ -6,6 +6,7 @@ import Services from "@/components/services/Services";
 import StagesSlider from "@/components/stagesSlider/StagesSlider";
 import {Footer} from "@/components/common/footer/Footer";
 import RunningString from "@/components/common/RunningString";
+import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 
 export default function Home() {
     return (
@@ -21,6 +22,7 @@ export default function Home() {
                 <RunningString/>
                 <StagesSlider/>
                 <Services/>
+                <CallBackMe/>
                 <Footer/>
             </main>
         </>
