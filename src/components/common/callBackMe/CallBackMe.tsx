@@ -10,11 +10,17 @@ const CallBackMe = () => {
             <SmallTitle children={"Остались вопросы?"} className={style.title}/>
             <div className={style.form}>
                 <div className={style.column}>
-                    <div className={style.name}>name</div>
+                    {/*<div className={style.name}>name</div>*/}
+                    <input type="text" placeholder="Иванов Иван Иванович"
+                           className={style.name}
+                    />
                     <p className={style.description}>Оставьте свои контакты и наши специалисты с вами свяжутся</p>
                 </div>
                 <div className={style.column}>
-                    <div className={style.phone}>+37544 5590660</div>
+                    <input type="tel" placeholder="+7 (___) ___ __ __"
+                           className={style.phone}
+                    />
+                    {/* <div className={style.phone}>+37544 5590660</div>*/}
                     <FullButton>Заказать звонок</FullButton>
                 </div>
             </div>
