@@ -3,7 +3,7 @@
 
 .wrapper {
   position: relative;
-  padding: 40px 90px 40px 130px;
+  padding: 40px 90px 80px 130px;
   /*border: 1px solid blue;*/
   font-family: 'Play', sans-serif;
   color: $text-color-primary;
@@ -14,7 +14,7 @@
 
     .leftBlock {
       position: relative;
-      width: 64%;
+      width: 55%;
       display: flex;
       flex-direction: column;
 
@@ -108,7 +108,7 @@
 
     .rightBlock {
       position: relative;
-      width: 36%;
+      width: 45%;
       height: 100%;
       overflow: hidden;
       @include Flex-Center();
@@ -116,7 +116,9 @@
       z-index: 2;
 
       .gifBlock {
-        @include Flex-Center();
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         position: absolute;
         top: 80px;
         width: 80%;
