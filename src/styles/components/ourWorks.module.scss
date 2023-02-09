@@ -1,0 +1,10 @@
+@import "../variables";
+@import "../mixins";
+
+.wrapper {
+  display: flex;
+
+  .swiper_container {
+    height: 285px;
+  }
+}
