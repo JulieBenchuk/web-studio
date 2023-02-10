@@ -13,7 +13,7 @@ import {worksItems} from "@/components/common/ourWorks/OurWotksItems";
 const OurWorks: React.FC = () => {
     return (
         <Wrapper className={style.wrapper}>
-            <SmallTitle>Наши Работы</SmallTitle>
+            <SmallTitle>Наши Работы!</SmallTitle>
             <Swiper
                 modules={[Autoplay]}
                 slidesPerView={'auto'}

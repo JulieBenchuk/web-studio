@@ -18,7 +18,7 @@ const StagesSlider: React.FC = () => {
 
 
     return (
-        <Wrapper>
+        <Wrapper className={style.wrapper}>
             <div className={style.stars}>
                 <div className={style.pulse}>
                     <div className={style.pulse_item}>{stage}</div>
