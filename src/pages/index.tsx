@@ -21,15 +21,14 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={style.main}>
-
                 <TopComponent/>
                 <RunningString/>
-                <CallBackMe/>
                 <Services/>
                 <Comfortable/>
                 <OurWorks/>
                 <StagesSlider/>
                 <Reviews/>
+                <CallBackMe/>
                 <Footer/>
             </main>
         </>
