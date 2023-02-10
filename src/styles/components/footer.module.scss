@@ -1,5 +1,6 @@
 @import "../mixins";
 @import "../variables";
+
 .wrapper {
   display: grid;
   grid-template-columns: minmax(240px, auto) 140px 140px;
@@ -57,6 +58,7 @@
       color: $text-color-primary;
     }
   }
+
   .date {
     grid-area: date;
     @include Text-FS-FW-LH(16px, 400, 19px);
@@ -90,20 +92,24 @@
 
     .contacts {
       @include Text-FS-FW-LH(14px, 400, 16px);
+
       a {
         @include Text-FS-FW-LH(16px, 400, 19px);
       }
     }
+
     .services1 {
       a {
         @include Text-FS-FW-LH(14px, 400, 28px);
       }
     }
+
     .services2 {
       a {
         @include Text-FS-FW-LH(14px, 400, 28px);
       }
     }
+
     .date {
       @include Text-FS-FW-LH(14px, 400, 28px);
       font-size: 14px;
