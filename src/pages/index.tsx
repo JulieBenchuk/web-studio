@@ -5,7 +5,7 @@ import TopComponent from "@/components/topComponent/TopComponent";
 import Services from "@/components/services/Services";
 import StagesSlider from "@/components/stagesSlider/StagesSlider";
 import {Footer} from "@/components/common/footer/Footer";
-import RunningString from "@/components/common/RunningString";
+import RunningString from "@/components/runningString/RunningString";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import OurWorks from "@/components/common/ourWorks/OurWorks";
 import {Reviews} from "@/components/reviews/Reviews";

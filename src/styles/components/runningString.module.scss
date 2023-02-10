@@ -18,11 +18,10 @@ $duration: 15s;
     @include Flex-Center();
     @include Text-FS-FW-LH(40px, 700, 123.7%);
     font-style: normal;
-    /* or 49px */
     text-transform: uppercase;
 
 
-    .firstString, .secondString {
+    .stringItem {
       @include Flex-Center();
       width: 770px;
       height: 49px;
