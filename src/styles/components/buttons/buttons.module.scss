@@ -8,10 +8,19 @@
   padding: 10px 18px;
   gap: 10px;
   background: transparent;
-  color: #F2F2F2;
+  color: $text-color-secondary;
   @include Text-FS-FW-LH(16px, 400, 150%);
-  border: 1px solid #FFFFFF;
+  border: 1px solid $text-color-primary;
   border-radius: 53px;
+  z-index: 3;
+
+  &:hover {
+    justify-content: center;
+    align-items: center;
+    background: $bg-five;
+    border: 1px solid $text-color-primary;
+    border-radius: 45px;
+  }
 }
 
 .default {
@@ -35,18 +44,8 @@
   z-index: 3;
 
   &:hover {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 10px;
-    width: 253px;
-    height: 64px;
     background: $bg-eight;
     border: 1px solid $text-color-primary;
     box-shadow: 0 69px 41px rgba(0, 0, 0, 0.26);
-    border-radius: 22px;
   }
 }
