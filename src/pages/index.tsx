@@ -20,8 +20,8 @@ export default function Home() {
             <main className={style.main}>
                 <TopComponent/>
                 <RunningString/>
-                {/*   <StagesSlider/>
-                <Services/>*/}
+                <StagesSlider/>
+                <Services/>
                 <CallBackMe/>
                 <Footer/>
             </main>

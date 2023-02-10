@@ -43,9 +43,9 @@ const TopComponent = () => {
                 </div>
 
                 <div className={style.rightBlock}>
-                    <Image src={gifBackground} alt={"gif"} height={650}/>
+                    <Image src={gifBackground} alt={"gif"} height={650} className={style.bigGifBckgrnd}/>
                     <div className={style.gifBlock}>
-                        <Image src={gif} alt={"gif"} height={850}/>
+                        <Image src={gif} alt={"gif"} height={850} className={style.bigGif}/>
                     </div>
                 </div>
 
