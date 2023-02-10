@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import React from "react";
 import style from '../styles/Home.module.scss'
-import OurWorks from "@/components/common/ourWorks/OurWorks";
-
+import Services from "@/components/services/Services";
+import {Footer} from "@/components/common/footer/Footer";
 
 export default function Home() {
     return (
@@ -14,7 +14,8 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={style.main}>
-                <OurWorks/>
+                <Services/>
+                <Footer/>
             </main>
         </>
     )
