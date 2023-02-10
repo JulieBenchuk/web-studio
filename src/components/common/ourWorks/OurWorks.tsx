@@ -24,6 +24,7 @@ const OurWorks: React.FC = () => {
                     reverseDirection: false,
                 }}
                 loop={true}
+                spaceBetween={20}
             >
                 {worksItems.map((el, i) =>
                     <SwiperSlide key={i}>

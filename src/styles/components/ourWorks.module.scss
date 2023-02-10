@@ -4,7 +4,8 @@
 
 .wrapper {
   display: flex;
-  
+  column-gap: 51px;
+
   :global {
     .swiper-slide {
       width: 380px;
