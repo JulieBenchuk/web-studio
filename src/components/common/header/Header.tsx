@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import Image from "next/image";
+import logo from '../../../assets/svg/Logo.svg'
 import style from '../../../styles/components/header.module.scss'
 import Wrapper from "@/components/common/wrapper";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
@@ -12,7 +12,7 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
             <header className={style.header}>
                 <div className={style.row}>
                     <div className={style.logoBlock}>
-                        <Image src='/Logo.svg' alt="silevans" width={180} height={31} priority={true}/>
+                        <img src={logo.src} alt="silevans" width={180} height={31}/>
                     </div>
 
                     <div className={style.navBlock}>
