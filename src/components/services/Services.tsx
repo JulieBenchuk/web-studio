@@ -74,23 +74,8 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-
             </Wrapper>
-            <Wrapper>
-                <div className={style.blockComfort}>
-                    <div className={style.rocketsImg}>
-                        <h3 className={style.comfort_title}>С нами <br/> комфортно</h3>
-                    </div>
-                    <div className={style.circleImg}>
-                        <p className={style.comfort_description}>
-                            Активно взаимодействуя с нами, вы будете заранее знать,
-                            какой именно результат вы получите.
-                            <br/>Стоит ли говорить, что он вам понравится?
-                        </p>
-                    </div>
 
-                </div>
-            </Wrapper>
         </>
 
     );

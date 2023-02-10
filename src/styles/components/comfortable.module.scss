@@ -1,0 +1,49 @@
+@import '../variables';
+@import '../mixins';
+
+.wrapper {
+  padding-top: 129px;
+
+  .blockComfort {
+    margin: 0 auto;
+    height: 356px;
+    max-width: 1173px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .rocketsImg {
+      background: url("../../assets/img/Rockets.png") no-repeat 60px 40px;
+      width: 50%;
+      background-size: 100% auto;
+      position: relative;
+
+      .comfort_title {
+        @include Text-FS-FW-LH(64px, 700, 97.2%);
+        color: #FFFFFF;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .circleImg {
+      background: url("../../assets/img/circle.png") no-repeat 100% 50px;
+      width: 50%;
+      position: relative;
+      background-size: 40% auto;
+
+      .comfort_description {
+        @include Text-FS-FW-LH(16px, 400, 150%);
+        padding: 20px 0 0;
+        color: #FFFFFF;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        top: 0;
+        left: 0;
+        position: absolute;
+      }
+    }
+  }
+}
