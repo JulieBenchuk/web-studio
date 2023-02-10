@@ -165,7 +165,6 @@
     .rightBlock {
       position: relative;
       width: 45%;
-      height: 100%;
       overflow: hidden;
       @include Flex-Center();
       -webkit-border-top-right-radius: 200px;
@@ -192,6 +191,8 @@
         -webkit-border-top-right-radius: 200px;
         overflow: hidden;
         box-shadow: 20px 20px 20px 1px rgba(0, 0, 0, 0.63);
+
+
         @media (max-width: 1024px) {
           top: 362px;
           width: 100%;
