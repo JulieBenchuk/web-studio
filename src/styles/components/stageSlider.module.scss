@@ -15,13 +15,13 @@
 
     .pulse_item {
       position: absolute;
-      top: 35%;
+      top: 25%;
       left: 40%;
       transform: translate(-505, -50%);
-      width: 283px;
-      height: 283px;
+      width: 236px;
+      height: 236px;
       background: #4C04A6;
-      border: 42px solid #8F0192;
+      border: 12px solid #8F0192;
       border-radius: 50%;
       box-sizing: border-box;
       box-shadow: 0 0 0 36px #8F0192;
@@ -49,18 +49,22 @@
 
       @keyframes animate {
         0% {
-          transform: scale(0.7);
+          transform: scale(1);
         }
 
         100% {
-          transform: scale(2.0);
+          transform: scale(1.7);
         }
       }
     }
   }
-
-
+  
   .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 400px;
+
     .titleBlock {
       @include Text-FS-FW-LH(48px, 400, 56px);
       text-align: right;
@@ -72,15 +76,19 @@
       @include Text-FS-FW-LH(64px, 400, 74px);
       text-align: right;
       text-transform: uppercase;
-
+      margin-top: 72px;
       color: #FFFFFF;
     }
 
     .description {
       @include Text-FS-FW-LH(16px, 400, 150%);
-
+      max-width: 330px;
       text-align: right;
       color: #FFFFFF;
     }
+  }
+
+  .btn {
+    margin-top: 88px;
   }
 }

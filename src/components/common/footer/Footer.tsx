@@ -3,10 +3,11 @@ import styles from '../../../styles/components/footer.module.scss'
 import Link from "next/link";
 import Image from 'next/image'
 import logo from '@/../public/Logo.svg'
+import Wrapper from "@/components/common/wrapper";
 
 export const Footer: React.FC = () => {
     return (
-        <div className={styles.wrapper}>
+        <Wrapper className={styles.wrapper}>
             <div className={styles.contacts}>
                 <div className={styles.logo}>
                     <Image src={logo} alt={"silevans logo"}/>
@@ -31,6 +32,6 @@ export const Footer: React.FC = () => {
                 <Link href={'#'}>Вакансии</Link>
             </div>
             <div className={styles.date}>Ⓒ {new Date().getFullYear()} Silevans. Все права защищены</div>
-        </div>
+        </Wrapper>
     );
 };

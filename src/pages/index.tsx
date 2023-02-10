@@ -7,6 +7,8 @@ import StagesSlider from "@/components/stagesSlider/StagesSlider";
 import {Footer} from "@/components/common/footer/Footer";
 import RunningString from "@/components/common/RunningString";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
+import OurWorks from "@/components/common/ourWorks/OurWorks";
+import {Reviews} from "@/components/reviews/Reviews";
 
 export default function Home() {
     return (
@@ -18,11 +20,14 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={style.main}>
+
                 <TopComponent/>
                 <RunningString/>
-                {/*  <StagesSlider/>
-                <Services/>*/}
                 <CallBackMe/>
+                <Services/>
+                <OurWorks/>
+                <StagesSlider/>
+                <Reviews/>
                 <Footer/>
             </main>
         </>
