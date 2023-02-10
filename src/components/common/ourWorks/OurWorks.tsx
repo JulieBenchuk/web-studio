@@ -8,28 +8,26 @@ import style from '../../../styles/components/ourWorks.module.scss'
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import {worksItems} from "@/components/common/ourWorks/OurWotksItems";
-import Image from "next/image";
 
 
-const OurWorks = () => {
+const OurWorks: React.FC = () => {
     return (
         <Wrapper className={style.wrapper}>
             <SmallTitle>Наши Работы</SmallTitle>
             <Swiper
                 modules={[Autoplay]}
-                pagination={{clickable: true}}
-                slidesPerView={2}
+                slidesPerView={'auto'}
                 autoplay={{
                     delay: 2000,
                     pauseOnMouseEnter: true,
-                    disableOnInteraction: false
+                    disableOnInteraction: false,
+                    reverseDirection: false,
                 }}
-                loop
-                className={style.swiper_container}
+                loop={true}
             >
-                {worksItems.map((el) =>
-                    <SwiperSlide style={{width: 'max-content'}}>
-                        <Image src={el} alt={''}/>
+                {worksItems.map((el, i) =>
+                    <SwiperSlide key={i}>
+                        <img src={el.src} alt={'image portfolio'}/>
                     </SwiperSlide>
                 )}
             </Swiper>

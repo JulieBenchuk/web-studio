@@ -4,4 +4,4 @@ import sky from '../../../assets/img/skySmartPro.png'
 import group from '../../../assets/img/theGroupChat.png'
 
 
-export const worksItems = [air, look, sky, group]
+export const worksItems = [air, look, sky, group, air, look, sky, group]

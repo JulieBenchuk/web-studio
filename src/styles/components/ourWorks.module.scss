@@ -1,10 +1,14 @@
 @import "../variables";
 @import "../mixins";
 
+
 .wrapper {
   display: flex;
-
-  .swiper_container {
-    height: 285px;
+  
+  :global {
+    .swiper-slide {
+      width: 380px;
+    }
   }
+
 }
