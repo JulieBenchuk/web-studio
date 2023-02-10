@@ -3,6 +3,7 @@ import React from "react";
 import style from '../styles/Home.module.scss'
 import Services from "@/components/services/Services";
 import {Footer} from "@/components/common/footer/Footer";
+import {Reviews} from "@/components/reviews/Reviews";
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             </Head>
             <main className={style.main}>
                 <Services/>
+                <Reviews/>
                 <Footer/>
             </main>
         </>
