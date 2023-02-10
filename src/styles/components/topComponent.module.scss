@@ -231,6 +231,26 @@
 
   }
 
+  .logoForMobile {
+    display: none;
+    @media (max-width: 767px) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      @include Flex-Center();
+    }
+
+    img {
+      position: absolute;
+      height: 165px;
+      top: 150px;
+      opacity: 0.16;
+
+    }
+  }
+
 }
 
 

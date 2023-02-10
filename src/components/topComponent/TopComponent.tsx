@@ -8,6 +8,7 @@ import FullButton from "@/components/common/buttons/FullButton";
 
 import ground from "@/assets/svg/ground.svg";
 import gift from '../../assets/svg/giftConsultation.svg'
+import vectorLogo from '../../assets/svg/vectorLogo.svg'
 import giftBckgrnd from '../../assets/svg/giftConsultBackground.svg'
 import gifBackground from '../../assets/img/BigGifBackground.png'
 import gif from '../../assets/gif/gifMain.gif'
@@ -54,6 +55,8 @@ const TopComponent = () => {
 
             </div>
             <Image src={ground} alt={"ground"} width={1440} height={770} className={style.ground}/>
+
+            <div className={style.logoForMobile}><img src={vectorLogo.src} alt="logo"/></div>
 
         </Wrapper>
     );
