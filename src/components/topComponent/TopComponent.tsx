@@ -1,15 +1,18 @@
 import React from 'react';
 import Image from "next/image";
-import ground from "@/assets/svg/ground.svg";
+
 import Header from "@/components/common/header/Header";
 import Wrapper from "@/components/common/wrapper";
-import style from '../../styles/components/topComponent.module.scss'
+import MainTitle from "@/components/common/Titles/MainTitle";
 import FullButton from "@/components/common/buttons/FullButton";
+
+import ground from "@/assets/svg/ground.svg";
 import gift from '../../assets/svg/giftConsultation.svg'
 import giftBckgrnd from '../../assets/svg/giftConsultBackground.svg'
 import gifBackground from '../../assets/img/BigGifBackground.png'
 import gif from '../../assets/gif/gifMain.gif'
-import MainTitle from "@/components/common/Titles/MainTitle";
+
+import style from '../../styles/components/topComponent.module.scss'
 
 
 const TopComponent = () => {
@@ -21,7 +24,7 @@ const TopComponent = () => {
                     <Header isMainPage={false} currentPage={"Разработка сайтов"}/>
                     <div className={style.titleBlock}>
                         <div className={style.littleGif}>
-                            <Image src={gif} alt={"gif"} height={130}/>
+                            <img src={gif.src} alt={"gif"} height={130}/>
                         </div>
                         <MainTitle title={"SILEVANS"} className={style.titleWrapper}/>
                     </div>
@@ -33,8 +36,8 @@ const TopComponent = () => {
                     </div>
                     <div className={style.consultationBlock}>
                         <div className={style.consultation}>
-                            <Image src={gift} alt={"free consultation"} className={style.gift}/>
-                            <Image src={giftBckgrnd} alt={"free consultation"} className={style.background}/>
+                            <img src={gift.src} alt={"free consultation"} className={style.gift}/>
+                            <img src={giftBckgrnd.src} alt={"free consultation"} className={style.background}/>
                             <p className={style.consultationText}>Заполните анкету, чтобы получить бесплатную
                                 консультацию</p>
                         </div>
@@ -43,9 +46,9 @@ const TopComponent = () => {
                 </div>
 
                 <div className={style.rightBlock}>
-                    <Image src={gifBackground} alt={"gif"} height={650} className={style.bigGifBckgrnd}/>
+                    <img src={gifBackground.src} alt={"gif"} height={650} className={style.bigGifBckgrnd}/>
                     <div className={style.gifBlock}>
-                        <Image src={gif} alt={"gif"} height={850} className={style.bigGif}/>
+                        <img src={gif.src} alt={"gif"} height={850} className={style.bigGif}/>
                     </div>
                 </div>
 
