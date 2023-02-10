@@ -5,6 +5,10 @@
   font-style: normal;
   @include Text-FS-FW-LH(128px, 700, 148px);
   letter-spacing: -0.025em;
+  @media (max-width: 767px) {
+    @include Text-FS-FW-LH(48px, 700, 56px)
+   
+  }
 }
 
 .title {

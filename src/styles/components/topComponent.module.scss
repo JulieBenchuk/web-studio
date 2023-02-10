@@ -10,6 +10,10 @@
     padding: 40px 170px;
     height: 791px;
   }
+  @media (max-width: 767px) {
+    padding: 44px 20px;
+  }
+
 
   .topComponent {
     display: flex;
@@ -59,6 +63,10 @@
             text-align: center;
             padding-top: 50px;
           }
+          @media (max-width: 767px) {
+            padding-top: 120px;
+            padding-bottom: 68px;
+          }
 
         }
       }
@@ -96,7 +104,6 @@
           width: 276px;
           height: 193px;
           bottom: 32px;
-          background-color: #9A219C;
           @media (max-width: 1024px) {
             position: relative;
             width: 300px;
@@ -192,6 +199,9 @@
           height: 216px;
           -webkit-border-top-right-radius: 0;
 
+        }
+        @media (max-width: 767px) {
+          display: none;
         }
 
         .bigGif {
