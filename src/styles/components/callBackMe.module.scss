@@ -68,6 +68,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: end;
+      position: relative;
       @media (max-width: 1024px) {
         flex-direction: column-reverse;
         align-items: center;
@@ -78,7 +79,6 @@
         width: 100%;
         align-items: start;
       }
-      /*padding-left: 60px;*/
 
       .name {
         background: $bg-seven;
@@ -102,6 +102,21 @@
         &::placeholder {
           color: rgba(255, 255, 255, 0.8);
           opacity: 0.4;
+        }
+
+      }
+
+      .formikError {
+        position: absolute;
+        top: -15px;
+        color: $bg-third;
+        @media (max-width: 1024px) {
+          position: absolute;
+          top: 60px;
+        }
+        @media (max-width: 767px) {
+          top: 90px;
+
         }
 
       }
@@ -134,6 +149,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: end;
+      position: relative;
       @media (max-width: 1024px) {
         align-items: center;
         justify-content: space-between;
@@ -167,6 +183,22 @@
           opacity: 0.4;
         }
 
+      }
+
+      .formikError {
+        color: $bg-third;
+        position: absolute;
+        top: -15px;
+        font-size: 11px;
+        @media (max-width: 1024px) {
+          position: static;
+        }
+        @media (max-width: 767px) {
+          position: absolute;
+          left: 0;
+          top: -10px;
+
+        }
       }
 
       .button {
