@@ -7,7 +7,7 @@
   letter-spacing: -0.025em;
   @media (max-width: 767px) {
     @include Text-FS-FW-LH(48px, 700, 56px)
-   
+
   }
 }
 
@@ -17,4 +17,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   max-width: 493px;
+  @media (max-width: 1024px) {
+    @include Text-FS-FW-LH(64px, 700, 94.7%)
+  }
+  @media (max-width: 767px) {
+    @include Text-FS-FW-LH(48px, 700, 94.7%)
+  }
 }

@@ -13,7 +13,7 @@ const Services = () => {
     return (
         <>
             <Wrapper className={style.wrapper}>
-                <SmallTitle>Наши услуги!</SmallTitle>
+                <SmallTitle className={style.smallTitle}>Наши услуги!</SmallTitle>
                 <div className={style.items}>
                     <div className={style.itemsBg}></div>
                     <div className={style.itemsMenu}>
@@ -30,7 +30,7 @@ const Services = () => {
                             </div>
                             <div className={style.item_blockRight}>
                                 <FullButton className={style.fillBtn}>Подробнее</FullButton>
-                                <h5 className={style.cost}>от 34990 &#8381;</h5>
+                                <h5 className={style.cost}>от 34 990 &#8381;</h5>
                                 <div className={style.giftBox}>
                                     <Image alt={'gift'} src={gift} width={`${20}`} height={`${20}`}/>
                                     <p className={style.gift}>Год хостинга в подарок</p>
@@ -48,7 +48,7 @@ const Services = () => {
                             </div>
                             <div className={style.item_blockRight}>
                                 <FullButton className={style.fillBtn}>Подробнее</FullButton>
-                                <h5 className={style.cost}>от 24990 &#8381;</h5>
+                                <h5 className={style.cost}>от 24 990 &#8381;</h5>
                                 <div className={style.giftBox}>
                                     <Image alt={'gift'} src={gift} width={`${20}`} height={`${20}`}/>
                                     <p className={style.gift}>Аудит в подарок</p>
@@ -65,7 +65,7 @@ const Services = () => {
                             </div>
                             <div className={style.item_blockRight}>
                                 <FullButton className={style.fillBtn}>Подробнее</FullButton>
-                                <h5 className={style.cost}>от 25990 &#8381;</h5>
+                                <h5 className={style.cost}>от 25 990 &#8381;</h5>
                                 <div className={style.giftBox}>
                                     <Image alt={'gift'} src={gift} width={`${20}`} height={`${20}`}/>
                                     <p className={style.gift}>Анализ дизайна в подарок</p>

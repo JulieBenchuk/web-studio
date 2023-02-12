@@ -2,13 +2,22 @@
 @import '../mixins';
 
 .wrapper {
-  padding: 48px 124px 0 143px;
+  padding: 48px 124px 60px 143px;
   @media(max-width: 1024px) {
-    padding: 60px 172px 0 168px;
-
+    padding: 60px 172px 60px 168px;
   }
   @media(max-width: 767px) {
-    padding: 60px 20px 0 20px;
+    padding: 60px 20px 60px 20px;
+  }
+
+  .smallTitle {
+    width: 439px;
+    @media(max-width: 767px) {
+      max-width: 367px;
+    }
+    @media(max-width: 767px) {
+      max-width: 180px;
+    }
   }
 
   .items {
@@ -22,7 +31,7 @@
       background: rgba(43, 40, 68, 0.6);
       border-radius: 50px;
       width: 83.5%;
-      height: 980px;
+      height: 103%;
       @media(max-width: 767px) {
         display: none;
       }
@@ -40,14 +49,31 @@
         justify-content: space-between;
         border-radius: 85px;
         padding: 56px 80px 20px;
+        @media(max-width: 1024px) {
+          flex-direction: column;
+          padding: 15px 81px 15px 38px;
+          border-radius: 30px;
+
+
+        }
 
         .item_blockLeft {
           width: 50%;
+          @media(max-width: 1024px) {
+            width: 100%;
+
+          }
 
           .item_title {
             @include Text-FS-FW-LH(48px, 400, 56px);
             text-transform: uppercase;
             color: #F2F2F2;
+            @media(max-width: 1024px) {
+              @include Text-FS-FW-LH(32px, 400, 37px);
+            }
+            @media(max-width: 767px) {
+              @include Text-FS-FW-LH(20px, 400, 23px);
+            }
           }
 
           .buttons {
@@ -63,11 +89,17 @@
 
         .item_blockRight {
           margin-top: 68px;
-          width: 35%;
+          width: 45%;
           display: flex;
           flex-direction: column;
           align-items: flex-end;
           row-gap: 7px;
+          @media(max-width: 1024px) {
+            width: 100%;
+            align-items: start;
+
+          }
+
 
           .fillBtn {
             width: 177px;
@@ -79,6 +111,9 @@
           .cost {
             @include Text-FS-FW-LH(48px, 400, 56px);
             color: #F2F2F2;
+            @media(max-width: 767px) {
+              @include Text-FS-FW-LH(32px, 400, 37px);
+            }
           }
 
           .giftBox {
@@ -89,6 +124,9 @@
             .gift {
               @include Text-FS-FW-LH(16px, 400, 150%);
               color: #FFFFFF;
+              @media(max-width: 767px) {
+                @include Text-FS-FW-LH(12px, 400, 150%);
+              }
             }
           }
 
