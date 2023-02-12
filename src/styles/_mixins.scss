@@ -9,3 +9,10 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin H5-Title-For-Mobile() {
+  background: linear-gradient(180deg, #FFFFFF 21.38%, rgba(255, 255, 255, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: none;
+}
