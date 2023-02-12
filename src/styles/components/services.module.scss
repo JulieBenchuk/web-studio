@@ -2,26 +2,38 @@
 @import '../mixins';
 
 .wrapper {
-  padding: 48px 130px 0;
+  padding: 48px 124px 0 143px;
+  @media(max-width: 1024px) {
+    padding: 60px 172px 0 168px;
+
+  }
+  @media(max-width: 767px) {
+    padding: 60px 20px 0 20px;
+  }
 
   .items {
+    position: relative;
     margin-top: 45px;
     @include Flex-Center;
     flex-direction: column;
 
     .itemsBg {
+      position: absolute;
       background: rgba(43, 40, 68, 0.6);
       border-radius: 50px;
-      width: 951px;
+      width: 83.5%;
       height: 980px;
+      @media(max-width: 767px) {
+        display: none;
+      }
     }
 
     .itemsMenu {
-      position: absolute;
+      position: relative;
       display: flex;
       flex-direction: column;
       gap: 20px;
-      padding: 0 10px;
+      width: 100%;
 
       .item_first, .item_second, .item_third {
         display: flex;
@@ -43,6 +55,9 @@
             flex-wrap: wrap;
             gap: 3px;
             padding-top: 9px;
+            @media(max-width: 1024px) {
+              display: none;
+            }
           }
         }
 
@@ -56,6 +71,9 @@
 
           .fillBtn {
             width: 177px;
+            @media(max-width: 1024px) {
+              display: none;
+            }
           }
 
           .cost {
