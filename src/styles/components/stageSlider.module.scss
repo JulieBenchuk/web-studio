@@ -18,8 +18,11 @@
     justify-content: space-between;
     @media (max-width: 1170px) {
       padding: 0 173px;
+      background: url("../../assets/svg/starForTablet.svg");
+
     }
     @media (max-width: 1010px) {
+      background: url("../../assets/svg/starForMobile.svg");
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
