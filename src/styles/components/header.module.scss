@@ -3,6 +3,13 @@
 
 .wrapper {
   width: 100%;
+  padding-bottom: 60px;
+  @media (max-width: 1024px) {
+    padding-bottom: 90px;
+  }
+  @media (max-width: 767px) {
+    padding-bottom: 128px;
+  }
 
 }
 

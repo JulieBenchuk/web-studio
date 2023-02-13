@@ -57,16 +57,19 @@
 
         .titleWrapper {
           padding-left: 90px;
-          padding-top: 110px;
+          padding-top: 50px;
           max-width: 613px;
           @media (max-width: 1024px) {
+            position: relative;
+            bottom: 90px;
             padding-left: 0;
             text-align: center;
-            padding-top: 50px;
+            padding-top: 0;
             @include Text-FS-FW-LH(128px, 700, 148px);
           }
           @media (max-width: 767px) {
-            padding-top: 120px;
+            position: static;
+            padding-top: 0;
             padding-bottom: 68px;
             @include Text-FS-FW-LH(48px, 700, 56px)
 
@@ -79,6 +82,11 @@
         width: 100%;
         @media (max-width: 1024px) {
           @include Flex-Center();
+          position: relative;
+          bottom: 90px;
+        }
+        @media (max-width: 767px) {
+          position: static;
         }
 
         .text {
