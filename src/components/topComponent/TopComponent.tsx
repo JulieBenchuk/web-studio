@@ -22,7 +22,7 @@ const TopComponent = () => {
             <div className={style.topComponent}>
 
                 <div className={style.leftBlock}>
-                    <Header isMainPage={false} currentPage={"Разработка сайтов"}/>
+                    <Header isMainPage={true} currentPage={"Разработка сайтов"}/>
                     <div className={style.titleBlock}>
                         <div className={style.littleGif}>
                             <img src={gif.src} alt={"gif"} height={130}/>
