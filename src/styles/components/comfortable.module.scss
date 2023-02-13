@@ -2,28 +2,50 @@
 @import '../mixins';
 
 .wrapper {
-  padding-top: 129px;
+  padding: 60px 124px 80px 143px;
+  @media(max-width: 1024px) {
+    padding: 0 170px;
+  }
+  @media(max-width: 767px) {
+    padding: 30px 43px 40px 37px;
+  }
 
   .blockComfort {
     margin: 0 auto;
     height: 356px;
     max-width: 1173px;
-    padding: 0 10px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    @media(max-width: 1024px) {
+      height: 173px;
+    }
+    @media(max-width: 767px) {
+      max-height: 116px;
+    }
 
     .rocketsImg {
-      background: url("../../assets/img/Rockets.png") no-repeat 60px 40px;
+      background: url("../../assets/img/Rockets.png") no-repeat 40px 60px;
       width: 50%;
       background-size: 100% auto;
       position: relative;
+      @media(max-width: 1024px) {
+        width: 40%;
+        background-position: 100% 100%;
+      }
+      @media(max-width: 767px) {
+        display: none;
+      }
 
       .comfort_title {
         @include Text-FS-FW-LH(64px, 700, 97.2%);
-        color: #FFFFFF;
+        color: $text-color-primary;
         position: absolute;
         top: 0;
         left: 0;
+        @media(max-width: 1024px) {
+          @include Text-FS-FW-LH(32px, 700, 97.2%);
+        }
       }
     }
 
@@ -31,18 +53,36 @@
       background: url("../../assets/img/circle.png") no-repeat 100% 50px;
       width: 50%;
       position: relative;
+      display: flex;
       background-size: 40% auto;
+      @media(max-width: 1024px) {
+        width: 55%;
+        background-size: 20% auto;
+        background-position: 90% 100%;
+      }
+      @media(max-width: 767px) {
+        background: none;
+        width: 100%;
+      }
+
 
       .comfort_description {
         @include Text-FS-FW-LH(16px, 400, 150%);
         padding: 20px 0 0;
-        color: #FFFFFF;
-        width: 100%;
-        max-width: 400px;
+        color: $text-color-primary;
+        width: 65%;
         height: auto;
         top: 0;
         left: 0;
         position: absolute;
+        @media(max-width: 1024px) {
+          width: 75%;
+        }
+        @media(max-width: 767px) {
+          padding: 0;
+          width: 100%;
+          text-align: center;
+        }
       }
     }
   }
