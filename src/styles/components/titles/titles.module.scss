@@ -3,10 +3,18 @@
 
 .mainTitle {
   font-style: normal;
+  max-width: 1038px;
+  text-transform: uppercase;
   @include Text-FS-FW-LH(128px, 700, 148px);
   letter-spacing: -0.025em;
+  @media (max-width: 1024px) {
+    @include Text-FS-FW-LH(64px, 700, 74px);
+    max-width: 554px;
+  }
   @media (max-width: 767px) {
-    @include Text-FS-FW-LH(48px, 700, 56px)
+    @include Text-FS-FW-LH(48px, 700, 56px);
+    max-width: 465px;
+    text-align: center;
 
   }
 }

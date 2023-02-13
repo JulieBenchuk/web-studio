@@ -74,6 +74,9 @@
     color: #FFFFFF;
     opacity: 0.4;
     padding-top: 20px;
+    @media (max-width: 1220px) {
+      display: none;
+    }
 
   }
 }

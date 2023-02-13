@@ -58,14 +58,18 @@
         .titleWrapper {
           padding-left: 90px;
           padding-top: 110px;
+          max-width: 613px;
           @media (max-width: 1024px) {
             padding-left: 0;
             text-align: center;
             padding-top: 50px;
+            @include Text-FS-FW-LH(128px, 700, 148px);
           }
           @media (max-width: 767px) {
             padding-top: 120px;
             padding-bottom: 68px;
+            @include Text-FS-FW-LH(48px, 700, 56px)
+
           }
 
         }
