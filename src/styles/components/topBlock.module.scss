@@ -3,4 +3,19 @@
 
 .wrapper {
   padding: 40px 130px 60px 130px;
+  @media(max-width: 1024px) {
+    padding: 33px 170px 90px 170px;
+  }
+  @media(max-width: 767px) {
+    padding: 40px 20px 27px 20px;
+  }
+
+  .bgImage {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 0;
+
+  }
+
 }
