@@ -7,9 +7,11 @@ import gift from '../../assets/svg/gift.svg'
 import style from '../../styles/components/services.module.scss'
 import FullButton from "@/components/common/buttons/FullButton";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
+import Link from "next/link";
 
 
 const Services = () => {
+
     return (
         <>
             <Wrapper className={style.wrapper}>
@@ -19,7 +21,9 @@ const Services = () => {
                     <div className={style.itemsMenu}>
                         <div className={style.item_first}>
                             <div className={style.item_blockLeft}>
-                                <h5 className={style.item_title}>РАЗРАБОТКА САЙТОВ</h5>
+                                <h5 className={style.item_title}>
+                                    <Link href={'/development'}>РАЗРАБОТКА САЙТОВ</Link>
+                                </h5>
                                 <div className={style.buttons}>
                                     <LinkBtn>Cайт-Визитка</LinkBtn>
                                     <LinkBtn>Промо-сайт</LinkBtn>
@@ -39,7 +43,9 @@ const Services = () => {
                         </div>
                         <div className={style.item_second}>
                             <div className={style.item_blockLeft}>
-                                <h5 className={style.item_title}>Интернет Продвижение</h5>
+                                <h5 className={style.item_title}>
+                                    <Link href={'/promotion'}>Интернет продвижение</Link>
+                                </h5>
                                 <div className={style.buttons}>
                                     <LinkBtn>SEO продвижение</LinkBtn>
                                     <LinkBtn>Контекстная реклама</LinkBtn>
@@ -57,7 +63,8 @@ const Services = () => {
                         </div>
                         <div className={style.item_third}>
                             <div className={style.item_blockLeft}>
-                                <h5 className={style.item_title}>Дизайн</h5>
+                                <h5 className={style.item_title}>
+                                    <Link href={'/design'}>Дизайн</Link></h5>
                                 <div className={style.buttons}>
                                     <LinkBtn>UI и UX дизайн</LinkBtn>
                                     <LinkBtn>Редизайн сайта</LinkBtn>
