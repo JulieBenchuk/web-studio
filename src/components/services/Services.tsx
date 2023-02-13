@@ -8,9 +8,11 @@ import style from '../../styles/components/services.module.scss'
 import FullButton from "@/components/common/buttons/FullButton";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 
 const Services = () => {
+    const router = useRouter();
 
     return (
         <>
@@ -33,7 +35,9 @@ const Services = () => {
                                 </div>
                             </div>
                             <div className={style.item_blockRight}>
-                                <FullButton className={style.fillBtn}>Подробнее</FullButton>
+                                <FullButton className={style.fillBtn} onClick={() => {
+                                    router.push('/development')
+                                }}>Подробнее</FullButton>
                                 <h5 className={style.cost}>от 34 990 &#8381;</h5>
                                 <div className={style.giftBox}>
                                     <Image alt={'gift'} src={gift} width={`${20}`} height={`${20}`}/>
@@ -53,7 +57,9 @@ const Services = () => {
                                 </div>
                             </div>
                             <div className={style.item_blockRight}>
-                                <FullButton className={style.fillBtn}>Подробнее</FullButton>
+                                <FullButton className={style.fillBtn} onClick={() => {
+                                    router.push('/promotion')
+                                }}>Подробнее</FullButton>
                                 <h5 className={style.cost}>от 24 990 &#8381;</h5>
                                 <div className={style.giftBox}>
                                     <Image alt={'gift'} src={gift} width={`${20}`} height={`${20}`}/>
@@ -71,7 +77,9 @@ const Services = () => {
                                 </div>
                             </div>
                             <div className={style.item_blockRight}>
-                                <FullButton className={style.fillBtn}>Подробнее</FullButton>
+                                <FullButton className={style.fillBtn} onClick={() => {
+                                    router.push('/design')
+                                }}>Подробнее</FullButton>
                                 <h5 className={style.cost}>от 25 990 &#8381;</h5>
                                 <div className={style.giftBox}>
                                     <Image alt={'gift'} src={gift} width={`${20}`} height={`${20}`}/>
