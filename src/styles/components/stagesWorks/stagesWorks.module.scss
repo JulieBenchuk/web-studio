@@ -1,0 +1,40 @@
+@import '../../variables';
+@import '../../mixins';
+
+.wrapper {
+  display: flex;
+  gap: 36px;
+
+  .numbersBlock {
+    @include Flex-Center();
+    flex-direction: column;
+    background: $bg-third;
+    border-radius: 38px;
+    width: 196px;
+    height: 190px;
+    box-shadow: 14px 14px 2px 1px $bg-five;
+
+    .number {
+      @include Text-FS-FW-LH(110px, 700, 97.2%);
+      color: $text-color-primary;
+    }
+
+    .subTitle {
+      @include Text-FS-FW-LH(20px, 400, 23px);
+      text-transform: uppercase;
+      color: $text-color-secondary;
+    }
+  }
+
+  .descriptionBlock {
+    .title {
+      @include Text-FS-FW-LH(64px, 700, 97.2%);
+      color: $text-color-primary;
+    }
+
+    .description {
+      @include Text-FS-FW-LH(18px, 400, 150%);
+      color: $text-color-primary;
+    }
+  }
+}
