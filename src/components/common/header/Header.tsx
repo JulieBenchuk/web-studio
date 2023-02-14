@@ -4,9 +4,11 @@ import logo from '../../../assets/svg/Logo.svg'
 import style from '../../../styles/components/header.module.scss'
 import Wrapper from "@/components/common/wrapper";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
+import {useRouter} from "next/router";
 
 const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainPage, currentPage}) => {
 
+    const router = useRouter()
     return (
         <Wrapper className={style.wrapper}>
             <header className={style.header}>
@@ -24,7 +26,11 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
 
                     </div>
                 </div>
-                {!isMainPage && <span className={style.currentPage}>Главная &#8226; {currentPage}</span>}
+                {!isMainPage && <span className={style.currentPage}>
+                    <span className={style.mainPageLink} onClick={() => {
+                        router.push('/')
+                    }}>Главная</span> &#8226; {currentPage}
+                </span>}
             </header>
         </Wrapper>
     );

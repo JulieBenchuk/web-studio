@@ -2,17 +2,17 @@ import React from 'react';
 import Head from "next/head";
 import style from "@/styles/Home.module.scss";
 import TopBlock from "@/components/common/topBlock/TopBlock";
-import bgImage from "@/assets/svg/promotionBg.svg";
+import bgImage from "@/assets/svg/supportBg.svg";
 
-const Promotion: React.FC<{}> = () => {
+const Support = () => {
     return (
         <>
             <Head>
-                <title>Promotion</title>
+                <title>Support</title>
             </Head>
             <main className={style.main}>
-                <TopBlock currentPage={"Интернет продвижение"}
-                          serviceDescription={"— Для быстрого привлечения ваших клиентов и увеличении конверсии"}
+                <TopBlock currentPage={"поддержка сайта"}
+                          serviceDescription={"— С гарантированным временем реакции и фиксированным сроком выполнения задач"}
                           backgroundImage={bgImage.src} button={"Заполнить анкету"}
                           buttonDescription={"Заполните анкету, чтобы получить бесплатную консультацию"}
                 />
@@ -22,4 +22,4 @@ const Promotion: React.FC<{}> = () => {
     );
 };
 
-export default Promotion;
+export default Support;
