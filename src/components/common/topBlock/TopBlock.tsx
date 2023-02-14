@@ -9,13 +9,15 @@ const TopBlock: React.FC<{}> = () => {
     return (
         <Wrapper className={style.wrapper}>
             <Header isMainPage={false} currentPage={"Разработка сайтов"}/>
-            <MainTitle title={"Разработка сайтов"}/>
-            <div className={style.bgImageBlock}>
-                <img src={bgImage.src} alt="background" className={style.bgImage}/>
+            <div className={style.mainTitleBlock}>
+                <MainTitle title={"Разработка сайтов"}/>
             </div>
             <div className={style.description}>— сайты, построенные на современных технологиях и фреймворках. Понятный
                 frontend для пользователя, который подключается к CMS, и надежный backend для стабильной работы
                 продукта.
+            </div>
+            <div className={style.bgImageBlock}>
+                <img src={bgImage.src} alt="background" className={style.bgImage}/>
             </div>
 
 
