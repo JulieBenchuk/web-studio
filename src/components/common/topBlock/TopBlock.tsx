@@ -4,6 +4,7 @@ import Header from "@/components/common/header/Header";
 import style from "./../../../styles/components/topBlock.module.scss"
 import bgImage from "../../../assets/img/developmentTopBg.png"
 import MainTitle from "@/components/common/Titles/MainTitle";
+import FullButton from "@/components/common/buttons/FullButton";
 
 const TopBlock: React.FC<{}> = () => {
     return (
@@ -18,6 +19,14 @@ const TopBlock: React.FC<{}> = () => {
             </div>
             <div className={style.bgImageBlock}>
                 <img src={bgImage.src} alt="background" className={style.bgImage}/>
+            </div>
+            <div className={style.costBlock}>
+                <div>
+                    <FullButton> Рассчитать стоимость </FullButton>
+                </div>
+                <span className={style.costDescription}>Финальная стоимость работы всегда напрямую зависит от объёма,
+                    необходимых технических решений и уровня проработки дизайна проекта.
+                </span>
             </div>
 
 

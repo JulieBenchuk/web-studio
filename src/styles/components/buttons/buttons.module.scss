@@ -36,10 +36,8 @@
   background: $bg-five;
   border-radius: 22px;
   border: none;
+  @include Text-FS-FW-LH(20px, 700, 23px);
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
   color: $text-color-primary;
   z-index: 3;
 

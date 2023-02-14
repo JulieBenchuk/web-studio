@@ -60,4 +60,23 @@
 
   }
 
+  .costBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin-top: 48px;
+    margin-left: 16%;
+    width: 80%;
+    border: 0.1px solid $text-color-primary;
+    border-radius: 30px;
+
+
+    .costDescription {
+      @include Text-FS-FW-LH(16px, 400, 150%);
+      margin-left: 29px;
+
+    }
+  }
+
 }
