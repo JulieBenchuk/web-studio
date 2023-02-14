@@ -33,6 +33,11 @@
       position: absolute;
       top: 60px;
       right: 0;
+      overflow: hidden;
+      width: 45%;
+      @media(max-width: 1024px) {
+        max-width: 40%;
+      }
       @media(max-width: 767px) {
         max-width: 360px;
         position: static;

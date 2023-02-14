@@ -2,7 +2,7 @@ import React from 'react';
 import Wrapper from "@/components/common/wrapper";
 import Header from "@/components/common/header/Header";
 import style from "./../../../styles/components/topBlock.module.scss"
-import bgImage from "../../../assets/img/developmentTopBg.png"
+import bgImage from "../../../assets/svg/developmentBg.svg"
 import MainTitle from "@/components/common/Titles/MainTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 
