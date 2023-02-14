@@ -14,9 +14,12 @@ import gifBackground from '../../assets/img/BigGifBackground.png'
 import gif from '../../assets/gif/gifMain.gif'
 
 import style from '../../styles/components/topComponent.module.scss'
+import {useRouter} from "next/router";
 
 
 const TopComponent = () => {
+    const router = useRouter()
+
     return (
         <Wrapper className={style.wrapper}>
             <div className={style.topComponent}>
@@ -43,7 +46,9 @@ const TopComponent = () => {
                                 консультацию</p>
                         </div>
                     </div>
-                    <FullButton className={style.buttonFillForm}>Заполнить анкету</FullButton>
+                    <FullButton className={style.buttonFillForm} onClick={() => {
+                        router.push('/questionnaire')
+                    }}>Заполнить анкету</FullButton>
                 </div>
 
                 <div className={style.rightBlock}>
