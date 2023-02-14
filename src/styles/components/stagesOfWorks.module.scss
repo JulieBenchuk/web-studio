@@ -1,0 +1,30 @@
+@import '../mixins';
+@import '../variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &:nth-child(n+1) {
+    row-gap: 100px;
+  }
+
+
+  .topBlock {
+    display: flex;
+
+    .titleBlock {
+
+      .description {
+        padding-top: 32px;
+        white-space: pre-wrap;
+        @include Text-FS-FW-LH(16PX, 400, 150%);
+        color: $text-color-primary;
+
+      }
+    }
+
+  }
+
+
+}
