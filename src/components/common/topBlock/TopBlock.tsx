@@ -22,7 +22,7 @@ const TopBlock: React.FC<{}> = () => {
             </div>
             <div className={style.costBlock}>
                 <div>
-                    <FullButton> Рассчитать стоимость </FullButton>
+                    <FullButton className={style.button}> Рассчитать стоимость </FullButton>
                 </div>
                 <span className={style.costDescription}>Финальная стоимость работы всегда напрямую зависит от объёма,
                     необходимых технических решений и уровня проработки дизайна проекта.
