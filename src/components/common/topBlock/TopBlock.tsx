@@ -5,13 +5,14 @@ import style from "./../../../styles/components/topBlock.module.scss"
 import MainTitle from "@/components/common/Titles/MainTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 
-const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, backgroundImage: string, button: string, buttonDescription: string }> = ({
-                                                                                                                                                         currentPage,
-                                                                                                                                                         serviceDescription,
-                                                                                                                                                         backgroundImage,
-                                                                                                                                                         button,
-                                                                                                                                                         buttonDescription
-                                                                                                                                                     }) => {
+const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, backgroundImage: string, button?: string, buttonDescription?: string, imageClassName?: string }> = ({
+                                                                                                                                                                                    currentPage,
+                                                                                                                                                                                    serviceDescription,
+                                                                                                                                                                                    backgroundImage,
+                                                                                                                                                                                    button,
+                                                                                                                                                                                    buttonDescription,
+                                                                                                                                                                                    imageClassName
+                                                                                                                                                                                }) => {
     return (
         <Wrapper className={style.wrapper}>
             <Header isMainPage={false} currentPage={currentPage}/>
@@ -20,7 +21,8 @@ const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, back
             </div>
             <div className={style.description}>{serviceDescription}</div>
             <div className={style.bgImageBlock}>
-                <img src={backgroundImage} alt="background" className={style.bgImage}/>
+                <img src={backgroundImage} alt="background"
+                     className={imageClassName ? `${style.bgImage} ${imageClassName}` : style.bgImage}/>
             </div>
             <div className={style.costBlock}>
                 <div>
