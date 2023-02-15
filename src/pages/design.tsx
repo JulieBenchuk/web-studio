@@ -2,7 +2,7 @@ import React from 'react';
 import Head from "next/head";
 import style from "@/styles/Home.module.scss";
 import TopBlock from "@/components/common/topBlock/TopBlock";
-import bgImage from "@/assets/svg/designBg.svg";
+import bgImage from "@/assets/img/webDesignBg.png";
 
 const Design: React.FC<{}> = () => {
     return (
