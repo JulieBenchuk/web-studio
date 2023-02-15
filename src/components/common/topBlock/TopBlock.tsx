@@ -5,37 +5,48 @@ import style from "./../../../styles/components/topBlock.module.scss"
 import MainTitle from "@/components/common/Titles/MainTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 import {useRouter} from "next/router";
+import coins from "../../../assets/img/coins.png"
+import gift from "../../../assets/img/rotatedGift.png"
 
-const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, backgroundImage: string, button?: string, buttonDescription?: string, imageClassName?: string }> = ({
-                                                                                                                                                                                    currentPage,
-                                                                                                                                                                                    serviceDescription,
-                                                                                                                                                                                    backgroundImage,
-                                                                                                                                                                                    button,
-                                                                                                                                                                                    buttonDescription,
-                                                                                                                                                                                    imageClassName
-                                                                                                                                                                                }) => {
+const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, backgroundImage: string, button?: string, buttonDescription?: string, buttonImage?: "coins" | "gift", imageClassName?: string, isCostBlockWide?: boolean, isMainTitleWide?: boolean }> = ({
+                                                                                                                                                                                                                                                                          currentPage,
+                                                                                                                                                                                                                                                                          serviceDescription,
+                                                                                                                                                                                                                                                                          backgroundImage,
+                                                                                                                                                                                                                                                                          button,
+                                                                                                                                                                                                                                                                          buttonDescription,
+                                                                                                                                                                                                                                                                          imageClassName,
+                                                                                                                                                                                                                                                                          isCostBlockWide,
+                                                                                                                                                                                                                                                                          isMainTitleWide,
+                                                                                                                                                                                                                                                                          buttonImage
+                                                                                                                                                                                                                                                                      }) => {
     const router = useRouter()
 
     return (
         <Wrapper className={style.wrapper}>
+            {button &&
+                <img src={buttonImage == "coins" ? coins.src : gift.src} alt={"image"}
+                     className={buttonImage == "coins" ? style.coinsImage : style.giftImage}/>}
             <Header isMainPage={false} currentPage={currentPage}/>
             <div className={style.mainTitleBlock}>
-                <MainTitle title={currentPage}/>
+                <MainTitle title={currentPage} isMainTitleWide={isMainTitleWide}/>
             </div>
             <div className={style.description}>{serviceDescription}</div>
             <div className={style.bgImageBlock}>
                 <img src={backgroundImage} alt="background"
                      className={imageClassName ? `${style.bgImage} ${imageClassName}` : style.bgImage}/>
             </div>
-            {button && <div className={style.costBlock}>
-                <div>
-                    <FullButton className={style.button} onClick={button == "Заполнить анкету" ? () => {
-                        router.push('/questionnaire')
-                    } : () => {
-                    }}> {button} </FullButton>
-                </div>
-                <span className={style.costDescription}>{buttonDescription}</span>
-            </div>}
+            {button &&
+                <div className={isCostBlockWide ? style.costBlockWide : style.costBlock}>
+                    <div>
+                        <FullButton className={style.button} onClick={button == "Заполнить анкету" ? () => {
+                            router.push('/questionnaire')
+                        } : () => {
+                        }}>
+                            {button}
+                        </FullButton>
+                    </div>
+                    <span className={style.costDescription}>{buttonDescription}</span>
+                </div>}
 
 
         </Wrapper>

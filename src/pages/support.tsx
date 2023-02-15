@@ -15,6 +15,7 @@ const Support = () => {
                           serviceDescription={"— С гарантированным временем реакции и фиксированным сроком выполнения задач"}
                           backgroundImage={bgImage.src} button={"Заполнить анкету"}
                           buttonDescription={"Заполните анкету, чтобы получить бесплатную консультацию"}
+                          buttonImage={"gift"}
                 />
             </main>
 

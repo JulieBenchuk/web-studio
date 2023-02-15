@@ -19,6 +19,19 @@
   }
 }
 
+.mainTitleWide {
+  @extend .mainTitle;
+  @media (max-width: 1098px) {
+    @include Text-FS-FW-LH(64px, 700, 74px);
+    max-width: 554px;
+  }
+  @media (max-width: 767px) {
+    @include Text-FS-FW-LH(48px, 700, 56px);
+    max-width: 370px;
+    text-align: center;
+  }
+}
+
 .title {
   @include Text-FS-FW-LH(110px, 700, 94.7%);
   background: linear-gradient(180deg, $text-color-primary 21.38%, rgba(255, 255, 255, 0) 100%);

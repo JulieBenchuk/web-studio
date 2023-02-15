@@ -2,6 +2,7 @@
 @import '../mixins';
 
 .wrapper {
+  position: relative;
   padding: 40px 130px 60px 130px;
   @media(max-width: 1024px) {
     padding: 33px 170px 90px 170px;
@@ -17,6 +18,26 @@
   .mainTitleBlock {
     @media(max-width: 767px) {
       @include Flex-Center();
+    }
+  }
+
+  .giftImage {
+    z-index: 0;
+    position: absolute;
+    bottom: 40px;
+    left: 15%;
+    @media(max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .coinsImage {
+    z-index: 0;
+    position: absolute;
+    bottom: -40px;
+    left: 4%;
+    @media(max-width: 1024px) {
+      display: none;
     }
   }
 
@@ -55,6 +76,7 @@
   }
 
   .description {
+    z-index: 1;
     @include Text-FS-FW-LH(16px, 400, 150%);
     max-width: 420px;
     padding-top: 48px;
@@ -74,13 +96,14 @@
   }
 
   .costBlock {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 20px;
     margin-top: 48px;
     margin-left: 16%;
-    width: 80%;
+    max-width: 520px;
     border: 0.1px solid $text-color-primary;
     border-radius: 30px;
     @media (max-width: 1024px) {
@@ -114,6 +137,23 @@
       }
 
     }
+
   }
+
+  .costBlockWide {
+    @extend .costBlock;
+    max-width: 80%;
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+
+    .costDescription {
+      @media (max-width: 1024px) {
+        margin-left: 6px;
+        @include Text-FS-FW-LH(14px, 400, 150%);
+      }
+    }
+  }
+
 
 }
