@@ -9,13 +9,14 @@ const StagesOfWork = () => {
     return (
         <Wrapper className={style.wrapper}>
             <div className={style.titleBlock}>
-                <SmallTitle>Этапы работы</SmallTitle>
+                <SmallTitle className={style.title}>Этапы работы</SmallTitle>
                 <p className={style.description}>
                     {'Сроки этапов варьируются в зависимости\nот их объёма и сложности:'}
                 </p>
             </div>
             {dataStagesDevelopment.map(el =>
-                <StagesWork text={el.desc} title={el.title} number={Number(el.id)} key={el.id}/>
+                <StagesWork className={style.content} text={el.desc} title={el.title} number={Number(el.id)}
+                            key={el.id}/>
             )}
         </Wrapper>
     );
