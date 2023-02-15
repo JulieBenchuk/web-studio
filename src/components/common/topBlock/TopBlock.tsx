@@ -5,6 +5,8 @@ import style from "./../../../styles/components/topBlock.module.scss"
 import MainTitle from "@/components/common/Titles/MainTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 import {useRouter} from "next/router";
+import Image from "next/image";
+import coins from "../../../assets/img/coins.png"
 
 const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, backgroundImage: string, button?: string, buttonDescription?: string, imageClassName?: string, isCostBlockWide?: boolean, isMainTitleWide?: boolean }> = ({
                                                                                                                                                                                                                                           currentPage,
@@ -20,6 +22,7 @@ const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, back
 
     return (
         <Wrapper className={style.wrapper}>
+            <img src={coins.src} alt={"image"} className={style.costImage}/>
             <Header isMainPage={false} currentPage={currentPage}/>
             <div className={style.mainTitleBlock}>
                 <MainTitle title={currentPage} isMainTitleWide={isMainTitleWide}/>
@@ -35,7 +38,9 @@ const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, back
                         <FullButton className={style.button} onClick={button == "Заполнить анкету" ? () => {
                             router.push('/questionnaire')
                         } : () => {
-                        }}> {button} </FullButton>
+                        }}>
+                            {button}
+                        </FullButton>
                     </div>
                     <span className={style.costDescription}>{buttonDescription}</span>
                 </div>}

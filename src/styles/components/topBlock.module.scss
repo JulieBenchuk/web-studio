@@ -21,6 +21,16 @@
     }
   }
 
+  .costImage {
+    z-index: 0;
+    position: absolute;
+    bottom: -40px;
+    left: 30px;
+    @media(max-width: 1024px) {
+      display: none;
+    }
+  }
+
   .bgImageBlock {
     @media(max-width: 767px) {
       display: flex;
@@ -56,6 +66,7 @@
   }
 
   .description {
+    z-index: 1;
     @include Text-FS-FW-LH(16px, 400, 150%);
     max-width: 420px;
     padding-top: 48px;
@@ -75,6 +86,7 @@
   }
 
   .costBlock {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -115,6 +127,7 @@
       }
 
     }
+
   }
 
   .costBlockWide {
