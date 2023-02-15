@@ -6,7 +6,7 @@ const MainTitle: React.FC<{ title: string, className?: string, isMainTitleWide?:
                                                                                                    className,
                                                                                                    isMainTitleWide
                                                                                                }) => {
-    const finalClass = isMainTitleWide ? `${style.mainTitle} ${style.mainTitleWide}` : style.mainTitle
+    const finalClass = isMainTitleWide ? `${style.mainTitle} ${style.mainTitleWide}` : className ? `${style.mainTitle} ${className}` : style.mainTitle
 
     return (
         <h1 className={finalClass}>{title}</h1>
