@@ -11,7 +11,7 @@ const Design: React.FC<{}> = () => {
                 <title>Design</title>
             </Head>
             <main className={style.main}>
-                <TopBlock currentPage={"Веб-дизайн"}
+                <TopBlock currentPage={"UI/UX Дизайн"}
                           serviceDescription={"— имидж и стиль. Грамотная концепция формирует первое впечатление. Это всегда требует больше внимания"}
                           backgroundImage={bgImage.src} button={"Заполнить анкету"}
                           buttonDescription={"Заполните анкету, чтобы получить бесплатную консультацию"}
