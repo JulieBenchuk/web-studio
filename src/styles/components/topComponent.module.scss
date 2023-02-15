@@ -116,6 +116,10 @@
           width: 276px;
           height: 193px;
           bottom: 32px;
+          background: rgba(217, 217, 217, 0.1);
+          backdrop-filter: blur(34px);
+          border-radius: 50px;
+          z-index: 1;
           @media (max-width: 1250px) {
             left: 0;
 
@@ -126,6 +130,8 @@
             height: 40px;
             bottom: 70px;
             left: 0;
+            background: none;
+            backdrop-filter: none;
 
           }
 
@@ -134,18 +140,6 @@
             position: relative;
             bottom: 15px;
             z-index: 3;
-            @media (max-width: 1024px) {
-              display: none;
-            }
-
-          }
-
-          .background {
-            position: absolute;
-            left: 0;
-            border-radius: 50px;
-            background-color: $bg-seven;
-            z-index: 1;
             @media (max-width: 1024px) {
               display: none;
             }

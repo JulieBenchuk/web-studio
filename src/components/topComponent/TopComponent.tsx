@@ -9,7 +9,6 @@ import FullButton from "@/components/common/buttons/FullButton";
 import ground from "@/assets/svg/ground.svg";
 import gift from '../../assets/svg/giftConsultation.svg'
 import vectorLogo from '../../assets/svg/vectorLogo.svg'
-import giftBckgrnd from '../../assets/svg/giftConsultBackground.svg'
 import gifBackground from '../../assets/img/BigGifBackground.png'
 import gif from '../../assets/gif/gifMain.gif'
 
@@ -41,7 +40,6 @@ const TopComponent = () => {
                     <div className={style.consultationBlock}>
                         <div className={style.consultation}>
                             <img src={gift.src} alt={"free consultation"} className={style.gift}/>
-                            <img src={giftBckgrnd.src} alt={"free consultation"} className={style.background}/>
                             <p className={style.consultationText}>Заполните анкету, чтобы получить бесплатную
                                 консультацию</p>
                         </div>
