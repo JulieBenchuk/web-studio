@@ -15,7 +15,8 @@ const StagesOfWork = () => {
                 </p>
             </div>
             {dataStagesDevelopment.map(el =>
-                <StagesWork text={el.desc} title={el.title} number={Number(el.id)} key={el.id}/>
+                <StagesWork className={style.content} text={el.desc} title={el.title} number={Number(el.id)}
+                            key={el.id}/>
             )}
         </Wrapper>
     );
