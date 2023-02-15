@@ -21,11 +21,21 @@
     }
   }
 
-  .costImage {
+  .giftImage {
+    z-index: 0;
+    position: absolute;
+    bottom: 40px;
+    left: 15%;
+    @media(max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .coinsImage {
     z-index: 0;
     position: absolute;
     bottom: -40px;
-    left: 30px;
+    left: 4%;
     @media(max-width: 1024px) {
       display: none;
     }

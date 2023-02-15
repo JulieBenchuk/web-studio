@@ -5,24 +5,27 @@ import style from "./../../../styles/components/topBlock.module.scss"
 import MainTitle from "@/components/common/Titles/MainTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 import {useRouter} from "next/router";
-import Image from "next/image";
 import coins from "../../../assets/img/coins.png"
+import gift from "../../../assets/img/rotatedGift.png"
 
-const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, backgroundImage: string, button?: string, buttonDescription?: string, imageClassName?: string, isCostBlockWide?: boolean, isMainTitleWide?: boolean }> = ({
-                                                                                                                                                                                                                                          currentPage,
-                                                                                                                                                                                                                                          serviceDescription,
-                                                                                                                                                                                                                                          backgroundImage,
-                                                                                                                                                                                                                                          button,
-                                                                                                                                                                                                                                          buttonDescription,
-                                                                                                                                                                                                                                          imageClassName,
-                                                                                                                                                                                                                                          isCostBlockWide,
-                                                                                                                                                                                                                                          isMainTitleWide
-                                                                                                                                                                                                                                      }) => {
+const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, backgroundImage: string, button?: string, buttonDescription?: string, buttonImage?: "coins" | "gift", imageClassName?: string, isCostBlockWide?: boolean, isMainTitleWide?: boolean }> = ({
+                                                                                                                                                                                                                                                                          currentPage,
+                                                                                                                                                                                                                                                                          serviceDescription,
+                                                                                                                                                                                                                                                                          backgroundImage,
+                                                                                                                                                                                                                                                                          button,
+                                                                                                                                                                                                                                                                          buttonDescription,
+                                                                                                                                                                                                                                                                          imageClassName,
+                                                                                                                                                                                                                                                                          isCostBlockWide,
+                                                                                                                                                                                                                                                                          isMainTitleWide,
+                                                                                                                                                                                                                                                                          buttonImage
+                                                                                                                                                                                                                                                                      }) => {
     const router = useRouter()
 
     return (
         <Wrapper className={style.wrapper}>
-            <img src={coins.src} alt={"image"} className={style.costImage}/>
+            {button &&
+                <img src={buttonImage == "coins" ? coins.src : gift.src} alt={"image"}
+                     className={buttonImage == "coins" ? style.coinsImage : style.giftImage}/>}
             <Header isMainPage={false} currentPage={currentPage}/>
             <div className={style.mainTitleBlock}>
                 <MainTitle title={currentPage} isMainTitleWide={isMainTitleWide}/>

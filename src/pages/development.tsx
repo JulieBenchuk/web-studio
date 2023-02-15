@@ -21,6 +21,7 @@ const Development: React.FC<{}> = ({}) => {
                           buttonDescription={"Финальная стоимость работы всегда напрямую зависит от объёма,\n" +
                               "                    необходимых технических решений и уровня проработки дизайна проекта."}
                           isCostBlockWide={true}
+                          buttonImage={"coins"}
                 />
                 <StagesOfWork/>
             </main>

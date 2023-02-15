@@ -15,6 +15,7 @@ const Design: React.FC<{}> = () => {
                           serviceDescription={"— имидж и стиль. Грамотная концепция формирует первое впечатление. Это всегда требует больше внимания"}
                           backgroundImage={bgImage.src} button={"Заполнить анкету"}
                           buttonDescription={"Заполните анкету, чтобы получить бесплатную консультацию"}
+                          buttonImage={"gift"}
                 />
             </main>
         </>

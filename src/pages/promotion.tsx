@@ -15,7 +15,7 @@ const Promotion: React.FC<{}> = () => {
                           serviceDescription={"— Для быстрого привлечения ваших клиентов и увеличении конверсии"}
                           backgroundImage={bgImage.src} button={"Заполнить анкету"}
                           buttonDescription={"Заполните анкету, чтобы получить бесплатную консультацию"}
-                          isMainTitleWide={true}
+                          isMainTitleWide={true} buttonImage={"gift"}
                 />
             </main>
 
