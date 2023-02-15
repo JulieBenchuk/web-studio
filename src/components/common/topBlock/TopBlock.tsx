@@ -6,22 +6,23 @@ import MainTitle from "@/components/common/Titles/MainTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 import {useRouter} from "next/router";
 
-const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, backgroundImage: string, button?: string, buttonDescription?: string, imageClassName?: string, isCostBlockWide?: boolean }> = ({
-                                                                                                                                                                                                               currentPage,
-                                                                                                                                                                                                               serviceDescription,
-                                                                                                                                                                                                               backgroundImage,
-                                                                                                                                                                                                               button,
-                                                                                                                                                                                                               buttonDescription,
-                                                                                                                                                                                                               imageClassName,
-                                                                                                                                                                                                               isCostBlockWide
-                                                                                                                                                                                                           }) => {
+const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, backgroundImage: string, button?: string, buttonDescription?: string, imageClassName?: string, isCostBlockWide?: boolean, isMainTitleWide?: boolean }> = ({
+                                                                                                                                                                                                                                          currentPage,
+                                                                                                                                                                                                                                          serviceDescription,
+                                                                                                                                                                                                                                          backgroundImage,
+                                                                                                                                                                                                                                          button,
+                                                                                                                                                                                                                                          buttonDescription,
+                                                                                                                                                                                                                                          imageClassName,
+                                                                                                                                                                                                                                          isCostBlockWide,
+                                                                                                                                                                                                                                          isMainTitleWide
+                                                                                                                                                                                                                                      }) => {
     const router = useRouter()
 
     return (
         <Wrapper className={style.wrapper}>
             <Header isMainPage={false} currentPage={currentPage}/>
             <div className={style.mainTitleBlock}>
-                <MainTitle title={currentPage}/>
+                <MainTitle title={currentPage} isMainTitleWide={isMainTitleWide}/>
             </div>
             <div className={style.description}>{serviceDescription}</div>
             <div className={style.bgImageBlock}>
