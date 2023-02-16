@@ -34,6 +34,7 @@
 
 
     .titleRow {
+      z-index: 1;
       @include Text-FS-FW-LH(64px, 700, 97.2%);
       padding-bottom: 16px;
       max-width: 700px;
@@ -57,6 +58,7 @@
 
     .gifAndTextRow {
       display: flex;
+      z-index: 1;
 
       .gifBlock {
         @include Flex-Center();
@@ -105,7 +107,56 @@
       padding: 30px 0 0 0;
     }
 
+    .gears {
+      position: relative;
+      border: 1px solid yellow;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+
+      .purple {
+        position: absolute;
+        right: -150px;
+        top: -250px;
+      }
+
+      .pink {
+        position: absolute;
+        top: 120px;
+        right: 230px;
+      }
+
+      .blue {
+        position: absolute;
+        right: 350px;
+        top: 0;
+      }
+
+      .blueBig {
+        position: absolute;
+        top: 180px;
+        left: -200px;
+      }
+
+      .green {
+        position: absolute;
+        top: 170px;
+        left: 150px;
+      }
+
+      .greenBig {
+        position: absolute;
+        top: 375px;
+        left: 200px;
+        z-index: 0;
+      }
+    }
+
+
     .design, .frontend, .backend {
+      z-index: 1;
       position: absolute;
       display: flex;
       flex-direction: column;
