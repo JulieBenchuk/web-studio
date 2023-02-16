@@ -23,9 +23,18 @@ const ToolsAndTechnologies = () => {
 
             </div>
             <div className={style.technologyBlock}>
-                <div className={style.design}></div>
-                <div className={style.frontend}></div>
-                <div className={style.backend}></div>
+                <div className={style.design}>
+                    <div className={style.designTitle}>Дизайн и проектирование</div>
+                    <div className={style.designBlock}></div>
+                </div>
+                <div className={style.frontend}>
+                    <div className={style.frontTitle}>FRONT-END</div>
+                    <div className={style.frontBlock}></div>
+                </div>
+                <div className={style.backend}>
+                    <div className={style.backTitle}>BACK-END</div>
+                    <div className={style.backBlock}></div>
+                </div>
             </div>
 
         </Wrapper>
