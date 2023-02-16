@@ -120,30 +120,53 @@
         position: absolute;
         right: -150px;
         top: -250px;
+        @media (max-width: 1024px) {
+          width: 271px;
+          right: -100px;
+          top: -100px;
+        }
       }
 
       .pink {
         position: absolute;
         top: 120px;
         right: 230px;
+        @media (max-width: 1024px) {
+          width: 143px;
+          right: -20px;
+          top: 480px;
+        }
       }
 
       .blue {
         position: absolute;
         right: 350px;
         top: 0;
+        @media (max-width: 1024px) {
+          width: 222px;
+          right: 100px;
+          top: 0;
+        }
       }
 
       .blueBig {
         position: absolute;
-        top: 180px;
+        top: 160px;
         left: -200px;
+        @media (max-width: 1024px) {
+          width: 359px;
+        }
       }
 
       .green {
         position: absolute;
         top: 170px;
         left: 150px;
+        @media (max-width: 1024px) {
+          width: 281px;
+          top: 500px;
+          left: 270px;
+        }
       }
 
       .greenBig {
@@ -151,6 +174,9 @@
         top: 375px;
         left: 200px;
         z-index: 0;
+        @media (max-width: 1024px) {
+          display: none;
+        }
       }
     }
 
