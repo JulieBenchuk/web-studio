@@ -2,5 +2,77 @@
 @import '../variables';
 
 .wrapper {
+  background-color: rosybrown;
+  padding: 147px 134px 0 130px;
+  position: relative;
+  color: $text-color-primary;
+  @media(max-width: 1024px) {
+    padding: 90px 170px 0 172px;
+  }
+
+  .toolsInfoBlock {
+    background-color: #9A219C;
+    width: 827px;
+    display: flex;
+    flex-direction: column;
+    @media(max-width: 1024px) {
+      width: 100%;
+    }
+
+    .titleRow {
+      background-color: red;
+      @include Text-FS-FW-LH(64px, 700, 97.2%);
+      padding-bottom: 16px;
+      width: 700px;
+      @media(max-width: 1024px) {
+        @include Text-FS-FW-LH(32px, 700, 97.2%);
+        width: 339px;
+      }
+    }
+
+    .gifAndTextRow {
+      display: flex;
+      position: relative;
+
+      .gifBock {
+        @include Flex-Center();
+        width: 418px;
+        height: 116px;
+        overflow: hidden;
+        margin-right: 29px;
+        @media(max-width: 1024px) {
+          width: 220px;
+          height: 61.05px;
+        }
+
+        .gif {
+
+
+        }
+      }
+
+      .text {
+        background-color: green;
+        @include Text-FS-FW-LH(16px, 400, 150%);
+        width: 380px;
+        position: relative;
+        bottom: 48px;
+      }
+    }
+  }
+
+  .technologyBlock {
+    .design {
+
+    }
+
+    .frontend {
+
+    }
+
+    .backend {
+
+    }
+  }
 }
 
