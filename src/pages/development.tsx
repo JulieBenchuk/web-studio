@@ -6,6 +6,8 @@ import StagesOfWork from "@/components/stagesOfWork/stagesOfWork";
 import bgImage from "../assets/svg/developmentBg.svg"
 import ToolsAndTechnologies from "@/components/02_Development/ToolsAndTechnologies/ToolsAndTechnologies";
 import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
+import {Footer} from "@/components/common/footer/Footer";
+import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 
 const Development: React.FC<{}> = ({}) => {
 
@@ -28,6 +30,8 @@ const Development: React.FC<{}> = ({}) => {
                 <OurBenefits/>
                 <StagesOfWork/>
                 <ToolsAndTechnologies/>
+                <CallBackMe/>
+                <Footer/>
             </main>
 
         </>
