@@ -1,15 +1,10 @@
 import React from 'react';
-import style from "@/styles/components/toolsAndTechnologies.module.scss"
 import Wrapper from "@/components/common/wrapper";
+import FilteredTools from "@/components/02_Development/ToolsAndTechnologies/FilteredTools";
+import GearsList from "@/components/02_Development/ToolsAndTechnologies/GearsList";
+import style from "@/styles/components/toolsAndTechnologies.module.scss"
 import spaceGif from "@/assets/gif/space.gif"
 import {toolItems} from "@/components/02_Development/ToolsAndTechnologies/ToolItems";
-import purpleGear from "@/assets/img/gears_icons/purpleGear.png"
-import pinkGear from "@/assets/img/gears_icons/roseGear.png"
-import blueBigGear from "@/assets/img/gears_icons/blueGear.png"
-import blueGear from "@/assets/img/gears_icons/blueGear2.png"
-import greenGear from "@/assets/img/gears_icons/greenGear.png"
-import greenBigGear from "@/assets/img/gears_icons/greenGear2.png"
-import FilteredTools from "@/components/02_Development/ToolsAndTechnologies/FilteredTools";
 
 
 const ToolsAndTechnologies = () => {
@@ -62,14 +57,7 @@ const ToolsAndTechnologies = () => {
 
                     </div>
                 </div>
-                <div className={style.gears}>
-                    <img src={purpleGear.src} alt="tool" className={style.purple}/>
-                    <img src={pinkGear.src} alt="tool" className={style.pink}/>
-                    <img src={blueGear.src} alt="tool" className={style.blue}/>
-                    <img src={blueBigGear.src} alt="tool" className={style.blueBig}/>
-                    <img src={greenGear.src} alt="tool" className={style.green}/>
-                    <img src={greenBigGear.src} alt="tool" className={style.greenBig}/>
-                </div>
+                <GearsList/>
             </div>
         </Wrapper>
     );
