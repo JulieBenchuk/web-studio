@@ -2,6 +2,8 @@ import React from 'react';
 import style from "@/styles/components/toolsAndTechnologies.module.scss"
 import Wrapper from "@/components/common/wrapper";
 import spaceGif from "@/assets/gif/space.gif"
+import figma from "@/assets/img/tools_icons/figma.png"
+
 
 const ToolsAndTechnologies = () => {
     return (
@@ -25,11 +27,70 @@ const ToolsAndTechnologies = () => {
             <div className={style.technologyBlock}>
                 <div className={style.design}>
                     <div className={style.designTitle}>Дизайн и проектирование</div>
-                    <div className={style.designBlock}></div>
+                    <div className={style.designBlock}>
+
+                        <div className={style.toolItem}>
+                            <div className={style.toolIcon}>
+                                <img src={figma.src} alt="icon"/>
+                            </div>
+                            <div className={style.toolName}>Figma</div>
+                        </div>
+
+                        <div className={style.toolItem}>
+                            <div className={style.toolIcon}>
+                                <img src={figma.src} alt="icon"/>
+                            </div>
+                            <div className={style.toolName}>Figma</div>
+                        </div>
+
+                    </div>
                 </div>
                 <div className={style.frontend}>
                     <div className={style.frontTitle}>FRONT-END</div>
-                    <div className={style.frontBlock}></div>
+                    <div className={style.frontBlock}>
+                        <div className={style.toolItem}>
+                            <div className={style.toolIcon}>
+                                <img src={figma.src} alt="icon"/>
+                            </div>
+                            <div className={style.toolName}>Figma</div>
+                        </div>
+                        <div className={style.toolItem}>
+                            <div className={style.toolIcon}>
+                                <img src={figma.src} alt="icon"/>
+                            </div>
+                            <div className={style.toolName}>Figma</div>
+                        </div>
+                        <div className={style.toolItem}>
+                            <div className={style.toolIcon}>
+                                <img src={figma.src} alt="icon"/>
+                            </div>
+                            <div className={style.toolName}>Figma</div>
+                        </div>
+                        <div className={style.toolItem}>
+                            <div className={style.toolIcon}>
+                                <img src={figma.src} alt="icon"/>
+                            </div>
+                            <div className={style.toolName}>Figma</div>
+                        </div>
+                        <div className={style.toolItem}>
+                            <div className={style.toolIcon}>
+                                <img src={figma.src} alt="icon"/>
+                            </div>
+                            <div className={style.toolName}>Figma</div>
+                        </div>
+                        <div className={style.toolItem}>
+                            <div className={style.toolIcon}>
+                                <img src={figma.src} alt="icon"/>
+                            </div>
+                            <div className={style.toolName}>Figma</div>
+                        </div>
+                        <div className={style.toolItem}>
+                            <div className={style.toolIcon}>
+                                <img src={figma.src} alt="icon"/>
+                            </div>
+                            <div className={style.toolName}>Figma</div>
+                        </div>
+                    </div>
                 </div>
                 <div className={style.backend}>
                     <div className={style.backTitle}>BACK-END</div>
