@@ -4,6 +4,7 @@ import Head from "next/head";
 import style from "@/styles/Home.module.scss";
 import StagesOfWork from "@/components/stagesOfWork/stagesOfWork";
 import bgImage from "../assets/svg/developmentBg.svg"
+import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
 
 const Development: React.FC<{}> = ({}) => {
 
@@ -24,6 +25,7 @@ const Development: React.FC<{}> = ({}) => {
                           buttonImage={"coins"}
                 />
                 <StagesOfWork/>
+                <OurBenefits/>
             </main>
 
         </>
