@@ -9,6 +9,7 @@ import blueBigGear from "@/assets/img/gears_icons/blueGear.png"
 import blueGear from "@/assets/img/gears_icons/blueGear2.png"
 import greenGear from "@/assets/img/gears_icons/greenGear.png"
 import greenBigGear from "@/assets/img/gears_icons/greenGear2.png"
+import FilteredTools from "@/components/02_Development/ToolsAndTechnologies/FilteredTools";
 
 
 const ToolsAndTechnologies = () => {
@@ -36,12 +37,7 @@ const ToolsAndTechnologies = () => {
                     <div className={style.designBlock}>
 
                         {toolItems.filter(i => i.id > 0 && i.id < 3).map((i) => {
-                            return <div className={style.toolItem}>
-                                <div className={style.toolIcon}>
-                                    <img src={i.img} alt="icon"/>
-                                </div>
-                                <div className={style.toolName}>{i.title}</div>
-                            </div>
+                            return <FilteredTools title={i.title} img={i.img}/>
                         })}
 
                     </div>
@@ -51,12 +47,7 @@ const ToolsAndTechnologies = () => {
                     <div className={style.frontBlock}>
 
                         {toolItems.filter(i => i.id > 2 && i.id < 12).map((i) => {
-                            return <div className={style.toolItem}>
-                                <div className={style.toolIcon}>
-                                    <img src={i.img} alt="icon"/>
-                                </div>
-                                <div className={style.toolName}>{i.title}</div>
-                            </div>
+                            return <FilteredTools title={i.title} img={i.img}/>
                         })}
 
                     </div>
@@ -66,12 +57,7 @@ const ToolsAndTechnologies = () => {
                     <div className={style.backBlock}>
 
                         {toolItems.filter(i => i.id > 11 && i.id < 15).map((i) => {
-                            return <div className={style.toolItem}>
-                                <div className={style.toolIcon}>
-                                    <img src={i.img} alt="icon"/>
-                                </div>
-                                <div className={style.toolName}>{i.title}</div>
-                            </div>
+                            return <FilteredTools title={i.title} img={i.img}/>
                         })}
 
                     </div>
