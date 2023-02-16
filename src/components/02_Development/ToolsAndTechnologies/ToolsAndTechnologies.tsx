@@ -2,7 +2,6 @@ import React from 'react';
 import style from "@/styles/components/toolsAndTechnologies.module.scss"
 import Wrapper from "@/components/common/wrapper";
 import spaceGif from "@/assets/gif/space.gif"
-import figma from "@/assets/img/tools_icons/figma.png"
 import {toolItems} from "@/components/02_Development/ToolsAndTechnologies/ToolItems";
 
 
@@ -30,14 +29,12 @@ const ToolsAndTechnologies = () => {
                     <div className={style.designTitle}>Дизайн и проектирование</div>
                     <div className={style.designBlock}>
                         {toolItems.filter(i => i.id > 0 && i.id < 3).map((i) => {
-                            return (
-                                <div className={style.toolItem}>
-                                    <div className={style.toolIcon}>
-                                        <img src={i.img} alt="icon"/>
-                                    </div>
-                                    <div className={style.toolName}>{i.title}</div>
+                            return <div className={style.toolItem}>
+                                <div className={style.toolIcon}>
+                                    <img src={i.img} alt="icon"/>
                                 </div>
-                            )
+                                <div className={style.toolName}>{i.title}</div>
+                            </div>
                         })}
 
                     </div>
@@ -46,14 +43,12 @@ const ToolsAndTechnologies = () => {
                     <div className={style.frontTitle}>FRONT-END</div>
                     <div className={style.frontBlock}>
                         {toolItems.filter(i => i.id > 2 && i.id < 12).map((i) => {
-                            return (
-                                <div className={style.toolItem}>
-                                    <div className={style.toolIcon}>
-                                        <img src={i.img} alt="icon"/>
-                                    </div>
-                                    <div className={style.toolName}>{i.title}</div>
+                            return <div className={style.toolItem}>
+                                <div className={style.toolIcon}>
+                                    <img src={i.img} alt="icon"/>
                                 </div>
-                            )
+                                <div className={style.toolName}>{i.title}</div>
+                            </div>
                         })}
 
                     </div>
@@ -62,15 +57,14 @@ const ToolsAndTechnologies = () => {
                     <div className={style.backTitle}>BACK-END</div>
                     <div className={style.backBlock}>
                         {toolItems.filter(i => i.id > 11 && i.id < 15).map((i) => {
-                            return (
-                                <div className={style.toolItem}>
-                                    <div className={style.toolIcon}>
-                                        <img src={i.img} alt="icon"/>
-                                    </div>
-                                    <div className={style.toolName}>{i.title}</div>
+                            return <div className={style.toolItem}>
+                                <div className={style.toolIcon}>
+                                    <img src={i.img} alt="icon"/>
                                 </div>
-                            )
+                                <div className={style.toolName}>{i.title}</div>
+                            </div>
                         })}
+
                     </div>
                 </div>
             </div>
