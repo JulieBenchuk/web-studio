@@ -5,6 +5,7 @@ import style from "@/styles/Home.module.scss";
 import StagesOfWork from "@/components/stagesOfWork/stagesOfWork";
 import bgImage from "../assets/svg/developmentBg.svg"
 import ToolsAndTechnologies from "@/components/02_Development/ToolsAndTechnologies/ToolsAndTechnologies";
+import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
 
 const Development: React.FC<{}> = ({}) => {
 
@@ -24,6 +25,7 @@ const Development: React.FC<{}> = ({}) => {
                           isCostBlockWide={true}
                           buttonImage={"coins"}
                 />
+                <OurBenefits/>
                 <StagesOfWork/>
                 <ToolsAndTechnologies/>
             </main>
