@@ -3,6 +3,7 @@ import style from "@/styles/components/toolsAndTechnologies.module.scss"
 import Wrapper from "@/components/common/wrapper";
 import spaceGif from "@/assets/gif/space.gif"
 import figma from "@/assets/img/tools_icons/figma.png"
+import {toolItems} from "@/components/02_Development/ToolsAndTechnologies/ToolItems";
 
 
 const ToolsAndTechnologies = () => {
@@ -28,73 +29,49 @@ const ToolsAndTechnologies = () => {
                 <div className={style.design}>
                     <div className={style.designTitle}>Дизайн и проектирование</div>
                     <div className={style.designBlock}>
-
-                        <div className={style.toolItem}>
-                            <div className={style.toolIcon}>
-                                <img src={figma.src} alt="icon"/>
-                            </div>
-                            <div className={style.toolName}>Figma</div>
-                        </div>
-
-                        <div className={style.toolItem}>
-                            <div className={style.toolIcon}>
-                                <img src={figma.src} alt="icon"/>
-                            </div>
-                            <div className={style.toolName}>Figma</div>
-                        </div>
+                        {toolItems.filter(i => i.id > 0 && i.id < 3).map((i) => {
+                            return (
+                                <div className={style.toolItem}>
+                                    <div className={style.toolIcon}>
+                                        <img src={i.img} alt="icon"/>
+                                    </div>
+                                    <div className={style.toolName}>{i.title}</div>
+                                </div>
+                            )
+                        })}
 
                     </div>
                 </div>
                 <div className={style.frontend}>
                     <div className={style.frontTitle}>FRONT-END</div>
                     <div className={style.frontBlock}>
-                        <div className={style.toolItem}>
-                            <div className={style.toolIcon}>
-                                <img src={figma.src} alt="icon"/>
-                            </div>
-                            <div className={style.toolName}>Figma</div>
-                        </div>
-                        <div className={style.toolItem}>
-                            <div className={style.toolIcon}>
-                                <img src={figma.src} alt="icon"/>
-                            </div>
-                            <div className={style.toolName}>Figma</div>
-                        </div>
-                        <div className={style.toolItem}>
-                            <div className={style.toolIcon}>
-                                <img src={figma.src} alt="icon"/>
-                            </div>
-                            <div className={style.toolName}>Figma</div>
-                        </div>
-                        <div className={style.toolItem}>
-                            <div className={style.toolIcon}>
-                                <img src={figma.src} alt="icon"/>
-                            </div>
-                            <div className={style.toolName}>Figma</div>
-                        </div>
-                        <div className={style.toolItem}>
-                            <div className={style.toolIcon}>
-                                <img src={figma.src} alt="icon"/>
-                            </div>
-                            <div className={style.toolName}>Figma</div>
-                        </div>
-                        <div className={style.toolItem}>
-                            <div className={style.toolIcon}>
-                                <img src={figma.src} alt="icon"/>
-                            </div>
-                            <div className={style.toolName}>Figma</div>
-                        </div>
-                        <div className={style.toolItem}>
-                            <div className={style.toolIcon}>
-                                <img src={figma.src} alt="icon"/>
-                            </div>
-                            <div className={style.toolName}>Figma</div>
-                        </div>
+                        {toolItems.filter(i => i.id > 2 && i.id < 12).map((i) => {
+                            return (
+                                <div className={style.toolItem}>
+                                    <div className={style.toolIcon}>
+                                        <img src={i.img} alt="icon"/>
+                                    </div>
+                                    <div className={style.toolName}>{i.title}</div>
+                                </div>
+                            )
+                        })}
+
                     </div>
                 </div>
                 <div className={style.backend}>
                     <div className={style.backTitle}>BACK-END</div>
-                    <div className={style.backBlock}></div>
+                    <div className={style.backBlock}>
+                        {toolItems.filter(i => i.id > 11 && i.id < 15).map((i) => {
+                            return (
+                                <div className={style.toolItem}>
+                                    <div className={style.toolIcon}>
+                                        <img src={i.img} alt="icon"/>
+                                    </div>
+                                    <div className={style.toolName}>{i.title}</div>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
 
