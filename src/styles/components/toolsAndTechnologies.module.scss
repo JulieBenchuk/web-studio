@@ -99,8 +99,7 @@
   }
 
   .technologyBlock {
-    min-height: 944px;
-    /*  background-color: #3F3954;*/
+    min-height: 1050px;
     position: relative;
     padding: 137px 76px 0 76px;
     @media (max-width: 1024px) {
@@ -109,7 +108,6 @@
 
     .gears {
       position: relative;
-      border: 1px solid yellow;
       top: 0;
       left: 0;
       right: 0;
@@ -125,6 +123,11 @@
           right: -100px;
           top: -100px;
         }
+        @media (max-width: 767px) {
+          width: 143px;
+          right: 80px;
+          top: 10px;
+        }
       }
 
       .pink {
@@ -135,6 +138,11 @@
           width: 143px;
           right: -20px;
           top: 480px;
+        }
+        @media (max-width: 767px) {
+          width: 105px;
+          right: 10px;
+          top: 130px;
         }
       }
 
@@ -147,6 +155,12 @@
           right: 100px;
           top: 0;
         }
+        @media (max-width: 767px) {
+          width: 185px;
+          right: 10px;
+          top: 640px;
+          z-index: 2;
+        }
       }
 
       .blueBig {
@@ -155,6 +169,11 @@
         left: -200px;
         @media (max-width: 1024px) {
           width: 359px;
+        }
+        @media (max-width: 767px) {
+          width: 163px;
+          top: 180px;
+          left: 80px;
         }
       }
 
@@ -166,6 +185,11 @@
           width: 281px;
           top: 500px;
           left: 270px;
+        }
+        @media (max-width: 767px) {
+          width: 147px;
+          top: 210px;
+          left: -60px;
         }
       }
 
@@ -191,6 +215,9 @@
         @include Text-FS-FW-LH(20px, 400, 23px);
         padding: 0 24px 24px;
         text-transform: uppercase;
+        @media (max-width: 767px) {
+          padding: 0 0 24px 0;
+        }
       }
 
       .designBlock, .frontBlock, .backBlock {
@@ -198,7 +225,7 @@
         flex-direction: row;
         flex-wrap: wrap-reverse;
         min-height: 134px;
-        border: 0.1px solid $text-color-primary;
+        border: 0.5px solid $text-color-primary;
         border-radius: 35px;
         background: rgba(217, 217, 217, 0.1);
         backdrop-filter: blur(34px);
@@ -250,6 +277,7 @@
         width: 320px;
         height: 420px;
         top: 303px;
+        z-index: 0;
       }
 
       .frontTitle {
@@ -276,6 +304,7 @@
       }
       @media (max-width: 767px) {
         top: 760px;
+        z-index: 0;
       }
 
       .backTitle {

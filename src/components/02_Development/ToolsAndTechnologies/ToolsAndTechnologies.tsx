@@ -34,6 +34,7 @@ const ToolsAndTechnologies = () => {
                 <div className={style.design}>
                     <div className={style.designTitle}>Дизайн и проектирование</div>
                     <div className={style.designBlock}>
+
                         {toolItems.filter(i => i.id > 0 && i.id < 3).map((i) => {
                             return <div className={style.toolItem}>
                                 <div className={style.toolIcon}>
@@ -48,6 +49,7 @@ const ToolsAndTechnologies = () => {
                 <div className={style.frontend}>
                     <div className={style.frontTitle}>FRONT-END</div>
                     <div className={style.frontBlock}>
+
                         {toolItems.filter(i => i.id > 2 && i.id < 12).map((i) => {
                             return <div className={style.toolItem}>
                                 <div className={style.toolIcon}>
@@ -62,6 +64,7 @@ const ToolsAndTechnologies = () => {
                 <div className={style.backend}>
                     <div className={style.backTitle}>BACK-END</div>
                     <div className={style.backBlock}>
+
                         {toolItems.filter(i => i.id > 11 && i.id < 15).map((i) => {
                             return <div className={style.toolItem}>
                                 <div className={style.toolIcon}>
