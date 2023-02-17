@@ -1,8 +1,9 @@
 import React from 'react';
 import Head from "next/head";
 import style from "@/styles/Home.module.scss";
-import TopBlock from "@/components/common/topBlock/TopBlock";
 import bgImage from "@/assets/svg/promotionBg.svg";
+import TopBlock from "@/components/common/topBlock/TopBlock";
+import WhoNeedPromotion from "@/components/03_Promotion/WhoNeedPromotion/WhoNeedPromotion";
 
 const Promotion: React.FC<{}> = () => {
     return (
@@ -17,6 +18,8 @@ const Promotion: React.FC<{}> = () => {
                           buttonDescription={"Заполните анкету, чтобы получить бесплатную консультацию"}
                           isMainTitleWide={true} buttonImage={"gift"}
                 />
+                <WhoNeedPromotion/>
+
             </main>
 
         </>

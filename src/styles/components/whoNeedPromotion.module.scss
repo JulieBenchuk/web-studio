@@ -1,0 +1,67 @@
+@import '../variables';
+@import '../mixins';
+
+.wrapper {
+  padding: 0 130px 100px 130px;
+
+  .content {
+    background-color: #3F3954;
+    display: flex;
+
+    .topPart {
+      background-color: #7200FD;
+
+      .topText {
+        background-color: brown;
+      }
+
+      .girlImg {
+        background-color: rosybrown;
+      }
+    }
+
+    .nextPart {
+      background-color: #2139B9;
+
+      .textBlock {
+        background-color: darkcyan;
+
+        .first {
+          background-color: orange;
+
+        }
+
+        .second {
+          background-color: #986e41;
+
+        }
+
+        .third {
+          background-color: #836238;
+
+        }
+      }
+
+      .buttonBlock {
+        background-color: hotpink;
+
+        .buttonDescription {
+
+        }
+      }
+    }
+  }
+
+  .title {
+    @include Text-FS-FW-LH(110px, 700, 97.2%);
+    max-width: 900px;
+    @media (max-width: 1024px) {
+      max-width: 468px;
+    }
+    @media (max-width: 767px) {
+      max-width: 360px;
+    }
+  }
+
+}
+
