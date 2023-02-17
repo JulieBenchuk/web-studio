@@ -26,9 +26,11 @@ const Guarantees = () => {
                 <div className={style.videoBg}>
                     <div className={style.cards}>
                         {guaranteesPromiseData.map(el =>
-                            <div className={style.card} key={el.id}>
-                                <h5 className={style.cardTitle}>{el.title}</h5>
-                                <p className={style.cardDescription}>{el.description}</p>
+                            <div className={style.wrapperCard} key={el.id}>
+                                <div className={style.card}>
+                                    <h5 className={style.cardTitle}>{el.title}</h5>
+                                    <p className={style.cardDescription}>{el.description}</p>
+                                </div>
                             </div>)}
                     </div>
                 </div>
