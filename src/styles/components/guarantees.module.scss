@@ -1,0 +1,83 @@
+@import '../variables';
+@import '../mixins';
+
+.wrapper {
+  padding: 180px 6.5% 0;
+  @include Flex-Center();
+  flex-direction: column;
+
+  .title {
+    @include Text-FS-FW-LH(64px, 700, 97.2%);
+    color: $text-color-primary;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .bigBlock {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .astroBg {
+      max-width: 50%;
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      background: url("../../assets/Group.png") no-repeat 50% 20%;
+    }
+
+    .items {
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .itemTitle {
+          @include Text-FS-FW-LH(64px, 700, 97.2%);
+          color: $text-color-primary;
+        }
+
+        .itemDescription {
+          @include Text-FS-FW-LH(18px, 400, 150%);
+          color: $text-color-primary;
+          word-break: break-word;
+          white-space: pre-wrap;
+        }
+      }
+    }
+  }
+
+  .smallBlock {
+    .videoBg {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      background: url("../../assets/MenGlass.png") no-repeat 50%;
+    }
+
+    .cards {
+      display: grid;
+
+      .card {
+        .cardTitle {
+          @include Text-FS-FW-LH(48px, 400, 56px);
+          text-transform: uppercase;
+          color: $text-color-primary;
+        }
+
+        .cardDescription {
+          @include Text-FS-FW-LH(18px, 400, 150%);
+          color: $text-color-primary;
+        }
+      }
+    }
+  }
+
+
+}

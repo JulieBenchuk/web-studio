@@ -5,6 +5,7 @@ import style from "@/styles/Home.module.scss";
 import StagesOfWork from "@/components/stagesOfWork/stagesOfWork";
 import bgImage from "../assets/svg/developmentBg.svg"
 import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
+import Guarantees from "@/components/guarantees/Guarantees";
 
 const Development: React.FC<{}> = ({}) => {
 
@@ -26,6 +27,7 @@ const Development: React.FC<{}> = ({}) => {
                 />
                 <StagesOfWork/>
                 <OurBenefits/>
+                <Guarantees/>
             </main>
 
         </>
