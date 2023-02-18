@@ -30,6 +30,11 @@
     max-width: 370px;
     text-align: center;
   }
+  @media (max-width: 370px) {
+    @include Text-FS-FW-LH(44px, 700, 56px);
+    max-width: 360px;
+  }
+
 }
 
 .title {
