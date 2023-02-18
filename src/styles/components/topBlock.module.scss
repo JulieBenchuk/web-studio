@@ -19,6 +19,7 @@
     @media(max-width: 767px) {
       @include Flex-Center();
     }
+
   }
 
   .bgImageBlock {
@@ -106,7 +107,7 @@
 
     .button {
       @media (max-width: 767px) {
-        min-width: 360px;
+        min-width: 350px;
         @include Text-FS-FW-LH(16px, 700, 19px);
       }
     }
