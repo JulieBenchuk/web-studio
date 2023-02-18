@@ -38,6 +38,7 @@
 }
 
 .title {
+  z-index: 1;
   @include Text-FS-FW-LH(110px, 700, 94.7%);
   background: linear-gradient(180deg, $text-color-primary 21.38%, rgba(255, 255, 255, 0) 100%);
   -webkit-background-clip: text;

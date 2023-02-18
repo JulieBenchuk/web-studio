@@ -9,6 +9,54 @@
   @media (max-width: 767px) {
     padding: 0 18px 60px 20px;
   }
+  position: relative;
+
+  .gifBlock {
+    z-index: 0;
+    position: absolute;
+    top: 50px;
+    right: 250px;
+    width: 500px;
+    height: 500px;
+    border: 1px solid $bg-primary;
+    overflow: hidden;
+    border-radius: 50%;
+    @media (max-width: 1405px) {
+   
+    }
+    @media (max-width: 1024px) {
+
+    }
+
+    img {
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 500px;
+      height: 500px;
+    }
+
+    .questMark {
+      z-index: 0;
+      font-size: 650px;
+      font-weight: bold;
+      color: $text-color-primary;
+      background: $bg-primary;
+      mix-blend-mode: darken;
+      width: 500px;
+      height: 500px;
+      overflow: hidden;
+      line-height: 70%;
+      text-align: center;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+  }
 
   .content {
     /*    background-color: #3F3954;*/
@@ -198,6 +246,8 @@
   }
 
   .title {
+    position: relative;
+    z-index: 1;
     @include Text-FS-FW-LH(110px, 700, 97.2%);
     max-width: 900px;
     @media (max-width: 1024px) {

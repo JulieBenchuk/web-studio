@@ -4,12 +4,18 @@ import style from "@/styles/components/whoNeedPromotion.module.scss"
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 import girl from "@/assets/img/promotionGirl.png"
+import gif from "@/assets/gif/promotionWhoNeed.gif"
 
 const WhoNeedPromotion = () => {
     return (
         <Wrapper className={style.wrapper}>
 
             <SmallTitle className={style.title}>Кому нужно продвижение?</SmallTitle>
+
+            <div className={style.gifBlock}>
+                <img src={gif.src} alt="promotion"/>
+                <div className={style.questMark}>?</div>
+            </div>
 
             <div className={style.content}>
 
