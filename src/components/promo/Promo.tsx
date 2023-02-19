@@ -7,13 +7,13 @@ import Image from "next/image";
 
 const Promo = () => {
     return (
-        <Wrapper>
-            <SmallTitle className={style.title}>Что мы продвигаем</SmallTitle>
+        <Wrapper className={style.wrapper}>
+            <SmallTitle className={style.title}>Что мы продвигаем?</SmallTitle>
             <div className={style.items}>
-                {PromoData.map(el=><div key={el.id}>
+                {PromoData.map(el => <div key={el.id} className={style.item}>
                     <Image src={el.img} alt={''}/>
-                    <h5>{el.title}</h5>
-                    <p>{el.description}</p>
+                    <h5 className={style.itemTitle}>{el.title}</h5>
+                    <p className={style.itemDescription}>{el.description}</p>
                 </div>)}
             </div>
         </Wrapper>
