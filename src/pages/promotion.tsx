@@ -4,6 +4,8 @@ import style from "@/styles/Home.module.scss";
 import bgImage from "@/assets/svg/promotionBg.svg";
 import TopBlock from "@/components/common/topBlock/TopBlock";
 import WhoNeedPromotion from "@/components/03_Promotion/WhoNeedPromotion/WhoNeedPromotion";
+import CallBackMe from "@/components/common/callBackMe/CallBackMe";
+import {Footer} from "@/components/common/footer/Footer";
 
 const Promotion: React.FC<{}> = () => {
     return (
@@ -19,7 +21,8 @@ const Promotion: React.FC<{}> = () => {
                           isMainTitleWide={true} buttonImage={"gift"}
                 />
                 <WhoNeedPromotion/>
-
+                <CallBackMe/>
+                <Footer/>
             </main>
 
         </>
