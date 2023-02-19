@@ -2,5 +2,62 @@
 @import "../variables";
 
 .wrapper {
+  height: 1400px; //need delete!!!!!!!!!!
+  position: relative;
+
+  .content {
+    padding: 0 130px;
+    @media (max-width: 1024px) {
+      padding: 0 155px;
+    }
+    @media (max-width: 767px) {
+      padding: 0 20px;
+    }
+
+    .title {
+      max-width: 819px;
+      @include Text-FS-FW-LH(110px, 700, 97.2%);
+    }
+
+    .tasks {
+      padding-top: 23px;
+
+      .topTask {
+
+      }
+
+      .leftTask {
+
+      }
+
+      .rightTask {
+
+      }
+
+      .tasksDescription {
+        @include Text-FS-FW-LH(18px, 400, 150%)
+
+      }
+    }
+
+    .visual {
+    }
+
+  }
+
+  .background {
+    @include Flex-Center();
+
+    .spaceman {
+
+    }
+
+    .waves {
+      position: absolute;
+      bottom: 0;
+      width: 100vw;
+    }
+  }
+
 
 }
