@@ -18,9 +18,8 @@
     right: 250px;
     width: 500px;
     height: 500px;
-    border: 1px solid $bg-primary;
-    overflow: hidden;
     border-radius: 50%;
+    overflow: hidden;
     @media (max-width: 1400px) {
       width: 500px;
       height: 500px;
@@ -66,8 +65,7 @@
       mix-blend-mode: darken;
       width: 500px;
       height: 500px;
-      overflow: hidden;
-      line-height: 70%;
+      line-height: 71%;
       text-align: center;
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
