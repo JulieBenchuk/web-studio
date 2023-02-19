@@ -16,6 +16,7 @@
 
     .item {
       @include Flex-Center();
+      justify-content: space-evenly;
       flex-direction: column;
       border: double 1px transparent;
       border-radius: 35px;

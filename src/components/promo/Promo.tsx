@@ -11,7 +11,7 @@ const Promo = () => {
             <SmallTitle className={style.title}>Что мы продвигаем?</SmallTitle>
             <div className={style.items}>
                 {PromoData.map(el => <div key={el.id} className={style.item}>
-                    <Image src={el.img} alt={''}/>
+                    <Image src={el.img} alt={''} width={130} height={85}/>
                     <h5 className={style.itemTitle}>{el.title}</h5>
                     <p className={style.itemDescription}>{el.description}</p>
                 </div>)}
