@@ -2,6 +2,7 @@
 @import '../../mixins';
 
 .mainTitle {
+  position: relative;
   z-index: 2;
   font-style: normal;
   max-width: 1038px;
