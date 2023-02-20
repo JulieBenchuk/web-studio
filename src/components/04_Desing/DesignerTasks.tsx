@@ -2,6 +2,7 @@ import React from 'react';
 import Wrapper from "@/components/common/wrapper";
 import style from "@/styles/components/designerTasks.module.scss"
 import spaceman from "@/assets/img/desing_spaceman.png"
+import stars from "@/assets/img/desing_stars.png"
 import waves from "@/assets/img/desing_waves.png"
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 
@@ -12,6 +13,7 @@ const DesignerTasks = () => {
                 <SmallTitle className={style.title}>Задачи дизайнера</SmallTitle>
                 <div className={style.tasks}>
                     <img src={spaceman.src} alt="design" className={style.spaceman}/>
+                    <img src={stars.src} alt="design" className={style.stars}/>
                     <div className={style.topTask}>Выделить компанию на фоне конкурентов</div>
                     <div className={style.leftTask}>сделать сайт запоминающимся</div>
                     <div className={style.rightTask}>Сделать понятный логичный визуал для удобного пользования клиентами

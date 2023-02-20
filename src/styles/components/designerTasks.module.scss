@@ -34,7 +34,14 @@
         top: -80px;
         max-width: 874px;
 
+      }
 
+      .stars {
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -200px;
       }
 
 
