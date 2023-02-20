@@ -87,16 +87,50 @@
     }
 
     .visual {
-    }
+      padding-top: 95px;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 80px;
 
-  }
 
-  .background {
+      .visualTitle {
+        z-index: 0;
+        align-self: center;
+        @include Text-FS-FW-LH(110px, 700, 97.2%);
 
-    .waves {
-      position: absolute;
-      bottom: 0;
-      width: 100vw;
+      }
+
+      .visualDescription {
+        z-index: 1;
+        align-self: end;
+        padding-top: 210px;
+        max-width: 679px;
+
+        .visualText {
+          padding-bottom: 30px;
+          @include Text-FS-FW-LH(18px, 400, 150%);
+        }
+
+        .visualButton {
+          z-index: 1;
+
+        }
+
+      }
+
+      .background {
+        z-index: 0;
+
+        .waves {
+          z-index: 0;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          max-width: 100%;
+
+        }
+      }
+
     }
   }
 
