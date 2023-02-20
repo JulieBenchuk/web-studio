@@ -4,6 +4,8 @@ import style from "@/styles/Home.module.scss";
 import TopBlock from "@/components/common/topBlock/TopBlock";
 import bgImage from "@/assets/img/webDesignBg.png";
 import DesignerTasks from "@/components/04_Desing/DesignerTasks";
+import CallBackMe from "@/components/common/callBackMe/CallBackMe";
+import {Footer} from "@/components/common/footer/Footer";
 
 const Design: React.FC<{}> = () => {
     return (
@@ -19,6 +21,8 @@ const Design: React.FC<{}> = () => {
                           buttonImage={"gift"}
                 />
                 <DesignerTasks/>
+                <CallBackMe/>
+                <Footer/>
             </main>
         </>
     );
