@@ -2,10 +2,11 @@
 @import "../variables";
 
 .wrapper {
-  height: 1400px; //need delete!!!!!!!!!!
+
   position: relative;
 
   .content {
+    overflow: hidden;
     padding: 0 130px;
     @media (max-width: 1024px) {
       padding: 0 155px;
@@ -21,20 +22,58 @@
 
     .tasks {
       padding-top: 23px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .spaceman {
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -80px;
+        max-width: 874px;
+
+
+      }
+
+
+      .topTask, .leftTask, .rightTask {
+        z-index: 1;
+        border: 1px solid $text-color-primary;
+        backdrop-filter: blur(34px);
+        border-radius: 35px;
+        text-transform: uppercase;
+        @include Text-FS-FW-LH(20px, 700, 123.7%);
+        padding: 36px 34px;
+      }
 
       .topTask {
+        align-self: center;
+        max-width: 557px;
+
 
       }
 
       .leftTask {
+        align-self: start;
+        margin-top: 148px;
+        margin-bottom: -70px;
 
       }
 
       .rightTask {
+        align-self: end;
+        max-width: 570px;
 
       }
 
       .tasksDescription {
+        z-index: 1;
+        margin-top: 313px;
+        max-width: 670px;
+        text-align: center;
+        align-self: center;
         @include Text-FS-FW-LH(18px, 400, 150%)
 
       }
@@ -46,11 +85,6 @@
   }
 
   .background {
-    @include Flex-Center();
-
-    .spaceman {
-
-    }
 
     .waves {
       position: absolute;

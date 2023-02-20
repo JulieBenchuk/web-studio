@@ -11,6 +11,7 @@ const DesignerTasks = () => {
             <div className={style.content}>
                 <SmallTitle className={style.title}>Задачи дизайнера</SmallTitle>
                 <div className={style.tasks}>
+                    <img src={spaceman.src} alt="design" className={style.spaceman}/>
                     <div className={style.topTask}>Выделить компанию на фоне конкурентов</div>
                     <div className={style.leftTask}>сделать сайт запоминающимся</div>
                     <div className={style.rightTask}>Сделать понятный логичный визуал для удобного пользования клиентами
@@ -20,12 +21,11 @@ const DesignerTasks = () => {
                         продумывает наиболее верные решения для подачи информации
                     </div>
                 </div>
-                <div className={style.visual}></div>
+                <div className={style.visual}>Контент+визуал</div>
             </div>
-            <div className={style.background}>
-                <img src={spaceman.src} alt="design" className={style.spaceman}/>
+            {/*<div className={style.background}>
                 <img src={waves.src} alt="design" className={style.waves}/>
-            </div>
+            </div>*/}
 
         </Wrapper>
     );
