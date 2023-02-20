@@ -9,10 +9,10 @@
     overflow: hidden;
     padding: 0 130px;
     @media (max-width: 1024px) {
-      padding: 0 170px;
+      padding: 100px 170px 90px 170px;
     }
     @media (max-width: 767px) {
-      padding: 0 20px;
+      padding: 89px 20px 82px 20px;
     }
 
     .titleBlock {
@@ -38,7 +38,7 @@
       display: flex;
       flex-direction: column;
       position: relative;
-      @media (max-width: 1024px) {
+      @media (max-width: 1270px) {
         padding-top: 40px;
         gap: 20px;
       }
@@ -74,13 +74,19 @@
         text-transform: uppercase;
         @include Text-FS-FW-LH(20px, 700, 123.7%);
         padding: 36px 34px;
-        @media (max-width: 1024px) {
+        @media (max-width: 1270px) {
           background: rgba(217, 217, 217, 0.04);
           backdrop-filter: blur(27px);
-          align-self: center;
-          width: 557px;
-          text-align: center;
           margin: 0;
+          align-self: center;
+          text-align: center;
+          width: 557px;
+        }
+        @media (max-width: 767px) {
+          @include Text-FS-FW-LH(14px, 700, 123.7%);
+          width: 100%;
+          max-width: 100%;
+          padding: 20px;
         }
       }
 
@@ -96,6 +102,11 @@
           max-width: 448px;
           margin-top: 60.65px;
         }
+        @media (max-width: 767px) {
+          @include Text-FS-FW-LH(14px, 400, 160%);
+          max-width: 448px;
+          margin-top: 90.35px;
+        }
 
 
       }
@@ -106,34 +117,41 @@
         left: 0;
         right: 0;
         top: -80px;
-        max-width: 874px;
+        max-width: 100%;
         @media (max-width: 1024px) {
-          max-width: 731px;
           top: -200px;
         }
-
-      }
-
-      .stars {
-        z-index: 0;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -200px;
-        @media (max-width: 1024px) {
-          top: 0;
-          width: 100%;
+        @media (max-width: 767px) {
+          max-width: 100%;
+          top: -180px;
+        }
+        @media (max-width: 590px) {
+          top: -100px;
         }
       }
     }
 
     .visual {
+      position: relative;
       padding-top: 95px;
       display: flex;
       flex-direction: column;
       padding-bottom: 80px;
       @media (max-width: 1024px) {
         padding-top: 90px;
+        padding-bottom: 0;
+      }
+
+      .wavesMob {
+        display: none;
+
+        @media (max-width: 767px) {
+          display: block;
+          position: absolute;
+          left: -20px;
+          top: 70px;
+          width: 120%;
+        }
       }
 
 
@@ -143,6 +161,16 @@
         @include Text-FS-FW-LH(110px, 700, 97.2%);
         @media (max-width: 1024px) {
           @include Text-FS-FW-LH(64px, 700, 97.2%);
+        }
+        @media (max-width: 767px) {
+          @include Text-FS-FW-LH(48px, 700, 94.7%);
+          background: linear-gradient(180deg, #FFFFFF 21.38%, rgba(255, 255, 255, 0) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+        }
+        @media (max-width: 400px) {
+          @include Text-FS-FW-LH(42px, 700, 94.7%);
         }
 
       }
@@ -156,6 +184,11 @@
           padding-top: 100px;
           align-self: center;
         }
+        @media (max-width: 767px) {
+          padding-top: 11px;
+          max-width: 100%;
+          text-align: center;
+        }
 
 
         .visualText {
@@ -165,10 +198,16 @@
             padding-bottom: 40px;
             max-width: 503px;
           }
+          @media (max-width: 767px) {
+            @include Text-FS-FW-LH(14px, 400, 160%);
+          }
         }
 
         .visualButton {
           z-index: 1;
+          @media (max-width: 767px) {
+            width: 100%;
+          }
 
         }
 
@@ -180,11 +219,14 @@
         .waves {
           z-index: 0;
           position: absolute;
-          bottom: 0;
+          bottom: 100px;
           left: 0;
           max-width: 100%;
-
+          @media (max-width: 767px) {
+            display: none;
+          }
         }
+
       }
 
     }

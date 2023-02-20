@@ -4,8 +4,8 @@ import Wrapper from "@/components/common/wrapper";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 import spaceman from "@/assets/img/desing_spaceman.png"
-import stars from "@/assets/img/desing_stars.png"
 import waves from "@/assets/img/desing_waves.png"
+import wavesMob from "@/assets/img/design_waves_mob.png"
 
 const DesignerTasks = () => {
     return (
@@ -18,7 +18,6 @@ const DesignerTasks = () => {
 
                 <div className={style.tasks}>
                     <img src={spaceman.src} alt="design" className={style.spaceman}/>
-                    <img src={stars.src} alt="design" className={style.stars}/>
                     <div className={style.topTask}>Выделить компанию на фоне конкурентов</div>
                     <div className={style.leftTask}>сделать сайт запоминающимся</div>
                     <div className={style.rightTask}>Сделать понятный логичный визуал для удобного пользования клиентами
@@ -46,6 +45,8 @@ const DesignerTasks = () => {
                     <div className={style.background}>
                         <img src={waves.src} alt="design" className={style.waves}/>
                     </div>
+
+                    <img src={wavesMob.src} alt="design" className={style.wavesMob}/>
                 </div>
             </div>
 
