@@ -9,50 +9,41 @@
     overflow: hidden;
     padding: 0 130px;
     @media (max-width: 1024px) {
-      padding: 0 155px;
+      padding: 0 170px;
     }
     @media (max-width: 767px) {
       padding: 0 20px;
     }
 
-    .title {
-      max-width: 819px;
-      @include Text-FS-FW-LH(110px, 700, 97.2%);
+    .titleBlock {
+      @media (max-width: 767px) {
+        @include Flex-Center();
+      }
+
+      .taskTitle {
+        max-width: 819px;
+        @media (max-width: 1024px) {
+          max-width: 377px;
+        }
+        @media (max-width: 767px) {
+          text-align: center;
+          max-width: 391px;
+        }
+      }
     }
+
 
     .tasks {
       padding-top: 23px;
       display: flex;
       flex-direction: column;
       position: relative;
-
-      .spaceman {
-        z-index: 0;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -80px;
-        max-width: 874px;
-
+      @media (max-width: 1024px) {
+        padding-top: 40px;
+        gap: 20px;
       }
-
-      .stars {
-        z-index: 0;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -200px;
-      }
-
-
-      .topTask, .leftTask, .rightTask {
-        z-index: 1;
-        border: 1px solid $text-color-primary;
-        backdrop-filter: blur(34px);
-        border-radius: 35px;
-        text-transform: uppercase;
-        @include Text-FS-FW-LH(20px, 700, 123.7%);
-        padding: 36px 34px;
+      @media (max-width: 767px) {
+        padding-top: 20px;
       }
 
       .topTask {
@@ -75,14 +66,64 @@
 
       }
 
+      .topTask, .leftTask, .rightTask {
+        z-index: 1;
+        border: 1px solid $text-color-primary;
+        backdrop-filter: blur(34px);
+        border-radius: 35px;
+        text-transform: uppercase;
+        @include Text-FS-FW-LH(20px, 700, 123.7%);
+        padding: 36px 34px;
+        @media (max-width: 1024px) {
+          background: rgba(217, 217, 217, 0.04);
+          backdrop-filter: blur(27px);
+          align-self: center;
+          width: 557px;
+          text-align: center;
+          margin: 0;
+        }
+      }
+
+
       .tasksDescription {
         z-index: 1;
         margin-top: 313px;
         max-width: 670px;
         text-align: center;
         align-self: center;
-        @include Text-FS-FW-LH(18px, 400, 150%)
+        @include Text-FS-FW-LH(18px, 400, 150%);
+        @media (max-width: 1024px) {
+          max-width: 448px;
+          margin-top: 60.65px;
+        }
 
+
+      }
+
+      .spaceman {
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -80px;
+        max-width: 874px;
+        @media (max-width: 1024px) {
+          max-width: 731px;
+          top: -200px;
+        }
+
+      }
+
+      .stars {
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -200px;
+        @media (max-width: 1024px) {
+          top: 0;
+          width: 100%;
+        }
       }
     }
 
@@ -91,12 +132,18 @@
       display: flex;
       flex-direction: column;
       padding-bottom: 80px;
+      @media (max-width: 1024px) {
+        padding-top: 90px;
+      }
 
 
       .visualTitle {
         z-index: 0;
         align-self: center;
         @include Text-FS-FW-LH(110px, 700, 97.2%);
+        @media (max-width: 1024px) {
+          @include Text-FS-FW-LH(64px, 700, 97.2%);
+        }
 
       }
 
@@ -105,10 +152,19 @@
         align-self: end;
         padding-top: 210px;
         max-width: 679px;
+        @media (max-width: 1024px) {
+          padding-top: 100px;
+          align-self: center;
+        }
+
 
         .visualText {
           padding-bottom: 30px;
           @include Text-FS-FW-LH(18px, 400, 150%);
+          @media (max-width: 1024px) {
+            padding-bottom: 40px;
+            max-width: 503px;
+          }
         }
 
         .visualButton {
