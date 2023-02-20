@@ -11,7 +11,8 @@ const Guarantees = () => {
             <SmallTitle>Гарантии</SmallTitle>
             <h3 className={style.title}>Мы не даем пустых обещаний</h3>
             <div className={style.bigBlock}>
-                <div className={style.astroBg}></div>
+                <div className={style.astroBg}>
+                </div>
                 <div className={style.items}>
                     {guaranteesData.map(el =>
                         <div className={style.item} key={el.id}>

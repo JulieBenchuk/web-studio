@@ -19,11 +19,11 @@
     justify-content: flex-end;
 
     .astroBg {
-      max-width: 50%;
       width: 100%;
       height: auto;
-      background-size: cover;
-      background: url("../../assets/Group.png") no-repeat 50% 20%;
+      max-width: 100%;
+      background: url("../../assets/gif/astro.gif") 50% 20%;
+      mix-blend-mode: color-dodge;
     }
 
     .items {
@@ -31,6 +31,7 @@
       display: flex;
       flex-direction: column;
       row-gap: 20px;
+      z-index: 2;
 
       .item {
         display: flex;
