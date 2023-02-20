@@ -23,9 +23,9 @@ type DataType = {
 
 export const Slider: React.FC<SwiperDataType> = ({swiperData}) => {
     return (
-        <>
-            <Swiper className={styles.carousel}
-                    modules={[Navigation, Autoplay]}
+        <div className={styles.carousel}>
+            <Swiper className='swiper-slide'
+                    modules={[Autoplay, Navigation]}
                     navigation={{
                         prevEl: '.swiper-button-prev',
                         nextEl: '.swiper-button-next',
@@ -33,46 +33,58 @@ export const Slider: React.FC<SwiperDataType> = ({swiperData}) => {
                     loop={true}
                     autoplay={true}
             >
-                {swiperData.map((el, index) => {
-                    return <SwiperSlide key={index} className={styles.slide}>
-                        <div className={styles.image}>
-                            <Image src={ava} alt={el.title}/>
-                        </div>
-                        <div className={styles.allText}>
-                            <div className={styles.title}>
-                                {el.title}
-                            </div>
-                            {el.subTitle && <div className={styles.subTitle}>{el.subTitle}</div>}
-                            <div className={styles.desc}>
-                                {el.desc}
-                            </div>
-                            {el.price && <div className={styles.price}>от {el.price} ₽</div>}
-
-                            <div className={styles.buttons}>
-                                <div className={`swiper-button-prev ${styles.swiperButtonPrev}`}>
-                                    <Image src={arrow} alt={'Arrow'}/>
+                <div>
+                    {swiperData.map((el, index) => {
+                        return <SwiperSlide key={index} className={styles.slide}>
+                                <div className={styles.image}>
+                                    <Image src={ava} alt={el.title}/>
                                 </div>
-                                {`0${index + 1}`}/<span>{`0${swiperData.length}`}</span>
-                                <div className={`swiper-button-next ${styles.swiperButtonNext}`}>
-                                    <Image src={arrow} alt={'Arrow'}/>
-                                </div>
-                            </div>
-                        </div>
+                                <div className={styles.allText}>
+                                    <div className={styles.title}>
+                                        {el.title}
+                                    </div>
+                                    {el.subTitle && <div className={styles.subTitle}>{el.subTitle}</div>}
+                                    <div className={styles.desc}>
+                                        {el.desc}
+                                    </div>
+                                    {el.price && <div className={styles.price}>от {el.price} ₽</div>}
 
-                    </SwiperSlide>
-                })}
+                                    <div className={styles.buttons}>
+                                        <div className={`swiper-button-prev ${styles.swiperButtonPrev}`}>
+                                            <Image src={arrow} alt={'Arrow'}/>
+                                        </div>
+                                        {`0${index + 1}`}/<span>{`0${swiperData.length}`}</span>
+                                        <div className={`swiper-button-next ${styles.swiperButtonNext}`}>
+                                            <Image src={arrow} alt={'Arrow'}/>
+                                        </div>
+                                    </div>
+                                </div>
+                        </SwiperSlide>
+                    })}
+
+                </div>
             </Swiper>
             <style jsx>{`
+              .slideClass {
+
+              }
+
+              .swiper-slide {
+
+              }
+
               .swiper-button-next:after {
                 display: none;
               }
+
               .swiper-button-prev:after {
                 display: none;
               }
-              .swiper-slide{
-              
+
+              .swiper-slide {
+
               }
             `}</style>
-        </>
+        </div>
     );
 }
