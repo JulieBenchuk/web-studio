@@ -6,6 +6,7 @@ import TopBlock from "@/components/common/topBlock/TopBlock";
 import WhoNeedPromotion from "@/components/03_Promotion/WhoNeedPromotion/WhoNeedPromotion";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import {Footer} from "@/components/common/footer/Footer";
+import RunningString from "@/components/runningString/RunningString";
 
 const Promotion: React.FC<{}> = () => {
     return (
@@ -21,6 +22,7 @@ const Promotion: React.FC<{}> = () => {
                           isMainTitleWide={true} buttonImage={"gift"}
                 />
                 <WhoNeedPromotion/>
+                <RunningString/>
                 <CallBackMe/>
                 <Footer/>
             </main>
