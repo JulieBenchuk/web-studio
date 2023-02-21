@@ -18,19 +18,22 @@ export const Footer: React.FC = () => {
                 <div className={styles.mail}>Присоединиться к команде
                     <Link href={'mailto:hr@silevans.com'}>hr@silevans.com</Link>
                 </div>
+                <div className={styles.date}>Ⓒ {new Date().getFullYear()} Silevans. Все права защищены</div>
             </div>
-            <div className={styles.services1}>
-                <Link href={'#'}>Услуги</Link>
-                <Link href={'#'}>Разработка</Link>
-                <Link href={'#'}>Продвижение</Link>
-                <Link href={'#'}>Дизайн</Link>
+            <div className={styles.allServices}>
+                <div className={styles.services1}>
+                    <Link href={'#'}>Услуги</Link>
+                    <Link href={'#'}>Разработка</Link>
+                    <Link href={'#'}>Продвижение</Link>
+                    <Link href={'#'}>Дизайн</Link>
+                </div>
+                <div className={styles.services2}>
+                    <Link href={'#'}>Портфолио</Link>
+                    <Link href={'#'}>Бриф</Link>
+                    <Link href={'#'}>Вакансии</Link>
+                </div>
+                <div className={styles.date}>Ⓒ {new Date().getFullYear()} Silevans. Все права защищены</div>
             </div>
-            <div className={styles.services2}>
-                <Link href={'#'}>Портфолио</Link>
-                <Link href={'#'}>Бриф</Link>
-                <Link href={'#'}>Вакансии</Link>
-            </div>
-            <div className={styles.date}>Ⓒ {new Date().getFullYear()} Silevans. Все права защищены</div>
         </div>
     );
 };
