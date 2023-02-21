@@ -3,7 +3,7 @@ import style from "@/styles/Home.module.scss";
 import bgImage from "@/assets/svg/anketaBg.svg";
 import Head from "next/head";
 import TopBlock from "@/components/common/topBlock/TopBlock";
-import CommonInfo from "@/components/05_Questionnaire/CommonInfo";
+import QuestionnaireForm from "@/components/05_Questionnaire/QuestionnaireForm";
 
 const Questionnaire = () => {
     return (
@@ -16,7 +16,7 @@ const Questionnaire = () => {
                           serviceDescription={"— Готовим предложение в течении 2 рабочих дней!"}
                           backgroundImage={bgImage.src}
                 />
-                <CommonInfo/>
+                <QuestionnaireForm/>
             </main>
 
         </>

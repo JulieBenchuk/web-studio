@@ -1,0 +1,98 @@
+@import "../mixins";
+@import "../variables";
+
+.wrapper {
+  padding: 0 144px;
+  @media(max-width: 1024px) {
+    padding: 0 170px;
+
+  }
+  @media(max-width: 767px) {
+    padding: 0 20px;
+  }
+
+
+  .formBlock {
+
+
+    .commonInfo, .interest, .projectInfo {
+      padding-bottom: 120px;
+
+      .titles {
+        max-width: 849px;
+        padding-bottom: 57px;
+        @media(max-width: 1024px) {
+          max-width: 480px;
+          padding-bottom: 39px;
+
+        }
+        @media(max-width: 767px) {
+          max-width: 345px;
+          padding-bottom: 30px;
+        }
+      }
+    }
+
+    .commonInfo {
+      .commonInfoForm {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 109px;
+        row-gap: 57px;
+
+
+        .formName, .formEmail, .formPhone, .formCompanyName {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          label {
+            padding-left: 35px;
+            @include Text-FS-FW-LH(20px, 700, 123.7%);
+            text-transform: uppercase;
+          }
+
+          input {
+            width: 380px;
+            padding: 35px;
+            border-radius: 49px;
+            background: $bg-seven;
+            color: $text-color-primary;
+            @include Text-FS-FW-LH(20px, 400, 123.7%);
+
+            &::placeholder {
+              color: rgba(255, 255, 255, 0.8);
+              opacity: 0.4;
+            }
+          }
+        }
+
+        .formName {
+        }
+
+        .formPhone {
+        }
+
+        .formEmail {
+        }
+
+        .formCompanyName {
+        }
+
+      }
+
+    }
+
+    .interest {
+
+    }
+
+    .projectInfo {
+
+    }
+
+
+  }
+
+}
