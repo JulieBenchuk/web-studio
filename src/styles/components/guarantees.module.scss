@@ -8,6 +8,7 @@
 
   .title {
     width: 100%;
+    text-align: center;
   }
 
   .subTitle {
@@ -150,6 +151,99 @@
 
     }
   }
+}
 
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 90px 0;
+
+    .title {
+      font-size: 64px;
+    }
+
+    .subTitle {
+      font-size: 32px;
+    }
+
+    .bigBlock {
+      padding: 60px 160px 0 0;
+
+      .astroBg {
+        background-position: 50% 50%;
+      }
+
+      .items {
+        .item {
+          .itemTitle {
+            font-size: 48px;
+          }
+
+          .itemDescription {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .smallBlock {
+      padding-bottom: 0;
+
+      .videoBg {
+        background-size: 242px 182px;
+        top: -2%;
+        left: 39%;
+      }
+
+      .cards {
+        padding-top: 150px;
+        grid-row-gap: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .wrapperCard {
+
+          &:nth-child(1) {
+            position: initial;
+            grid-area: 1 / 1 / 2 / 2;
+            max-width: 100%;
+            width: 50%;
+          }
+
+          &:nth-child(2) {
+            position: initial;
+            grid-area: 2 / 1 / 3 / 2;
+            max-width: 100%;
+            width: 50%;
+          }
+
+          &:nth-child(3) {
+            position: initial;
+            grid-area: 3 / 1 / 4 / 2;
+            max-width: 100%;
+            width: 50%;
+          }
+
+          &:nth-child(4) {
+            position: initial;
+            grid-area: 4 / 1 / 5 / 2;
+            max-width: 100%;
+            width: 50%;
+          }
+
+          .card {
+            width: 100%;
+
+            .cardDescription {
+              font-size: 16px;
+
+            }
+          }
+        }
+
+      }
+    }
+
+  }
 
 }
