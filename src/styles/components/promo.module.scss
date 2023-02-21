@@ -1,0 +1,48 @@
+@import "../mixins";
+@import "../variables";
+
+
+.wrapper {
+  padding: 120px 130px 0;
+
+  .title {
+    max-width: 60%;
+  }
+
+  .items {
+    display: flex;
+    gap: 1%;
+    padding-top: 64px;
+
+    .item {
+      @include Flex-Center();
+      justify-content: space-evenly;
+      flex-direction: column;
+      border: double 1px transparent;
+      border-radius: 35px;
+      width: 280px;
+      height: 315px;
+
+      background-image: radial-gradient(circle at center, #262038, #262038),
+      linear-gradient(to bottom left, transparent 30%, #ffffff, transparent, transparent);
+
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      padding: 18px;
+
+      .itemTitle {
+        @include Text-FS-FW-LH(20px, 700, 123.7%);
+        text-transform: uppercase;
+        color: #F2F2F2;
+        text-align: center;
+      }
+
+      .itemDescription {
+        @include Text-FS-FW-LH(16px, 400, 150%);
+        text-align: center;
+        color: #F2F2F2;
+
+      }
+    }
+  }
+}

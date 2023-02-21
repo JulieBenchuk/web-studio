@@ -5,7 +5,7 @@ import StringItem from "@/components/runningString/stringItem/StringItem";
 
 const RunningString = () => {
     return (
-        <Wrapper>
+        <Wrapper className={style.wrapper}>
             <div className={style.runningString}>
                 <div className={style.strings}>
                     <StringItem string={"22 эксперта в нашей команде"}/>
