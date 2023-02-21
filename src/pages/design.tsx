@@ -6,6 +6,7 @@ import bgImage from "@/assets/img/webDesignBg.png";
 import DesignerTasks from "@/components/04_Desing/DesignerTasks";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import {Footer} from "@/components/common/footer/Footer";
+import OurWorks from "@/components/common/ourWorks/OurWorks";
 
 const Design: React.FC<{}> = () => {
     return (
@@ -21,6 +22,7 @@ const Design: React.FC<{}> = () => {
                           buttonImage={"gift"}
                 />
                 <DesignerTasks/>
+                <OurWorks/>
                 <CallBackMe/>
                 <Footer/>
             </main>

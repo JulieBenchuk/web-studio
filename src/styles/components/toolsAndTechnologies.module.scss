@@ -2,7 +2,7 @@
 @import '../variables';
 
 .wrapper {
-  padding: 147px 134px 0 130px;
+  padding: 0 134px 0 130px;
   color: $text-color-primary;
   @media(max-width: 1024px) {
     padding: 90px 170px 0 172px;

@@ -7,6 +7,9 @@ import WhoNeedPromotion from "@/components/03_Promotion/WhoNeedPromotion/WhoNeed
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import {Footer} from "@/components/common/footer/Footer";
 import RunningString from "@/components/runningString/RunningString";
+import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
+import Guarantees from "@/components/guarantees/Guarantees";
+import Promo from "@/components/promo/Promo";
 
 const Promotion: React.FC<{}> = () => {
     return (
@@ -21,8 +24,11 @@ const Promotion: React.FC<{}> = () => {
                           buttonDescription={"Заполните анкету, чтобы получить бесплатную консультацию"}
                           isMainTitleWide={true} buttonImage={"gift"}
                 />
+                <OurBenefits/>
+                <Guarantees/>
                 <WhoNeedPromotion/>
                 <RunningString/>
+                <Promo/>
                 <CallBackMe/>
                 <Footer/>
             </main>

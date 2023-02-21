@@ -8,8 +8,8 @@ import {guaranteesData, guaranteesPromiseData} from "../guarantees/MocGuarantees
 const Guarantees = () => {
     return (
         <Wrapper className={style.wrapper}>
-            <SmallTitle>Гарантии</SmallTitle>
-            <h3 className={style.title}>Мы не даем пустых обещаний</h3>
+            <SmallTitle className={style.title}>Гарантии</SmallTitle>
+            <h3 className={style.subTitle}>Мы не даем пустых обещаний</h3>
             <div className={style.bigBlock}>
                 <div className={style.astroBg}>
                 </div>
@@ -22,7 +22,7 @@ const Guarantees = () => {
                     )}
                 </div>
             </div>
-            <h3 className={style.title}>Но можем гарантировать</h3>
+            <h3 className={style.subTitle}>Но можем гарантировать</h3>
             <div className={style.smallBlock}>
                 <div className={style.videoBg}>
                     <div className={style.cards}>

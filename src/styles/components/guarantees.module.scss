@@ -2,27 +2,33 @@
 @import '../mixins';
 
 .wrapper {
-  padding: 180px 6.5% 0;
+  padding: 180px 130px 0;
   @include Flex-Center();
   flex-direction: column;
 
   .title {
+    width: 100%;
+  }
+
+  .subTitle {
     @include Text-FS-FW-LH(64px, 700, 97.2%);
     color: $text-color-primary;
     text-align: center;
     white-space: nowrap;
+    padding-top: 60px;
   }
 
   .bigBlock {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    padding: 76px 0 81px;
 
     .astroBg {
       width: 100%;
       height: auto;
       max-width: 100%;
-      background: url("../../assets/gif/astro.gif") 50% 20%;
+      background: url("../../assets/gif/astro.gif") no-repeat 50% 20%;
       mix-blend-mode: color-dodge;
     }
 
@@ -54,6 +60,8 @@
   }
 
   .smallBlock {
+    padding-bottom: 213px;
+
     .videoBg {
       max-width: 100%;
       width: 100%;
