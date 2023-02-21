@@ -60,7 +60,6 @@
     padding-top: 48px;
     @media(max-width: 1439px) {
       padding-top: 10px;
-      max-width: 333px;
     }
     @media(max-width: 966px) {
       padding-top: 20px;
@@ -128,9 +127,6 @@
   .costBlockWide {
     @extend .costBlock;
     max-width: 80%;
-    @media (max-width: 1439px) {
-      max-width: 100%;
-    }
 
     .costDescription {
       @media (max-width: 1439px) {
