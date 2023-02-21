@@ -10,8 +10,8 @@ export const Reviews: React.FC = () => {
     return (
         <Wrapper className={styles.wrapper}>
             <div className={styles.text}>
-                <p>отзывы</p>
-                <p>клиентов</p>
+                <span>отзывы</span>
+                <span>клиентов</span>
             </div>
             <Slider swiperData={data}/>
         </Wrapper>
