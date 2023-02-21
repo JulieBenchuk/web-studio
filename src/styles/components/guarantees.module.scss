@@ -61,13 +61,17 @@
 
   .smallBlock {
     padding-bottom: 213px;
+    position: relative;
 
     .videoBg {
       max-width: 100%;
-      width: 100%;
-      height: auto;
-      background-size: cover;
-      background: url("../../assets/MenGlass.png") no-repeat 50%;
+      width: 480px;
+      height: 360px;
+      background: url("../../assets/gif/MenGlass.gif") no-repeat;
+      mix-blend-mode: color-dodge;
+      position: absolute;
+      left: 35%;
+      top: 5%;
     }
 
     .cards {
@@ -82,13 +86,13 @@
 
       .wrapperCard {
 
-
         &:nth-child(1) {
           grid-area: 1 / 1 / 2 / 3;
           max-width: 509px;
           height: max-content;
           bottom: 0;
           position: absolute;
+          z-index: 2;
         }
 
         &:nth-child(2) {

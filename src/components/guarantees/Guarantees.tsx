@@ -24,16 +24,15 @@ const Guarantees = () => {
             </div>
             <h3 className={style.subTitle}>Но можем гарантировать</h3>
             <div className={style.smallBlock}>
-                <div className={style.videoBg}>
-                    <div className={style.cards}>
-                        {guaranteesPromiseData.map(el =>
-                            <div className={style.wrapperCard} key={el.id}>
-                                <div className={style.card}>
-                                    <h5 className={style.cardTitle}>{el.title}</h5>
-                                    <p className={style.cardDescription}>{el.description}</p>
-                                </div>
-                            </div>)}
-                    </div>
+                <div className={style.videoBg}></div>
+                <div className={style.cards}>
+                    {guaranteesPromiseData.map(el =>
+                        <div className={style.wrapperCard} key={el.id}>
+                            <div className={style.card}>
+                                <h5 className={style.cardTitle}>{el.title}</h5>
+                                <p className={style.cardDescription}>{el.description}</p>
+                            </div>
+                        </div>)}
                 </div>
             </div>
         </Wrapper>
