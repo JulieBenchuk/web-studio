@@ -30,6 +30,7 @@ const QuestionnaireForm = () => {
                     </div>
                 </div>
 
+
                 <div className={style.interest}>
                     <SmallTitle className={style.titles}>Вас интересует</SmallTitle>
                 </div>
