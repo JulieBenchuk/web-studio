@@ -1,21 +1,51 @@
 @import "../mixins";
 @import "../variables";
+
 .wrapper {
-  padding: 150px 210px;
+  padding: 50px 5%;
   color: $text-color-primary;
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   .text {
     color: $text-color-primary;
     writing-mode: vertical-lr;
-    text-orientation: upright;
+    text-orientation: upright;margin-right: 25px;
     @include Text-FS-FW-LH(48px, 400, 56px);
 
     :nth-child(2) {
+      display: block;
       padding-top: 70px;
       padding-left: 50px;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 30px 42px;
+
+    .text {
+      writing-mode: horizontal-tb;
+      text-orientation: upright;
+      color: $text-color-primary;
+      @include Text-FS-FW-LH(64px, 700, 94.6%);
+      background: linear-gradient(180deg, #FFFFFF 21.38%, rgba(255, 255, 255, 0) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      :nth-child(2) {
+        display: inline-block;
+        padding: 0 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 30px 42px;
   }
 }
