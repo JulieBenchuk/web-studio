@@ -2,6 +2,7 @@ import React from 'react';
 import Wrapper from "@/components/common/wrapper";
 import style from "@/styles/components/questionnaireForm.module.scss"
 import SmallTitle from "@/components/common/Titles/SmallTitle";
+import FullButton from "@/components/common/buttons/FullButton";
 
 const QuestionnaireForm = () => {
     return (
@@ -37,6 +38,47 @@ const QuestionnaireForm = () => {
 
                 <div className={style.projectInfo}>
                     <SmallTitle className={style.titles}>Информация о проекте</SmallTitle>
+                    <div className={style.projectInputForm}>
+                        <div className={style.row1}>
+                            <div className={style.formSite}>
+                                <label>Веб-сайт</label>
+                                <input type="text" placeholder={"www.ivanovka.com"}/>
+                            </div>
+                            <div className={style.formAge}>
+                                <label>Возраст компании (в годах)</label>
+                                <input type="text" placeholder={"21 год"}/>
+                            </div>
+                        </div>
+                        <div className={style.row2}>
+                            <div className={style.formMessage}>
+                                <label>Сообщение</label>
+                                <textarea/>
+                            </div>
+                        </div>
+                        <div className={style.buttonBlock}>
+                            <FullButton className={style.button}>Отправить</FullButton>
+                        </div>
+
+                    </div>
+
+
+                    {/*  <div className={style.projectInputForm}>
+                        <div className={style.formSite}>
+                            <label>Веб-сайт</label>
+                            <input type="text" placeholder={"www.ivanovka.com"}/>
+                        </div>
+                        <div className={style.formAge}>
+                            <label>Возраст компании (в годах)</label>
+                            <input type="text" placeholder={"21 год"}/>
+                        </div>
+                    </div>
+
+                    <div className={style.projectTextareaForm}>
+                        <div className={style.formMessage}>
+                            <label>Сообщение</label>
+                            <textarea/>
+                        </div>
+                    </div>*/}
                 </div>
 
 

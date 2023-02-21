@@ -11,9 +11,37 @@
     padding: 0 20px;
   }
 
+  input, textarea {
+    padding: 35px;
+    border-radius: 49px;
+    background: $bg-seven;
+    color: $text-color-primary;
+    @include Text-FS-FW-LH(20px, 400, 123.7%);
+    @media (max-width: 1439px) {
+      @include Text-FS-FW-LH(16px, 400, 123.7%);
+      padding: 20px;
+    }
+    @media (max-width: 966px) {
+      padding: 25px;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.8);
+      opacity: 0.4;
+    }
+  }
+
+  label {
+    padding-left: 35px;
+    @include Text-FS-FW-LH(20px, 700, 123.7%);
+    text-transform: uppercase;
+    @media (max-width: 1439px) {
+      display: none;
+    }
+  }
+
 
   .formBlock {
-
 
     .commonInfo, .interest, .projectInfo {
       padding-bottom: 120px;
@@ -49,65 +77,26 @@
           flex-direction: column;
         }
 
-
         .formName, .formEmail, .formPhone, .formCompanyName {
           display: flex;
           flex-direction: column;
           gap: 20px;
+
+          input {
+            width: 380px;
+            @media (max-width: 1439px) {
+              width: 100%;
+            }
+          }
+
           @media (max-width: 1439px) {
             width: 45%;
           }
           @media (max-width: 966px) {
             width: 100%;
           }
-
-
-          label {
-            padding-left: 35px;
-            @include Text-FS-FW-LH(20px, 700, 123.7%);
-            text-transform: uppercase;
-            @media (max-width: 1439px) {
-              display: none;
-            }
-          }
-
-          input {
-            width: 380px;
-            padding: 35px;
-            border-radius: 49px;
-            background: $bg-seven;
-            color: $text-color-primary;
-            @include Text-FS-FW-LH(20px, 400, 123.7%);
-            @media (max-width: 1439px) {
-              @include Text-FS-FW-LH(16px, 400, 123.7%);
-              width: 100%;
-              padding: 20px;
-            }
-            @media (max-width: 966px) {
-              padding: 25px;
-            }
-
-            &::placeholder {
-              color: rgba(255, 255, 255, 0.8);
-              opacity: 0.4;
-            }
-          }
         }
-
-        .formName {
-        }
-
-        .formPhone {
-        }
-
-        .formEmail {
-        }
-
-        .formCompanyName {
-        }
-
       }
-
     }
 
     .interest {
@@ -115,10 +104,67 @@
     }
 
     .projectInfo {
+      .projectInputForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 57px;
 
+        .row1 {
+          width: 854px;
+          display: flex;
+          justify-content: space-between;
+
+
+          .formSite {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            input {
+              width: 380px;
+            }
+          }
+
+          .formAge {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            input {
+              width: 172px;
+              align-self: end;
+            }
+          }
+        }
+
+        .row2 {
+          .formMessage {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            textarea {
+              min-width: 854px;
+            }
+          }
+        }
+
+        .buttonBlock {
+          width: 854px;
+          display: flex;
+          flex-direction: column;
+
+          .button {
+            align-self: end;
+
+          }
+        }
+      }
     }
 
 
   }
+
 
 }
