@@ -104,7 +104,6 @@
 
     .button {
       @media (max-width: 966px) {
-        min-width: 350px;
         @include Text-FS-FW-LH(16px, 700, 19px);
       }
     }
@@ -116,7 +115,7 @@
         margin: 0;
         text-align: center;
         padding-top: 20px;
-        width: 270px;
+        width: 350px;
         @include Text-FS-FW-LH(14px, 400, 150%);
       }
 
@@ -126,7 +125,7 @@
 
   .costBlockWide {
     @extend .costBlock;
-    max-width: 80%;
+    max-width: 100%;
 
     .costDescription {
       @media (max-width: 1439px) {

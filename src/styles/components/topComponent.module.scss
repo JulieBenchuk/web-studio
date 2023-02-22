@@ -6,11 +6,11 @@
   padding: 40px 90px 80px 130px;
   font-family: 'Play', sans-serif;
   color: $text-color-primary;
-  @media (max-width: 1024px) {
+  @media (max-width: 1439px) {
     padding: 40px 170px;
     height: 791px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 965px) {
     padding: 44px 20px;
   }
 
@@ -18,7 +18,7 @@
   .topComponent {
     display: flex;
     z-index: 999;
-    @media (max-width: 1024px) {
+    @media (max-width: 1439px) {
       flex-direction: column;
 
     }
@@ -28,7 +28,7 @@
       width: 55%;
       display: flex;
       flex-direction: column;
-      @media (max-width: 1024px) {
+      @media (max-width: 1439px) {
         width: 100%;
         position: static;
         align-items: center;
@@ -49,7 +49,7 @@
           height: 83px;
           overflow: hidden;
           -webkit-border-top-left-radius: 200px;
-          @media (max-width: 1024px) {
+          @media (max-width: 1439px) {
             display: none;
           }
 
@@ -59,7 +59,7 @@
           padding-left: 90px;
           padding-top: 50px;
           max-width: 613px;
-          @media (max-width: 1024px) {
+          @media (max-width: 1439px) {
             position: relative;
             bottom: 90px;
             padding-left: 0;
@@ -67,7 +67,7 @@
             padding-top: 0;
             @include Text-FS-FW-LH(128px, 700, 148px);
           }
-          @media (max-width: 767px) {
+          @media (max-width: 965px) {
             position: static;
             padding-top: 0;
             padding-bottom: 68px;
@@ -80,12 +80,12 @@
 
       .textDescription {
         width: 100%;
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           @include Flex-Center();
           position: relative;
           bottom: 90px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 965px) {
           position: static;
         }
 
@@ -94,7 +94,7 @@
           height: 75px;
           font-style: normal;
           @include Text-FS-FW-LH(16px, 400, 123.7%);
-          @media (max-width: 1024px) {
+          @media (max-width: 1439px) {
             width: 435px;
             text-align: center;
 
@@ -120,11 +120,7 @@
           backdrop-filter: blur(34px);
           border-radius: 50px;
           z-index: 1;
-          @media (max-width: 1250px) {
-            left: 0;
-
-          }
-          @media (max-width: 1024px) {
+          @media (max-width: 1439px) {
             position: relative;
             width: 300px;
             height: 40px;
@@ -140,7 +136,7 @@
             position: relative;
             bottom: 15px;
             z-index: 3;
-            @media (max-width: 1024px) {
+            @media (max-width: 1439px) {
               display: none;
             }
 
@@ -154,7 +150,7 @@
             font-weight: 400;
             font-size: 16px;
             z-index: 3;
-            @media (max-width: 1024px) {
+            @media (max-width: 1439px) {
               padding: 0;
             }
           }
@@ -165,10 +161,7 @@
         position: absolute;
         bottom: 0;
         left: 300px;
-        @media (max-width: 1250px) {
-          left: 190px;
-        }
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           margin-bottom: 130px;
           left: unset;
         }
@@ -182,13 +175,13 @@
       @include Flex-Center();
       -webkit-border-top-right-radius: 200px;
       z-index: 2;
-      @media (max-width: 1024px) {
+      @media (max-width: 1439px) {
         width: 100%;
         position: static;
       }
 
       .bigGifBckgrnd {
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           display: none;
         }
       }
@@ -206,7 +199,7 @@
         box-shadow: 20px 20px 20px 1px rgba(0, 0, 0, 0.63);
 
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           top: 362px;
           width: 100%;
           box-shadow: none;
@@ -214,12 +207,12 @@
           -webkit-border-top-right-radius: 0;
 
         }
-        @media (max-width: 767px) {
+        @media (max-width: 965px) {
           display: none;
         }
 
         .bigGif {
-          @media (max-width: 1024px) {
+          @media (max-width: 1439px) {
             width: 100%;
             position: absolute;
 
@@ -238,7 +231,7 @@
     z-index: 0;
     overflow: hidden;
     height: 100%;
-    @media (max-width: 1024px) {
+    @media (max-width: 1439px) {
       display: none;
     }
 
@@ -246,7 +239,7 @@
 
   .logoForMobile {
     display: none;
-    @media (max-width: 767px) {
+    @media (max-width: 965px) {
       position: absolute;
       left: 0;
       right: 0;

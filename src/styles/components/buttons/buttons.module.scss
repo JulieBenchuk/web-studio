@@ -46,4 +46,8 @@
     border: 1px solid $text-color-primary;
     box-shadow: 0 69px 41px rgba(0, 0, 0, 0.26);
   }
+
+  @media (max-width: 966px) {
+    min-width: 350px;
+  }
 }
