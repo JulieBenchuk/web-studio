@@ -47,16 +47,19 @@ const QuestionnaireForm = () => {
                             <div className={style.formSite}>
                                 <label>Веб-сайт</label>
                                 <input type="text" placeholder={"www.ivanovka.com"}/>
+                                <span className={style.fakePlaceholder}>Ссылка на сайт</span>
                             </div>
                             <div className={style.formAge}>
                                 <label>Возраст компании (в годах)</label>
                                 <input type="text" placeholder={"21 год"}/>
+                                <span className={style.fakePlaceholder}>Возраст компании (в годах)</span>
                             </div>
                         </div>
                         <div className={style.row2}>
                             <div className={style.formMessage}>
                                 <label>Сообщение</label>
                                 <textarea/>
+                                <span className={style.fakePlaceholder}>Сообщение</span>
                             </div>
                         </div>
                         <div className={style.buttonBlock}>
@@ -64,25 +67,7 @@ const QuestionnaireForm = () => {
                         </div>
 
                     </div>
-
-
-                    {/*  <div className={style.projectInputForm}>
-                        <div className={style.formSite}>
-                            <label>Веб-сайт</label>
-                            <input type="text" placeholder={"www.ivanovka.com"}/>
-                        </div>
-                        <div className={style.formAge}>
-                            <label>Возраст компании (в годах)</label>
-                            <input type="text" placeholder={"21 год"}/>
-                        </div>
-                    </div>
-
-                    <div className={style.projectTextareaForm}>
-                        <div className={style.formMessage}>
-                            <label>Сообщение</label>
-                            <textarea/>
-                        </div>
-                    </div>*/}
+                    
                 </div>
 
 

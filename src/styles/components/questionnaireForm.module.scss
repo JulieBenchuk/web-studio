@@ -163,6 +163,35 @@
 
         }
 
+        .formSite, .formAge, .formMessage {
+          position: relative;
+
+          span {
+            position: absolute;
+            left: 0;
+            display: none;
+            @include Text-FS-FW-LH(16px, 400, 123.7%);
+            color: rgba(255, 255, 255, 0.8);
+            opacity: 0.4;
+            padding: 22px;
+            pointer-events: none;
+            @media (max-width: 1439px) {
+              display: block;
+            }
+            @media (max-width: 965px) {
+              padding: 27px;
+            }
+          }
+
+          input:focus ~ .fakePlaceholder {
+            display: none;
+          }
+
+          textarea:focus ~ .fakePlaceholder {
+            display: none;
+          }
+        }
+
         .row1 {
           width: 854px;
           display: flex;
