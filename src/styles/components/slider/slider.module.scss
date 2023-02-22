@@ -52,10 +52,6 @@
         @include Text-FS-FW-LH(16px, 400, 150%);
       }
 
-      .mobileDesc {
-        display: none;
-      }
-
       .price {
         position: absolute;
         bottom: 10px;
@@ -108,7 +104,6 @@
         }
       }
     }
-
   }
 }
 
@@ -128,19 +123,15 @@
       .allText {
         .title {
           @include Text-FS-FW-LH(20px, 400, 23px);
-
         }
 
         .desc {
-          display: none;
-        }
-
-        .mobileDesc {
-          display: inline-block;
-          margin-top: 20px;
-        }
-
-        .buttons {
+          width: 100%;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
         }
       }
     }

@@ -46,9 +46,6 @@ export const Slider: React.FC<SwiperDataType> = ({swiperData}) => {
                                     <div className={styles.desc}>
                                         {el.desc}
                                     </div>
-                                    <div className={styles.mobileDesc}>
-                                        {el.desc.split(' ').slice(0, 18).join(' ') + ' ...'}
-                                    </div>
                                     <div className={styles.price}>{el.price && `от ${el.price} ₽`}</div>
                                     <div className={styles.buttons}>
                                         <div className={`swiper-button-prev ${styles.swiperButtonPrev}`}>
