@@ -3,11 +3,12 @@ import style from "@/styles/components/questionnaireForm.module.scss"
 import arrow from "@/assets/svg/arrowDown.svg"
 import LinkBtn from "@/components/common/buttons/LinkBtn";
 
-const SelectorItem: React.FC<{ title: string, buttons?: Array<string>, onMessageActiveHandler: () => void }> = ({
-                                                                                                                    title,
-                                                                                                                    buttons,
-                                                                                                                    onMessageActiveHandler
-                                                                                                                }) => {
+const SelectorItem: React.FC<{ title: string, buttons?: Array<string>, background?: string, onMessageActiveHandler: () => void }> = ({
+                                                                                                                                         title,
+                                                                                                                                         buttons,
+                                                                                                                                         background,
+                                                                                                                                         onMessageActiveHandler
+                                                                                                                                     }) => {
 
     const [expandedMenu, setExpandedMenu] = useState(false)
 
