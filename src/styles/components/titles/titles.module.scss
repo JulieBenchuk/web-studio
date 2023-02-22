@@ -13,7 +13,7 @@
     @include Text-FS-FW-LH(64px, 700, 74px);
     max-width: 554px;
   }
-  @media (max-width: 966px) {
+  @media (max-width: 965px) {
     @include Text-FS-FW-LH(48px, 700, 56px);
     max-width: 370px;
     text-align: center;
@@ -26,7 +26,7 @@
     @include Text-FS-FW-LH(64px, 700, 74px);
     max-width: 554px;
   }
-  @media (max-width: 966px) {
+  @media (max-width: 965px) {
     @include Text-FS-FW-LH(48px, 700, 56px);
     max-width: 370px;
     text-align: center;
@@ -48,7 +48,7 @@
   @media (max-width: 1439px) {
     @include Text-FS-FW-LH(64px, 700, 94.7%)
   }
-  @media (max-width: 966px) {
+  @media (max-width: 965px) {
     @include Text-FS-FW-LH(48px, 700, 94.7%)
   }
 }
