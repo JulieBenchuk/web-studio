@@ -12,6 +12,7 @@
   }
 
   input, textarea {
+    border: 2px solid transparent;
     padding: 35px;
     border-radius: 49px;
     background: $bg-seven;
@@ -23,6 +24,10 @@
     }
     @media (max-width: 965px) {
       padding: 25px;
+    }
+
+    &:focus {
+      border: 2px solid #FFFFFF;
     }
 
     &::placeholder {
@@ -38,6 +43,22 @@
     @media (max-width: 1439px) {
       display: none;
     }
+  }
+
+  :focus::-webkit-input-placeholder {
+    color: transparent
+  }
+
+  :focus::-moz-placeholder {
+    color: transparent
+  }
+
+  :focus:-moz-placeholder {
+    color: transparent
+  }
+
+  :focus:-ms-input-placeholder {
+    color: transparent
   }
 
 
