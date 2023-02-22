@@ -67,15 +67,14 @@ const QuestionnaireForm = () => {
                             </div>
                         </div>
 
-                        {isMessageActive &&
-                            <div className={style.row2}>
-                                <div className={style.formMessage}>
-                                    <label>Сообщение</label>
-                                    <textarea/>
-                                    <span className={style.fakePlaceholder}>Сообщение</span>
-                                </div>
-                            </div>}
-                        
+                        <div className={style.row2}>
+                            <div className={style.formMessage}>
+                                <label>Сообщение</label>
+                                <textarea disabled={!isMessageActive}/>
+                                <span className={style.fakePlaceholder}>Сообщение</span>
+                            </div>
+                        </div>
+
                         <div className={style.buttonBlock}>
                             <FullButton className={style.button}>Отправить</FullButton>
                         </div>

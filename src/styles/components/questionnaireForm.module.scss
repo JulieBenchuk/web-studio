@@ -234,6 +234,7 @@
           textarea {
             min-width: 854px;
             min-height: 265px;
+
             @media(max-width: 1439px) {
               min-width: 100%;
               min-height: 300px;
@@ -315,6 +316,11 @@
 
     &:focus ~ .fakePlaceholder {
       display: none;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: no-drop;
     }
   }
 
