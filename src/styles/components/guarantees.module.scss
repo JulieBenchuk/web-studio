@@ -8,6 +8,7 @@
 
   .title {
     width: 100%;
+    text-align: center;
   }
 
   .subTitle {
@@ -61,13 +62,17 @@
 
   .smallBlock {
     padding-bottom: 213px;
+    position: relative;
 
     .videoBg {
       max-width: 100%;
-      width: 100%;
-      height: auto;
-      background-size: cover;
-      background: url("../../assets/MenGlass.png") no-repeat 50%;
+      width: 480px;
+      height: 360px;
+      background: url("../../assets/gif/MenGlass.gif") no-repeat center;
+      mix-blend-mode: color-dodge;
+      position: absolute;
+      left: 35%;
+      top: 6%;
     }
 
     .cards {
@@ -82,13 +87,13 @@
 
       .wrapperCard {
 
-
         &:nth-child(1) {
           grid-area: 1 / 1 / 2 / 3;
           max-width: 509px;
           height: max-content;
           bottom: 0;
           position: absolute;
+          z-index: 2;
         }
 
         &:nth-child(2) {
@@ -146,6 +151,175 @@
 
     }
   }
+}
 
+@media (max-width: 1439px) {
+  .wrapper {
+    padding: 90px 0;
+
+    .title {
+      font-size: 64px;
+    }
+
+    .subTitle {
+      font-size: 32px;
+    }
+
+    .bigBlock {
+      padding: 60px 160px 0 0;
+
+      .astroBg {
+        background-position: 42% 50%;
+      }
+
+      .items {
+        .item {
+          .itemTitle {
+            font-size: 48px;
+          }
+
+          .itemDescription {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .smallBlock {
+      padding-bottom: 0;
+
+      .videoBg {
+        background-size: 242px 182px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -41%);
+      }
+
+      .cards {
+        padding-top: 150px;
+        grid-row-gap: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .wrapperCard {
+
+
+          &:nth-child(1) {
+            position: initial;
+            max-width: 100%;
+            width: 50%;
+            order: 3;
+          }
+
+          &:nth-child(2) {
+            position: initial;
+            max-width: 100%;
+            width: 50%;
+            order: 1;
+          }
+
+          &:nth-child(3) {
+            position: initial;
+            max-width: 100%;
+            width: 50%;
+            order: 4;
+          }
+
+          &:nth-child(4) {
+            position: initial;
+            max-width: 100%;
+            width: 50%;
+            order: 2;
+          }
+
+          &:not(:nth-child(2)) {
+            .cardTitle {
+              font-size: 32px;
+              line-height: 37px;
+            }
+          }
+
+          .card {
+            width: 100%;
+
+            .cardDescription {
+              font-size: 16px;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+}
+
+@media (max-width: 965px) {
+  .wrapper {
+
+    .title {
+      font-size: 48px;
+      line-height: 94.7%;
+    }
+
+    .subTitle {
+      padding-top: 10px;
+      font-size: 14px;
+      line-height: 160%;
+    }
+
+    .bigBlock {
+      padding: 40px 20px 0 0;
+
+      .astroBg {
+        background-position: 55% -75px;
+      }
+
+      .items {
+        .item {
+          row-gap: 0;
+
+          .itemTitle, .itemDescription {
+            font-size: 14px;
+            line-height: 160%;
+          }
+        }
+      }
+    }
+
+    .smallBlock {
+
+      .videoBg {
+        background-size: 158px 118px;
+      }
+
+      .cards {
+        padding-top: 118px;
+
+        .wrapperCard {
+
+          &:nth-child(n) {
+            width: 95%;
+          }
+
+          .card {
+            .cardTitle {
+              font-size: 20px;
+              line-height: 23px;
+            }
+
+            .cardDescription {
+              font-size: 14px;
+              line-height: 160%;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
 
 }
