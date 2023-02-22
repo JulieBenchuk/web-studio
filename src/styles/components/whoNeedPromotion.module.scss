@@ -6,7 +6,7 @@
   @media (max-width: 1439px) {
     padding: 0 175px 40px 170px;
   }
-  @media (max-width: 966px) {
+  @media (max-width: 965px) {
     padding: 0 18px 60px 20px;
   }
   position: relative;
@@ -35,7 +35,7 @@
       top: -20px;
       right: 100px;
     }
-    @media (max-width: 966px) {
+    @media (max-width: 965px) {
       top: 40px;
       right: -80px;
     }
@@ -51,7 +51,7 @@
         width: 400px;
         height: 400px;
       }
-      @media (max-width: 966px) {
+      @media (max-width: 965px) {
         top: 20px;
         right: 90px;
         width: 250px;
@@ -74,7 +74,7 @@
       @media (max-width: 1439px) {
         font-size: 450px;
       }
-      @media (max-width: 966px) {
+      @media (max-width: 965px) {
         font-size: 300px;
         line-height: 100%;
       }
@@ -103,7 +103,7 @@
       .topText {
         @include Text-FS-FW-LH(18px, 400, 150%);
         max-width: 440px;
-        @media (max-width: 966px) {
+        @media (max-width: 965px) {
           max-width: 80%;
           @include Text-FS-FW-LH(14px, 400, 160%);
         }
