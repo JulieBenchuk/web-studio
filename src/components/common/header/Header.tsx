@@ -19,8 +19,8 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
 
                     <div className={style.navBlock}>
                         <nav className={style.navLinks}>
-                            <Link href='#'>Услуги</Link>
-                            <Link href='/portfolio'> Портфолио</Link>
+                            <div className={style.servicesLink}><Link href='#'>Услуги</Link></div>
+                            <div className={style.portfolioLink}><Link href='/portfolio'>Портфолио</Link></div>
                         </nav>
                         <LinkBtn className={style.buttonCallback}>Заказать звонок</LinkBtn>
 
@@ -29,7 +29,7 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
                 {!isMainPage && <span className={style.currentPage}>
                     <span className={style.mainPageLink} onClick={() => {
                         router.push('/')
-                    }}>Главная</span> &#8226; {currentPage}
+                    }}>Главная</span> <span className={style.currentPageName}> &#8226; {currentPage}</span>
                 </span>}
             </header>
         </Wrapper>

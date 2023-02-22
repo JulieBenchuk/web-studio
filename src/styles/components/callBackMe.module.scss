@@ -5,10 +5,10 @@
   padding: 40px 130px 120px 130px;
   color: $text-color-primary;
   display: flex;
-  @media (max-width: 1024px) {
+  @media (max-width: 1439px) {
     flex-direction: column;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 966px) {
     padding: 40px 20px 120px 20px;
   }
 
@@ -31,23 +31,16 @@
 
   .title {
     max-width: 50%;
-    @media (max-width: 1320px) {
-      text-align: start;
-      font-size: 70px;
+    @media (max-width: 1439px) {
       padding: 37px 0;
-    }
-    @media (max-width: 1024px) {
       max-width: 100%;
       text-align: center;
       font-size: 64px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 966px) {
       text-align: start;
-      width: 60%;
+      width: 384px;
       @include Text-FS-FW-LH(48px, 700, 97.2%);
-    }
-    @media (max-width: 430px) {
-      width: 72%;
     }
   }
 
@@ -56,7 +49,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
-    @media (max-width: 1024px) {
+    @media (max-width: 1439px) {
       flex-direction: column;
       align-items: center;
 
@@ -69,13 +62,13 @@
       justify-content: space-between;
       align-items: end;
       position: relative;
-      @media (max-width: 1024px) {
+      @media (max-width: 1439px) {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: space-between;
         padding: 10px 0;
       }
-      @media (max-width: 767px) {
+      @media (max-width: 966px) {
         width: 100%;
         align-items: start;
       }
@@ -91,10 +84,10 @@
         @include Text-FS-FW-LH(16px, 400, 123.7%);
         display: flex;
         align-items: center;
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           width: 460px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           width: 100%;
         }
 
@@ -110,11 +103,11 @@
         position: absolute;
         top: -15px;
         color: $bg-third;
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           position: absolute;
           top: 60px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           top: 90px;
 
         }
@@ -125,17 +118,13 @@
         font-style: normal;
 
         @include Text-FS-FW-LH(18px, 400, 150%);
-        @media (max-width: 1120px) {
-          font-size: 15px;
-          margin-right: 40px;
-        }
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           font-size: 18px;
           width: 537px;
           padding-bottom: 40px;
           margin-right: 0;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           width: 287px;
         }
       }
@@ -150,12 +139,12 @@
       justify-content: space-between;
       align-items: end;
       position: relative;
-      @media (max-width: 1024px) {
+      @media (max-width: 1439px) {
         align-items: center;
         justify-content: space-between;
         padding: 10px 0;
       }
-      @media (max-width: 767px) {
+      @media (max-width: 966px) {
         width: 100%;
       }
 
@@ -170,10 +159,10 @@
         @include Text-FS-FW-LH(16px, 400, 123.7%);
         display: flex;
         align-items: center;
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           width: 460px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           width: 100%;
         }
 
@@ -189,10 +178,10 @@
         color: $bg-third;
         position: absolute;
         top: -15px;
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           position: static;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           position: absolute;
           left: 0;
           top: -10px;
@@ -201,10 +190,10 @@
       }
 
       .button {
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           margin-top: 40px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           width: 100%;
         }
 

@@ -9,11 +9,11 @@
   text-transform: uppercase;
   @include Text-FS-FW-LH(128px, 700, 148px);
   letter-spacing: -0.025em;
-  @media (max-width: 1024px) {
+  @media (max-width: 1439px) {
     @include Text-FS-FW-LH(64px, 700, 74px);
     max-width: 554px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 966px) {
     @include Text-FS-FW-LH(48px, 700, 56px);
     max-width: 370px;
     text-align: center;
@@ -26,7 +26,7 @@
     @include Text-FS-FW-LH(64px, 700, 74px);
     max-width: 554px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 966px) {
     @include Text-FS-FW-LH(48px, 700, 56px);
     max-width: 370px;
     text-align: center;
@@ -45,10 +45,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   max-width: 493px;
-  @media (max-width: 1024px) {
+  @media (max-width: 1439px) {
     @include Text-FS-FW-LH(64px, 700, 94.7%)
   }
-  @media (max-width: 767px) {
+  @media (max-width: 966px) {
     @include Text-FS-FW-LH(48px, 700, 94.7%)
   }
 }

@@ -3,10 +3,10 @@
 
 .wrapper {
   padding: 0 130px 100px 130px;
-  @media (max-width: 1024px) {
+  @media (max-width: 1439px) {
     padding: 0 175px 40px 170px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 966px) {
     padding: 0 18px 60px 20px;
   }
   position: relative;
@@ -25,21 +25,17 @@
     -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    @media (max-width: 1400px) {
+    @media (max-width: 1439px) {
       width: 500px;
       height: 500px;
       top: 190px;
       right: 300px;
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1439px) {
       top: -20px;
       right: 100px;
     }
-    @media (max-width: 970px) {
-      top: -20px;
-      right: 0;
-    }
-    @media (max-width: 767px) {
+    @media (max-width: 966px) {
       top: 40px;
       right: -80px;
     }
@@ -51,11 +47,11 @@
       right: 20px;
       width: 450px;
       height: 450px;
-      @media (max-width: 1400px) {
+      @media (max-width: 1439px) {
         width: 400px;
         height: 400px;
       }
-      @media (max-width: 767px) {
+      @media (max-width: 966px) {
         top: 20px;
         right: 90px;
         width: 250px;
@@ -75,10 +71,10 @@
       line-height: 71%;
       text-align: center;
 
-      @media (max-width: 1400px) {
+      @media (max-width: 1439px) {
         font-size: 450px;
       }
-      @media (max-width: 767px) {
+      @media (max-width: 966px) {
         font-size: 300px;
         line-height: 100%;
       }
@@ -91,7 +87,7 @@
     padding-top: 64px;
     padding-left: 100px;
     position: relative;
-    @media (max-width: 1024px) {
+    @media (max-width: 1439px) {
       flex-direction: column;
       padding-left: 0;
       padding-top: 20px;
@@ -100,14 +96,14 @@
 
     .topPart {
       width: 40%;
-      @media (max-width: 1024px) {
+      @media (max-width: 1439px) {
         width: 100%;
       }
 
       .topText {
         @include Text-FS-FW-LH(18px, 400, 150%);
         max-width: 440px;
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           max-width: 80%;
           @include Text-FS-FW-LH(14px, 400, 160%);
         }
@@ -118,22 +114,16 @@
       .girlImg {
         position: relative;
         left: -180px;
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           position: absolute;
-
-          bottom: 30px;
         }
-        @media (max-width: 905px) {
-          bottom: 60px;
-          left: -220px;
-        }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           left: -100px;
           bottom: 140px;
         }
 
         img {
-          @media (max-width: 767px) {
+          @media (max-width: 966px) {
             max-width: 292px;
           }
         }
@@ -148,15 +138,12 @@
       flex-direction: column;
       margin-top: 247px;
       position: relative;
-      @media (max-width: 1024px) {
+      @media (max-width: 1439px) {
         margin-top: 109px;
         width: 100%;
         align-items: end;
       }
-      @media (max-width: 905px) {
-        margin-top: 50px;
-      }
-      @media (max-width: 767px) {
+      @media (max-width: 966px) {
         margin-top: 110px;
       }
 
@@ -164,7 +151,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 2px;
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           align-items: end;
           row-gap: 20px;
         }
@@ -172,19 +159,17 @@
         .first, .second, .third {
           @include Text-FS-FW-LH(18px, 400, 150%);
           max-width: 75%;
-          @media (max-width: 1024px) {
+          @media (max-width: 1439px) {
             max-width: 375px;
           }
-          @media (max-width: 905px) {
+          @media (max-width: 966px) {
             max-width: 246px;
-          }
-          @media (max-width: 767px) {
             @include Text-FS-FW-LH(14px, 400, 160%);
           }
         }
 
         .first {
-          @media(max-width: 767px) {
+          @media(max-width: 966px) {
             position: absolute;
             left: 0;
             top: 0;
@@ -193,7 +178,7 @@
         }
 
         .second {
-          @media(max-width: 767px) {
+          @media(max-width: 966px) {
             padding-top: 95px;
           }
           @media(max-width: 440px) {
@@ -223,12 +208,12 @@
         border-radius: 35px;
         background: rgba(217, 217, 217, 0.1);
         backdrop-filter: blur(25px);
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           width: 469px;
           padding: 9px;
           flex-direction: row-reverse;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           max-width: 100%;
           width: 100%;
           flex-direction: column-reverse;
@@ -241,11 +226,11 @@
         }
 
         .button {
-          @media (max-width: 1024px) {
+          @media (max-width: 1439px) {
             min-width: 220px;
             @include Text-FS-FW-LH(16px, 700, 19px);
           }
-          @media (max-width: 767px) {
+          @media (max-width: 966px) {
             min-width: 350px;
           }
         }
@@ -253,13 +238,10 @@
         .buttonDescription {
           width: 50%;
           @include Text-FS-FW-LH(16px, 400, 150%);
-          @media (max-width: 1310px) {
-            @include Text-FS-FW-LH(14px, 400, 123.7%);
-          }
-          @media (max-width: 1024px) {
+          @media (max-width: 1439px) {
             padding-left: 20px;
           }
-          @media (max-width: 767px) {
+          @media (max-width: 966px) {
             width: 270px;
             margin: 0;
             text-align: center;
@@ -277,11 +259,11 @@
     z-index: 1;
     @include Text-FS-FW-LH(110px, 700, 97.2%);
     max-width: 900px;
-    @media (max-width: 1024px) {
+    @media (max-width: 1439px) {
       @include Text-FS-FW-LH(64px, 700, 94.7%);
       max-width: 468px;
     }
-    @media (max-width: 905px) {
+    @media (max-width: 966px) {
       @include Text-FS-FW-LH(48px, 700, 94.7%);
       max-width: 360px;
     }
