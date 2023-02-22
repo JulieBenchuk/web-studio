@@ -33,7 +33,6 @@ export const Slider: React.FC<SwiperDataType> = ({swiperData}) => {
                     loop={true}
                     autoplay={true}
             >
-                <div>
                     {swiperData.map((el, index) => {
                         return <SwiperSlide key={index} className={styles.slide}>
                                 <div className={styles.image}>
@@ -43,12 +42,14 @@ export const Slider: React.FC<SwiperDataType> = ({swiperData}) => {
                                     <div className={styles.title}>
                                         {el.title}
                                     </div>
-                                    {el.subTitle && <div className={styles.subTitle}>{el.subTitle}</div>}
+                                    <div className={styles.subTitle}>{el.subTitle}</div>
                                     <div className={styles.desc}>
                                         {el.desc}
                                     </div>
-                                    {el.price && <div className={styles.price}>от {el.price} ₽</div>}
-
+                                    <div className={styles.mobileDesc}>
+                                        {el.desc.split(' ').slice(0, 18).join(' ') + ' ...'}
+                                    </div>
+                                    <div className={styles.price}>{el.price && `от ${el.price} ₽`}</div>
                                     <div className={styles.buttons}>
                                         <div className={`swiper-button-prev ${styles.swiperButtonPrev}`}>
                                             <Image src={arrow} alt={'Arrow'}/>
@@ -61,8 +62,6 @@ export const Slider: React.FC<SwiperDataType> = ({swiperData}) => {
                                 </div>
                         </SwiperSlide>
                     })}
-
-                </div>
             </Swiper>
             <style jsx>{`
               .slideClass {
@@ -83,6 +82,9 @@ export const Slider: React.FC<SwiperDataType> = ({swiperData}) => {
 
               .swiper-slide {
 
+              }
+              .swiper-wrapper{
+              display: none;
               }
             `}</style>
         </div>

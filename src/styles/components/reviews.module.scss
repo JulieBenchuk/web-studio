@@ -2,10 +2,10 @@
 @import "../variables";
 
 .wrapper {
-  padding: 50px 5%;
+  padding: 50px 210px;
   color: $text-color-primary;
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
 
   .text {
@@ -20,11 +20,13 @@
       padding-left: 50px;
     }
   }
+
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1145px) {
   .wrapper {
     flex-direction: column;
+    align-items: center;
     padding: 30px 42px;
 
     .text {
@@ -47,5 +49,8 @@
 @media (max-width: 767px) {
   .wrapper {
     padding: 30px 42px;
+    .text{
+      text-align: center;
+    }
   }
 }
