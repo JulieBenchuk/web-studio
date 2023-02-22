@@ -15,18 +15,22 @@ const QuestionnaireForm = () => {
                         <div className={style.formName}>
                             <label>Имя</label>
                             <input type="text" placeholder={"Иванов Иван Иванович"}/>
+                            <span className={style.fakePlaceholder}>Фамилия Имя Отчество</span>
                         </div>
                         <div className={style.formPhone}>
                             <label>Номер телефона</label>
                             <input type="tel" placeholder={"+7(___) ___ __ __"}/>
+                            <span className={style.fakePlaceholder}>+7(___) ___ __ __</span>
                         </div>
                         <div className={style.formEmail}>
                             <label>E-mail</label>
                             <input type="email" placeholder={"Ivan@mail.ru"}/>
+                            <span className={style.fakePlaceholder}>E-mail</span>
                         </div>
                         <div className={style.formCompanyName}>
                             <label>Компания/проект</label>
                             <input type="text" placeholder={"OOO Ivanovka"}/>
+                            <span className={style.fakePlaceholder}>Компания/проект</span>
                         </div>
                     </div>
                 </div>
