@@ -103,7 +103,7 @@
 
 
         &::placeholder {
-          color: rgba(255, 255, 255, 0.8);
+          color: $text-color-third;
           opacity: 0.4;
         }
 
@@ -178,7 +178,7 @@
 
 
         &::placeholder {
-          color: rgba(255, 255, 255, 0.8);
+          color: $text-color-third;
           opacity: 0.4;
         }
 

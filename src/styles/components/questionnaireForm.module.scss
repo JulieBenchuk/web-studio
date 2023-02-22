@@ -65,6 +65,96 @@
     }
 
     .interest {
+      padding-bottom: 100px;
+      @media (max-width: 1439px) {
+        padding-bottom: 70px;
+      }
+      @media (max-width: 965px) {
+        padding-bottom: 32px;
+      }
+
+
+      .selectorsBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        .selectorItem {
+          z-index: 1;
+          display: flex;
+          justify-content: space-between;
+          width: 980px;
+          padding: 32px 50px;
+          border-radius: 35px;
+          background: rgba(76, 4, 166, 0.27);
+          border: 1px solid $text-color-primary;
+          backdrop-filter: blur(34px);
+          @media (max-width: 1439px) {
+            width: 100%;
+            padding: 30px 32px;
+          }
+          @media (max-width: 965px) {
+            padding: 25px 30px;
+          }
+
+          .itemTitle {
+            @include Text-FS-FW-LH(48px, 400, 56px);
+            text-transform: uppercase;
+            color: $text-color-third;
+            @media (max-width: 1439px) {
+              @include Text-FS-FW-LH(32px, 400, 37px);
+            }
+            @media (max-width: 965px) {
+              @include Text-FS-FW-LH(20px, 400, 23px);
+            }
+          }
+
+          .itemArrow {
+
+          }
+        }
+
+        .selectorItemHidden {
+          z-index: 0;
+          position: relative;
+          left: 0;
+          top: 0;
+          width: 980px;
+          height: 0;
+          margin-bottom: 20px;
+          @media (max-width: 1439px) {
+            width: 100%;
+          }
+          @media (max-width: 965px) {
+            margin-bottom: 8px;
+          }
+
+        }
+
+        .selectorItemExpanded {
+          @extend .selectorItemHidden;
+          background: rgba(216, 216, 216, 0.13);
+          backdrop-filter: blur(34px);
+          border-radius: 35px;
+          padding: 140px 149px 42px 54px;
+          height: 299px;
+          top: -120px;
+          border: 1px solid $text-color-primary;
+          margin-bottom: -100px;
+          @media (max-width: 1439px) {
+            top: -100px;
+            margin-bottom: -80px;
+            padding: 30px 32px;
+          }
+          @media (max-width: 965px) {
+            top: -80px;
+            margin-bottom: -72px;
+            padding: 25px 30px;
+          }
+
+        }
+      }
 
     }
 

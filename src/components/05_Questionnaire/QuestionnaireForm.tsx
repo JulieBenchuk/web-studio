@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Wrapper from "@/components/common/wrapper";
 import style from "@/styles/components/questionnaireForm.module.scss"
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 import FullButton from "@/components/common/buttons/FullButton";
+import arrow from "@/assets/svg/arrowDown.svg"
 
 const QuestionnaireForm = () => {
+
+    const [expandedMenu, setExpandedMenu] = useState(false)
+
+    const onClickHandler = () => {
+        setExpandedMenu(!expandedMenu)
+    }
+
     return (
         <Wrapper className={style.wrapper}>
             <form className={style.formBlock}>
@@ -38,7 +46,18 @@ const QuestionnaireForm = () => {
 
                 <div className={style.interest}>
                     <SmallTitle className={style.titles}>Вас интересует</SmallTitle>
+                    <div className={style.selectorsBlock}>
+                        <div className={style.selectorItem} onClick={onClickHandler}>
+                            <h5 className={style.itemTitle}>Разработка сайта</h5>
+                            <img src={arrow.src} className={style.itemArrow} alt="questionnaire"/>
+                        </div>
+                        <div
+                            className={expandedMenu ? `${style.selectorItemExpanded}` : `${style.selectorItemHidden}`}></div>
+
+
+                    </div>
                 </div>
+
 
                 <div className={style.projectInfo}>
                     <SmallTitle className={style.titles}>Информация о проекте</SmallTitle>
@@ -67,7 +86,7 @@ const QuestionnaireForm = () => {
                         </div>
 
                     </div>
-                    
+
                 </div>
 
 
