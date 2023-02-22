@@ -3,12 +3,20 @@ import style from "@/styles/components/questionnaireForm.module.scss"
 import arrow from "@/assets/svg/arrowDown.svg"
 import LinkBtn from "@/components/common/buttons/LinkBtn";
 
-const SelectorItem: React.FC<{ title: string, buttons: Array<string> }> = ({title, buttons}) => {
+const SelectorItem: React.FC<{ title: string, buttons?: Array<string>, onMessageActiveHandler: () => void }> = ({
+                                                                                                                    title,
+                                                                                                                    buttons,
+                                                                                                                    onMessageActiveHandler
+                                                                                                                }) => {
 
     const [expandedMenu, setExpandedMenu] = useState(false)
 
     const onClickHandler = () => {
-        setExpandedMenu(!expandedMenu)
+        if (title === "Другое") {
+            onMessageActiveHandler()
+        } else {
+            setExpandedMenu(!expandedMenu)
+        }
     }
 
     return <>
@@ -17,7 +25,7 @@ const SelectorItem: React.FC<{ title: string, buttons: Array<string> }> = ({titl
             <img src={arrow.src} className={style.itemArrow} alt="questionnaire"/>
         </div>
         <div className={expandedMenu ? `${style.selectorItemExpanded}` : `${style.selectorItemHidden}`}>
-            {expandedMenu && buttons.map((b) => <LinkBtn>{b}</LinkBtn>)}
+            {expandedMenu && buttons && buttons.map((b) => <LinkBtn>{b}</LinkBtn>)}
         </div>
     </>
 };

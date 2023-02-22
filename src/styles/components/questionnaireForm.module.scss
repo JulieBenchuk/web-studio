@@ -123,6 +123,11 @@
           width: 980px;
           height: 0;
           margin-bottom: 20px;
+          display: flex;
+          justify-content: start;
+          align-items: end;
+          flex-wrap: wrap;
+          gap: 20px;
           @media (max-width: 1439px) {
             width: 100%;
           }
@@ -137,20 +142,20 @@
           background: rgba(216, 216, 216, 0.13);
           backdrop-filter: blur(34px);
           border-radius: 35px;
-          padding: 140px 149px 42px 54px;
-          height: 299px;
+          padding: 140px 40% 42px 54px;
+          height: 100%;
           top: -120px;
           border: 1px solid $text-color-primary;
           margin-bottom: -100px;
           @media (max-width: 1439px) {
             top: -100px;
             margin-bottom: -80px;
-            padding: 30px 32px;
+            padding: 120px 32px 30px 32px;
           }
           @media (max-width: 965px) {
             top: -80px;
             margin-bottom: -72px;
-            padding: 25px 30px;
+            padding: 100px 30px 25px 30px;
           }
 
         }

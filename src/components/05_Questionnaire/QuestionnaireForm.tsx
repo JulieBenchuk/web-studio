@@ -7,6 +7,11 @@ import SelectorItem from "@/components/05_Questionnaire/SelectorItem";
 import {selectorItemsData} from "@/components/05_Questionnaire/SelectorItemsData";
 
 const QuestionnaireForm = () => {
+    const [isMessageActive, setIsMessageActive] = useState(false)
+
+    const onMessageActiveHandler = () => {
+        setIsMessageActive(true)
+    }
 
     return (
         <Wrapper className={style.wrapper}>
@@ -41,7 +46,8 @@ const QuestionnaireForm = () => {
                 <div className={style.interest}>
                     <SmallTitle className={style.titles}>Вас интересует</SmallTitle>
                     <div className={style.selectorsBlock}>
-                        {selectorItemsData.map((i) => <SelectorItem title={i.title} buttons={i.buttons}/>)}
+                        {selectorItemsData.map((i) => <SelectorItem title={i.title} buttons={i.buttons}
+                                                                    onMessageActiveHandler={onMessageActiveHandler}/>)}
                     </div>
                 </div>
 
@@ -60,13 +66,16 @@ const QuestionnaireForm = () => {
                                 <span className={style.fakePlaceholder}>Возраст компании (в годах)</span>
                             </div>
                         </div>
-                        <div className={style.row2}>
-                            <div className={style.formMessage}>
-                                <label>Сообщение</label>
-                                <textarea/>
-                                <span className={style.fakePlaceholder}>Сообщение</span>
-                            </div>
-                        </div>
+
+                        {isMessageActive &&
+                            <div className={style.row2}>
+                                <div className={style.formMessage}>
+                                    <label>Сообщение</label>
+                                    <textarea/>
+                                    <span className={style.fakePlaceholder}>Сообщение</span>
+                                </div>
+                            </div>}
+                        
                         <div className={style.buttonBlock}>
                             <FullButton className={style.button}>Отправить</FullButton>
                         </div>

@@ -14,4 +14,8 @@ export const selectorItemsData = [
         title: "Дизайн",
         buttons: ["UI и UX дизайн", "Редизайн сайта"]
     },
+    {
+        id: 4,
+        title: "Другое",
+    }
 ]
