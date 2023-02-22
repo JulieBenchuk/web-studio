@@ -1,0 +1,226 @@
+@import "../mixins";
+@import "../variables";
+
+.wrapper {
+  padding: 0 144px;
+  @media(max-width: 1439px) {
+    padding: 0 170px;
+
+  }
+  @media(max-width: 965px) {
+    padding: 0 20px;
+  }
+
+  input, textarea {
+    padding: 35px;
+    border-radius: 49px;
+    background: $bg-seven;
+    color: $text-color-primary;
+    @include Text-FS-FW-LH(20px, 400, 123.7%);
+    @media (max-width: 1439px) {
+      @include Text-FS-FW-LH(16px, 400, 123.7%);
+      padding: 20px;
+    }
+    @media (max-width: 965px) {
+      padding: 25px;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.8);
+      opacity: 0.4;
+    }
+  }
+
+  label {
+    padding-left: 35px;
+    @include Text-FS-FW-LH(20px, 700, 123.7%);
+    text-transform: uppercase;
+    @media (max-width: 1439px) {
+      display: none;
+    }
+  }
+
+
+  .formBlock {
+
+    .commonInfo, .interest, .projectInfo {
+      padding-bottom: 120px;
+
+      .titles {
+        max-width: 849px;
+        padding-bottom: 57px;
+        @media(max-width: 1439px) {
+          max-width: 480px;
+          padding-bottom: 39px;
+
+        }
+        @media(max-width: 965px) {
+          max-width: 345px;
+          padding-bottom: 30px;
+        }
+      }
+    }
+
+    .commonInfo {
+      .commonInfoForm {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 109px;
+        row-gap: 57px;
+        @media (max-width: 1439px) {
+          justify-content: space-between;
+          column-gap: 20px;
+          row-gap: 20px;
+        }
+        @media (max-width: 965px) {
+          flex-direction: column;
+        }
+
+        .formName, .formEmail, .formPhone, .formCompanyName {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          input {
+            width: 380px;
+            @media (max-width: 1439px) {
+              width: 100%;
+            }
+          }
+
+          @media (max-width: 1439px) {
+            width: 45%;
+          }
+          @media (max-width: 965px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .interest {
+
+    }
+
+    .projectInfo {
+      .projectInputForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 57px;
+        @media(max-width: 1439px) {
+          row-gap: 20px;
+          align-items: start;
+
+        }
+
+        .row1 {
+          width: 854px;
+          display: flex;
+          justify-content: space-between;
+          @media(max-width: 1439px) {
+            width: 100%;
+            justify-content: start;
+            column-gap: 20px;
+          }
+          @media(max-width: 965px) {
+            flex-direction: column;
+            row-gap: 20px;
+          }
+
+
+          .formSite {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            @media(max-width: 1439px) {
+              width: 100%;
+
+            }
+
+            input {
+              width: 380px;
+              @media(max-width: 1439px) {
+                width: 100%;
+
+              }
+            }
+          }
+
+          .formAge {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            @media(max-width: 1439px) {
+              width: 100%;
+
+            }
+
+            input {
+              width: 172px;
+              align-self: end;
+              @media(max-width: 1439px) {
+                width: 100%;
+
+              }
+            }
+          }
+        }
+
+        .row2 {
+          @media(max-width: 1439px) {
+            width: 100%;
+
+          }
+
+          .formMessage {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            textarea {
+              min-width: 854px;
+              min-height: 265px;
+              @media(max-width: 1439px) {
+                min-width: 100%;
+                min-height: 300px;
+              }
+              @media(max-width: 965px) {
+                min-height: 240px;
+              }
+            }
+          }
+        }
+
+        .buttonBlock {
+          width: 854px;
+          display: flex;
+          flex-direction: column;
+          @media(max-width: 1439px) {
+            width: 100%;
+            margin-top: 20px;
+          }
+          @media(max-width: 965px) {
+            width: 100%;
+            margin-top: 40px;
+
+          }
+
+          .button {
+            align-self: end;
+            @media(max-width: 1439px) {
+              align-self: center;
+
+            }
+
+          }
+        }
+      }
+    }
+
+
+  }
+
+
+}

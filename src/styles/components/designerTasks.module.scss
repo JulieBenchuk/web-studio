@@ -8,24 +8,24 @@
   .content {
     overflow: hidden;
     padding: 0 130px;
-    @media (max-width: 1024px) {
+    @media (max-width: 1439px) {
       padding: 100px 170px 90px 170px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 966px) {
       padding: 89px 20px 82px 20px;
     }
 
     .titleBlock {
-      @media (max-width: 767px) {
+      @media (max-width: 966px) {
         @include Flex-Center();
       }
 
       .taskTitle {
         max-width: 819px;
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           max-width: 377px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           text-align: center;
           max-width: 391px;
         }
@@ -38,11 +38,11 @@
       display: flex;
       flex-direction: column;
       position: relative;
-      @media (max-width: 1270px) {
+      @media (max-width: 1439px) {
         padding-top: 40px;
         gap: 20px;
       }
-      @media (max-width: 767px) {
+      @media (max-width: 966px) {
         padding-top: 20px;
       }
 
@@ -74,7 +74,7 @@
         text-transform: uppercase;
         @include Text-FS-FW-LH(20px, 700, 123.7%);
         padding: 36px 34px;
-        @media (max-width: 1270px) {
+        @media (max-width: 1439px) {
           background: rgba(217, 217, 217, 0.04);
           backdrop-filter: blur(27px);
           margin: 0;
@@ -82,7 +82,7 @@
           text-align: center;
           width: 557px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           @include Text-FS-FW-LH(14px, 700, 123.7%);
           width: 100%;
           max-width: 100%;
@@ -98,11 +98,11 @@
         text-align: center;
         align-self: center;
         @include Text-FS-FW-LH(18px, 400, 150%);
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           max-width: 448px;
           margin-top: 60.65px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           @include Text-FS-FW-LH(14px, 400, 160%);
           max-width: 448px;
           margin-top: 90.35px;
@@ -114,19 +114,21 @@
       .spaceman {
         z-index: 0;
         position: absolute;
-        left: 0;
+        left: 5%;
         right: 0;
         top: -80px;
         max-width: 100%;
-        @media (max-width: 1024px) {
-          top: -200px;
-        }
-        @media (max-width: 767px) {
-          max-width: 100%;
+        @media (max-width: 1439px) {
+          max-width: 731px;
           top: -180px;
         }
-        @media (max-width: 590px) {
+        @media (max-width: 966px) {
           top: -100px;
+          left: 10%;
+          max-width: 452px;
+        }
+        @media (max-width: 550px) {
+          left: -10%;
         }
       }
     }
@@ -137,7 +139,7 @@
       display: flex;
       flex-direction: column;
       padding-bottom: 80px;
-      @media (max-width: 1024px) {
+      @media (max-width: 1439px) {
         padding-top: 90px;
         padding-bottom: 0;
       }
@@ -145,7 +147,7 @@
       .wavesMob {
         display: none;
 
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           display: block;
           position: absolute;
           left: -20px;
@@ -156,18 +158,17 @@
 
 
       .visualTitle {
-        z-index: 0;
+        z-index: 1;
         align-self: center;
         @include Text-FS-FW-LH(110px, 700, 97.2%);
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           @include Text-FS-FW-LH(64px, 700, 97.2%);
         }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           @include Text-FS-FW-LH(48px, 700, 94.7%);
           background: linear-gradient(180deg, #FFFFFF 21.38%, rgba(255, 255, 255, 0) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          text-fill-color: transparent;
         }
         @media (max-width: 400px) {
           @include Text-FS-FW-LH(42px, 700, 94.7%);
@@ -180,11 +181,11 @@
         align-self: end;
         padding-top: 210px;
         max-width: 679px;
-        @media (max-width: 1024px) {
+        @media (max-width: 1439px) {
           padding-top: 100px;
           align-self: center;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 966px) {
           padding-top: 11px;
           max-width: 100%;
           text-align: center;
@@ -194,18 +195,18 @@
         .visualText {
           padding-bottom: 30px;
           @include Text-FS-FW-LH(18px, 400, 150%);
-          @media (max-width: 1024px) {
+          @media (max-width: 1439px) {
             padding-bottom: 40px;
             max-width: 503px;
           }
-          @media (max-width: 767px) {
+          @media (max-width: 966px) {
             @include Text-FS-FW-LH(14px, 400, 160%);
           }
         }
 
         .visualButton {
           z-index: 1;
-          @media (max-width: 767px) {
+          @media (max-width: 966px) {
             width: 100%;
           }
 
@@ -222,7 +223,7 @@
           bottom: 100px;
           left: 0;
           max-width: 100%;
-          @media (max-width: 767px) {
+          @media (max-width: 966px) {
             display: none;
           }
         }

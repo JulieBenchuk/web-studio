@@ -4,10 +4,10 @@
 .wrapper {
   width: 100%;
   padding-bottom: 60px;
-  @media (max-width: 1024px) {
+  @media (max-width: 1439px) {
     padding-bottom: 90px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 965px) {
     padding-bottom: 128px;
   }
 
@@ -48,16 +48,16 @@
       .navLinks {
         display: flex;
 
-        a {
-          left: 68.22%;
-          right: 27.63%;
-          top: 19.35%;
-          bottom: 19.35%;
+        .servicesLink, .portfolioLink {
           @include Text-FS-FW-LH(16px, 400, 19px);
+          z-index: 2;
           font-style: normal;
           padding-right: 30px;
-          color: #FFFFFF;
           opacity: 0.4;
+
+          &:hover {
+            opacity: 1;
+          }
 
         }
       }
@@ -78,15 +78,23 @@
     bottom: 98.46%;
     font-style: normal;
     @include Text-FS-FW-LH(16px, 400, 19px);
-    color: #FFFFFF;
-    opacity: 0.4;
     padding-top: 20px;
     @media (max-width: 1220px) {
       display: none;
     }
 
     .mainPageLink {
+      opacity: 0.4;
       cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .currentPageName {
+      opacity: 0.4;
+
     }
 
   }
