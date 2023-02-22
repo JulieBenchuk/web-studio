@@ -123,7 +123,10 @@
             width: 100%;
             justify-content: start;
             column-gap: 20px;
-
+          }
+          @media(max-width: 966px) {
+            flex-direction: column;
+            row-gap: 20px;
           }
 
 
@@ -178,8 +181,13 @@
 
             textarea {
               min-width: 854px;
+              min-height: 265px;
               @media(max-width: 1439px) {
                 min-width: 100%;
+                min-height: 300px;
+              }
+              @media(max-width: 966px) {
+                min-height: 240px;
               }
             }
           }
@@ -192,6 +200,10 @@
           @media(max-width: 1439px) {
             width: 100%;
             margin-top: 20px;
+          }
+          @media(max-width: 966px) {
+            width: 100%;
+            margin-top: 40px;
 
           }
 
