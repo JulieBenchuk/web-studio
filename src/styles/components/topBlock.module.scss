@@ -104,7 +104,6 @@
 
     .button {
       @media (max-width: 966px) {
-        min-width: 350px;
         @include Text-FS-FW-LH(16px, 700, 19px);
       }
     }
