@@ -27,9 +27,11 @@ const SelectorItem: React.FC<SelectorItemPropsType> = ({
     }
 
     return <>
-        <div className={style.selectorItem} onClick={onClickHandler} style={background}>
+        <div className={expandedMenu ? style.selectorItemActive : style.selectorItem} onClick={onClickHandler}
+             style={background}>
             <h5 className={style.itemTitle}>{title}</h5>
-            <img src={arrow.src} className={style.itemArrow} alt="questionnaire"/>
+            <img src={arrow.src} className={expandedMenu ? style.itemArrowExpanded : style.itemArrow}
+                 alt="questionnaire"/>
         </div>
         <div className={expandedMenu ? `${style.selectorItemExpanded}` : `${style.selectorItemHidden}`}>
             {expandedMenu && buttons && buttons.map((b) => <LinkBtn>{b}</LinkBtn>)}
