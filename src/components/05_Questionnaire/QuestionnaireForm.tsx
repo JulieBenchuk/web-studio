@@ -8,7 +8,7 @@ import SelectorItem from "@/components/05_Questionnaire/SelectorItem";
 import {selectorItemsData} from "@/components/05_Questionnaire/SelectorItemsData";
 
 const QuestionnaireForm = () => {
-    const [isMessageActive, setIsMessageActive] = useState(false)
+    const [isMessageActive, setIsMessageActive] = useState<boolean>(false)
 
     const onMessageActiveHandler = () => {
         setIsMessageActive(true)
@@ -38,28 +38,30 @@ const QuestionnaireForm = () => {
                     <SmallTitle className={style.titles}>Общая информация</SmallTitle>
                     <div className={style.commonInfoForm}>
                         <div className={style.formName}>
-                            <label>Имя</label>
+                            <label className={style.label}>Имя</label>
                             <input type="text" name="name" placeholder={"Иванов Иван Иванович"}
                                    onChange={formik.handleChange}
                                    value={formik.values.name}/>
                             <span className={style.fakePlaceholder}>Фамилия Имя Отчество</span>
                         </div>
                         <div className={style.formPhone}>
-                            <label>Номер телефона</label>
+                            <label className={style.label}>Номер телефона</label>
                             <input type="tel" name="phone" placeholder={"+7(___) ___ __ __"}
                                    onChange={formik.handleChange}
                                    value={formik.values.phone}/>
                             <span className={style.fakePlaceholder}>+7(___) ___ __ __</span>
                         </div>
                         <div className={style.formEmail}>
-                            <label>E-mail</label>
-                            <input type="email" name="email" placeholder={"Ivan@mail.ru"} onChange={formik.handleChange}
+                            <label className={style.label}>E-mail</label>
+                            <input type="email" name="email" placeholder={"Ivan@mail.ru"}
+                                   onChange={formik.handleChange}
                                    value={formik.values.email}/>
                             <span className={style.fakePlaceholder}>E-mail</span>
                         </div>
                         <div className={style.formCompanyName}>
-                            <label>Компания/проект</label>
-                            <input type="text" name="companyOrProject" placeholder={"OOO Ivanovka"}
+                            <label className={style.label}>Компания/проект</label>
+                            <input type="text" name="companyOrProject"
+                                   placeholder={"OOO Ivanovka"}
                                    onChange={formik.handleChange}
                                    value={formik.values.companyOrProject}/>
                             <span className={style.fakePlaceholder}>Компания/проект</span>
@@ -83,14 +85,14 @@ const QuestionnaireForm = () => {
                     <div className={style.projectInputForm}>
                         <div className={style.row1}>
                             <div className={style.formSite}>
-                                <label>Веб-сайт</label>
+                                <label className={style.label}>Веб-сайт</label>
                                 <input type="text" placeholder={"www.ivanovka.com"} name="site"
                                        onChange={formik.handleChange}
                                        value={formik.values.site}/>
                                 <span className={style.fakePlaceholder}>Ссылка на сайт</span>
                             </div>
                             <div className={style.formAge}>
-                                <label>Возраст компании (в годах)</label>
+                                <label className={style.label}>Возраст компании (в годах)</label>
                                 <input type="text" placeholder={"21 год"} name="ageOfCompany"
                                        onChange={formik.handleChange}
                                        value={formik.values.ageOfCompany}/>
@@ -100,7 +102,7 @@ const QuestionnaireForm = () => {
 
                         <div className={style.row2}>
                             <div className={style.formMessage}>
-                                <label>Сообщение</label>
+                                <label className={style.label}>Сообщение</label>
                                 <textarea disabled={!isMessageActive} name="message" onChange={formik.handleChange}
                                           value={formik.values.message}/>
                                 <span className={style.fakePlaceholder}>Сообщение</span>

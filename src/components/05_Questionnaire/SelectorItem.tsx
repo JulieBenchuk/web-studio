@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, MouseEvent} from 'react';
 import style from "@/styles/components/questionnaireForm.module.scss"
 import arrow from "@/assets/svg/arrowDown.svg"
-import LinkBtn from "@/components/common/buttons/LinkBtn";
+import InterestItem from "@/components/05_Questionnaire/InterestItem";
 
 type SelectorItemPropsType = {
     title: string,
@@ -17,8 +17,13 @@ const SelectorItem: React.FC<SelectorItemPropsType> = ({
                                                        }) => {
 
     const [expandedMenu, setExpandedMenu] = useState(false)
+    const [checked, setChecked] = useState(false)
 
-    const onClickHandler = () => {
+    const onChangeCheckHandler = () => {
+        setChecked(checked)
+    }
+
+    const onMenuClickHandler = () => {
         if (title === "Другое") {
             onMessageActiveHandler()
         } else {
@@ -26,15 +31,25 @@ const SelectorItem: React.FC<SelectorItemPropsType> = ({
         }
     }
 
+    const onButtonClickHandler = (b: string, e: MouseEvent<HTMLInputElement>) => {
+        e.preventDefault()
+        console.log(b)
+
+    }
+
     return <>
-        <div className={expandedMenu ? style.selectorItemActive : style.selectorItem} onClick={onClickHandler}
+        <div className={expandedMenu ? style.selectorItemActive : style.selectorItem} onClick={onMenuClickHandler}
              style={background}>
             <h5 className={style.itemTitle}>{title}</h5>
             <img src={arrow.src} className={expandedMenu ? style.itemArrowExpanded : style.itemArrow}
                  alt="questionnaire"/>
         </div>
         <div className={expandedMenu ? `${style.selectorItemExpanded}` : `${style.selectorItemHidden}`}>
-            {expandedMenu && buttons && buttons.map((b) => <LinkBtn>{b}</LinkBtn>)}
+            {expandedMenu && buttons && buttons.map((b) => <InterestItem checked={checked}
+                                                                         onChange={onChangeCheckHandler}
+                                                                         onClick={(e) => onButtonClickHandler(b, e)}>{b}</InterestItem>)}
+        </div>
+        <div>
         </div>
     </>
 };

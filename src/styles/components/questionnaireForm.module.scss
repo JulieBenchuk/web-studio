@@ -240,7 +240,7 @@
             width: 100%;
           }
 
-          input {
+          input[type=text], input[type=tel], input[type=email] {
             width: 172px;
             align-self: end;
             @media(max-width: 1439px) {
@@ -316,7 +316,7 @@
     }
   }
 
-  input, textarea {
+  input[type=text], input[type=tel], input[type=email], textarea {
     border: 2px solid transparent;
     padding: 35px;
     border-radius: 49px;
@@ -353,7 +353,7 @@
     }
   }
 
-  input {
+  input[type=text], input[type=tel], input[type=email] {
     width: 380px;
     @media (max-width: 1439px) {
       width: 100%;
