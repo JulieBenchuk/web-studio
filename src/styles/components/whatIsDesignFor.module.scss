@@ -1,0 +1,33 @@
+@import "../mixins";
+@import "../variables";
+
+.wrapper {
+  padding: 120px 106px 120px 130px;
+
+
+  .title {
+    max-width: 827px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding-top: 28px;
+
+    .description {
+      max-width: 45%;
+      @include Text-FS-FW-LH(16px, 400, 150%);
+      color: $text-color-primary;
+    }
+
+    .blockArrow {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
+}
+
+
