@@ -15,8 +15,8 @@ import {worksItems} from "@/components/common/ourWorks/OurWotksItems";
 const OurProjects = () => {
     return (
         <Wrapper className={style.wrapper}>
-            <MainTitle title={'Наши Проекты'}/>
-            <p>Здесь может оказаться ваш проект</p>
+            <MainTitle title={'Наши Проекты'} className={style.title}/>
+            <p className={style.subTitle}>Здесь может оказаться ваш проект</p>
             <div className={style.swiperBlock}>
                 <Swiper
                     pagination={{
