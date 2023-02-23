@@ -3,12 +3,18 @@ import style from "@/styles/components/questionnaireForm.module.scss"
 import arrow from "@/assets/svg/arrowDown.svg"
 import LinkBtn from "@/components/common/buttons/LinkBtn";
 
-const SelectorItem: React.FC<{ title: string, buttons?: Array<string>, background?: string, onMessageActiveHandler: () => void }> = ({
-                                                                                                                                         title,
-                                                                                                                                         buttons,
-                                                                                                                                         background,
-                                                                                                                                         onMessageActiveHandler
-                                                                                                                                     }) => {
+type SelectorItemPropsType = {
+    title: string,
+    buttons?: Array<string>,
+    background: { background: string },
+    onMessageActiveHandler: () => void
+}
+const SelectorItem: React.FC<SelectorItemPropsType> = ({
+                                                           title,
+                                                           buttons,
+                                                           background,
+                                                           onMessageActiveHandler
+                                                       }) => {
 
     const [expandedMenu, setExpandedMenu] = useState(false)
 
@@ -21,7 +27,7 @@ const SelectorItem: React.FC<{ title: string, buttons?: Array<string>, backgroun
     }
 
     return <>
-        <div className={style.selectorItem} onClick={onClickHandler}>
+        <div className={style.selectorItem} onClick={onClickHandler} style={background}>
             <h5 className={style.itemTitle}>{title}</h5>
             <img src={arrow.src} className={style.itemArrow} alt="questionnaire"/>
         </div>
