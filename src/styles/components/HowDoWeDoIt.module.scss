@@ -120,23 +120,59 @@
 
       .title {
         text-align: left;
+
       }
 
       .items {
         padding: 20px 20px 0;
 
-        .item {
+      }
+    }
 
-          .itemTitle {
+  }
+}
 
-          }
+@media (max-width: 965px) {
+  .wrapper {
+    gap: 60px;
 
-          .itemDescription {
+    .videoBG {
+      .videoWrapper {
+        width: 100%;
 
-          }
+        .video {
+          max-height: 265px;
         }
       }
     }
 
+    .content {
+      padding: 0 20px;
+      align-items: center;
+
+      .title {
+        font-size: 48px;
+        max-width: 215px;
+        margin-right: auto;
+      }
+
+      .items {
+        padding: 30px 0 0;
+        gap: 20px;
+        width: 90%;
+
+        .item {
+          .itemTitle {
+            font-size: 20px;
+            line-height: 23px;
+          }
+
+          .itemDescription {
+            font-size: 14px;
+            line-height: 160%;
+          }
+        }
+      }
+    }
   }
 }
