@@ -1,4 +1,4 @@
-import React, {useState, MouseEvent} from 'react';
+import React, {useState} from 'react';
 import style from "@/styles/components/questionnaireForm.module.scss"
 import arrow from "@/assets/svg/arrowDown.svg"
 import InterestItem from "@/components/05_Questionnaire/InterestItem";
@@ -17,11 +17,6 @@ const SelectorItem: React.FC<SelectorItemPropsType> = ({
                                                        }) => {
 
     const [expandedMenu, setExpandedMenu] = useState(false)
-    const [checked, setChecked] = useState(false)
-
-    const onChangeCheckHandler = () => {
-        setChecked(checked)
-    }
 
     const onMenuClickHandler = () => {
         if (title === "Другое") {
@@ -29,12 +24,6 @@ const SelectorItem: React.FC<SelectorItemPropsType> = ({
         } else {
             setExpandedMenu(!expandedMenu)
         }
-    }
-
-    const onButtonClickHandler = (b: string, e: MouseEvent<HTMLInputElement>) => {
-        e.preventDefault()
-        console.log(b)
-
     }
 
     return <>
@@ -45,9 +34,7 @@ const SelectorItem: React.FC<SelectorItemPropsType> = ({
                  alt="questionnaire"/>
         </div>
         <div className={expandedMenu ? `${style.selectorItemExpanded}` : `${style.selectorItemHidden}`}>
-            {expandedMenu && buttons && buttons.map((b) => <InterestItem checked={checked}
-                                                                         onChange={onChangeCheckHandler}
-                                                                         onClick={(e) => onButtonClickHandler(b, e)}>{b}</InterestItem>)}
+            {expandedMenu && buttons && buttons.map((b) => <InterestItem>{b}</InterestItem>)}
         </div>
         <div>
         </div>

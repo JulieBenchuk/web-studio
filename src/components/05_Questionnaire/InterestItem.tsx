@@ -1,4 +1,4 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from 'react';
+import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, useState} from 'react';
 import style from "@/styles/components/checkbox/checkbox.module.scss"
 
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
@@ -10,27 +10,30 @@ const InterestItem: React.FC<InterestItemPropsType> = ({
                                                            type,
                                                            onChange, onChangeChecked,
                                                            className,
-                                                           children, checked,
+                                                           children,
                                                            ...restProps
                                                        }) => {
 
+    const [checked, setChecked] = useState(false)
+
     const finalInputClassName = `${style.checkboxBtn} ${className ? className : ''}`
 
+
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        onChange && onChange(e)
-        onChangeChecked && onChangeChecked(e.currentTarget.checked)
+        setChecked(e.currentTarget.checked)
     }
 
     return (
-        <div className={finalInputClassName}>
+        <label className={finalInputClassName}>
             <input
                 type={'checkbox'}
                 onChange={onChangeCallback}
+                checked={checked}
 
                 {...restProps}
             />
             {children && <span>{children}</span>}
-        </div>
+        </label>
     );
 };
 

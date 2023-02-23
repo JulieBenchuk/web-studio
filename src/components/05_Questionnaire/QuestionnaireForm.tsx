@@ -23,6 +23,7 @@ const QuestionnaireForm = () => {
             site: '',
             ageOfCompany: '',
             message: '',
+            interest: [],
         },
         onSubmit: (values, {resetForm}) => {
             console.log(JSON.stringify(values, null, 2));
