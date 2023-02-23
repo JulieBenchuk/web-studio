@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useFormik} from 'formik';
 import Wrapper from "@/components/common/wrapper";
 import style from "@/styles/components/questionnaireForm.module.scss"
 import SmallTitle from "@/components/common/Titles/SmallTitle";
@@ -13,31 +14,54 @@ const QuestionnaireForm = () => {
         setIsMessageActive(true)
     }
 
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            phone: '',
+            email: '',
+            companyOrProject: '',
+            site: '',
+            ageOfCompany: '',
+            message: '',
+        },
+        onSubmit: (values, {resetForm}) => {
+            console.log(JSON.stringify(values, null, 2));
+            resetForm();
+        },
+    });
+
     return (
         <Wrapper className={style.wrapper}>
-            <form className={style.formBlock}>
+            <form className={style.formBlock} onSubmit={formik.handleSubmit}>
 
                 <div className={style.commonInfo}>
                     <SmallTitle className={style.titles}>Общая информация</SmallTitle>
                     <div className={style.commonInfoForm}>
                         <div className={style.formName}>
                             <label>Имя</label>
-                            <input type="text" placeholder={"Иванов Иван Иванович"}/>
+                            <input type="text" name="name" placeholder={"Иванов Иван Иванович"}
+                                   onChange={formik.handleChange}
+                                   value={formik.values.name}/>
                             <span className={style.fakePlaceholder}>Фамилия Имя Отчество</span>
                         </div>
                         <div className={style.formPhone}>
                             <label>Номер телефона</label>
-                            <input type="tel" placeholder={"+7(___) ___ __ __"}/>
+                            <input type="tel" name="phone" placeholder={"+7(___) ___ __ __"}
+                                   onChange={formik.handleChange}
+                                   value={formik.values.phone}/>
                             <span className={style.fakePlaceholder}>+7(___) ___ __ __</span>
                         </div>
                         <div className={style.formEmail}>
                             <label>E-mail</label>
-                            <input type="email" placeholder={"Ivan@mail.ru"}/>
+                            <input type="email" name="email" placeholder={"Ivan@mail.ru"} onChange={formik.handleChange}
+                                   value={formik.values.email}/>
                             <span className={style.fakePlaceholder}>E-mail</span>
                         </div>
                         <div className={style.formCompanyName}>
                             <label>Компания/проект</label>
-                            <input type="text" placeholder={"OOO Ivanovka"}/>
+                            <input type="text" name="companyOrProject" placeholder={"OOO Ivanovka"}
+                                   onChange={formik.handleChange}
+                                   value={formik.values.companyOrProject}/>
                             <span className={style.fakePlaceholder}>Компания/проект</span>
                         </div>
                     </div>
@@ -47,7 +71,7 @@ const QuestionnaireForm = () => {
                     <SmallTitle className={style.titles}>Вас интересует</SmallTitle>
                     <div className={style.selectorsBlock}>
                         <div className={style.container}>
-                            {selectorItemsData.map((i) => <SelectorItem title={i.title} buttons={i.buttons}
+                            {selectorItemsData.map((i) => <SelectorItem key={i.id} title={i.title} buttons={i.buttons}
                                                                         background={i.style}
                                                                         onMessageActiveHandler={onMessageActiveHandler}/>)}
                         </div>
@@ -60,12 +84,16 @@ const QuestionnaireForm = () => {
                         <div className={style.row1}>
                             <div className={style.formSite}>
                                 <label>Веб-сайт</label>
-                                <input type="text" placeholder={"www.ivanovka.com"}/>
+                                <input type="text" placeholder={"www.ivanovka.com"} name="site"
+                                       onChange={formik.handleChange}
+                                       value={formik.values.site}/>
                                 <span className={style.fakePlaceholder}>Ссылка на сайт</span>
                             </div>
                             <div className={style.formAge}>
                                 <label>Возраст компании (в годах)</label>
-                                <input type="text" placeholder={"21 год"}/>
+                                <input type="text" placeholder={"21 год"} name="ageOfCompany"
+                                       onChange={formik.handleChange}
+                                       value={formik.values.ageOfCompany}/>
                                 <span className={style.fakePlaceholder}>Возраст компании (в годах)</span>
                             </div>
                         </div>
@@ -73,13 +101,14 @@ const QuestionnaireForm = () => {
                         <div className={style.row2}>
                             <div className={style.formMessage}>
                                 <label>Сообщение</label>
-                                <textarea disabled={!isMessageActive}/>
+                                <textarea disabled={!isMessageActive} name="message" onChange={formik.handleChange}
+                                          value={formik.values.message}/>
                                 <span className={style.fakePlaceholder}>Сообщение</span>
                             </div>
                         </div>
 
                         <div className={style.buttonBlock}>
-                            <FullButton className={style.button}>Отправить</FullButton>
+                            <FullButton className={style.button} type="submit">Отправить</FullButton>
                         </div>
 
                     </div>
