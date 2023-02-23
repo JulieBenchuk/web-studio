@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '@/styles/components/slider/slider.module.scss'
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper";
+import Image from 'next/image'
 import ava from '@/assets/img/reviews_ava.png'
 import arrow from '@/assets/img/Arrow_2.png'
 
@@ -32,36 +33,32 @@ export const Slider: React.FC<SwiperDataType> = ({swiperData}) => {
                     loop={true}
                     autoplay={true}
             >
-                <div>
                     {swiperData.map((el, index) => {
                         return <SwiperSlide key={index} className={styles.slide}>
-                            <div className={styles.image}>
-                                <img src={ava.src} alt={el.title}/>
-                            </div>
-                            <div className={styles.allText}>
-                                <div className={styles.title}>
-                                    {el.title}
+                                <div className={styles.image}>
+                                    <Image src={ava} alt={el.title}/>
                                 </div>
-                                {el.subTitle && <div className={styles.subTitle}>{el.subTitle}</div>}
-                                <div className={styles.desc}>
-                                    {el.desc}
-                                </div>
-                                {el.price && <div className={styles.price}>от {el.price} ₽</div>}
-
-                                <div className={styles.buttons}>
-                                    <div className={`swiper-button-prev ${styles.swiperButtonPrev}`}>
-                                        <img src={arrow.src} alt={'Arrow'}/>
+                                <div className={styles.allText}>
+                                    <div className={styles.title}>
+                                        {el.title}
                                     </div>
-                                    {`0${index + 1}`}/<span>{`0${swiperData.length}`}</span>
-                                    <div className={`swiper-button-next ${styles.swiperButtonNext}`}>
-                                        <img src={arrow.src} alt={'Arrow'}/>
+                                    <div className={styles.subTitle}>{el.subTitle}</div>
+                                    <div className={styles.desc}>
+                                        {el.desc}
+                                    </div>
+                                    <div className={styles.price}>{el.price && `от ${el.price} ₽`}</div>
+                                    <div className={styles.buttons}>
+                                        <div className={`swiper-button-prev ${styles.swiperButtonPrev}`}>
+                                            <Image src={arrow} alt={'Arrow'}/>
+                                        </div>
+                                        {`0${index + 1}`}/<span>{`0${swiperData.length}`}</span>
+                                        <div className={`swiper-button-next ${styles.swiperButtonNext}`}>
+                                            <Image src={arrow} alt={'Arrow'}/>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                         </SwiperSlide>
                     })}
-
-                </div>
             </Swiper>
             <style jsx>{`
               .slideClass {
@@ -82,6 +79,9 @@ export const Slider: React.FC<SwiperDataType> = ({swiperData}) => {
 
               .swiper-slide {
 
+              }
+              .swiper-wrapper{
+              display: none;
               }
             `}</style>
         </div>
