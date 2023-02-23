@@ -46,9 +46,11 @@ const QuestionnaireForm = () => {
                 <div className={style.interest}>
                     <SmallTitle className={style.titles}>Вас интересует</SmallTitle>
                     <div className={style.selectorsBlock}>
-                        {selectorItemsData.map((i) => <SelectorItem title={i.title} buttons={i.buttons}
-                                                                    background={i.style}
-                                                                    onMessageActiveHandler={onMessageActiveHandler}/>)}
+                        <div className={style.container}>
+                            {selectorItemsData.map((i) => <SelectorItem title={i.title} buttons={i.buttons}
+                                                                        background={i.style}
+                                                                        onMessageActiveHandler={onMessageActiveHandler}/>)}
+                        </div>
                     </div>
                 </div>
 
