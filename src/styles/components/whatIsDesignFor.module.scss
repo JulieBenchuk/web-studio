@@ -52,3 +52,20 @@
     }
   }
 }
+
+@media(max-width: 965px) {
+  .wrapper {
+    padding: 90px 45px 40px 20px;
+
+    .title {
+      max-width: 360px;
+    }
+
+    .content {
+      .description {
+        font-size: 14px;
+        line-height: 160%;
+      }
+    }
+  }
+}
