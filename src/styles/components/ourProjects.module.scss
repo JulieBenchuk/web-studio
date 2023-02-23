@@ -1,0 +1,33 @@
+@import "../mixins";
+@import "../variables";
+
+
+.wrapper {
+  :global(.swiper-wrapper) {
+    flex-direction: unset !important;
+  }
+
+  .swiperBlock {
+    padding: 120px 130px 288px;
+  }
+}
+
+@media(max-width: 1439px) {
+  .wrapper {
+    .swiperBlock {
+      padding: 76px 170px 60px;
+
+      .img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media(max-width: 965px) {
+  .wrapper {
+    .swiperBlock {
+      padding: 80px 25px 60px;
+    }
+  }
+}

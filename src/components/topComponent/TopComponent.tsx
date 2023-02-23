@@ -22,7 +22,6 @@ const TopComponent = () => {
     return (
         <Wrapper className={style.wrapper}>
             <div className={style.topComponent}>
-
                 <div className={style.leftBlock}>
                     <Header isMainPage={true} currentPage={"Разработка сайтов"}/>
                     <div className={style.titleBlock}>
