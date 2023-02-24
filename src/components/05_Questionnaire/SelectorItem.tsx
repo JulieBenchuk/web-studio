@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {ReactNode, useState} from 'react';
 import style from "@/styles/components/questionnaireForm.module.scss"
 import arrow from "@/assets/svg/arrowDown.svg"
 import InterestItem from "@/components/05_Questionnaire/InterestItem";
@@ -8,15 +8,19 @@ type SelectorItemPropsType = {
     buttons?: Array<string>,
     background: { background: string },
     onMessageActiveHandler: () => void
+    addClickedButton: (array: Array<any>) => void
 }
 const SelectorItem: React.FC<SelectorItemPropsType> = ({
                                                            title,
                                                            buttons,
                                                            background,
-                                                           onMessageActiveHandler
+                                                           onMessageActiveHandler,
+                                                           addClickedButton
                                                        }) => {
 
     const [expandedMenu, setExpandedMenu] = useState(false)
+
+    const clickedButtonInfo: Array<{ checked: boolean, title: ReactNode }> = []
 
     const onMenuClickHandler = () => {
         if (title === "Другое") {
@@ -24,6 +28,17 @@ const SelectorItem: React.FC<SelectorItemPropsType> = ({
         } else {
             setExpandedMenu(!expandedMenu)
         }
+    }
+
+    const onChangeChecked = (checked: boolean, children: ReactNode) => {
+        const button = {checked: checked, title: children}
+        const indexOfButton = clickedButtonInfo.findIndex(el => el.title === children)
+        if (indexOfButton >= 0) {
+            clickedButtonInfo.splice(indexOfButton, 1, button)
+        } else {
+            clickedButtonInfo.push(button)
+        }
+        addClickedButton(clickedButtonInfo)
     }
 
     return <>
@@ -34,7 +49,8 @@ const SelectorItem: React.FC<SelectorItemPropsType> = ({
                  alt="questionnaire"/>
         </div>
         <div className={expandedMenu ? `${style.selectorItemExpanded}` : `${style.selectorItemHidden}`}>
-            {expandedMenu && buttons && buttons.map((b) => <InterestItem>{b}</InterestItem>)}
+            {expandedMenu && buttons && buttons.map((b) => <InterestItem
+                onChangeChecked={onChangeChecked}>{b}</InterestItem>)}
         </div>
         <div>
         </div>

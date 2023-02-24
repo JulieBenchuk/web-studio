@@ -1,18 +1,32 @@
-import React, {useState} from 'react';
+import React, {ReactNode, useEffect, useState} from 'react';
 import {useFormik} from 'formik';
 import Wrapper from "@/components/common/wrapper";
-import style from "@/styles/components/questionnaireForm.module.scss"
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 import SelectorItem from "@/components/05_Questionnaire/SelectorItem";
 import {selectorItemsData} from "@/components/05_Questionnaire/SelectorItemsData";
+import style from "@/styles/components/questionnaireForm.module.scss"
 
 const QuestionnaireForm = () => {
     const [isMessageActive, setIsMessageActive] = useState<boolean>(false)
 
+    const [interest, setInterest] = useState<Array<{ checked: boolean, title: ReactNode }>>([])
+
     const onMessageActiveHandler = () => {
         setIsMessageActive(true)
     }
+
+    const addClickedButton = (checkedButton: Array<{ checked: boolean, title: ReactNode }>) => {
+        const indexOfCheckedButton = interest.findIndex(el => el.title === checkedButton[0].title)
+        let newInterest = interest
+        if (checkedButton[0] && indexOfCheckedButton >= 0) {
+            newInterest.splice(indexOfCheckedButton, 1, ...checkedButton)
+        } else {
+            newInterest.push(...checkedButton)
+        }
+        setInterest(newInterest)
+    }
+
 
     const formik = useFormik({
         initialValues: {
@@ -23,13 +37,17 @@ const QuestionnaireForm = () => {
             site: '',
             ageOfCompany: '',
             message: '',
-            interest: [],
+            interest: interest
         },
         onSubmit: (values, {resetForm}) => {
-            console.log(JSON.stringify(values, null, 2));
+            alert(JSON.stringify(values, null, 2));
             resetForm();
         },
     });
+
+    useEffect(() => {
+
+    })
 
     return (
         <Wrapper className={style.wrapper}>
@@ -76,7 +94,8 @@ const QuestionnaireForm = () => {
                         <div className={style.container}>
                             {selectorItemsData.map((i) => <SelectorItem key={i.id} title={i.title} buttons={i.buttons}
                                                                         background={i.style}
-                                                                        onMessageActiveHandler={onMessageActiveHandler}/>)}
+                                                                        onMessageActiveHandler={onMessageActiveHandler}
+                                                                        addClickedButton={addClickedButton}/>)}
                         </div>
                     </div>
                 </div>

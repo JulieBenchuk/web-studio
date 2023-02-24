@@ -1,10 +1,10 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, useState} from 'react';
+import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, ReactNode, useState} from 'react';
 import style from "@/styles/components/checkbox/checkbox.module.scss"
 
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 type InterestItemPropsType = DefaultInputPropsType & {
-    onChangeChecked?: (checked: boolean) => void
+    onChangeChecked: (checked: boolean, children: ReactNode) => void
 }
 const InterestItem: React.FC<InterestItemPropsType> = ({
                                                            type,
@@ -21,6 +21,7 @@ const InterestItem: React.FC<InterestItemPropsType> = ({
 
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         setChecked(e.currentTarget.checked)
+        onChangeChecked(e.currentTarget.checked, children)
     }
 
     return (
