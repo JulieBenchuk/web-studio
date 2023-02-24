@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React, {FC, useRef} from 'react';
 import Wrapper from "@/components/common/wrapper";
 import MainTitle from "@/components/common/Titles/MainTitle";
 import style from "@/styles/components/ourProjects.module.scss";
 
-import {Swiper, SwiperSlide} from "swiper/react";
+import {Swiper, SwiperSlide, useSwiper} from "swiper/react";
 import {Grid, Pagination} from "swiper";
+import {Swiper as SwiperCore} from 'swiper/types'
 
 import "swiper/css";
 import "swiper/css/grid";
@@ -13,8 +14,16 @@ import "swiper/css/pagination";
 import {worksItems} from "@/components/common/ourWorks/OurWotksItems";
 
 const OurProjects = () => {
+    const swiperRef = useRef<SwiperCore>()
 
-    const [count, setCount] = useState(2)
+    // swiperRef.current?.update()
+    //
+    // const swiper = useSwiper()
+    // //
+    // useEffect(() => {
+    //
+    // }, [count])
+    console.log('render')
 
     return (
         <Wrapper className={style.wrapper}>
@@ -22,6 +31,9 @@ const OurProjects = () => {
             <p className={style.subTitle}>Здесь может оказаться ваш проект</p>
             <div className={style.swiperBlock}>
                 <Swiper
+                    onBeforeInit={swiper => {
+                        swiperRef.current = swiper
+                    }}
                     pagination={{
                         clickable: true,
                     }}
@@ -66,15 +78,24 @@ const OurProjects = () => {
                             <img src={el.src} alt="img" className={style.img}/>
                         </SwiperSlide>
                     )}
+                    <Example/>
                 </Swiper>
             </div>
             <button onClick={() => {
-                setCount(count + 4)
-                console.log(count + 4)
+                
             }}>Button
             </button>
         </Wrapper>
     );
 };
 
+
 export default OurProjects;
+const Example: FC = () => {
+    const swiper = useSwiper()
+    return <button onClick={() => {
+        swiper.update()
+        swiper.slideTo(0)
+    }}>Button
+    </button>
+}
