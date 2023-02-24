@@ -1,5 +1,6 @@
-import React, {ReactNode, useEffect, useState} from 'react';
+import React, {ReactNode, useState} from 'react';
 import {useFormik} from 'formik';
+import * as yup from "yup";
 import Wrapper from "@/components/common/wrapper";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 import FullButton from "@/components/common/buttons/FullButton";
@@ -42,11 +43,12 @@ const QuestionnaireForm = () => {
             alert(JSON.stringify(values, null, 2));
             resetForm();
         },
+        validationSchema: yup.object({
+            name: yup.string().trim().required("Необходимо ввести имя"),
+            phone: yup.string().required("Необходима ввести телефон").min(11, "Слишком короткий номер"),
+            email: yup.string().email('Некорректный email').required('Необходимо ввести email'),
+        })
     });
-
-    useEffect(() => {
-
-    })
 
     return (
         <Wrapper className={style.wrapper}>
@@ -54,27 +56,34 @@ const QuestionnaireForm = () => {
 
                 <div className={style.commonInfo}>
                     <SmallTitle className={style.titles}>Общая информация</SmallTitle>
-                    <div className={style.commonInfoForm}>
+                    <div className={style.commonInfoForm} id={"commonInfo"}>
                         <div className={style.formName}>
                             <label className={style.label}>Имя</label>
                             <input type="text" name="name" placeholder={"Иванов Иван Иванович"}
                                    onChange={formik.handleChange}
                                    value={formik.values.name}/>
-                            <span className={style.fakePlaceholder}>Фамилия Имя Отчество</span>
+                            {formik.errors.name && formik.touched.name &&
+                                <span className={style.formikError}>{formik.errors.name}</span>}
+                            {!formik.values.name &&
+                                <span className={style.fakePlaceholder}>Фамилия Имя Отчество</span>}
                         </div>
                         <div className={style.formPhone}>
                             <label className={style.label}>Номер телефона</label>
                             <input type="tel" name="phone" placeholder={"+7(___) ___ __ __"}
                                    onChange={formik.handleChange}
                                    value={formik.values.phone}/>
-                            <span className={style.fakePlaceholder}>+7(___) ___ __ __</span>
+                            {formik.errors.name && formik.touched.phone &&
+                                <span className={style.formikError}>{formik.errors.phone}</span>}
+                            {!formik.values.phone && <span className={style.fakePlaceholder}>+7(___) ___ __ __</span>}
                         </div>
                         <div className={style.formEmail}>
                             <label className={style.label}>E-mail</label>
                             <input type="email" name="email" placeholder={"Ivan@mail.ru"}
                                    onChange={formik.handleChange}
                                    value={formik.values.email}/>
-                            <span className={style.fakePlaceholder}>E-mail</span>
+                            {formik.errors.email && formik.touched.email &&
+                                <span className={style.formikError}>{formik.errors.email}</span>}
+                            {!formik.values.email && <span className={style.fakePlaceholder}>E-mail</span>}
                         </div>
                         <div className={style.formCompanyName}>
                             <label className={style.label}>Компания/проект</label>
@@ -82,7 +91,8 @@ const QuestionnaireForm = () => {
                                    placeholder={"OOO Ivanovka"}
                                    onChange={formik.handleChange}
                                    value={formik.values.companyOrProject}/>
-                            <span className={style.fakePlaceholder}>Компания/проект</span>
+                            {!formik.values.companyOrProject &&
+                                <span className={style.fakePlaceholder}>Компания/проект</span>}
                         </div>
                     </div>
                 </div>
@@ -109,14 +119,15 @@ const QuestionnaireForm = () => {
                                 <input type="text" placeholder={"www.ivanovka.com"} name="site"
                                        onChange={formik.handleChange}
                                        value={formik.values.site}/>
-                                <span className={style.fakePlaceholder}>Ссылка на сайт</span>
+                                {!formik.values.site && <span className={style.fakePlaceholder}>Ссылка на сайт</span>}
                             </div>
                             <div className={style.formAge}>
                                 <label className={style.label}>Возраст компании (в годах)</label>
                                 <input type="text" placeholder={"21 год"} name="ageOfCompany"
                                        onChange={formik.handleChange}
                                        value={formik.values.ageOfCompany}/>
-                                <span className={style.fakePlaceholder}>Возраст компании (в годах)</span>
+                                {!formik.values.name &&
+                                    <span className={style.fakePlaceholder}>Возраст компании (в годах)</span>}
                             </div>
                         </div>
 
@@ -125,7 +136,7 @@ const QuestionnaireForm = () => {
                                 <label className={style.label}>Сообщение</label>
                                 <textarea disabled={!isMessageActive} name="message" onChange={formik.handleChange}
                                           value={formik.values.message}/>
-                                <span className={style.fakePlaceholder}>Сообщение</span>
+                                {!formik.values.name && <span className={style.fakePlaceholder}>Сообщение</span>}
                             </div>
                         </div>
 

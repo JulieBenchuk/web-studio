@@ -296,6 +296,12 @@
         }
       }
     }
+
+    .formikError {
+      color: $bg-third;
+      font-size: 16px;
+      @include Flex-Center();
+    }
   }
 
 
