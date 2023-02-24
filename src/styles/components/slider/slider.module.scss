@@ -28,7 +28,7 @@
     .allText {
       display: flex;
       flex-direction: column;
-      justify-content: start;
+      justify-content: flex-start;
       position: relative;
       width: 80%;
       padding: 0 30px 0 24px;
@@ -95,7 +95,8 @@
         .subTitle {
           display: none;
         }
-        .desc{
+
+        .desc {
           margin-top: 20px;
         }
 
@@ -115,6 +116,7 @@
     .slide {
       .image {
         width: 30%;
+
         img {
           height: 200px;
         }

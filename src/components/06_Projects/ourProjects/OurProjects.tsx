@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Wrapper from "@/components/common/wrapper";
 import MainTitle from "@/components/common/Titles/MainTitle";
 import style from "@/styles/components/ourProjects.module.scss";
@@ -13,6 +13,9 @@ import "swiper/css/pagination";
 import {worksItems} from "@/components/common/ourWorks/OurWotksItems";
 
 const OurProjects = () => {
+
+    const [count, setCount] = useState(2)
+
     return (
         <Wrapper className={style.wrapper}>
             <MainTitle title={'Наши Проекты'} className={style.title}/>
@@ -27,10 +30,12 @@ const OurProjects = () => {
                         360: {
                             slidesPerView: 1,
                             grid: {
-                                rows: 4,
-                                fill: 'row'
+                                rows: 2,
+                                fill: 'column',
                             },
-                            spaceBetween: 20
+                            spaceBetween: 20,
+                            allowTouchMove: false,
+                            pagination: false,
                         },
                         // when window width is >= 965px
                         497: {
@@ -39,7 +44,8 @@ const OurProjects = () => {
                                 rows: 3,
                                 fill: 'row'
                             },
-                            spaceBetween: 20
+                            spaceBetween: 20,
+                            allowTouchMove: false
                         },
                         // when window width is >= 1439px
                         1440: {
@@ -48,19 +54,25 @@ const OurProjects = () => {
                                 rows: 4,
                                 fill: 'row',
                             },
-                            spaceBetween: 20
+                            spaceBetween: 20,
+
                         },
                     }}
                     modules={[Grid, Pagination]}
+
                 >
-                    {worksItems.map((el) =>
-                        <SwiperSlide>
+                    {worksItems.map((el, i) =>
+                        <SwiperSlide key={i}>
                             <img src={el.src} alt="img" className={style.img}/>
                         </SwiperSlide>
                     )}
                 </Swiper>
             </div>
-
+            <button onClick={() => {
+                setCount(count + 4)
+                console.log(count + 4)
+            }}>Button
+            </button>
         </Wrapper>
     );
 };
