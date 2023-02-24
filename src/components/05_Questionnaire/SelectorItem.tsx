@@ -9,13 +9,14 @@ type SelectorItemPropsType = {
     background: { background: string },
     onMessageActiveHandler: () => void
     addClickedButton: (array: Array<any>) => void
+    interest: Array<{ checked: boolean, title: ReactNode }>
 }
 const SelectorItem: React.FC<SelectorItemPropsType> = ({
                                                            title,
                                                            buttons,
                                                            background,
                                                            onMessageActiveHandler,
-                                                           addClickedButton
+                                                           addClickedButton, interest
                                                        }) => {
 
     const [expandedMenu, setExpandedMenu] = useState(false)
@@ -49,8 +50,8 @@ const SelectorItem: React.FC<SelectorItemPropsType> = ({
                  alt="questionnaire"/>
         </div>
         <div className={expandedMenu ? `${style.selectorItemExpanded}` : `${style.selectorItemHidden}`}>
-            {expandedMenu && buttons && buttons.map((b) => <InterestItem
-                onChangeChecked={onChangeChecked}>{b}</InterestItem>)}
+            {expandedMenu && buttons && buttons.map((b) => <InterestItem key={b} interest={interest}
+                                                                         onChangeChecked={onChangeChecked}>{b}</InterestItem>)}
         </div>
         <div>
         </div>

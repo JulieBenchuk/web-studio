@@ -5,19 +5,22 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 
 type InterestItemPropsType = DefaultInputPropsType & {
     onChangeChecked: (checked: boolean, children: ReactNode) => void
+    interest: Array<{ checked: boolean, title: ReactNode }>
 }
 const InterestItem: React.FC<InterestItemPropsType> = ({
                                                            type,
                                                            onChange, onChangeChecked,
                                                            className,
-                                                           children,
+                                                           children, interest,
                                                            ...restProps
                                                        }) => {
 
-    const [checked, setChecked] = useState(false)
+    const isChecked = interest.findIndex(i => i.title === children && i.checked) !== -1
 
     const finalInputClassName = `${style.checkboxBtn} ${className ? className : ''}`
 
+    const [checked, setChecked] = useState(isChecked)
+    
 
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         setChecked(e.currentTarget.checked)

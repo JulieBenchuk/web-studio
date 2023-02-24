@@ -27,7 +27,6 @@ const QuestionnaireForm = () => {
         setInterest(newInterest)
     }
 
-
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -95,7 +94,8 @@ const QuestionnaireForm = () => {
                             {selectorItemsData.map((i) => <SelectorItem key={i.id} title={i.title} buttons={i.buttons}
                                                                         background={i.style}
                                                                         onMessageActiveHandler={onMessageActiveHandler}
-                                                                        addClickedButton={addClickedButton}/>)}
+                                                                        addClickedButton={addClickedButton}
+                                                                        interest={interest}/>)}
                         </div>
                     </div>
                 </div>
