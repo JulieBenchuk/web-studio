@@ -5,10 +5,22 @@ import style from '../../../styles/components/header.module.scss'
 import Wrapper from "@/components/common/wrapper";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
 import {useRouter} from "next/router";
+import * as Scroll from "react-scroll";
 
 const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainPage, currentPage}) => {
 
     const router = useRouter()
+
+    const onServicesClickHandler = () => {
+        router.push('/').then(() => {
+            Scroll.scroller.scrollTo('ourServices', {
+                duration: 0,
+                smooth: false,
+                offset: 0,
+            })
+        })
+    }
+
     return (
         <Wrapper className={style.wrapper}>
             <header className={style.header}>
@@ -19,7 +31,9 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
 
                     <div className={style.navBlock}>
                         <nav className={style.navLinks}>
-                            <div className={style.servicesLink}><Link href='#'>Услуги</Link></div>
+                            <div className={style.servicesLink}><span
+                                onClick={onServicesClickHandler}>Услуги</span>
+                            </div>
                             <div className={style.portfolioLink}><Link href='/portfolio'>Портфолио</Link></div>
                         </nav>
                         <LinkBtn className={style.buttonCallback}>Заказать звонок</LinkBtn>
