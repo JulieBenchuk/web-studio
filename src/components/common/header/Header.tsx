@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from "next/link";
-import logo from '../../../assets/svg/Logo.svg'
-import style from '../../../styles/components/header.module.scss'
+import * as Scroll from "react-scroll";
+import {useRouter} from "next/router";
 import Wrapper from "@/components/common/wrapper";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
-import {useRouter} from "next/router";
-import * as Scroll from "react-scroll";
+import style from '../../../styles/components/header.module.scss'
+import logo from '../../../assets/svg/Logo.svg'
 
 const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainPage, currentPage}) => {
 
@@ -14,11 +14,29 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
     const onServicesClickHandler = () => {
         router.push('/').then(() => {
             Scroll.scroller.scrollTo('ourServices', {
-                duration: 0,
-                smooth: false,
+                duration: 700,
+                smooth: true,
                 offset: 0,
             })
         })
+    }
+
+    const onCallMeBackClickHandler = () => {
+        if (currentPage === "Анкета" || currentPage === "Наши проекты") {
+            router.push('/').then(() => {
+                Scroll.scroller.scrollTo('callMeBack', {
+                    duration: 700,
+                    smooth: true,
+                    offset: 0,
+                })
+            })
+        } else {
+            Scroll.scroller.scrollTo('callMeBack', {
+                duration: 700,
+                smooth: true,
+                offset: 0,
+            })
+        }
     }
 
     return (
@@ -36,7 +54,8 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
                             </div>
                             <div className={style.portfolioLink}><Link href='/portfolio'>Портфолио</Link></div>
                         </nav>
-                        <LinkBtn className={style.buttonCallback}>Заказать звонок</LinkBtn>
+                        <LinkBtn className={style.buttonCallback} onClick={onCallMeBackClickHandler}>Заказать
+                            звонок</LinkBtn>
 
                     </div>
                 </div>
