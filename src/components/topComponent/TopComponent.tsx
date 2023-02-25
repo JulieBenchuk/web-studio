@@ -19,46 +19,51 @@ const TopComponent = () => {
     const router = useRouter()
 
     return (
-        <Wrapper className={style.wrapper}>
-            <div className={style.topComponent}>
-                <div className={style.leftBlock}>
-                    <div className={style.titleBlock}>
-                        <div className={style.littleGif}>
-                            <img src={gif.src} alt={"gif"} height={130}/>
+        <>
+            <Wrapper className={style.wrapper}>
+                <div className={style.topComponent}>
+                    <div className={style.leftBlock}>
+                        <div className={style.titleBlock}>
+                            <div className={style.littleGif}>
+                                <img src={gif.src} alt={"gif"} height={130}/>
+                            </div>
+                            <MainTitle title={"SILEVANS"} className={style.titleWrapper}/>
                         </div>
-                        <MainTitle title={"SILEVANS"} className={style.titleWrapper}/>
+                        <div className={style.textDescription}>
+                            <p className={style.text}>Веб-студия специализируется на разработке сложно-функциональных
+                                сайтов
+                                и веб-сервисов, на
+                                креативном дизайне, интернет продвижении
+                                и поддержке.</p>
+                        </div>
+                        <div className={style.consultationBlock}>
+                            <div className={style.consultation}>
+                                <img src={gift.src} alt={"free consultation"} className={style.gift}/>
+                                <p className={style.consultationText}>Заполните анкету, чтобы получить бесплатную
+                                    консультацию</p>
+                            </div>
+                        </div>
+                        <FullButton className={style.buttonFillForm} onClick={() => {
+                            router.push('/questionnaire')
+                        }}>Заполнить анкету</FullButton>
                     </div>
-                    <div className={style.textDescription}>
-                        <p className={style.text}>Веб-студия специализируется на разработке сложно-функциональных сайтов
-                            и веб-сервисов, на
-                            креативном дизайне, интернет продвижении
-                            и поддержке.</p>
-                    </div>
-                    <div className={style.consultationBlock}>
-                        <div className={style.consultation}>
-                            <img src={gift.src} alt={"free consultation"} className={style.gift}/>
-                            <p className={style.consultationText}>Заполните анкету, чтобы получить бесплатную
-                                консультацию</p>
+
+                    <div className={style.rightBlock}>
+                        <img src={gifBackground.src} alt={"gif"} height={650} className={style.bigGifBckgrnd}/>
+                        <div className={style.gifBlock}>
+                            <img src={gif.src} alt={"gif"} height={850} className={style.bigGif}/>
                         </div>
                     </div>
-                    <FullButton className={style.buttonFillForm} onClick={() => {
-                        router.push('/questionnaire')
-                    }}>Заполнить анкету</FullButton>
+
                 </div>
 
-                <div className={style.rightBlock}>
-                    <img src={gifBackground.src} alt={"gif"} height={650} className={style.bigGifBckgrnd}/>
-                    <div className={style.gifBlock}>
-                        <img src={gif.src} alt={"gif"} height={850} className={style.bigGif}/>
-                    </div>
+                <div className={style.logoForMobile}><img src={vectorLogo.src} alt="logo"/></div>
+                <div className={style.groundBlock}>
+                    <Image src={ground} alt={"ground"} width={1440} height={770} className={style.ground}/>
                 </div>
 
-            </div>
-            <Image src={ground} alt={"ground"} width={1440} height={770} className={style.ground}/>
-
-            <div className={style.logoForMobile}><img src={vectorLogo.src} alt="logo"/></div>
-
-        </Wrapper>
+            </Wrapper>
+        </>
     );
 };
 

@@ -3,16 +3,17 @@
 
 .wrapper {
   width: 100%;
-  padding: 46px 130px 61px 130px;
+  border: 1px solid red;
+  padding: 46px 130px 0 130px;
   @media(max-width: 1439px) {
-    padding: 33px 170px 96px 170px;
+    padding: 33px 170px 0 170px;
   }
 
   @media(max-width: 965px) {
-    padding: 44px 20px 158px 20px;
+    padding: 44px 20px 0 20px;
   }
   @media(max-width: 400px) {
-    padding: 44px 3px 158px 3px;
+    padding: 44px 3px 0 3px;
   }
 
 
@@ -68,20 +69,16 @@
 
         .buttonCallback {
           font-family: 'Play', sans-serif;
+          padding: 3px 18px;
         }
 
       }
     }
 
     .currentPage {
-
-      left: 9.03%;
-      right: 86.67%;
-      top: 1.27%;
-      bottom: 98.46%;
       font-style: normal;
       @include Text-FS-FW-LH(16px, 400, 19px);
-      padding-top: 20px;
+      padding-top: 15px;
       @media (max-width: 1220px) {
         display: none;
       }
