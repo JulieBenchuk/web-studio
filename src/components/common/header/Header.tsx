@@ -11,32 +11,26 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
 
     const router = useRouter()
 
+    const scrollToComponent = (target: string, offset: number) => {
+        Scroll.scroller.scrollTo(target, {
+            duration: 700,
+            smooth: true,
+            offset,
+        })
+    }
+
     const onServicesClickHandler = () => {
         router.push('/').then(() => {
-            Scroll.scroller.scrollTo('ourServices', {
-                duration: 700,
-                smooth: true,
-                offset: 0,
-            })
+            scrollToComponent('ourServices', 0)
         })
     }
 
     const onCallMeBackClickHandler = () => {
         if (currentPage === "Анкета" || currentPage === "Наши проекты") {
             router.push('/').then(() => {
-                Scroll.scroller.scrollTo('callMeBack', {
-                    duration: 700,
-                    smooth: true,
-                    offset: 0,
-                })
+                scrollToComponent('callMeBack', 250)
             })
-        } else {
-            Scroll.scroller.scrollTo('callMeBack', {
-                duration: 700,
-                smooth: true,
-                offset: 0,
-            })
-        }
+        } else scrollToComponent('callMeBack', 0)
     }
 
     return (
