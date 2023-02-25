@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {MouseEvent} from 'react';
 import Link from "next/link";
 import * as Scroll from "react-scroll";
 import {useRouter} from "next/router";
@@ -33,6 +33,12 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
         } else scrollToComponent('callMeBack', 0)
     }
 
+    const onPortfolioClickHandler = (e: MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault()
+        router.push('/portfolio')
+    }
+
+
     return (
         <Wrapper className={style.wrapper}>
             <header className={style.header}>
@@ -46,7 +52,9 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
                             <div className={style.servicesLink}><span
                                 onClick={onServicesClickHandler}>Услуги</span>
                             </div>
-                            <div className={style.portfolioLink}><Link href='/portfolio'>Портфолио</Link></div>
+                            <div className={style.portfolioLink}>
+                                <Link href='/#' onClick={onPortfolioClickHandler}>Портфолио</Link>
+                            </div>
                         </nav>
                         <LinkBtn className={style.buttonCallback} onClick={onCallMeBackClickHandler}>Заказать
                             звонок</LinkBtn>
