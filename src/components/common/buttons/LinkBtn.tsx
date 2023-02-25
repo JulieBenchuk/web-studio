@@ -1,5 +1,6 @@
 import React, {ButtonHTMLAttributes, DetailedHTMLProps} from 'react';
-import style from '../../../styles/components/buttons/buttons.module.scss'
+import style from '../../../styles/components/buttons/buttons.module.scss';
+import * as Scroll from 'react-scroll';
 
 const LinkBtn: React.FC<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement>> = ({
@@ -10,8 +11,19 @@ const LinkBtn: React.FC<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement
 
     const finalClass = className ? `${style.LinkBtn} ${className}` : style.LinkBtn
 
+    const onCallMeBackClickHandler = () => {
+        if (children === "Заказать звонок") {
+            Scroll.scroller.scrollTo('callMeBack', {
+                duration: 500,
+                smooth: true,
+                offset: 0,
+            })
+
+        }
+    }
+
     return (
-        <button className={finalClass} onClick={onClick}>
+        <button className={finalClass} onClick={onClick ? onClick : onCallMeBackClickHandler}>
             {children}
         </button>
     );
