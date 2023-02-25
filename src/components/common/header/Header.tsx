@@ -41,7 +41,7 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
 
     return (
         <Wrapper className={style.wrapper}>
-            <header className={style.header}>
+            <header className={isMainPage ? style.headerMainPage : style.header}>
                 <div className={style.row}>
                     <div className={style.logoBlock}>
                         <img src={logo.src} alt="silevans" width={180} height={31}/>

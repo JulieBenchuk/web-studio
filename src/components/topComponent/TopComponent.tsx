@@ -22,7 +22,6 @@ const TopComponent = () => {
         <Wrapper className={style.wrapper}>
             <div className={style.topComponent}>
                 <div className={style.leftBlock}>
-                    {/*<Header isMainPage={true} currentPage={"Разработка сайтов"}/>*/}
                     <div className={style.titleBlock}>
                         <div className={style.littleGif}>
                             <img src={gif.src} alt={"gif"} height={130}/>

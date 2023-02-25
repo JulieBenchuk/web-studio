@@ -3,98 +3,111 @@
 
 .wrapper {
   width: 100%;
-  padding: 40px 130px 60px 130px;
+  padding: 46px 130px 61px 130px;
   @media(max-width: 1439px) {
-    padding: 33px 170px 90px 170px;
+    padding: 33px 170px 96px 170px;
   }
 
   @media(max-width: 965px) {
-    padding: 40px 20px 60px 20px;
+    padding: 44px 20px 158px 20px;
   }
-}
+  @media(max-width: 400px) {
+    padding: 44px 3px 158px 3px;
+  }
 
-.header {
-  color: $text-color-primary;
-  display: flex;
-  flex-direction: column;
 
-  .row {
+  .header {
+    color: $text-color-primary;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 
-
-    .logoBlock {
-      left: 0;
-      right: 84.75%;
-      top: 0.1%;
-      bottom: 0.1%;
-      @media (max-width: 1220px) {
-        display: none;
-      }
-    }
-
-    .navBlock {
+    .row {
       display: flex;
       flex-direction: row;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
-      width: 100%;
-      @media (max-width: 1220px) {
-        justify-content: space-between;
-      }
 
-      .navLinks {
-        display: flex;
 
-        .servicesLink, .portfolioLink {
-          @include Text-FS-FW-LH(16px, 400, 19px);
-          z-index: 2;
-          font-style: normal;
-          padding-right: 30px;
-          opacity: 0.4;
-
-          &:hover {
-            opacity: 1;
-          }
-
+      .logoBlock {
+        left: 0;
+        right: 84.75%;
+        top: 0.1%;
+        bottom: 0.1%;
+        @media (max-width: 965px) {
+          display: none;
         }
       }
 
+      .navBlock {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        @media (max-width: 965px) {
+          justify-content: space-between;
+        }
 
-      .buttonCallback {
-        font-family: 'Play', sans-serif;
+        .navLinks {
+          display: flex;
+
+          .servicesLink, .portfolioLink {
+            @include Text-FS-FW-LH(16px, 400, 19px);
+            z-index: 2;
+            font-style: normal;
+            padding-right: 30px;
+            opacity: 0.4;
+
+            &:hover {
+              opacity: 1;
+            }
+
+          }
+        }
+
+
+        .buttonCallback {
+          font-family: 'Play', sans-serif;
+        }
+
+      }
+    }
+
+    .currentPage {
+
+      left: 9.03%;
+      right: 86.67%;
+      top: 1.27%;
+      bottom: 98.46%;
+      font-style: normal;
+      @include Text-FS-FW-LH(16px, 400, 19px);
+      padding-top: 20px;
+      @media (max-width: 1220px) {
+        display: none;
+      }
+
+      .mainPageLink {
+        opacity: 0.4;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .currentPageName {
+        opacity: 0.4;
+
       }
 
     }
   }
 
-  .currentPage {
-
-    left: 9.03%;
-    right: 86.67%;
-    top: 1.27%;
-    bottom: 98.46%;
-    font-style: normal;
-    @include Text-FS-FW-LH(16px, 400, 19px);
-    padding-top: 20px;
-    @media (max-width: 1220px) {
-      display: none;
-    }
-
-    .mainPageLink {
-      opacity: 0.4;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .currentPageName {
-      opacity: 0.4;
-
+  .headerMainPage {
+    @extend .header;
+    width: 55%;
+    @media(max-width: 1439px) {
+      width: 100%;
     }
 
   }
