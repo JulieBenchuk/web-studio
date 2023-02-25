@@ -4,8 +4,8 @@ import * as Scroll from "react-scroll";
 import {useRouter} from "next/router";
 import Wrapper from "@/components/common/wrapper";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
-import style from '../../../styles/components/header.module.scss'
 import logo from '../../../assets/svg/Logo.svg'
+import style from '../../../styles/components/header.module.scss'
 
 const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainPage, currentPage}) => {
 

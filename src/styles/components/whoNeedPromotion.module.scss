@@ -117,13 +117,13 @@
         @media (max-width: 1439px) {
           position: absolute;
         }
-        @media (max-width: 966px) {
+        @media (max-width: 965px) {
           left: -100px;
           bottom: 140px;
         }
 
         img {
-          @media (max-width: 966px) {
+          @media (max-width: 965px) {
             max-width: 292px;
           }
         }
@@ -143,7 +143,7 @@
         width: 100%;
         align-items: end;
       }
-      @media (max-width: 966px) {
+      @media (max-width: 965px) {
         margin-top: 110px;
       }
 
@@ -162,14 +162,14 @@
           @media (max-width: 1439px) {
             max-width: 375px;
           }
-          @media (max-width: 966px) {
+          @media (max-width: 965px) {
             max-width: 246px;
             @include Text-FS-FW-LH(14px, 400, 160%);
           }
         }
 
         .first {
-          @media(max-width: 966px) {
+          @media(max-width: 965px) {
             position: absolute;
             left: 0;
             top: 0;
@@ -178,7 +178,7 @@
         }
 
         .second {
-          @media(max-width: 966px) {
+          @media(max-width: 965px) {
             padding-top: 95px;
           }
           @media(max-width: 440px) {
@@ -213,7 +213,7 @@
           padding: 9px;
           flex-direction: row-reverse;
         }
-        @media (max-width: 966px) {
+        @media (max-width: 965px) {
           max-width: 100%;
           width: 100%;
           flex-direction: column-reverse;
@@ -230,7 +230,7 @@
             min-width: 220px;
             @include Text-FS-FW-LH(16px, 700, 19px);
           }
-          @media (max-width: 966px) {
+          @media (max-width: 965px) {
             min-width: 350px;
           }
         }
@@ -241,7 +241,7 @@
           @media (max-width: 1439px) {
             padding-left: 20px;
           }
-          @media (max-width: 966px) {
+          @media (max-width: 965px) {
             width: 270px;
             margin: 0;
             text-align: center;
@@ -263,7 +263,7 @@
       @include Text-FS-FW-LH(64px, 700, 94.7%);
       max-width: 468px;
     }
-    @media (max-width: 966px) {
+    @media (max-width: 965px) {
       @include Text-FS-FW-LH(48px, 700, 94.7%);
       max-width: 360px;
     }

@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from "next/image";
 
-import Header from "@/components/common/header/Header";
 import Wrapper from "@/components/common/wrapper";
 import MainTitle from "@/components/common/Titles/MainTitle";
 import FullButton from "@/components/common/buttons/FullButton";
@@ -23,7 +22,7 @@ const TopComponent = () => {
         <Wrapper className={style.wrapper}>
             <div className={style.topComponent}>
                 <div className={style.leftBlock}>
-                    <Header isMainPage={true} currentPage={"Разработка сайтов"}/>
+                    {/*<Header isMainPage={true} currentPage={"Разработка сайтов"}/>*/}
                     <div className={style.titleBlock}>
                         <div className={style.littleGif}>
                             <img src={gif.src} alt={"gif"} height={130}/>
