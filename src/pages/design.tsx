@@ -7,6 +7,8 @@ import DesignerTasks from "@/components/04_Desing/DesignerTasks";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import {Footer} from "@/components/common/footer/Footer";
 import OurWorks from "@/components/common/ourWorks/OurWorks";
+import HowDoWeDoIt from "@/components/howDoWeDoIt/HowDoWeDoIt";
+import WhatIsDesignFor from "@/components/whatIsDesignFor/WhatIsDesignFor";
 
 const Design: React.FC<{}> = () => {
     return (
@@ -22,6 +24,8 @@ const Design: React.FC<{}> = () => {
                           buttonImage={"gift"}
                 />
                 <DesignerTasks/>
+                <HowDoWeDoIt/>
+                <WhatIsDesignFor/>
                 <OurWorks/>
                 <CallBackMe/>
                 <Footer/>

@@ -70,7 +70,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: end;
+      align-items: flex-end;
       position: relative;
       @media (max-width: 1439px) {
         flex-direction: column-reverse;
@@ -80,7 +80,7 @@
       }
       @media (max-width: 965px) {
         width: 100%;
-        align-items: start;
+        align-items: flex-start;
       }
 
       .name {
@@ -147,7 +147,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: end;
+      align-items: flex-end;
       position: relative;
       @media (max-width: 1439px) {
         align-items: center;
