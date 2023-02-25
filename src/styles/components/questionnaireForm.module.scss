@@ -141,8 +141,8 @@
             height: 0;
             margin-bottom: 20px;
             display: flex;
-            justify-content: start;
-            align-items: end;
+            justify-content: flex-start;
+            align-items: flex-end;
             flex-wrap: wrap;
             gap: 20px;
             padding: 0 40% 0 54px;
@@ -200,7 +200,7 @@
         row-gap: 57px;
         @media(max-width: 1439px) {
           row-gap: 20px;
-          align-items: start;
+          align-items: flex-start;
         }
 
         .formSite, .formAge, .formMessage {
@@ -213,7 +213,7 @@
           justify-content: space-between;
           @media(max-width: 1439px) {
             width: 100%;
-            justify-content: start;
+            justify-content: flex-start;
             column-gap: 20px;
           }
           @media(max-width: 965px) {
@@ -242,7 +242,7 @@
 
           input[type=text], input[type=tel], input[type=email] {
             width: 172px;
-            align-self: end;
+            align-self: flex-end;
             @media(max-width: 1439px) {
               width: 100%;
             }
@@ -289,7 +289,7 @@
         }
 
         .button {
-          align-self: end;
+          align-self: flex-end;
           @media(max-width: 1439px) {
             align-self: center;
           }

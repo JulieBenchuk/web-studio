@@ -45,7 +45,7 @@ const QuestionnaireForm = () => {
         },
         validationSchema: yup.object({
             name: yup.string().trim().required("Необходимо ввести имя"),
-            phone: yup.string().required("Необходима ввести телефон").min(11, "Слишком короткий номер"),
+            phone: yup.string().required("Необходима ввести телефон").min(7, "Слишком короткий номер"),
             email: yup.string().email('Некорректный email').required('Необходимо ввести email'),
         })
     });
@@ -69,16 +69,16 @@ const QuestionnaireForm = () => {
                         </div>
                         <div className={style.formPhone}>
                             <label className={style.label}>Номер телефона</label>
-                            <input type="tel" name="phone" placeholder={"+7(___) ___ __ __"}
+                            <input type="text" name="phone" placeholder={"+7(___) ___ __ __"}
                                    onChange={formik.handleChange}
                                    value={formik.values.phone}/>
-                            {formik.errors.name && formik.touched.phone &&
+                            {formik.errors.phone && formik.touched.phone &&
                                 <span className={style.formikError}>{formik.errors.phone}</span>}
                             {!formik.values.phone && <span className={style.fakePlaceholder}>+7(___) ___ __ __</span>}
                         </div>
                         <div className={style.formEmail}>
                             <label className={style.label}>E-mail</label>
-                            <input type="email" name="email" placeholder={"Ivan@mail.ru"}
+                            <input type="text" name="email" placeholder={"Ivan@mail.ru"}
                                    onChange={formik.handleChange}
                                    value={formik.values.email}/>
                             {formik.errors.email && formik.touched.email &&
