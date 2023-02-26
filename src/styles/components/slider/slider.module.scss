@@ -20,7 +20,7 @@
     justify-content: space-between;
 
     .image {
-      width: 20%;
+      width: 204px;
       overflow: hidden;
 
     }
@@ -36,19 +36,20 @@
       .title {
         @include Text-FS-FW-LH(48px, 400, 56px);
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: $text-color-primary;
         margin-top: 8px;
       }
 
       .subTitle {
         @include Text-FS-FW-LH(20px, 400, 124%);
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: $text-color-primary;
         min-height: 40px;
       }
 
       .desc {
         width: 80%;
+        margin-top: 24px;
         @include Text-FS-FW-LH(16px, 400, 150%);
       }
 
@@ -88,15 +89,23 @@
 @media (max-width: 1439px) {
   .carousel {
     max-width: 617px;
+    height: 236px;
 
     .slide {
-
+      .image{
+        height: 236px;
+        width: 135px;
+      }
       .allText {
+        .title{
+          @include Text-FS-FW-LH(32px, 400, 37px);
+
+        }
         .subTitle {
           display: none;
         }
         .desc{
-          margin-top: 20px;
+          margin-top: 24px;
         }
 
         .price {
@@ -113,10 +122,12 @@
     width: 346px;
 
     .slide {
+      height: 189px;
+      width: 346px;
       .image {
-        width: 30%;
+
         img {
-          height: 200px;
+
         }
       }
 
@@ -132,10 +143,10 @@
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           text-overflow: ellipsis;
+          @include Text-FS-FW-LH(12px, 400, 160%);
+
         }
       }
     }
   }
 }
-
-

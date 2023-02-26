@@ -7,9 +7,12 @@ import arrow from '@/assets/img/Arrow_2.png'
 
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
+import "swiper/css";
 
-type SwiperDataType = {
+
+export type SwiperDataType = {
     swiperData: DataType[]
+    activeHandler?: (index: number) => void;
 }
 type DataType = {
     id: string;
@@ -18,9 +21,19 @@ type DataType = {
     desc: string;
     img?: string;
     price?: number;
+    QA?: Array<QAType>
+}
+type QAType = {
+    title: string;
+    desc: string;
 }
 
-export const Slider: React.FC<SwiperDataType> = ({swiperData}) => {
+export const Slider: React.FC<SwiperDataType> = ({swiperData, activeHandler}) => {
+    const handleSlideChange = (swiper: { activeIndex: number; }) => {
+        if (activeHandler) {
+            activeHandler(swiper.activeIndex)
+        }
+    };
     return (
         <div className={styles.carousel}>
             <Swiper className='swiper-slide'
@@ -29,13 +42,13 @@ export const Slider: React.FC<SwiperDataType> = ({swiperData}) => {
                         prevEl: '.swiper-button-prev',
                         nextEl: '.swiper-button-next',
                     }}
-                    loop={true}
                     autoplay={true}
+                    onSlideChange={handleSlideChange}
             >
                 {swiperData.map((el, index) => {
                     return <SwiperSlide key={index} className={styles.slide}>
                         <div className={styles.image}>
-                            <img src={ava.src} alt={el.title}/>
+                            <img src={ava.src} alt={el.title} style={{maxWidth: '100%', height: 'auto'}}/>
                         </div>
                         <div className={styles.allText}>
                             <div className={styles.title}>
@@ -84,6 +97,10 @@ export const Slider: React.FC<SwiperDataType> = ({swiperData}) => {
                 display: none;
               }
             `}</style>
+            {/*{form && <div className={styles.writeForm}>*/}
+            {/*    <p>Заполните анкету, чтобы получить бесплатную консультацию</p>*/}
+            {/*    <div>Заполнить анкету</div>*/}
+            {/*</div>}*/}
         </div>
     );
 }

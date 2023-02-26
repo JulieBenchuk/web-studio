@@ -8,7 +8,8 @@ import ToolsAndTechnologies from "@/components/02_Development/ToolsAndTechnologi
 import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
 import {Footer} from "@/components/common/footer/Footer";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
-
+import {development} from "@/components/reviews/moc";
+import {WeDo} from "@/components/weDo/WeDo";
 const Development: React.FC<{}> = ({}) => {
 
     return (
@@ -27,6 +28,7 @@ const Development: React.FC<{}> = ({}) => {
                           isCostBlockWide={true}
                           buttonImage={"coins"}
                 />
+                <WeDo weDoData={development}/>
                 <OurBenefits/>
                 <StagesOfWork/>
                 <ToolsAndTechnologies/>
