@@ -8,6 +8,7 @@ import {selectorItemsData} from "@/components/05_Questionnaire/SelectorItemsData
 import * as yup from "yup";
 import * as Scroll from "react-scroll";
 import style from "@/styles/components/questionnaireForm.module.scss"
+import axios from "axios";
 
 const QuestionnaireForm = () => {
     const [isMessageActive, setIsMessageActive] = useState<boolean>(false)
@@ -43,8 +44,23 @@ const QuestionnaireForm = () => {
             interest: interest
         },
         onSubmit: (values, {resetForm}) => {
-            alert(JSON.stringify({...values, interest: interest.filter(i => i.checked).map(i => i.title)}, null, 2));
-            resetForm();
+            console.log(JSON.stringify({
+                ...values,
+                interest: interest.filter(i => i.checked).map(i => i.title)
+            }, null, 2));
+            axios.post("https://silevans-backend.vercel.app/", {
+                ...values,
+                interest: interest.filter(i => i.checked).map(i => i.title)
+            }, {withCredentials: true})
+                .then(() => {
+                    alert("Ваша анкета была успешно отправлена! В ближайшее время наши специалисты с Вами свяжутся.")
+                    resetForm()
+                })
+                .catch(() => {
+                    alert("Произошла ошибка :( Попробуйте еще раз.")
+                })
+                .finally(() => {
+                })
         },
         validationSchema: yup.object({
             name: yup.string().trim().required("Необходимо ввести имя"),
