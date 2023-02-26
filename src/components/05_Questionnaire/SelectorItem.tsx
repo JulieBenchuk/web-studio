@@ -1,7 +1,8 @@
 import React, {ReactNode, useState} from 'react';
-import style from "@/styles/components/questionnaireForm.module.scss"
-import arrow from "@/assets/svg/arrowDown.svg"
+import {animateScroll as scroll} from "react-scroll";
 import InterestItem from "@/components/05_Questionnaire/InterestItem";
+import arrow from "@/assets/svg/arrowDown.svg"
+import style from "@/styles/components/questionnaireForm.module.scss"
 
 type SelectorItemPropsType = {
     title: string,
@@ -25,6 +26,7 @@ const SelectorItem: React.FC<SelectorItemPropsType> = ({
 
     const onMenuClickHandler = () => {
         if (title === "Другое") {
+            scroll.scrollToBottom()
             onMessageActiveHandler()
         } else {
             setExpandedMenu(!expandedMenu)

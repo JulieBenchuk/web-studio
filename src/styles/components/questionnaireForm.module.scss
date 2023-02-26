@@ -97,8 +97,12 @@
             border: 2px solid transparent;
             position: relative;
 
+            &:active {
+              border: 2px solid $text-color-primary;
+
+            }
+
             @media (max-width: 1439px) {
-              //width: 100%;
               padding: 30px 32px;
             }
             @media (max-width: 965px) {
@@ -150,7 +154,6 @@
             border-top: none;
             transition: all 0.2s ease 0s;
             @media (max-width: 1439px) {
-              /*width: 100%;*/
               padding: 0 32px 0 32px;
             }
             @media (max-width: 965px) {
