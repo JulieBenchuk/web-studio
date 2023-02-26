@@ -33,6 +33,11 @@
         right: 84.75%;
         top: 0.1%;
         bottom: 0.1%;
+
+        &:hover {
+          cursor: pointer;
+        }
+
         @media (max-width: 965px) {
           display: none;
         }
@@ -51,6 +56,10 @@
         .navLinks {
           display: flex;
           z-index: 4;
+
+          &:hover {
+            cursor: pointer;
+          }
 
           .servicesLink, .portfolioLink {
             @include Text-FS-FW-LH(16px, 400, 19px);
