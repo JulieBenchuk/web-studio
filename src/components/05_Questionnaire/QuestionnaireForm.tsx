@@ -43,7 +43,7 @@ const QuestionnaireForm = () => {
             interest: interest
         },
         onSubmit: (values, {resetForm}) => {
-            alert(JSON.stringify(values, null, 2));
+            alert(JSON.stringify({...values, interest: interest.filter(i => i.checked).map(i => i.title)}, null, 2));
             resetForm();
         },
         validationSchema: yup.object({
