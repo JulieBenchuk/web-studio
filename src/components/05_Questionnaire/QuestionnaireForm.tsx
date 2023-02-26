@@ -44,14 +44,11 @@ const QuestionnaireForm = () => {
             interest: interest
         },
         onSubmit: (values, {resetForm}) => {
-            console.log(JSON.stringify({
-                ...values,
-                interest: interest.filter(i => i.checked).map(i => i.title)
-            }, null, 2));
+
             axios.post("https://silevans-backend.vercel.app/", {
                 ...values,
                 interest: interest.filter(i => i.checked).map(i => i.title)
-            }, {withCredentials: true})
+            })
                 .then(() => {
                     alert("Ваша анкета была успешно отправлена! В ближайшее время наши специалисты с Вами свяжутся.")
                     resetForm()
@@ -60,6 +57,7 @@ const QuestionnaireForm = () => {
                     alert("Произошла ошибка :( Попробуйте еще раз.")
                 })
                 .finally(() => {
+                    // need to add loading
                 })
         },
         validationSchema: yup.object({
