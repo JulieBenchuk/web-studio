@@ -3,7 +3,6 @@
 
 .wrapper {
   width: 100%;
-  border: 1px solid red;
   padding: 46px 130px 0 130px;
   @media(max-width: 1439px) {
     padding: 33px 170px 0 170px;
@@ -51,6 +50,7 @@
 
         .navLinks {
           display: flex;
+          z-index: 4;
 
           .servicesLink, .portfolioLink {
             @include Text-FS-FW-LH(16px, 400, 19px);

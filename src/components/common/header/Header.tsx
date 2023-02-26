@@ -11,6 +11,10 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
 
     const router = useRouter()
 
+    const onLogoClickHandler = () => {
+        router.push('/')
+    }
+
     const scrollToComponent = (target: string, offset: number) => {
         Scroll.scroller.scrollTo(target, {
             duration: 700,
@@ -43,7 +47,7 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
         <Wrapper className={style.wrapper}>
             <header className={isMainPage ? style.headerMainPage : style.header}>
                 <div className={style.row}>
-                    <div className={style.logoBlock}>
+                    <div className={style.logoBlock} onClick={onLogoClickHandler}>
                         <img src={logo.src} alt="silevans" width={180} height={31}/>
                     </div>
 
