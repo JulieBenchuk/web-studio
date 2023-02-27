@@ -11,12 +11,12 @@
     @media (max-width: 1439px) {
       padding: 100px 170px 90px 170px;
     }
-    @media (max-width: 966px) {
+    @media (max-width: 965px) {
       padding: 89px 20px 82px 20px;
     }
 
     .titleBlock {
-      @media (max-width: 966px) {
+      @media (max-width: 965px) {
         @include Flex-Center();
       }
 
@@ -25,7 +25,7 @@
         @media (max-width: 1439px) {
           max-width: 377px;
         }
-        @media (max-width: 966px) {
+        @media (max-width: 965px) {
           text-align: center;
           max-width: 391px;
         }
@@ -42,7 +42,7 @@
         padding-top: 40px;
         gap: 20px;
       }
-      @media (max-width: 966px) {
+      @media (max-width: 965px) {
         padding-top: 20px;
       }
 
@@ -82,7 +82,7 @@
           text-align: center;
           width: 557px;
         }
-        @media (max-width: 966px) {
+        @media (max-width: 965px) {
           @include Text-FS-FW-LH(14px, 700, 123.7%);
           width: 100%;
           max-width: 100%;
@@ -102,7 +102,7 @@
           max-width: 448px;
           margin-top: 60.65px;
         }
-        @media (max-width: 966px) {
+        @media (max-width: 965px) {
           @include Text-FS-FW-LH(14px, 400, 160%);
           max-width: 448px;
           margin-top: 90.35px;
@@ -122,7 +122,7 @@
           max-width: 731px;
           top: -180px;
         }
-        @media (max-width: 966px) {
+        @media (max-width: 965px) {
           top: -100px;
           left: 10%;
           max-width: 452px;
@@ -147,7 +147,7 @@
       .wavesMob {
         display: none;
 
-        @media (max-width: 966px) {
+        @media (max-width: 965px) {
           display: block;
           position: absolute;
           left: -20px;
@@ -164,7 +164,7 @@
         @media (max-width: 1439px) {
           @include Text-FS-FW-LH(64px, 700, 97.2%);
         }
-        @media (max-width: 966px) {
+        @media (max-width: 965px) {
           @include Text-FS-FW-LH(48px, 700, 94.7%);
           background: linear-gradient(180deg, #FFFFFF 21.38%, rgba(255, 255, 255, 0) 100%);
           -webkit-background-clip: text;
@@ -185,7 +185,7 @@
           padding-top: 100px;
           align-self: center;
         }
-        @media (max-width: 966px) {
+        @media (max-width: 965px) {
           padding-top: 11px;
           max-width: 100%;
           text-align: center;
@@ -199,14 +199,14 @@
             padding-bottom: 40px;
             max-width: 503px;
           }
-          @media (max-width: 966px) {
+          @media (max-width: 965px) {
             @include Text-FS-FW-LH(14px, 400, 160%);
           }
         }
 
         .visualButton {
           z-index: 1;
-          @media (max-width: 966px) {
+          @media (max-width: 965px) {
             width: 100%;
           }
 
@@ -223,7 +223,7 @@
           bottom: 100px;
           left: 0;
           max-width: 100%;
-          @media (max-width: 966px) {
+          @media (max-width: 965px) {
             display: none;
           }
         }

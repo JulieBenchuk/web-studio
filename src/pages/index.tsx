@@ -10,6 +10,7 @@ import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import OurWorks from "@/components/common/ourWorks/OurWorks";
 import {Reviews} from "@/components/reviews/Reviews";
 import Comfortable from "@/components/comfortable/Comfortable";
+import Header from "@/components/common/header/Header";
 
 export default function Home() {
     return (
@@ -21,6 +22,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={style.main}>
+                <Header isMainPage={true} currentPage={"Разработка сайтов"}/>
                 <TopComponent/>
                 <RunningString/>
                 <Services/>

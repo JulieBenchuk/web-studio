@@ -9,13 +9,20 @@ import FullButton from "@/components/common/buttons/FullButton";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 import Link from "next/link";
 import {useRouter} from "next/router";
+import * as scroll from "react-scroll";
 
 
 const Services = () => {
+
     const router = useRouter();
 
+    const {Element: ScrollElement} = scroll;
+
     return (
-        <>
+        <ScrollElement
+            id="ourServices"
+            name="ourServices"
+        >
             <Wrapper className={style.wrapper}>
                 <SmallTitle className={style.smallTitle}>Наши услуги!</SmallTitle>
                 <div className={style.items}>
@@ -91,7 +98,7 @@ const Services = () => {
                 </div>
             </Wrapper>
 
-        </>
+        </ScrollElement>
 
     );
 };

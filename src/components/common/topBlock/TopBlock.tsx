@@ -1,11 +1,10 @@
 import React from 'react';
 import Wrapper from "@/components/common/wrapper";
-import Header from "@/components/common/header/Header";
 import MainTitle from "@/components/common/Titles/MainTitle";
 import FullButton from "@/components/common/buttons/FullButton";
-import style from "./../../../styles/components/topBlock.module.scss"
 import coins from "../../../assets/img/coins.png"
 import gift from "../../../assets/img/rotatedGift.png"
+import style from "./../../../styles/components/topBlock.module.scss"
 
 const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, backgroundImage: string, button?: string, buttonDescription?: string, buttonImage?: "coins" | "gift", imageClassName?: string, isCostBlockWide?: boolean, isMainTitleWide?: boolean }> = ({
                                                                                                                                                                                                                                                                           currentPage,
@@ -24,7 +23,6 @@ const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, back
             {button &&
                 <img src={buttonImage == "coins" ? coins.src : gift.src} alt={"image"}
                      className={buttonImage == "coins" ? style.coinsImage : style.giftImage}/>}
-            <Header isMainPage={false} currentPage={currentPage}/>
             <div className={style.mainTitleBlock}>
                 <MainTitle title={currentPage} isMainTitleWide={isMainTitleWide}/>
             </div>

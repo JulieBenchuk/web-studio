@@ -3,29 +3,30 @@
 
 .wrapper {
   position: relative;
-  padding: 40px 130px 60px 130px;
+  padding: 60px 130px 60px 130px;
   @media(max-width: 1439px) {
-    padding: 33px 170px 90px 170px;
+    padding: 90px 170px 90px 170px;
   }
 
-  @media(max-width: 966px) {
-    padding: 40px 20px 60px 20px;
+  @media(max-width: 965px) {
+    padding: 155px 20px 60px 20px;
+    min-height: 700px;
   }
 
   .mainTitleBlock {
-    @media(max-width: 966px) {
+    @media(max-width: 965px) {
       @include Flex-Center();
     }
 
   }
 
   .bgImageBlock {
-    @media(max-width: 966px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      bottom: 300px;
+    @media(max-width: 965px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
 
     }
 
@@ -39,9 +40,10 @@
 
 
       @media(max-width: 1439px) {
-        width: 40%;
+        top: -100px;
+        width: 50%;
       }
-      @media(max-width: 966px) {
+      @media(max-width: 965px) {
         min-width: 360px;
         width: 100%;
         position: static;
@@ -60,8 +62,9 @@
     padding-top: 48px;
     @media(max-width: 1439px) {
       padding-top: 10px;
+      max-width: 333px;
     }
-    @media(max-width: 966px) {
+    @media(max-width: 965px) {
       padding-top: 20px;
       @include Text-FS-FW-LH(14px, 400, 160%);
       text-align: center;
@@ -91,8 +94,11 @@
       margin-left: 0;
       padding-left: 5px;
     }
-    @media (max-width: 966px) {
+    @media (max-width: 965px) {
+      position: absolute;
       max-width: 100%;
+      bottom: 0;
+      right: 0;
       flex-direction: column;
       margin: 0;
       padding: 0;
@@ -103,7 +109,7 @@
     }
 
     .button {
-      @media (max-width: 966px) {
+      @media (max-width: 965px) {
         @include Text-FS-FW-LH(16px, 700, 19px);
       }
     }
@@ -111,7 +117,7 @@
     .costDescription {
       @include Text-FS-FW-LH(16px, 400, 150%);
       margin-left: 29px;
-      @media (max-width: 966px) {
+      @media (max-width: 965px) {
         margin: 0;
         text-align: center;
         padding-top: 20px;
@@ -125,7 +131,10 @@
 
   .costBlockWide {
     @extend .costBlock;
-    max-width: 100%;
+    max-width: 700px;
+    @media (max-width: 965px) {
+      max-width: 100%;
+    }
 
     .costDescription {
       @media (max-width: 1439px) {

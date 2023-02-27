@@ -32,7 +32,7 @@ const ToolsAndTechnologies = () => {
                     <div className={style.designBlock}>
 
                         {toolItems.filter(i => i.id > 0 && i.id < 3).map((i) => {
-                            return <FilteredTools title={i.title} img={i.img}/>
+                            return <FilteredTools key={i.id} title={i.title} img={i.img}/>
                         })}
 
                     </div>
@@ -42,7 +42,7 @@ const ToolsAndTechnologies = () => {
                     <div className={style.frontBlock}>
 
                         {toolItems.filter(i => i.id > 2 && i.id < 12).map((i) => {
-                            return <FilteredTools title={i.title} img={i.img}/>
+                            return <FilteredTools key={i.id} title={i.title} img={i.img}/>
                         })}
 
                     </div>
@@ -52,7 +52,7 @@ const ToolsAndTechnologies = () => {
                     <div className={style.backBlock}>
 
                         {toolItems.filter(i => i.id > 11 && i.id < 15).map((i) => {
-                            return <FilteredTools title={i.title} img={i.img}/>
+                            return <FilteredTools key={i.id} title={i.title} img={i.img}/>
                         })}
 
                     </div>

@@ -8,6 +8,7 @@ import ToolsAndTechnologies from "@/components/02_Development/ToolsAndTechnologi
 import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
 import {Footer} from "@/components/common/footer/Footer";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
+import Header from "@/components/common/header/Header";
 
 const Development: React.FC<{}> = ({}) => {
 
@@ -17,6 +18,7 @@ const Development: React.FC<{}> = ({}) => {
                 <title>Development</title>
             </Head>
             <main className={style.main}>
+                <Header isMainPage={false} currentPage={"Разработка сайтов"}/>
                 <TopBlock currentPage={"Разработка сайтов"}
                           serviceDescription={"— сайты, построенные на современных технологиях и фреймворках. Понятный\n" +
                               "                frontend для пользователя, который подключается к CMS, и надежный backend для стабильной работы\n" +
