@@ -9,9 +9,10 @@ import axios from "axios";
 import * as yup from "yup";
 import * as Scroll from "react-scroll";
 import style from "@/styles/components/questionnaireForm.module.scss"
+import {CHAT_ID, URI_API} from "@/components/05_Questionnaire/telegramAPI/telegramAPI";
 
 const QuestionnaireForm = () => {
-    
+
     const [isMessageActive, setIsMessageActive] = useState<boolean>(false)
 
     const [interest, setInterest] = useState<Array<{ checked: boolean, title: ReactNode }>>([])
@@ -48,13 +49,19 @@ const QuestionnaireForm = () => {
             interest: interest
         },
         onSubmit: (values, {resetForm}) => {
-
             setIsLoading(true)
 
-            axios.post("https://silevans-backend.vercel.app/", {
-                ...values,
-                interest: interest.filter(i => i.checked).map(i => i.title)
+            const mailRequest = axios.post("https://silevans-backend.vercel.app/", {
+                ...values, interest: interest.filter(i => i.checked).map(i => i.title)
             })
+
+            const tgBotRequest = axios.post(URI_API, {
+                chat_id: CHAT_ID, parse_mode: "html", text: `<b>Заявка с сайта!</b> \n
+<b>Имя: ${values.name}, \nтелефон: ${values.phone}, \nemail: ${values.email}, \nкомпания или проект: ${values.companyOrProject ? values.companyOrProject : "нет данных"}, \nсайт: ${values.site ? values.site : "нет данных"}, \nвозраст компании: ${values.ageOfCompany ? values.ageOfCompany : "нет данных"}.\n</b>
+<b>Интересует: ${values.interest.length > 0 ? values.interest.filter(i => i.checked).map(i => i.title) : "не выбрано"} </b>`
+            })
+
+            Promise.all([mailRequest, tgBotRequest])
                 .then(() => {
                     alert("Ваша анкета была успешно отправлена! В ближайшее время наши специалисты с Вами свяжутся.")
                     resetForm()
@@ -64,7 +71,7 @@ const QuestionnaireForm = () => {
                 })
                 .finally(() => {
                     setIsLoading(false)
-                })
+                });
         },
         validationSchema: yup.object({
             name: yup.string().trim().required("Необходимо ввести имя"),
