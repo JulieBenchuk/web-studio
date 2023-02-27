@@ -9,14 +9,14 @@ import FullButton from "@/components/common/buttons/FullButton";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 import Link from "next/link";
 import {useRouter} from "next/router";
-import * as Scroll from "react-scroll";
+import * as scroll from "react-scroll";
 
 
 const Services = () => {
 
     const router = useRouter();
 
-    const {Element: ScrollElement} = Scroll;
+    const {Element: ScrollElement} = scroll;
 
     return (
         <ScrollElement

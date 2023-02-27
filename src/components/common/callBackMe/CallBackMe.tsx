@@ -3,14 +3,14 @@ import SmallTitle from "@/components/common/Titles/SmallTitle";
 import Wrapper from "@/components/common/wrapper";
 import FullButton from "@/components/common/buttons/FullButton";
 import {useFormik} from "formik";
-import * as yup from "yup";
-import * as Scroll from 'react-scroll';
 import style from './../../../styles/components/callBackMe.module.scss'
+import * as yup from "yup";
+import * as scroll from 'react-scroll';
 
 
 const CallBackMe = () => {
 
-    const {Element: ScrollElement} = Scroll;
+    const {Element: ScrollElement} = scroll;
 
     const formik = useFormik({
         initialValues: {
@@ -26,7 +26,7 @@ const CallBackMe = () => {
             phone: yup.string().required("Необходима ввести телефон").min(11, "Слишком короткий номер")
         })
     })
-    
+
     return (
         <ScrollElement
             id="callMeBack"

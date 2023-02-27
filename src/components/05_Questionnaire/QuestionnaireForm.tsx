@@ -5,11 +5,11 @@ import SmallTitle from "@/components/common/Titles/SmallTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 import SelectorItem from "@/components/05_Questionnaire/SelectorItem";
 import {selectorItemsData} from "@/components/05_Questionnaire/SelectorItemsData";
+import {CHAT_ID, URI_API} from "@/components/05_Questionnaire/telegramAPI/telegramAPI";
 import axios from "axios";
 import * as yup from "yup";
-import * as Scroll from "react-scroll";
+import * as scroll from "react-scroll";
 import style from "@/styles/components/questionnaireForm.module.scss"
-import {CHAT_ID, URI_API} from "@/components/05_Questionnaire/telegramAPI/telegramAPI";
 
 const QuestionnaireForm = () => {
 
@@ -19,7 +19,7 @@ const QuestionnaireForm = () => {
 
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
-    const {Element: ScrollElement} = Scroll;
+    const {Element: ScrollElement} = scroll;
 
     const onMessageActiveHandler = () => {
         setIsMessageActive(true)
