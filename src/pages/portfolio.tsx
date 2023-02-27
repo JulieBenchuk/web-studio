@@ -3,7 +3,8 @@ import Head from "next/head";
 import {Footer} from "@/components/common/footer/Footer";
 import Header from "@/components/common/header/Header";
 import style from '@/styles/Home.module.scss'
-import OurProjects from "@/components/06_Projects/ourProjects/OurProjects";
+import ReservedOurProjects from "@/components/06_Projects/ourProjects/reservedOurProjects";
+
 
 const Portfolio: React.FC<{}> = ({}) => {
     return (
@@ -13,7 +14,7 @@ const Portfolio: React.FC<{}> = ({}) => {
             </Head>
             <main className={style.main}>
                 <Header isMainPage={false} currentPage={'Наши проекты'}/>
-                <OurProjects/>
+                <ReservedOurProjects/>
                 <Footer/>
             </main>
 
