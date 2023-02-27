@@ -133,44 +133,51 @@ const QuestionnaireForm = () => {
                         </div>
                     </div>
 
-                    <div className={style.projectInfo}>
-                        <SmallTitle className={style.titles}>Информация о проекте</SmallTitle>
-                        <div className={style.projectInputForm}>
-                            <div className={style.row1}>
-                                <div className={style.formSite}>
-                                    <label className={style.label}>Веб-сайт</label>
-                                    <input type="text" placeholder={"www.ivanovka.com"} name="site"
-                                           onChange={formik.handleChange}
-                                           value={formik.values.site}/>
-                                    {!formik.values.site &&
-                                        <span className={style.fakePlaceholder}>Ссылка на сайт</span>}
+                    <ScrollElement
+                        id="projectInfo"
+                        name="projectInfo"
+                    >
+                        <div className={style.projectInfo}>
+                            <SmallTitle className={style.titles}>Информация о проекте</SmallTitle>
+                            <div className={style.projectInputForm}>
+                                <div className={style.row1}>
+                                    <div className={style.formSite}>
+                                        <label className={style.label}>Веб-сайт</label>
+                                        <input type="text" placeholder={"www.ivanovka.com"} name="site"
+                                               onChange={formik.handleChange}
+                                               value={formik.values.site}/>
+                                        {!formik.values.site &&
+                                            <span className={style.fakePlaceholder}>Ссылка на сайт</span>}
+                                    </div>
+                                    <div className={style.formAge}>
+                                        <label className={style.label}>Возраст компании (в годах)</label>
+                                        <input type="text" placeholder={"21 год"} name="ageOfCompany"
+                                               onChange={formik.handleChange}
+                                               value={formik.values.ageOfCompany}/>
+                                        {!formik.values.name &&
+                                            <span className={style.fakePlaceholder}>Возраст компании (в годах)</span>}
+                                    </div>
                                 </div>
-                                <div className={style.formAge}>
-                                    <label className={style.label}>Возраст компании (в годах)</label>
-                                    <input type="text" placeholder={"21 год"} name="ageOfCompany"
-                                           onChange={formik.handleChange}
-                                           value={formik.values.ageOfCompany}/>
-                                    {!formik.values.name &&
-                                        <span className={style.fakePlaceholder}>Возраст компании (в годах)</span>}
-                                </div>
-                            </div>
 
-                            <div className={style.row2}>
-                                <div className={style.formMessage}>
-                                    <label className={style.label}>Сообщение</label>
-                                    <textarea disabled={!isMessageActive} name="message" onChange={formik.handleChange}
-                                              value={formik.values.message}/>
-                                    {!formik.values.name && <span className={style.fakePlaceholder}>Сообщение</span>}
+                                <div className={style.row2}>
+                                    <div className={style.formMessage}>
+                                        <label className={style.label}>Сообщение</label>
+                                        <textarea disabled={!isMessageActive} name="message"
+                                                  onChange={formik.handleChange}
+                                                  value={formik.values.message}/>
+                                        {!formik.values.name &&
+                                            <span className={style.fakePlaceholder}>Сообщение</span>}
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div className={style.buttonBlock}>
-                                <FullButton className={style.button} type="submit">Отправить</FullButton>
+                                <div className={style.buttonBlock}>
+                                    <FullButton className={style.button} type="submit">Отправить</FullButton>
+                                </div>
+
                             </div>
 
                         </div>
-
-                    </div>
+                    </ScrollElement>
 
 
                 </form>

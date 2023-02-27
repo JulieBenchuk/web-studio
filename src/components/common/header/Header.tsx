@@ -1,11 +1,11 @@
 import React, {MouseEvent} from 'react';
 import Link from "next/link";
-import * as Scroll from "react-scroll";
 import {useRouter} from "next/router";
 import Wrapper from "@/components/common/wrapper";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
 import logo from '../../../assets/svg/Logo.svg'
 import style from '../../../styles/components/header.module.scss'
+import {scrollToElement} from "@/utils/scrollToElement";
 
 const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainPage, currentPage}) => {
 
@@ -15,26 +15,18 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
         router.push('/')
     }
 
-    const scrollToComponent = (target: string, offset: number) => {
-        Scroll.scroller.scrollTo(target, {
-            duration: 700,
-            smooth: true,
-            offset,
-        })
-    }
-
     const onServicesClickHandler = () => {
         router.push('/').then(() => {
-            scrollToComponent('ourServices', 0)
+            scrollToElement('ourServices', 0)
         })
     }
 
     const onCallMeBackClickHandler = () => {
         if (currentPage === "Анкета" || currentPage === "Наши проекты") {
             router.push('/').then(() => {
-                scrollToComponent('callMeBack', 250)
+                scrollToElement('callMeBack', 250)
             })
-        } else scrollToComponent('callMeBack', 0)
+        } else scrollToElement('callMeBack', 0)
     }
 
     const onPortfolioClickHandler = (e: MouseEvent<HTMLAnchorElement>) => {
