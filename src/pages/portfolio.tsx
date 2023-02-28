@@ -14,7 +14,7 @@ const Portfolio: React.FC<{}> = ({}) => {
             </Head>
             <main className={style.main}>
                 <Header isMainPage={false} currentPage={'Наши проекты'}/>
-                <ReservedOurProjects/>
+                <ReservedOurProjects data={[]}/>
                 <Footer/>
             </main>
 
