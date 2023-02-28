@@ -6,7 +6,6 @@ type QAType = {
 }
 export const WeDoQA: React.FC<QAType> = ({data}) => {
     const [active, setActive] = useState<boolean>(false)
-    console.log(data)
     return (
         <div className={styles.wrapper}>
                  <div className={styles.btnWrapper}>

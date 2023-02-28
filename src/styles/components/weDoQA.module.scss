@@ -1,9 +1,11 @@
 @import "../mixins";
 @import "../variables";
-.wrapper{
+
+.wrapper {
   .btnWrapper {
     display: flex;
     flex-direction: column;
+
     .btn {
       width: 620px;
       background: url("../../../src/assets/img/weDoQA_bg.png") no-repeat;
@@ -40,17 +42,37 @@
     }
   }
 }
+
 @media (max-width: 965px) {
-  .wrapper{
-   .btnWrapper{
-     .btn{
-       width: 390px;
-       padding: 25px 30px;
-     }
-     .desc_active{
-       width: 390px;
-     }
-   }
+  .wrapper {
+    .btnWrapper {
+      .btn {
+        width: 390px;
+        padding: 25px 30px;
+      }
+
+      .desc_active {
+        width: 390px;
+      }
+    }
+  }
+}
+
+@media (max-width: 445px) {
+  .wrapper {
+    .btnWrapper {
+      width: 330px;
+      .btn {
+        width: 100%;
+        .title{
+          @include Text-FS-FW-LH(12px, 400, 150%);
+
+        }
+      }
+      .desc_active{
+        width: 100%;
+      }
+    }
   }
 }
 

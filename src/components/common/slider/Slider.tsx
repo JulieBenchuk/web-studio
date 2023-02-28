@@ -11,21 +11,17 @@ import "swiper/css";
 
 
 export type SwiperDataType = {
-    swiperData: DataType[]
+    swiperData: {
+        id: string;
+        title: string;
+        subTitle: string;
+        desc: string;
+        price: number;
+        QA?:
+            { title?: string;
+                desc?: string; }[];
+    }[]
     activeHandler?: (index: number) => void;
-}
-type DataType = {
-    id: string;
-    title: string;
-    subTitle?: string;
-    desc: string;
-    img?: string;
-    price?: number;
-    QA?: Array<QAType>
-}
-type QAType = {
-    title: string;
-    desc: string;
 }
 
 export const Slider: React.FC<SwiperDataType> = ({swiperData, activeHandler}) => {

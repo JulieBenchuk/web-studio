@@ -3,9 +3,8 @@ import {Slider} from "@/components/common/slider/Slider";
 import styles from '@/styles/components/weDo.module.scss'
 import Wrapper from "@/components/common/wrapper";
 import {WeDoQA} from "@/components/weDo/WeDoQA";
-import {development} from "@/components/reviews/moc";
 
-type weDoDataType = {
+export type weDoDataType = {
     weDoData: {
         id: string;
         title: string;
@@ -51,7 +50,7 @@ export const WeDo: React.FC<weDoDataType> = ({weDoData}) => {
                 </div>
             </div>
             <div className={styles.pcSlider}>
-                <Slider swiperData={development}
+                <Slider swiperData={weDoData}
                         activeHandler={activeHandler}
                 />
                 <div className={styles.writeForm}>
@@ -66,8 +65,6 @@ export const WeDo: React.FC<weDoDataType> = ({weDoData}) => {
                 <div className={styles.writeFormBtn}>Заполнить анкету</div>
                 <p>Заполните анкету, чтобы получить бесплатную консультацию</p>
             </div>
-
-
         </Wrapper>
     );
 };
