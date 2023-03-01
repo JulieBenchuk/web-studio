@@ -1,5 +1,12 @@
 @import "variables";
 
+.wrap{
+  padding: 50px 210px;
+  color: $text-color-primary;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
 .main {
   background: $bg-primary;
   height: 100%;

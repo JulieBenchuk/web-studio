@@ -11,6 +11,8 @@ import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
 import Guarantees from "@/components/guarantees/Guarantees";
 import Promo from "@/components/promo/Promo";
 import Header from "@/components/common/header/Header";
+import {WeDo} from "@/components/weDo/WeDo";
+import {promotion} from "@/components/reviews/moc";
 
 const Promotion: React.FC<{}> = () => {
     return (
@@ -26,6 +28,7 @@ const Promotion: React.FC<{}> = () => {
                           buttonDescription={"Заполните анкету, чтобы получить бесплатную консультацию"}
                           isMainTitleWide={true} buttonImage={"gift"}
                 />
+                <WeDo weDoData={promotion}/>
                 <OurBenefits/>
                 <Guarantees/>
                 <WhoNeedPromotion/>
