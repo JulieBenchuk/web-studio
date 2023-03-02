@@ -5,14 +5,16 @@ import Header from "@/components/common/header/Header";
 import style from '@/styles/Home.module.scss'
 import ReservedOurProjects from "@/components/06_Projects/ourProjects/reservedOurProjects";
 import {GetStaticProps, NextPage} from 'next'
+import {Api} from "@/pages/api/api";
+import {PortfolioType} from "@/components/06_Projects/ourProjects/moc";
 
 export interface PortfolioPageProps {
-    data: string[];
+    data: PortfolioType[];
 }
 
 
 export const getStaticProps: GetStaticProps = async () => {
-    const res = ['sss', 'ssss', 'sasdasdasd']
+    const res = await Api.portfolioAPI()
     return {
         props: {
             data: res
