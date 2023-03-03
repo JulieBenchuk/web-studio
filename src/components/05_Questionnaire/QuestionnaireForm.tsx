@@ -80,6 +80,8 @@ const QuestionnaireForm = () => {
         })
     });
 
+    const errorInputStyle = formik.errors.name && formik.touched.name ? style.errorInput : ""
+
     return (
         <ScrollElement
             id="callMeBack"
@@ -95,7 +97,8 @@ const QuestionnaireForm = () => {
                                 <label className={style.label}>Имя</label>
                                 <input type="text" name="name" placeholder={"Иванов Иван Иванович"}
                                        onChange={formik.handleChange}
-                                       value={formik.values.name} disabled={isLoading}/>
+                                       value={formik.values.name} disabled={isLoading}
+                                       className={errorInputStyle}/>
                                 {formik.errors.name && formik.touched.name &&
                                     <span className={style.formikError}>{formik.errors.name}</span>}
                                 {!formik.values.name &&
@@ -105,7 +108,7 @@ const QuestionnaireForm = () => {
                                 <label className={style.label}>Номер телефона</label>
                                 <input type="text" name="phone" placeholder={"+7(___) ___ __ __"}
                                        onChange={formik.handleChange}
-                                       value={formik.values.phone} disabled={isLoading}/>
+                                       value={formik.values.phone} disabled={isLoading} className={errorInputStyle}/>
                                 {formik.errors.phone && formik.touched.phone &&
                                     <span className={style.formikError}>{formik.errors.phone}</span>}
                                 {!formik.values.phone &&
@@ -115,7 +118,7 @@ const QuestionnaireForm = () => {
                                 <label className={style.label}>E-mail</label>
                                 <input type="text" name="email" placeholder={"Ivan@mail.ru"}
                                        onChange={formik.handleChange}
-                                       value={formik.values.email} disabled={isLoading}/>
+                                       value={formik.values.email} disabled={isLoading} className={errorInputStyle}/>
                                 {formik.errors.email && formik.touched.email &&
                                     <span className={style.formikError}>{formik.errors.email}</span>}
                                 {!formik.values.email && <span className={style.fakePlaceholder}>E-mail</span>}
