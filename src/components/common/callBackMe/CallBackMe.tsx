@@ -40,7 +40,8 @@ const CallBackMe = () => {
                         {formik.errors.name && formik.touched.name &&
                             <span className={style.formikError}>{formik.errors.name}</span>}
                         <input name={"name"} type="text" value={formik.values.name} placeholder="Иванов Иван Иванович"
-                               className={style.name} onChange={formik.handleChange} onBlur={formik.handleBlur}
+                               className={formik.errors.name && formik.touched.name ? `${style.name} ${style.inputError}` : style.name}
+                               onChange={formik.handleChange} onBlur={formik.handleBlur}
                         />
                         <p className={style.description}>Оставьте свои контакты и наши специалисты с вами свяжутся</p>
                     </div>
@@ -49,7 +50,8 @@ const CallBackMe = () => {
                         {formik.errors.phone && formik.touched.phone &&
                             <span className={style.formikError}>{formik.errors.phone}</span>}
                         <input type="tel" name={"phone"} value={formik.values.phone} placeholder="+7 (___) ___ __ __"
-                               className={style.phone} onChange={formik.handleChange} onBlur={formik.handleBlur}
+                               className={style.phone && formik.touched.phone ? `${style.phone} ${style.inputError}` : style.phone}
+                               onChange={formik.handleChange} onBlur={formik.handleBlur}
                         />
                         <FullButton className={style.button} type={"submit"}>Заказать звонок</FullButton>
                     </div>
