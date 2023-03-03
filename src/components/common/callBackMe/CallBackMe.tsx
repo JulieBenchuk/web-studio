@@ -24,8 +24,14 @@ const CallBackMe = () => {
         onSubmit: (values, {resetForm}) => {
             setIsLoading(true)
 
-            /// need to delete
-            axios.post("https://silevans-backend.vercel.app/callback", values)
+            const mailRequest = axios.post("https://silevans-backend.vercel.app/callback", values)
+
+            const tgBotRequest = axios.post(URI_API, {
+                chat_id: CHAT_ID, parse_mode: "html", text: `<b>Заказан звонок!</b> \n
+                 <b>Имя: ${values.name}, \nтелефон: ${values.phone}.</b>`
+            })
+
+            Promise.all([mailRequest, tgBotRequest])
                 .then(() => {
                     alert("Ваша анкета была успешно отправлена! В ближайшее время наши специалисты с Вами свяжутся.")
                     resetForm()
@@ -35,28 +41,7 @@ const CallBackMe = () => {
                 })
                 .finally(() => {
                     setIsLoading(false)
-                })
-            /// need to delete
-
-
-            /* const mailRequest = axios.post("https://silevans-backend.vercel.app/callback", values)
-
-             const tgBotRequest = axios.post(URI_API, {
-                 chat_id: CHAT_ID, parse_mode: "html", text: `<b>Заказан звонок!</b> \n
-                 <b>Имя: ${values.name}, \nтелефон: ${values.phone}.</b>`
-             })
-
-             Promise.all([mailRequest, tgBotRequest])
-                 .then(() => {
-                     alert("Ваша анкета была успешно отправлена! В ближайшее время наши специалисты с Вами свяжутся.")
-                     resetForm()
-                 })
-                 .catch(() => {
-                     alert("Произошла ошибка :( Попробуйте еще раз.")
-                 })
-                 .finally(() => {
-                     setIsLoading(false)
-                 });*/
+                });
         },
         validationSchema: yup.object({
             name: yup.string().trim().required("Необходимо ввести имя"),
