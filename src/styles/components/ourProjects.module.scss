@@ -22,6 +22,9 @@
 
   .swiperBlock {
     padding: 120px 130px 288px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
   }
 }
 
@@ -29,6 +32,9 @@
   .wrapper {
     .swiperBlock {
       padding: 76px 170px 60px;
+      grid-template-columns: repeat(2, minmax(300px, 380px));
+      justify-content: center;
+      row-gap: 80px;
 
       .img {
         width: 100%;
@@ -50,6 +56,9 @@
 
     .swiperBlock {
       padding: 80px 25px 60px;
+      grid-template-columns: repeat(1, minmax(300px, 380px));
+      row-gap: 20px;
+
     }
   }
 }

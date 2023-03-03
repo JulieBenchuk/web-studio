@@ -27,6 +27,7 @@ const ReservedOurProjects: React.FC<{ portfolio: PortfolioType[] }> = ({portfoli
                              alt="image"
                              onMouseEnter={() => onMouseHandler(el.id)}
                              onMouseLeave={() => onMouseHandler('')}
+                             className={style.img}
                         />
                         {id === el.id && <CardModal el={el}/>}
                     </div>
