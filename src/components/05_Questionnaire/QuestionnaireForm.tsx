@@ -4,6 +4,7 @@ import Wrapper from "@/components/common/wrapper";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 import SelectorItem from "@/components/05_Questionnaire/SelectorItem";
+import {scrollToElement} from "@/utils/scrollToElement";
 import {selectorItemsData} from "@/components/05_Questionnaire/SelectorItemsData";
 import {CHAT_ID, URI_API} from "@/components/05_Questionnaire/telegramAPI/telegramAPI";
 import axios from "axios";
@@ -20,6 +21,12 @@ const QuestionnaireForm = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const {Element: ScrollElement} = scroll;
+
+    const onSubmitHandler = () => {
+        if (formik.errors.name || formik.errors.phone || formik.errors.email) {
+            scrollToElement("commonInfo", 0)
+        }
+    }
 
     const onMessageActiveHandler = () => {
         setIsMessageActive(true)
@@ -80,7 +87,6 @@ const QuestionnaireForm = () => {
         })
     });
 
-    const errorInputStyle = formik.errors.name && formik.touched.name ? style.errorInput : ""
 
     return (
         <ScrollElement
@@ -90,50 +96,57 @@ const QuestionnaireForm = () => {
             <Wrapper className={style.wrapper}>
                 <form className={style.formBlock} onSubmit={formik.handleSubmit}>
 
-                    <div className={style.commonInfo}>
-                        <SmallTitle className={style.titles}>Общая информация</SmallTitle>
-                        <div className={style.commonInfoForm} id={"commonInfo"}>
-                            <div className={style.formName}>
-                                <label className={style.label}>Имя</label>
-                                <input type="text" name="name" placeholder={"Иванов Иван Иванович"}
-                                       onChange={formik.handleChange}
-                                       value={formik.values.name} disabled={isLoading}
-                                       className={errorInputStyle}/>
-                                {formik.errors.name && formik.touched.name &&
-                                    <span className={style.formikError}>{formik.errors.name}</span>}
-                                {!formik.values.name &&
-                                    <span className={style.fakePlaceholder}>Фамилия Имя Отчество</span>}
-                            </div>
-                            <div className={style.formPhone}>
-                                <label className={style.label}>Номер телефона</label>
-                                <input type="text" name="phone" placeholder={"+7(___) ___ __ __"}
-                                       onChange={formik.handleChange}
-                                       value={formik.values.phone} disabled={isLoading} className={errorInputStyle}/>
-                                {formik.errors.phone && formik.touched.phone &&
-                                    <span className={style.formikError}>{formik.errors.phone}</span>}
-                                {!formik.values.phone &&
-                                    <span className={style.fakePlaceholder}>+7(___) ___ __ __</span>}
-                            </div>
-                            <div className={style.formEmail}>
-                                <label className={style.label}>E-mail</label>
-                                <input type="text" name="email" placeholder={"Ivan@mail.ru"}
-                                       onChange={formik.handleChange}
-                                       value={formik.values.email} disabled={isLoading} className={errorInputStyle}/>
-                                {formik.errors.email && formik.touched.email &&
-                                    <span className={style.formikError}>{formik.errors.email}</span>}
-                                {!formik.values.email && <span className={style.fakePlaceholder}>E-mail</span>}
-                            </div>
-                            <div className={style.formCompanyName}>
-                                <label className={style.label}>Компания/проект</label>
-                                <input type="text" name="companyOrProject"
-                                       placeholder={"OOO Ivanovka"}
-                                       onChange={formik.handleChange}
-                                       value={formik.values.companyOrProject} disabled={isLoading}/>
-                                {!formik.values.companyOrProject &&
-                                    <span className={style.fakePlaceholder}>Компания/проект</span>}
+                    <ScrollElement
+                        id="commonInfo"
+                        name="commonInfo"
+                    >
+                        <div className={style.commonInfo}>
+                            <SmallTitle className={style.titles}>Общая информация</SmallTitle>
+                            <div className={style.commonInfoForm} id={"commonInfo"}>
+                                <div className={style.formName}>
+                                    <label className={style.label}>Имя</label>
+                                    <input type="text" name="name" placeholder={"Иванов Иван Иванович"}
+                                           onChange={formik.handleChange}
+                                           value={formik.values.name} disabled={isLoading}
+                                           className={formik.errors.name && formik.touched.name ? style.errorInput : ""}/>
+                                    {formik.errors.name && formik.touched.name &&
+                                        <span className={style.formikError}>{formik.errors.name}</span>}
+                                    {!formik.values.name &&
+                                        <span className={style.fakePlaceholder}>Фамилия Имя Отчество</span>}
+                                </div>
+                                <div className={style.formPhone}>
+                                    <label className={style.label}>Номер телефона</label>
+                                    <input type="text" name="phone" placeholder={"+7(___) ___ __ __"}
+                                           onChange={formik.handleChange}
+                                           value={formik.values.phone} disabled={isLoading}
+                                           className={formik.errors.phone && formik.touched.phone ? style.errorInput : ""}/>
+                                    {formik.errors.phone && formik.touched.phone &&
+                                        <span className={style.formikError}>{formik.errors.phone}</span>}
+                                    {!formik.values.phone &&
+                                        <span className={style.fakePlaceholder}>+7(___) ___ __ __</span>}
+                                </div>
+                                <div className={style.formEmail}>
+                                    <label className={style.label}>E-mail</label>
+                                    <input type="text" name="email" placeholder={"Ivan@mail.ru"}
+                                           onChange={formik.handleChange}
+                                           value={formik.values.email} disabled={isLoading}
+                                           className={formik.errors.email && formik.touched.email ? style.errorInput : ""}/>
+                                    {formik.errors.email && formik.touched.email &&
+                                        <span className={style.formikError}>{formik.errors.email}</span>}
+                                    {!formik.values.email && <span className={style.fakePlaceholder}>E-mail</span>}
+                                </div>
+                                <div className={style.formCompanyName}>
+                                    <label className={style.label}>Компания/проект</label>
+                                    <input type="text" name="companyOrProject"
+                                           placeholder={"OOO Ivanovka"}
+                                           onChange={formik.handleChange}
+                                           value={formik.values.companyOrProject} disabled={isLoading}/>
+                                    {!formik.values.companyOrProject &&
+                                        <span className={style.fakePlaceholder}>Компания/проект</span>}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </ScrollElement>
 
                     <div className={style.interest}>
                         <SmallTitle className={style.titles}>Вас интересует</SmallTitle>
@@ -187,7 +200,8 @@ const QuestionnaireForm = () => {
                                 </div>
 
                                 <div className={style.buttonBlock}>
-                                    <FullButton className={style.button} type="submit">Отправить</FullButton>
+                                    <FullButton className={style.button} type="submit"
+                                                onClick={onSubmitHandler}>Отправить</FullButton>
                                 </div>
 
                             </div>
