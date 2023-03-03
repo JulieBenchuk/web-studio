@@ -33,8 +33,7 @@ const TopComponent = () => {
                             <p className={style.text}>Веб-студия специализируется на разработке сложно-функциональных
                                 сайтов
                                 и веб-сервисов, на
-                                креативном дизайне, интернет продвижении
-                                и поддержке.</p>
+                                креативном дизайне и интернет продвижении.</p>
                         </div>
                         <div className={style.consultationBlock}>
                             <div className={style.consultation}>
