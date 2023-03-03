@@ -1,37 +1,37 @@
 import React from 'react';
 import {PortfolioType} from "@/components/06_Projects/ourProjects/moc";
-
+import style from '@/styles/components/ourProjects.module.scss'
 
 const CardModal: React.FC<{ el: PortfolioType }> = ({el}) => {
     return (
-        <div>
-            <button>x</button>
-            <h4>{el.title}</h4>
-            <div>
-                <h6>{el.request.title}</h6>
-                <p>{el.request.description}</p>
+        <div className={style.items}>
+            <button className={style.closeBtn}>x</button>
+            <h4 className={style.itemsTitle}>{el.title}</h4>
+            <div className={style.item}>
+                <h6 className={style.itemTitle}>{el.request.title}</h6>
+                <p className={style.itemDescription}>{el.request.description}</p>
             </div>
-            <div>
-                <h6>{el.deadlines.title}</h6>
-                <p>{el.deadlines.description}</p>
+            <div className={style.item}>
+                <h6 className={style.itemTitle}>{el.deadlines.title}</h6>
+                <p className={style.itemDescription}>{el.deadlines.description}</p>
             </div>
-            <div>
-                <h6>{el.services.title}</h6>
-                <p>{el.services.description}</p>
+            <div className={style.item}>
+                <h6 className={style.itemTitle}>{el.services.title}</h6>
+                <p className={style.itemDescription}>{el.services.description}</p>
             </div>
-            <div>
-                <h6>{el.frontEnd.title}</h6>
-                <p>{el.frontEnd.description}</p>
+            <div className={style.item}>
+                <h6 className={style.itemTitle}>{el.frontEnd.title}</h6>
+                <p className={style.itemDescription}>{el.frontEnd.description}</p>
             </div>
-            <div>
-                <h6>{el.backEnd.title}</h6>
-                <p>{el.backEnd.description}</p>
+            <div className={style.item}>
+                <h6 className={style.itemTitle}>{el.backEnd.title}</h6>
+                <p className={style.itemDescription}>{el.backEnd.description}</p>
             </div>
-            <div>
-                <h6>{el.design.title}</h6>
-                <p>{el.design.description}</p>
+            <div className={style.item}>
+                <h6 className={style.itemTitle}>{el.design.title}</h6>
+                <p className={style.itemDescription}>{el.design.description}</p>
             </div>
-            <button>Перейти на Сайт</button>
+            <button className={style.btn}>Перейти на Сайт</button>
         </div>
     );
 };
