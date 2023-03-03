@@ -60,6 +60,11 @@
       color: $text-color-primary;
       border: 2px solid transparent;
 
+      &:disabled {
+        opacity: 0.4;
+        cursor: no-drop;
+      }
+
       &:focus {
         border: 2px solid $text-color-primary;
       }
@@ -209,6 +214,7 @@
     .inputError {
       border: 2px solid $bg-third;
     }
+
 
   }
 
