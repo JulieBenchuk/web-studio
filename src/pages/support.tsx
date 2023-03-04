@@ -3,6 +3,8 @@ import Head from "next/head";
 import style from "@/styles/Home.module.scss";
 import TopBlock from "@/components/common/topBlock/TopBlock";
 import bgImage from "@/assets/svg/supportBg.svg";
+import {WeDo} from "@/components/weDo/WeDo";
+import {support} from "@/components/reviews/moc";
 
 const Support = () => {
     return (
@@ -17,8 +19,8 @@ const Support = () => {
                           buttonDescription={"Заполните анкету, чтобы получить бесплатную консультацию"}
                           buttonImage={"gift"}
                 />
+                <WeDo weDoData={support}/>
             </main>
-
         </>
     );
 };

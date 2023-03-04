@@ -53,7 +53,7 @@
       background: url("../../../src/assets/img/slider_form_bg.png") no-repeat;
       background-size: cover;
       position: absolute;
-      bottom: -95px;
+      bottom: -100px;
       right: 220px;
       display: flex;
       white-space: normal;
@@ -150,24 +150,28 @@
 
 @media (max-width: 965px) {
   .wrapper {
+    display: grid;
+    grid-template-columns: minmax(330px, 390px);
+    justify-content: center;
 
     .whatWeDo {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      width: 390px;
-
+      width: 100%;
       .title {
-        width: 100%;
+        width: 90%;
         text-align: start;
       }
 
       .items {
         position: relative;
-        width: 430px;
+        width: 100%;
         right: auto;
         top: auto;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 45px;
         gap: 8px;
         .item{
           @include Text-FS-FW-LH(14px, 400, 150%);
@@ -183,27 +187,6 @@
         width: 230px;
         @include Text-FS-FW-LH(14px, 400, 160%);
       }
-    }
-  }
-}
-
-@media (max-width: 445px){
-  .wrapper{
-    margin: 0 20px;
-   .whatWeDo{
-      max-width: 330px;
-     .items{
-       justify-content: center;
-       max-width: 100%;
-
-       .item{
-         @include Text-FS-FW-LH(12px, 400, 150%);
-         padding: 5px 10px;
-       }
-     }
-   }
-    .mobileSlider{
-        max-width: 330px;
     }
   }
 }

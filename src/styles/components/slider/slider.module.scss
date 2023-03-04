@@ -48,14 +48,13 @@
       }
 
       .desc {
-        width: 90%;
         margin-top: 5px;
         @include Text-FS-FW-LH(16px, 400, 150%);
       }
 
       .price {
         position: absolute;
-        bottom: 10px;
+        bottom: 15px;
         left: 24px;
         @include Text-FS-FW-LH(64px, 400, 74px);
       }
@@ -92,19 +91,22 @@
     height: 236px;
 
     .slide {
-      .image{
+      .image {
         height: 236px;
         width: 135px;
       }
+
       .allText {
-        .title{
+        .title {
           @include Text-FS-FW-LH(32px, 400, 37px);
 
         }
+
         .subTitle {
           display: none;
         }
-        .desc{
+
+        .desc {
           margin-top: 24px;
         }
 
@@ -124,6 +126,7 @@
     .slide {
       height: 189px;
       width: 346px;
+
       .image {
 
         img {
@@ -132,48 +135,18 @@
       }
 
       .allText {
+        padding: 0 30px 0 10px;
+
         .title {
           @include Text-FS-FW-LH(20px, 400, 23px);
         }
 
         .desc {
+          margin-top: 10px;
           width: 100%;
           overflow: hidden;
           display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          text-overflow: ellipsis;
-          @include Text-FS-FW-LH(12px, 400, 160%);
-
-        }
-      }
-    }
-  }
-}
-@media (max-width: 420px){
-  .carousel{
-    height: 180px;
-    width: 300px;
-    .slide {
-      height: 189px;
-      width: 346px;
-      .image {
-
-        img {
-
-        }
-      }
-
-      .allText {
-        .title {
-          @include Text-FS-FW-LH(18px, 400, 23px);
-        }
-
-        .desc {
-          width: 100%;
-          overflow: hidden;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
+          -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
           text-overflow: ellipsis;
           @include Text-FS-FW-LH(12px, 400, 160%);

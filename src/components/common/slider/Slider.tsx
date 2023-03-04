@@ -14,9 +14,9 @@ export type SwiperDataType = {
     swiperData: {
         id: string;
         title: string;
-        subTitle: string;
+        subTitle?: string;
         desc: string;
-        price: number;
+        price?: number;
         QA?:
             { title?: string;
                 desc?: string; }[];
@@ -75,6 +75,10 @@ export const Slider: React.FC<SwiperDataType> = ({swiperData, activeHandler}) =>
 
               .swiper-slide {
 
+              }
+
+              .swiper-button-prev {
+                width: auto;
               }
 
               .swiper-button-next:after {

@@ -10,6 +10,8 @@ import OurWorks from "@/components/common/ourWorks/OurWorks";
 import HowDoWeDoIt from "@/components/howDoWeDoIt/HowDoWeDoIt";
 import WhatIsDesignFor from "@/components/whatIsDesignFor/WhatIsDesignFor";
 import Header from "@/components/common/header/Header";
+import {WeDo} from "@/components/weDo/WeDo";
+import {design} from "@/components/reviews/moc";
 
 const Design: React.FC<{}> = () => {
     return (
@@ -25,6 +27,7 @@ const Design: React.FC<{}> = () => {
                           buttonDescription={"Заполните анкету, чтобы получить бесплатную консультацию"}
                           buttonImage={"gift"}
                 />
+                <WeDo weDoData={design}/>
                 <DesignerTasks/>
                 <HowDoWeDoIt/>
                 <WhatIsDesignFor/>
