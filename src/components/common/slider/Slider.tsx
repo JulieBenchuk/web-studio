@@ -14,12 +14,14 @@ export type SwiperDataType = {
     swiperData: {
         id: string;
         title: string;
-        subTitle: string;
+        subTitle?: string;
         desc: string;
-        price: number;
+        price?: number;
         QA?:
-            { title?: string;
-                desc?: string; }[];
+            {
+                title?: string;
+                desc?: string;
+            }[];
     }[]
     activeHandler?: (index: number) => void;
 }
