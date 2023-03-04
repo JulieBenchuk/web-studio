@@ -6,26 +6,41 @@ import LinkBtn from "@/components/common/buttons/LinkBtn";
 import {PortfolioType} from "@/components/06_Projects/ourProjects/moc";
 import CardModal from "@/components/06_Projects/ourProjects/CardModal";
 import ReactPaginate from "react-paginate";
+import {useWindowSize} from "@/hooks/useWindowSize";
 
 const ReservedOurProjects: React.FC<{ portfolio: PortfolioType[] }> = ({portfolio}) => {
     const [id, setId] = useState('')
     const [slice, setSliced] = useState(portfolio)
     const [pageSize, setPageSize] = useState(12)
-    const pagesCount = Math.ceil(portfolio.length / pageSize); // 100/10
+    const pagesCount = Math.ceil(portfolio.length / pageSize);
+    const size = useWindowSize();
+
     useEffect(() => {
-        paginate(portfolio, 1, pageSize)
-    }, [])
+        if (size.width !== undefined) {
+            if (size.width > 1440) {
+                console.log('1440', size.width)
+                setPageSize(12)
+            }
+            if (size.width < 1440 && size.width > 965) {
+                console.log('1439', size.width)
+                setPageSize(8)
+            }
+            if (size.width < 965) {
+                console.log('965', size.width)
+                setPageSize(4)
+            }
+            paginate(portfolio, 1, pageSize)
+        }
 
-
+    }, [size])
+    
     const onMouseHandler = (id: string) => {
         setId(id)
     }
 
     const paginate = (portfolio: PortfolioType[], pageNumber: number, pageSize: number) => {
-        console.log(pageNumber)
         const startIndex = (pageNumber - 1) * pageSize;
         const slice = portfolio.slice(startIndex, startIndex + pageSize);
-
         setSliced(slice)
     };
 
@@ -39,6 +54,7 @@ const ReservedOurProjects: React.FC<{ portfolio: PortfolioType[] }> = ({portfoli
                         <img src={el.img}
                              alt="image"
                              onMouseEnter={() => onMouseHandler(el.id)}
+                             onClick={() => onMouseHandler(el.id)}
                              onMouseLeave={() => onMouseHandler('')}
                              className={style.img}
                         />
@@ -50,7 +66,6 @@ const ReservedOurProjects: React.FC<{ portfolio: PortfolioType[] }> = ({portfoli
             <ReactPaginate
                 pageCount={pagesCount}
                 onPageChange={(selectedItem) => paginate(portfolio, selectedItem.selected + 1, pageSize)}
-
             />
         </Wrapper>
     );
