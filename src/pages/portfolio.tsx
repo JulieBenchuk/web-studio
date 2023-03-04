@@ -33,7 +33,6 @@ const Portfolio: NextPage<PortfolioPageProps> = ({data}) => {
                 <ReservedOurProjects portfolio={data}/>
                 <Footer/>
             </main>
-
         </>
     );
 };
