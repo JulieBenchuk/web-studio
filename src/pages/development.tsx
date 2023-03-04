@@ -10,6 +10,8 @@ import {Footer} from "@/components/common/footer/Footer";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import Header from "@/components/common/header/Header";
 
+import {development} from "@/components/reviews/moc";
+import {WeDo} from "@/components/weDo/WeDo";
 const Development: React.FC<{}> = ({}) => {
 
     return (
@@ -29,6 +31,7 @@ const Development: React.FC<{}> = ({}) => {
                           isCostBlockWide={true}
                           buttonImage={"coins"}
                 />
+                <WeDo weDoData={development}/>
                 <OurBenefits/>
                 <StagesOfWork/>
                 <ToolsAndTechnologies/>
