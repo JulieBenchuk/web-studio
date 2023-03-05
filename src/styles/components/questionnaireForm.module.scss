@@ -60,6 +60,10 @@
           @media (max-width: 965px) {
             width: 100%;
           }
+
+          .errorInput {
+            border: 2px solid $bg-third;
+          }
         }
       }
     }
