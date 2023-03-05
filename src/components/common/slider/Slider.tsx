@@ -79,6 +79,10 @@ export const Slider: React.FC<SwiperDataType> = ({swiperData, activeHandler}) =>
 
               }
 
+              .swiper-button-prev {
+                width: auto;
+              }
+
               .swiper-button-next:after {
                 display: none;
               }

@@ -5,6 +5,7 @@
   .btnWrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     .btn {
       width: 620px;
@@ -45,31 +46,17 @@
 
 @media (max-width: 965px) {
   .wrapper {
+    margin: 0 5px;
     .btnWrapper {
+      display: grid;
+      grid-template-columns: minmax(330px, 390px);
+
       .btn {
-        width: 390px;
+        width: 100%;
         padding: 25px 30px;
       }
 
       .desc_active {
-        width: 390px;
-      }
-    }
-  }
-}
-
-@media (max-width: 445px) {
-  .wrapper {
-    .btnWrapper {
-      width: 330px;
-      .btn {
-        width: 100%;
-        .title{
-          @include Text-FS-FW-LH(12px, 400, 150%);
-
-        }
-      }
-      .desc_active{
         width: 100%;
       }
     }
