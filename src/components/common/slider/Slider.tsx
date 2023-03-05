@@ -18,8 +18,10 @@ export type SwiperDataType = {
         desc: string;
         price?: number;
         QA?:
-            { title?: string;
-                desc?: string; }[];
+            {
+                title?: string;
+                desc?: string;
+            }[];
     }[]
     activeHandler?: (index: number) => void;
 }
