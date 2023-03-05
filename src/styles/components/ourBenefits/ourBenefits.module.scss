@@ -9,7 +9,6 @@
 
   .title {
     max-width: max-content;
-
   }
 
   .items {
@@ -45,27 +44,10 @@
   }
 }
 
-@media (max-width: 1167px) {
+@media (max-width: 1439px) {
   .wrapper {
-    .title {
-      font-size: 96px;
-    }
+    gap: normal;
 
-    .items {
-      .item {
-        width: 242px;
-        height: 153px;
-
-        .description {
-          font-size: 18px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  .wrapper {
     .title {
       font-size: 64px;
       line-height: 94.7%;
@@ -74,9 +56,10 @@
     .items {
       gap: normal;
       height: 250px;
+      align-items: center;
 
       .item {
-        width: 188px;
+        width: 223px;
         height: 103px;
 
 
@@ -108,7 +91,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 965px) {
   .wrapper {
     gap: 40px;
 
@@ -154,6 +137,8 @@
 
         .description {
           font-size: 14px;
+          line-height: 160%;
+          padding: 10px;
         }
       }
     }

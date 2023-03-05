@@ -8,7 +8,10 @@ import ToolsAndTechnologies from "@/components/02_Development/ToolsAndTechnologi
 import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
 import {Footer} from "@/components/common/footer/Footer";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
+import Header from "@/components/common/header/Header";
 
+import {development} from "@/components/reviews/moc";
+import {WeDo} from "@/components/weDo/WeDo";
 const Development: React.FC<{}> = ({}) => {
 
     return (
@@ -17,6 +20,7 @@ const Development: React.FC<{}> = ({}) => {
                 <title>Development</title>
             </Head>
             <main className={style.main}>
+                <Header isMainPage={false} currentPage={"Разработка сайтов"}/>
                 <TopBlock currentPage={"Разработка сайтов"}
                           serviceDescription={"— сайты, построенные на современных технологиях и фреймворках. Понятный\n" +
                               "                frontend для пользователя, который подключается к CMS, и надежный backend для стабильной работы\n" +
@@ -27,6 +31,7 @@ const Development: React.FC<{}> = ({}) => {
                           isCostBlockWide={true}
                           buttonImage={"coins"}
                 />
+                <WeDo weDoData={development}/>
                 <OurBenefits/>
                 <StagesOfWork/>
                 <ToolsAndTechnologies/>

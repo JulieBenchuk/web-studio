@@ -2,11 +2,11 @@ import React, {useEffect, useState} from 'react';
 import Wrapper from "@/components/common/wrapper";
 import FullButton from "@/components/common/buttons/FullButton";
 import style from '../../styles/components/stageSlider.module.scss'
-import {useRouter} from "next/router";
 
 const StagesSlider: React.FC = () => {
-    const router = useRouter()
+
     const [stage, setStage] = useState(1)
+    
     useEffect(() => {
         if (stage !== 5) {
             const interval = setInterval(() => {
@@ -70,9 +70,7 @@ const StagesSlider: React.FC = () => {
                                 исходники.
                             </p>
                         </>}
-                    <FullButton className={style.btn} onClick={() => {
-                        router.push('/questionnaire')
-                    }}>Заполнить анкету</FullButton>
+                    <FullButton className={style.btn}>Заполнить анкету</FullButton>
                 </div>
             </div>
         </Wrapper>

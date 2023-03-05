@@ -10,6 +10,9 @@ import RunningString from "@/components/runningString/RunningString";
 import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
 import Guarantees from "@/components/guarantees/Guarantees";
 import Promo from "@/components/promo/Promo";
+import Header from "@/components/common/header/Header";
+import {WeDo} from "@/components/weDo/WeDo";
+import {promotion} from "@/components/reviews/moc";
 
 const Promotion: React.FC<{}> = () => {
     return (
@@ -18,12 +21,14 @@ const Promotion: React.FC<{}> = () => {
                 <title>Promotion</title>
             </Head>
             <main className={style.main}>
+                <Header isMainPage={false} currentPage={"Интернет продвижение"}/>
                 <TopBlock currentPage={"Интернет продвижение"}
                           serviceDescription={"— Для быстрого привлечения ваших клиентов и увеличении конверсии"}
                           backgroundImage={bgImage.src} button={"Заполнить анкету"}
                           buttonDescription={"Заполните анкету, чтобы получить бесплатную консультацию"}
                           isMainTitleWide={true} buttonImage={"gift"}
                 />
+                <WeDo weDoData={promotion}/>
                 <OurBenefits/>
                 <Guarantees/>
                 <WhoNeedPromotion/>
