@@ -6,17 +6,17 @@ import coins from "../../../assets/img/coins.png"
 import gift from "../../../assets/img/rotatedGift.png"
 import style from "./../../../styles/components/topBlock.module.scss"
 
-const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, backgroundImage: string, button?: string, buttonDescription?: string, buttonImage?: "coins" | "gift", imageClassName?: string, isCostBlockWide?: boolean, isMainTitleWide?: boolean }> = ({
-                                                                                                                                                                                                                                                                          currentPage,
-                                                                                                                                                                                                                                                                          serviceDescription,
-                                                                                                                                                                                                                                                                          backgroundImage,
-                                                                                                                                                                                                                                                                          button,
-                                                                                                                                                                                                                                                                          buttonDescription,
-                                                                                                                                                                                                                                                                          imageClassName,
-                                                                                                                                                                                                                                                                          isCostBlockWide,
-                                                                                                                                                                                                                                                                          isMainTitleWide,
-                                                                                                                                                                                                                                                                          buttonImage
-                                                                                                                                                                                                                                                                      }) => {
+const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, backgroundImage: string, button?: string, buttonDescription?: string, buttonImage?: "coins" | "gift", imageClassName?: string, isCostBlockWide?: boolean, isMainTitleWide?: boolean, isQuestionnairePage?: boolean }> = ({
+                                                                                                                                                                                                                                                                                                         currentPage,
+                                                                                                                                                                                                                                                                                                         serviceDescription,
+                                                                                                                                                                                                                                                                                                         backgroundImage,
+                                                                                                                                                                                                                                                                                                         button,
+                                                                                                                                                                                                                                                                                                         buttonDescription,
+                                                                                                                                                                                                                                                                                                         isCostBlockWide,
+                                                                                                                                                                                                                                                                                                         isMainTitleWide,
+                                                                                                                                                                                                                                                                                                         buttonImage,
+                                                                                                                                                                                                                                                                                                         isQuestionnairePage
+                                                                                                                                                                                                                                                                                                     }) => {
 
     return (
         <Wrapper className={style.wrapper}>
@@ -27,9 +27,9 @@ const TopBlock: React.FC<{ currentPage: string, serviceDescription: string, back
                 <MainTitle title={currentPage} isMainTitleWide={isMainTitleWide}/>
             </div>
             <div className={style.description}>{serviceDescription}</div>
-            <div className={style.bgImageBlock}>
+            <div className={isQuestionnairePage ? style.bgImageBlockQuest : style.bgImageBlock}>
                 <img src={backgroundImage} alt="background"
-                     className={imageClassName ? `${style.bgImage} ${imageClassName}` : style.bgImage}/>
+                     className={isQuestionnairePage ? style.questionnaireImage : style.bgImage}/>
             </div>
             {button &&
                 <div className={isCostBlockWide ? style.costBlockWide : style.costBlock}>

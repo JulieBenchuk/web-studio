@@ -27,7 +27,6 @@
       left: 0;
       right: 0;
       width: 100%;
-
     }
 
     .bgImage {
@@ -52,7 +51,25 @@
 
     }
 
+    .questionnaireImage {
+      @extend .bgImage;
+      @media(max-width: 965px) {
+        max-width: 579px;
+        position: static;
+        padding-top: 380px;
+        opacity: 1;
+      }
+    }
 
+
+  }
+
+  .bgImageBlockQuest {
+    @extend .bgImageBlock;
+    @media(max-width: 965px) {
+      width: 100%;
+      @include Flex-Center();
+    };
   }
 
   .description {
