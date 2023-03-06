@@ -210,51 +210,10 @@
           align-items: flex-start;
         }
 
-        .formSite, .formAge, .formMessage {
+        .formMessage {
           position: relative;
         }
 
-        .row1 {
-          width: 854px;
-          display: flex;
-          justify-content: space-between;
-          @media(max-width: 1439px) {
-            width: 100%;
-            justify-content: flex-start;
-            column-gap: 20px;
-          }
-          @media(max-width: 965px) {
-            flex-direction: column;
-            row-gap: 20px;
-          }
-
-
-          .formSite {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            @media(max-width: 1439px) {
-              width: 100%;
-            }
-          }
-        }
-
-        .formAge {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-          @media(max-width: 1439px) {
-            width: 100%;
-          }
-
-          input[type=text], input[type=tel], input[type=email] {
-            width: 172px;
-            align-self: flex-end;
-            @media(max-width: 1439px) {
-              width: 100%;
-            }
-          }
-        }
       }
 
       .row2 {
