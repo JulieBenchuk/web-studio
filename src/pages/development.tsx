@@ -2,16 +2,16 @@ import React from 'react';
 import TopBlock from "@/components/common/topBlock/TopBlock";
 import Head from "next/head";
 import style from "@/styles/Home.module.scss";
+import bgImage from "../assets/img/developmentBg.png"
 import StagesOfWork from "@/components/stagesOfWork/stagesOfWork";
-import bgImage from "../assets/svg/developmentBg.svg"
 import ToolsAndTechnologies from "@/components/02_Development/ToolsAndTechnologies/ToolsAndTechnologies";
 import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
 import {Footer} from "@/components/common/footer/Footer";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import Header from "@/components/common/header/Header";
-
-import {development} from "@/components/reviews/moc";
 import {WeDo} from "@/components/weDo/WeDo";
+import {development} from "@/components/reviews/moc";
+
 const Development: React.FC<{}> = ({}) => {
 
     return (
