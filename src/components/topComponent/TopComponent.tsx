@@ -52,6 +52,9 @@ const TopComponent = () => {
                         <video autoPlay muted loop className={style.videoBlock}>
                             <source src={'./topComponent.mp4'} type={'video/mp4'} className={style.bigVideo}/>
                         </video>
+                        <video autoPlay muted loop className={style.videoBlockTablet}>
+                            <source src={'./topComponentTablet.mp4'} type={'video/mp4'}/>
+                        </video>
                         {/* <div className={style.gifBlock}>
                             <img src={gif.src} alt={"gif"} height={850} className={style.bigGif}/>
                         </div>*/}

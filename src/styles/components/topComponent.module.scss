@@ -191,6 +191,7 @@
       @media (max-width: 1439px) {
         width: 100%;
         position: static;
+        -webkit-border-top-right-radius: 0;
       }
 
       .bigGifBckgrnd {
@@ -212,17 +213,9 @@
         overflow: hidden;
         box-shadow: 20px 20px 20px 1px rgba(0, 0, 0, 0.63);
 
-
         @media (max-width: 1439px) {
-          top: 280px;
-          width: 100%;
-          box-shadow: none;
-          height: 216px;
-          -webkit-border-top-right-radius: 0;
-
-        }
-        @media (max-width: 965px) {
           display: none;
+
         }
 
         .bigVideo {
@@ -232,7 +225,19 @@
 
           }
         }
+      }
 
+      .videoBlockTablet {
+        display: none;
+        @media (max-width: 1439px) {
+          position: absolute;
+          display: block;
+          top: 260px;
+          width: 100%;
+        }
+        @media (max-width: 965px) {
+          display: none;
+        }
       }
     }
   }
@@ -254,7 +259,6 @@
       height: 165px;
       top: 48px;
       opacity: 0.16;
-
     }
   }
 
@@ -275,10 +279,7 @@
       min-width: 1440px;
       height: 883px;
     }
-
   }
-
-
 }
 
 
