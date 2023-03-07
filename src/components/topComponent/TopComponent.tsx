@@ -9,7 +9,6 @@ import ground from "@/assets/svg/ground.svg";
 import gift from '../../assets/svg/giftConsultation.svg'
 import vectorLogo from '../../assets/svg/vectorLogo.svg'
 import gifBackground from '../../assets/img/BigGifBackground.png'
-import gif from '../../assets/gif/gifMain.gif'
 
 import style from '../../styles/components/topComponent.module.scss'
 import {useRouter} from "next/router";
@@ -24,9 +23,9 @@ const TopComponent = () => {
                 <div className={style.topComponent}>
                     <div className={style.leftBlock}>
                         <div className={style.titleBlock}>
-                            <div className={style.littleGif}>
-                                <img src={gif.src} alt={"gif"} height={130}/>
-                            </div>
+                            <video autoPlay muted loop className={style.littleVideoBlock}>
+                                <source src={'./topComponent.mp4'} type={'video/mp4'}/>
+                            </video>
                             <MainTitle title={"SILEVANS"} className={style.titleWrapper}/>
                         </div>
                         <div className={style.textDescription}>
@@ -55,9 +54,6 @@ const TopComponent = () => {
                         <video autoPlay muted loop className={style.videoBlockTablet}>
                             <source src={'./topComponentTablet.mp4'} type={'video/mp4'}/>
                         </video>
-                        {/* <div className={style.gifBlock}>
-                            <img src={gif.src} alt={"gif"} height={850} className={style.bigGif}/>
-                        </div>*/}
                     </div>
 
                 </div>

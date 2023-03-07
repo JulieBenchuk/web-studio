@@ -42,7 +42,7 @@
           padding-top: 109px;
         }
 
-        .littleGif {
+        .littleVideoBlock {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
@@ -50,13 +50,12 @@
           position: absolute;
           bottom: 28px;
           width: 83px;
-          height: 83px;
+          height: 90px;
           overflow: hidden;
           -webkit-border-top-left-radius: 200px;
           @media (max-width: 1439px) {
             display: none;
           }
-
         }
 
         .titleWrapper {
