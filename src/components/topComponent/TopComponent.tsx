@@ -23,7 +23,7 @@ const TopComponent = () => {
                 <div className={style.topComponent}>
                     <div className={style.leftBlock}>
                         <div className={style.titleBlock}>
-                            <video autoPlay muted loop className={style.littleVideoBlock}>
+                            <video autoPlay muted loop playsInline className={style.littleVideoBlock}>
                                 <source src={'./topComponent.mp4'} type={'video/mp4'}/>
                             </video>
                             <MainTitle title={"SILEVANS"} className={style.titleWrapper}/>
@@ -48,10 +48,10 @@ const TopComponent = () => {
 
                     <div className={style.rightBlock}>
                         <img src={gifBackground.src} alt={"gif"} height={650} className={style.bigGifBckgrnd}/>
-                        <video autoPlay muted loop className={style.videoBlock}>
+                        <video autoPlay muted playsInline loop className={style.videoBlock}>
                             <source src={'./topComponent.mp4'} type={'video/mp4'} className={style.bigVideo}/>
                         </video>
-                        <video autoPlay muted loop className={style.videoBlockTablet}>
+                        <video autoPlay muted playsInline loop className={style.videoBlockTablet}>
                             <source src={'./topComponentTablet.mp4'} type={'video/mp4'}/>
                         </video>
                     </div>
