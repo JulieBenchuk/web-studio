@@ -16,7 +16,7 @@ import {useRouter} from "next/router";
 
 const TopComponent = () => {
     const router = useRouter()
-
+    /// autoplay video doesn't work in Safari version 15
     return (
         <>
             <Wrapper className={style.wrapper}>
