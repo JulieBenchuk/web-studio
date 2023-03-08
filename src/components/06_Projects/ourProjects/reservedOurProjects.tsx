@@ -22,11 +22,9 @@ const ReservedOurProjects: React.FC<{ portfolio: PortfolioType[] }> = ({portfoli
                 paginate(portfolio, 1, pageSize)
             }
             if (size.width < 1440 && size.width > 965) {
-
                 paginate(portfolio, 1, pageSize)
             }
             if (size.width < 965) {
-
                 paginate(portfolio, 1, pageSize)
             }
         }
@@ -37,7 +35,6 @@ const ReservedOurProjects: React.FC<{ portfolio: PortfolioType[] }> = ({portfoli
         const slice = portfolio.slice(startIndex, startIndex + pageSize);
         setSliced(slice)
     };
-    console.log(pageSize)
 
     return (
         <Wrapper className={style.wrapper}>
@@ -47,8 +44,8 @@ const ReservedOurProjects: React.FC<{ portfolio: PortfolioType[] }> = ({portfoli
                 <Cards id={id} portfolio={slice}
                        setIdCallBack={(id) => setId(id)}
                        setPageSize={setPageSize}
+                       pageSize={pageSize}
                 />
-
             </div>
             <LinkBtn className={style.button} onClick={() => setPageSize(pageSize + 4)}>Загрузить</LinkBtn>
             <ReactPaginate
