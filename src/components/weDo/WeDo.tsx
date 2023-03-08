@@ -3,6 +3,7 @@ import {Slider} from "@/components/common/slider/Slider";
 import styles from '@/styles/components/weDo.module.scss'
 import Wrapper from "@/components/common/wrapper";
 import {WeDoQA} from "@/components/weDo/WeDoQA";
+import FullButton from "@/components/common/buttons/FullButton";
 
 export type weDoDataType = {
     weDoData: {
@@ -12,8 +13,10 @@ export type weDoDataType = {
         desc: string;
         price: number;
         QA?:
-            { title?: string;
-                desc?: string; }[];
+            {
+                title?: string;
+                desc?: string;
+            }[];
     }[]
 }
 
@@ -55,14 +58,14 @@ export const WeDo: React.FC<weDoDataType> = ({weDoData}) => {
                 />
                 <div className={styles.writeForm}>
                     <p>Заполните анкету, чтобы получить бесплатную консультацию</p>
-                    <div className={styles.writeFormBtn}>Заполнить анкету</div>
+                    <FullButton className={styles.writeFormBtn}>Заполнить анкету</FullButton>
                 </div>
             </div>
             <div className={styles.mobileSlider}>
                 {weDoData[active].QA && weDoData[active].QA?.map((el, index) => (
                     <WeDoQA data={el} key={index}/>
                 ))}
-                <div className={styles.writeFormBtn}>Заполнить анкету</div>
+                <FullButton className={styles.writeFormBtn}>Заполнить анкету</FullButton>
                 <p>Заполните анкету, чтобы получить бесплатную консультацию</p>
             </div>
         </Wrapper>
