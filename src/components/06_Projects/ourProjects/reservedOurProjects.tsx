@@ -48,7 +48,7 @@ const ReservedOurProjects: React.FC<{ portfolio: PortfolioType[] }> = ({portfoli
                        pageSize={pageSize}
                 />
             </div>
-            <LinkBtn className={style.button} onClick={() => setPageSize(pageSize + 4)}>Загрузить</LinkBtn>
+            <LinkBtn className={style.button} onClick={() => setPageSize(pageSize + 4)}>Загрузить еще</LinkBtn>
             <ReactPaginate
                 pageCount={pagesCount}
                 onPageChange={(selectedItem) => paginate(portfolio, selectedItem.selected + 1, pageSize)}
