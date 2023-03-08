@@ -37,6 +37,7 @@
   background: $bg-five;
   border-radius: 22px;
   border: none;
+  white-space: nowrap;
   @include Text-FS-FW-LH(20px, 700, 23px);
   font-style: normal;
   color: $text-color-primary;
