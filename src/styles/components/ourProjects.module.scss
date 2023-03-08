@@ -3,9 +3,7 @@
 
 
 .wrapper {
-  :global(.swiper-wrapper) {
-    flex-direction: unset !important;
-  }
+  padding: 61px 0 100px;
 
   .title {
     margin: 0 auto;
@@ -20,7 +18,7 @@
 
   }
 
-  .swiperBlock {
+  .content {
     padding: 120px 130px 288px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -186,6 +184,12 @@
       position: relative;
       cursor: pointer;
 
+      &:hover {
+        .glass {
+          display: flex;
+        }
+      }
+
       .glass {
         @include Flex-Center();
         flex-direction: column;
@@ -201,6 +205,7 @@
         border-radius: 35px;
         scale: 1.1;
         z-index: 2;
+        display: none;
 
         > h5 {
           &:before {
@@ -224,6 +229,11 @@
           @include Text-FS-FW-LH(20px, 700, 123.7%);
           color: $text-color-primary;
         }
+
+        .linkBtnMobile {
+          display: none;
+        }
+
       }
     }
   }
@@ -239,10 +249,9 @@
     min-height: 44px;
     height: 100%;
     cursor: pointer;
-    margin-bottom: 100px;
 
     .btn {
-      border: 1px solid #FFFFFF;
+      border: 1px solid $border-secondary;
       border-radius: 53px;
       width: 40px;
       height: 44px;
@@ -256,13 +265,13 @@
       }
 
       &:hover {
-        background: #4C04A6;
+        background: $bg-five;
       }
     }
 
     .activeBtn {
-      background: #4C04A6;
-      border: 1px solid #FFFFFF;
+      background: $bg-five;
+      border: 1px solid $border-secondary;
       border-radius: 53px;
       @include Flex-Center();
       cursor: pointer;
@@ -272,7 +281,9 @@
 
 @media(max-width: 1439px) {
   .wrapper {
-    .swiperBlock {
+    padding: 90px 0 120px;
+
+    .content {
       padding: 76px 170px 107px;
       grid-template-columns: repeat(2, minmax(300px, 380px));
       justify-content: center;
@@ -281,6 +292,48 @@
       .img {
         width: 100%;
       }
+
+      .item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: double 1px transparent;
+        border-radius: 35px;
+        max-width: 380px;
+        width: 100%;
+        background-image: radial-gradient(circle at center, #262038, #262038), linear-gradient(to bottom left, transparent 30%, #ffffff, transparent, transparent);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        padding: 8px 15px 37px;
+
+        .img {
+          border-radius: 35px;
+          max-width: 350px;
+          width: 100%;
+        }
+
+        .glass {
+          display: flex;
+          backdrop-filter: none;
+          position: initial;
+          gap: 8px;
+          padding-top: 8px;
+
+          > h5 {
+            display: none;
+          }
+
+          .linkBtn {
+            display: none;
+          }
+
+          .linkBtnMobile {
+            display: flex;
+          }
+
+
+        }
+      }
     }
 
     .button {
@@ -288,7 +341,7 @@
       width: 300px;
       height: 76px;
       border-radius: 22px;
-      margin: 0 auto 120px;
+      margin: 0 auto;
     }
 
     .pagination {
@@ -311,7 +364,7 @@
       line-height: 160%;
     }
 
-    .swiperBlock {
+    .content {
       padding: 80px 0 60px;
       grid-template-columns: repeat(1, minmax(300px, 380px));
       row-gap: 20px;

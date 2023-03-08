@@ -14,7 +14,6 @@ const Cards: React.FC<{ portfolio: PortfolioType[], setIdCallBack: (id: string) 
                                                                                                                                                                  }) => {
     const size = useWindowSize();
     const [showModal, setShowModal] = useState(false)
-    const [showGlass, setShowGlass] = useState(false)
 
     useEffect(() => {
         if (size.width !== undefined) {
@@ -31,14 +30,9 @@ const Cards: React.FC<{ portfolio: PortfolioType[], setIdCallBack: (id: string) 
     }, [size])
 
     const onItemHandler = (id: string) => {
-        showGlassHandler(true)
         setIdCallBack(id)
     }
-    const showGlassHandler = (open: boolean) => {
-        setShowGlass(open)
-    }
     const showModalHandler = (open: boolean) => {
-        setShowGlass(!showGlass)
         setShowModal(open)
     }
 
@@ -51,14 +45,12 @@ const Cards: React.FC<{ portfolio: PortfolioType[], setIdCallBack: (id: string) 
                          onMouseEnter={() => onItemHandler(el.id)}
                          className={style.img}
                     />
-                    {id === el.id && showGlass &&
-                        <div className={style.glass}
-                             onMouseLeave={() => showGlassHandler(false)}
-                        >
-                            <h5>{el.title}</h5>
-                            <p>{el.services.description}</p>
-                            <LinkBtn onClick={() => showModalHandler(true)}>Подробнее</LinkBtn>
-                        </div>}
+                    <div className={style.glass}>
+                        <h5>{el.title}</h5>
+                        <p>{el.services.description}</p>
+                        <LinkBtn onClick={() => showModalHandler(true)} className={style.linkBtn}>Подробнее</LinkBtn>
+                        <LinkBtn className={style.linkBtnMobile}><a href={el.link}>Перейти на страницу</a></LinkBtn>
+                    </div>
                     {showModal && id === el.id &&
                         <div className={style.wrapperModal}
                              onClick={(e) => (e.currentTarget === e.target) && showModalHandler(false)}
