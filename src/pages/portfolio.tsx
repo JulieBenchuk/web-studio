@@ -3,7 +3,7 @@ import Head from "next/head";
 import {Footer} from "@/components/common/footer/Footer";
 import Header from "@/components/common/header/Header";
 import style from '@/styles/Home.module.scss'
-import ReservedOurProjects from "@/components/06_Projects/ourProjects/reservedOurProjects";
+import OurProjects from "@/components/06_Projects/ourProjects/OurProjects";
 import {GetStaticProps, NextPage} from 'next'
 import {Api} from "@/pages/api/api";
 import {PortfolioType} from "@/components/06_Projects/ourProjects/moc";
@@ -30,7 +30,7 @@ const Portfolio: NextPage<PortfolioPageProps> = ({data}) => {
             </Head>
             <main className={style.main}>
                 <Header isMainPage={false} currentPage={'Наши проекты'}/>
-                <ReservedOurProjects portfolio={data}/>
+                <OurProjects portfolio={data}/>
                 <Footer/>
             </main>
         </>
