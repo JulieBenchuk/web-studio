@@ -1,11 +1,13 @@
 import React from 'react';
 import {PortfolioType} from "@/components/06_Projects/ourProjects/moc";
 import style from '@/styles/components/ourProjects.module.scss'
+import FullButton from "@/components/common/buttons/FullButton";
 
-const CardModal: React.FC<{ el: PortfolioType }> = ({el}) => {
+const CardModal: React.FC<{ el: PortfolioType, closeModal: () => void }> = ({el, closeModal}) => {
     return (
         <div className={style.items}>
-            <button className={style.closeBtn}>x</button>
+
+            <button className={style.closeBtn} onClick={closeModal}/>
             <h4 className={style.itemsTitle}>{el.title}</h4>
             <div className={style.item}>
                 <h6 className={style.itemTitle}>{el.request.title}</h6>
@@ -31,7 +33,7 @@ const CardModal: React.FC<{ el: PortfolioType }> = ({el}) => {
                 <h6 className={style.itemTitle}>{el.design.title}</h6>
                 <p className={style.itemDescription}>{el.design.description}</p>
             </div>
-            <button className={style.btn}>Перейти на Сайт</button>
+            <FullButton className={style.btn}><a href={el.link}>Перейти на Сайт</a></FullButton>
         </div>
     );
 };

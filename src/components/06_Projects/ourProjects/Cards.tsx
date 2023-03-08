@@ -63,7 +63,11 @@ const Cards: React.FC<{ portfolio: PortfolioType[], setIdCallBack: (id: string) 
                         <div className={style.wrapperModal}
                              onClick={(e) => (e.currentTarget === e.target) && showModalHandler(false)}
                         >
-                            <CardModal el={el}/>
+                            <img src={el.img}
+                                 alt="image"
+                                 className={style.imgModal}
+                            />
+                            <CardModal el={el} closeModal={() => showModalHandler(false)}/>
                         </div>}
                 </div>
             )}
