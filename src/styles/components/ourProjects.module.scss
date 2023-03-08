@@ -176,7 +176,6 @@
       }
     }
 
-
     .item {
       position: relative;
       cursor: pointer;
@@ -221,8 +220,46 @@
         }
       }
     }
+  }
 
+  .button {
+    display: none;
+  }
 
+  .pagination {
+    @include Flex-Center();
+    list-style: none;
+    gap: 20px;
+    min-height: 44px;
+    height: 100%;
+    cursor: pointer;
+
+    .btn {
+      border: 1px solid #FFFFFF;
+      border-radius: 53px;
+      width: 40px;
+      height: 44px;
+      @include Flex-Center();
+      cursor: pointer;
+
+      .linkBtn {
+        @include Flex-Center();
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        background: #4C04A6;
+      }
+    }
+
+    .activeBtn {
+      background: #4C04A6;
+      border: 1px solid #FFFFFF;
+      border-radius: 53px;
+      @include Flex-Center();
+      cursor: pointer;
+    }
   }
 }
 
@@ -237,8 +274,15 @@
       .img {
         width: 100%;
       }
+    }
 
+    .button {
+      display: block;
+      margin: 0 auto;
+    }
 
+    .pagination {
+      display: none;
     }
   }
 }

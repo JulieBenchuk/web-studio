@@ -7,6 +7,7 @@ import {PortfolioType} from "@/components/06_Projects/ourProjects/moc";
 import ReactPaginate from "react-paginate";
 import Cards from "@/components/06_Projects/ourProjects/Cards";
 import {useWindowSize} from "@/hooks/useWindowSize";
+import arrow from "@/assets/img/ArrowPaginate.webp"
 
 
 const ReservedOurProjects: React.FC<{ portfolio: PortfolioType[] }> = ({portfolio}) => {
@@ -51,6 +52,12 @@ const ReservedOurProjects: React.FC<{ portfolio: PortfolioType[] }> = ({portfoli
             <ReactPaginate
                 pageCount={pagesCount}
                 onPageChange={(selectedItem) => paginate(portfolio, selectedItem.selected + 1, pageSize)}
+                containerClassName={style.pagination}
+                activeClassName={style.activeBtn}
+                pageClassName={style.btn}
+                pageLinkClassName={style.linkBtn}
+                previousLabel={<img src={arrow.src} alt=""/>}
+                nextLabel={<img src={arrow.src} alt="" style={{rotate: '180deg'}}/>}
             />
         </Wrapper>
     );
