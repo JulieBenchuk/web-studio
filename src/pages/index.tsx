@@ -27,7 +27,7 @@ export default function Home() {
                 <RunningString/>
                 <Services/>
                 <Comfortable/>
-                <OurWorks/>
+                <OurWorks isButton={true}/>
                 <StagesSlider/>
                 <Reviews/>
                 <CallBackMe/>

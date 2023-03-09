@@ -3,14 +3,51 @@
 
 
 .wrapper {
-  display: flex;
+  @include Flex-Center();
+  flex-wrap: wrap;
   column-gap: 51px;
   padding-left: 42px;
-  align-items: center;
+
+  > h2 {
+    flex-basis: 30%;
+    flex-grow: 1;
+  }
 
   :global {
-    .swiper-slide {
-      width: 380px;
+    .swiper {
+      flex-basis: 65%;
+      flex-grow: 1;
+
+      .swiper-slide {
+        width: 380px;
+      }
+    }
+  }
+
+  > button {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .wrapper {
+    padding-left: 170px;
+    column-gap: 0;
+
+    > h2 {
+      flex-basis: 30%;
+      flex-grow: 1;
+      max-width: 270px;
+    }
+
+    :global {
+      .swiper {
+        flex-basis: 60%;
+      }
+    }
+
+    > button {
+      margin: 40px 15% 0 0;
     }
   }
 }
