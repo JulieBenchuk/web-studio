@@ -3,7 +3,6 @@ import Wrapper from "../common/wrapper";
 import Image from "next/image";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
 import gift from '../../assets/svg/gift.svg'
-
 import style from '../../styles/components/services.module.scss'
 import FullButton from "@/components/common/buttons/FullButton";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
@@ -29,6 +28,10 @@ const Services = () => {
                     <div className={style.itemsBg}></div>
                     <div className={style.itemsMenu}>
                         <div className={style.item_first}>
+                            <video autoPlay muted loop className={style.item_video}>
+                                <source src={'./Development.mp4'} type={'video/mp4'}/>
+                            </video>
+                            <div className={style.overlay}></div>
                             <div className={style.item_blockLeft}>
                                 <h5 className={style.item_title}>
                                     <Link href={'/development'}>РАЗРАБОТКА САЙТОВ</Link>
@@ -52,7 +55,12 @@ const Services = () => {
                                 </div>
                             </div>
                         </div>
+
                         <div className={style.item_second}>
+                            <video autoPlay muted loop className={style.item_video}>
+                                <source src={'./Promotion.mp4'} type={'video/mp4'}/>
+                            </video>
+                            <div className={style.overlay}></div>
                             <div className={style.item_blockLeft}>
                                 <h5 className={style.item_title}>
                                     <Link href={'/promotion'}>Интернет продвижение</Link>
@@ -74,7 +82,12 @@ const Services = () => {
                                 </div>
                             </div>
                         </div>
+
                         <div className={style.item_third}>
+                            <video autoPlay muted loop className={style.item_video}>
+                                <source src={'./Design.mp4'} type={'video/mp4'}/>
+                            </video>
+                            <div className={style.overlay}></div>
                             <div className={style.item_blockLeft}>
                                 <h5 className={style.item_title}>
                                     <Link href={'/design'}>Дизайн</Link></h5>
