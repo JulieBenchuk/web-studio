@@ -4,7 +4,6 @@ import style from "@/styles/components/whoNeedPromotion.module.scss"
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 import girl from "@/assets/img/promotionGirl.png"
-import gif from "@/assets/gif/promotionWhoNeed.gif"
 
 const WhoNeedPromotion = () => {
     return (
@@ -13,7 +12,9 @@ const WhoNeedPromotion = () => {
             <SmallTitle className={style.title}>Кому нужно продвижение?</SmallTitle>
 
             <div className={style.gifBlock}>
-                <img src={gif.src} alt="promotion"/>
+                <video autoPlay muted loop className={style.questionVideo}>
+                    <source src={'./questionMark.mp4'} type={'video/mp4'}/>
+                </video>
                 <div className={style.questMark}>?</div>
             </div>
 
