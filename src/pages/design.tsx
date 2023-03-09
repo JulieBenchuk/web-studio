@@ -12,8 +12,19 @@ import WhatIsDesignFor from "@/components/04_Desing/whatIsDesignFor/WhatIsDesign
 import Header from "@/components/common/header/Header";
 import {WeDo} from "@/components/weDo/WeDo";
 import {design} from "@/components/01_Main/reviews/moc";
+import {GetStaticProps, NextPage} from "next";
+import {Api} from "@/pages/api/api";
+import {PortfolioPageProps} from "@/pages/portfolio";
 
-const Design: React.FC<{}> = () => {
+export const getStaticProps: GetStaticProps = async () => {
+    const res = await Api.portfolioAPI()
+    return {
+        props: {
+            data: res
+        }
+    };
+};
+const Design: NextPage<PortfolioPageProps> = ({data}) => {
     return (
         <>
             <Head>
@@ -31,7 +42,7 @@ const Design: React.FC<{}> = () => {
                 <DesignerTasks/>
                 <HowDoWeDoIt/>
                 <WhatIsDesignFor/>
-                <OurWorks isButton={false}/>
+                <OurWorks isButton={true} portfolio={data} className={style.OurWorks}/>
                 <CallBackMe/>
                 <Footer/>
             </main>
