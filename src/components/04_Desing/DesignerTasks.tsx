@@ -39,7 +39,9 @@ const DesignerTasks = () => {
                             если
                             графики «много»
                         </div>
-                        <FullButton className={style.visualButton}>Заполнить анкету</FullButton>
+                        <div className={style.visualButtonWrapper}>
+                            <FullButton className={style.visualButton}>Заполнить анкету</FullButton>
+                        </div>
                     </div>
 
                     <div className={style.background}>

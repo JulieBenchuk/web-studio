@@ -204,13 +204,17 @@
           }
         }
 
-        .visualButton {
-          z-index: 1;
+        .visualButtonWrapper {
           @media (max-width: 965px) {
-            width: 100%;
+            display: flex;
+            justify-content: center;
           }
 
+          .visualButton {
+            z-index: 1;
+          }
         }
+
 
       }
 
