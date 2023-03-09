@@ -11,8 +11,20 @@ import OurWorks from "@/components/common/ourWorks/OurWorks";
 import {Reviews} from "@/components/01_Main/reviews/Reviews";
 import Comfortable from "@/components/01_Main/comfortable/Comfortable";
 import Header from "@/components/common/header/Header";
+import {GetStaticProps, NextPage} from "next";
+import {Api} from "@/pages/api/api";
+import {PortfolioPageProps} from "@/pages/portfolio";
 
-export default function Home() {
+export const getStaticProps: GetStaticProps = async () => {
+    const res = await Api.portfolioAPI()
+    return {
+        props: {
+            data: res
+        }
+    };
+};
+
+const Home: NextPage<PortfolioPageProps> = ({data}) => {
     return (
         <>
             <Head>
@@ -27,7 +39,7 @@ export default function Home() {
                 <RunningString/>
                 <Services/>
                 <Comfortable/>
-                <OurWorks isButton={true}/>
+                <OurWorks isButton={true} portfolio={data}/>
                 <StagesSlider/>
                 <Reviews/>
                 <CallBackMe/>
@@ -36,3 +48,5 @@ export default function Home() {
         </>
     )
 }
+
+export default Home;
