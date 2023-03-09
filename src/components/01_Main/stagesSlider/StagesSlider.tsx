@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Wrapper from "@/components/common/wrapper";
 import FullButton from "@/components/common/buttons/FullButton";
-import style from '../../styles/components/stageSlider.module.scss'
+import style from '../../../styles/components/stageSlider.module.scss'
 
 const StagesSlider: React.FC = () => {
 
     const [stage, setStage] = useState(1)
-    
+
     useEffect(() => {
         if (stage !== 5) {
             const interval = setInterval(() => {

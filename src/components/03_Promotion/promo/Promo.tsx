@@ -1,8 +1,8 @@
 import React from 'react';
 import Wrapper from "@/components/common/wrapper";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
-import style from "../../styles/components/promo.module.scss";
-import {PromoData} from "@/components/promo/MocPromo";
+import style from "../../../styles/components/promo.module.scss";
+import {PromoData} from "@/components/03_Promotion/promo/MocPromo";
 
 
 const Promo = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import Wrapper from "@/components/common/wrapper";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
-import style from '../../styles/components/guarantees.module.scss'
-import {guaranteesData, guaranteesPromiseData} from "../guarantees/MocGuarantees";
+import style from '../../../styles/components/guarantees.module.scss'
+import {guaranteesData, guaranteesPromiseData} from "./MocGuarantees";
 
 
 const Guarantees = () => {

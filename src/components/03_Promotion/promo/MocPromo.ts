@@ -1,7 +1,7 @@
-import vk from "../../assets/img/vk.png"
-import application from "../../assets/img/application.png"
-import www from "../../assets/img/www.png"
-import socialGroup from "../../assets/img/socialGroup.png"
+import vk from "../../../assets/img/vk.png"
+import application from "../../../assets/img/application.png"
+import www from "../../../assets/img/www.png"
+import socialGroup from "../../../assets/img/socialGroup.png"
 
 
 export const PromoData: PromoItemType[] = [
