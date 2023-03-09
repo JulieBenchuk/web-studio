@@ -31,7 +31,7 @@ const Design: React.FC<{}> = () => {
                 <DesignerTasks/>
                 <HowDoWeDoIt/>
                 <WhatIsDesignFor/>
-                <OurWorks/>
+                <OurWorks isButton={false}/>
                 <CallBackMe/>
                 <Footer/>
             </main>
