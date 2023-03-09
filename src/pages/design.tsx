@@ -7,11 +7,11 @@ import DesignerTasks from "@/components/04_Desing/DesignerTasks";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import {Footer} from "@/components/common/footer/Footer";
 import OurWorks from "@/components/common/ourWorks/OurWorks";
-import HowDoWeDoIt from "@/components/howDoWeDoIt/HowDoWeDoIt";
-import WhatIsDesignFor from "@/components/whatIsDesignFor/WhatIsDesignFor";
+import HowDoWeDoIt from "@/components/04_Desing/howDoWeDoIt/HowDoWeDoIt";
+import WhatIsDesignFor from "@/components/04_Desing/whatIsDesignFor/WhatIsDesignFor";
 import Header from "@/components/common/header/Header";
 import {WeDo} from "@/components/weDo/WeDo";
-import {design} from "@/components/reviews/moc";
+import {design} from "@/components/01_Main/reviews/moc";
 
 const Design: React.FC<{}> = () => {
     return (
