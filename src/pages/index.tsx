@@ -2,17 +2,29 @@ import Head from 'next/head'
 import React from "react";
 import style from '../styles/Home.module.scss'
 import TopComponent from "@/components/topComponent/TopComponent";
-import Services from "@/components/services/Services";
-import StagesSlider from "@/components/stagesSlider/StagesSlider";
+import Services from "@/components/01_Main/services/Services";
+import StagesSlider from "@/components/01_Main/stagesSlider/StagesSlider";
 import {Footer} from "@/components/common/footer/Footer";
 import RunningString from "@/components/runningString/RunningString";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import OurWorks from "@/components/common/ourWorks/OurWorks";
-import {Reviews} from "@/components/reviews/Reviews";
-import Comfortable from "@/components/comfortable/Comfortable";
+import {Reviews} from "@/components/01_Main/reviews/Reviews";
+import Comfortable from "@/components/01_Main/comfortable/Comfortable";
 import Header from "@/components/common/header/Header";
+import {GetStaticProps, NextPage} from "next";
+import {Api} from "@/pages/api/api";
+import {PortfolioPageProps} from "@/pages/portfolio";
 
-export default function Home() {
+export const getStaticProps: GetStaticProps = async () => {
+    const res = await Api.portfolioAPI()
+    return {
+        props: {
+            data: res
+        }
+    };
+};
+
+const Home: NextPage<PortfolioPageProps> = ({data}) => {
     return (
         <>
             <Head>
@@ -27,7 +39,7 @@ export default function Home() {
                 <RunningString/>
                 <Services/>
                 <Comfortable/>
-                <OurWorks/>
+                <OurWorks isButton={true} portfolio={data}/>
                 <StagesSlider/>
                 <Reviews/>
                 <CallBackMe/>
@@ -36,3 +48,5 @@ export default function Home() {
         </>
     )
 }
+
+export default Home;

@@ -3,7 +3,6 @@ import Wrapper from "@/components/common/wrapper";
 import FilteredTools from "@/components/02_Development/ToolsAndTechnologies/FilteredTools";
 import GearsList from "@/components/02_Development/ToolsAndTechnologies/GearsList";
 import style from "@/styles/components/toolsAndTechnologies.module.scss"
-import spaceGif from "@/assets/gif/space.gif"
 import {toolItems} from "@/components/02_Development/ToolsAndTechnologies/ToolItems";
 
 
@@ -11,13 +10,17 @@ const ToolsAndTechnologies = () => {
     return (
         <Wrapper className={style.wrapper}>
             <div className={style.toolsInfoBlock}>
-                <div className={style.gifBlockForMobile}>
-                    <img src={spaceGif.src} alt={"tools"} className={style.gifForMobile}/>
+                <div className={style.videoBlockForMobile}>
+                    <video autoPlay muted loop className={style.videoForMobile}>
+                        <source src={'./space.mp4'} type={'video/mp4'}/>
+                    </video>
                 </div>
                 <h4 className={style.titleRow}>Набор инструментов <span>и технологий</span></h4>
-                <div className={style.gifAndTextRow}>
-                    <div className={style.gifBlock}>
-                        <img src={spaceGif.src} alt={"tools"}/>
+                <div className={style.videoAndTextRow}>
+                    <div className={style.videoBlock}>
+                        <video autoPlay muted loop>
+                            <source src={'./space.mp4'} type={'video/mp4'}/>
+                        </video>
                     </div>
                     <div className={style.text}>На этапе разработки мы добавляем в проект большую часть интерактивных и
                         анимированных элементов, что позволяет получить работающие страницы и многократно протестировать

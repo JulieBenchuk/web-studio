@@ -11,7 +11,7 @@
     padding: 100px 20px 0 20px;
   }
 
-  .gifBlockForMobile {
+  .videoBlockForMobile {
     display: none;
     @media (max-width: 965px) {
       position: relative;
@@ -19,7 +19,7 @@
       padding-bottom: 100px;
     }
 
-    .gifForMobile {
+    .videoForMobile {
       width: 100%;
     }
   }
@@ -56,11 +56,11 @@
       }
     }
 
-    .gifAndTextRow {
+    .videoAndTextRow {
       display: flex;
       z-index: 1;
 
-      .gifBlock {
+      .videoBlock {
         @include Flex-Center();
         width: 418px;
         height: 116px;
