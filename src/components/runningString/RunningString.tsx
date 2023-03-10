@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../styles/components/runningString.module.scss'
+import style from '@/styles/components/runningString.module.scss'
 import Wrapper from "@/components/common/wrapper";
 import StringItem from "@/components/runningString/stringItem/StringItem";
 

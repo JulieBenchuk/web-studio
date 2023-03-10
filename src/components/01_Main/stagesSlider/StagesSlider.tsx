@@ -70,6 +70,13 @@ const StagesSlider: React.FC = () => {
                                 исходники.
                             </p>
                         </>}
+                    <div className={style.dots}>
+                        <div className={style.dot} style={stage === 1 ? {background: '#9A219C'} : undefined}></div>
+                        <div className={style.dot} style={stage === 2 ? {background: '#9A219C'} : undefined}></div>
+                        <div className={style.dot} style={stage === 3 ? {background: '#9A219C'} : undefined}></div>
+                        <div className={style.dot} style={stage === 4 ? {background: '#9A219C'} : undefined}></div>
+                    </div>
+
                     <FullButton className={style.btn}>Заполнить анкету</FullButton>
                 </div>
             </div>
