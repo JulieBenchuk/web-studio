@@ -6,11 +6,11 @@ import MainTitle from "@/components/common/Titles/MainTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 
 import ground from "@/assets/svg/ground.svg";
-import gift from '../../assets/svg/giftConsultation.svg'
-import vectorLogo from '../../assets/svg/vectorLogo.svg'
-import gifBackground from '../../assets/img/BigGifBackground.png'
+import gift from '../../../assets/svg/giftConsultation.svg'
+import vectorLogo from '../../../assets/svg/vectorLogo.svg'
+import gifBackground from '../../../assets/img/BigGifBackground.png'
 
-import style from '../../styles/components/topComponent.module.scss'
+import style from '../../../styles/components/topComponent.module.scss'
 import {useRouter} from "next/router";
 
 

@@ -119,10 +119,13 @@
           width: 276px;
           height: 193px;
           bottom: 32px;
-          background: rgba(217, 217, 217, 0.1);
-          backdrop-filter: blur(34px);
           border-radius: 50px;
           z-index: 1;
+          border: solid 1px transparent;
+          background-image: radial-gradient(circle at center, $bg-primary, #262038), linear-gradient(to bottom left, transparent 30%, #ffffff, transparent, transparent);
+          background-origin: border-box;
+          background-clip: padding-box, border-box;
+
           @media (max-width: 1439px) {
             position: relative;
             width: 300px;

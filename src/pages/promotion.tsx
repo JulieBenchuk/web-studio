@@ -6,7 +6,7 @@ import TopBlock from "@/components/common/topBlock/TopBlock";
 import WhoNeedPromotion from "@/components/03_Promotion/WhoNeedPromotion/WhoNeedPromotion";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import {Footer} from "@/components/common/footer/Footer";
-import RunningString from "@/components/runningString/RunningString";
+import RunningString from "@/components/common/runningString/RunningString";
 import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
 import Guarantees from "@/components/03_Promotion/guarantees/Guarantees";
 import Promo from "@/components/03_Promotion/promo/Promo";

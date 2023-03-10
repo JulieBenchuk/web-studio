@@ -44,6 +44,8 @@
         padding: 56px 80px 20px;
         position: relative;
         overflow: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
         max-width: 1173px;
         max-height: 302px;
 
