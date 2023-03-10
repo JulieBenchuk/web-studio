@@ -49,7 +49,7 @@
       .topTask {
         align-self: center;
         max-width: 557px;
-
+        backdrop-filter: blur(34px);
 
       }
 
@@ -57,19 +57,20 @@
         align-self: start;
         margin-top: 148px;
         margin-bottom: -70px;
+        backdrop-filter: none;
 
       }
 
       .rightTask {
         align-self: end;
         max-width: 570px;
+        backdrop-filter: blur(34px);
 
       }
 
       .topTask, .leftTask, .rightTask {
         z-index: 1;
-        border: 1px solid $text-color-primary;
-        backdrop-filter: blur(34px);
+        border: 0.1px solid $text-color-primary;
         border-radius: 35px;
         text-transform: uppercase;
         @include Text-FS-FW-LH(20px, 700, 123.7%);
