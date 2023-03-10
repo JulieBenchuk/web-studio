@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from "next/head";
-import style from "@/styles/Home.module.scss";
 import TopBlock from "@/components/common/topBlock/TopBlock";
-import bgImage from "@/assets/svg/supportBg.svg";
 import {WeDo} from "@/components/weDo/WeDo";
 import {support} from "@/components/01_Main/reviews/moc";
+import bgImage from "@/assets/img/supportBg.png";
+import style from "@/styles/Home.module.scss";
 
 const Support = () => {
     return (
