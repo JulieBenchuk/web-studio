@@ -74,7 +74,7 @@ const QuestionnaireForm = () => {
                     resetForm()
                 })
                 .catch(() => {
-                    alert("Произошла ошибка :( Попробуйте еще раз.")
+                    alert("Упс! Произошла ошибка :( Попробуйте еще раз.")
                 })
                 .finally(() => {
                     setIsLoading(false)
