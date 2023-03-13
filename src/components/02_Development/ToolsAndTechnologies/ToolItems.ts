@@ -1,6 +1,6 @@
 import figma from "@/assets/img/tools_icons/figma.png"
 import miro from "@/assets/img/tools_icons/summit.png"
-import ts from "@/assets/img/tools_icons/typescript.png"
+import ts from "@/assets/img/tools_icons/Typescript.png"
 import less from "@/assets/img/tools_icons/less.png"
 import node from "@/assets/img/tools_icons/nodejs.png"
 import sass from "@/assets/img/tools_icons/sass.png"
