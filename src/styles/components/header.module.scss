@@ -72,15 +72,31 @@
               opacity: 1;
             }
 
+            @media(max-width: 965px) {
+              padding-right: 16px;
+            }
+
           }
         }
 
+        .buttonsBlock {
+          display: flex;
+          gap: 20px;
+          @media(max-width: 1439px) {
+            gap: 10px;
+          }
 
-        .buttonCallback {
-          font-family: 'Play', sans-serif;
-          padding: 3px 18px;
+          button {
+            padding: 3px 18px;
+            @include Flex-Center();
+          }
+
+          .buttonTelegram {
+            @media(max-width: 440px) {
+              display: none;
+            }
+          }
         }
-
       }
     }
 
