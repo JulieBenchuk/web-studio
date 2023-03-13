@@ -11,7 +11,7 @@ import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
 import Guarantees from "@/components/03_Promotion/guarantees/Guarantees";
 import Promo from "@/components/03_Promotion/promo/Promo";
 import Header from "@/components/common/header/Header";
-import {WeDo} from "@/components/weDo/WeDo";
+import {WeDo} from "@/components/common/weDo/WeDo";
 import {promotion} from "@/components/01_Main/reviews/moc";
 
 const Promotion: React.FC<{}> = () => {

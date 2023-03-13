@@ -2,8 +2,8 @@ import React from 'react';
 import Wrapper from "@/components/common/wrapper";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 import StagesWork from "@/components/common/stagesWork/stagesWork";
-import {dataStagesDevelopment} from "@/components/stagesOfWork/MocStages";
-import style from '../../styles/components/stagesOfWorks.module.scss'
+import {dataStagesDevelopment} from "@/components/02_Development/stagesOfWork/MocStages";
+import style from '../../../styles/components/stagesOfWorks.module.scss'
 
 const StagesOfWork = () => {
     return (

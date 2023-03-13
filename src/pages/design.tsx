@@ -10,7 +10,7 @@ import OurWorks from "@/components/common/ourWorks/OurWorks";
 import HowDoWeDoIt from "@/components/04_Desing/howDoWeDoIt/HowDoWeDoIt";
 import WhatIsDesignFor from "@/components/04_Desing/whatIsDesignFor/WhatIsDesignFor";
 import Header from "@/components/common/header/Header";
-import {WeDo} from "@/components/weDo/WeDo";
+import {WeDo} from "@/components/common/weDo/WeDo";
 import {design} from "@/components/01_Main/reviews/moc";
 import {GetStaticProps, NextPage} from "next";
 import {Api} from "@/pages/api/api";

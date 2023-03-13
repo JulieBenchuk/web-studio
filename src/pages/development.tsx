@@ -3,13 +3,13 @@ import TopBlock from "@/components/common/topBlock/TopBlock";
 import Head from "next/head";
 import style from "@/styles/Home.module.scss";
 import bgImage from "../assets/img/developmentBg.png"
-import StagesOfWork from "@/components/stagesOfWork/stagesOfWork";
+import StagesOfWork from "@/components/02_Development/stagesOfWork/stagesOfWork";
 import ToolsAndTechnologies from "@/components/02_Development/ToolsAndTechnologies/ToolsAndTechnologies";
 import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
 import {Footer} from "@/components/common/footer/Footer";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import Header from "@/components/common/header/Header";
-import {WeDo} from "@/components/weDo/WeDo";
+import {WeDo} from "@/components/common/weDo/WeDo";
 import {development} from "@/components/01_Main/reviews/moc";
 
 const Development: React.FC<{}> = ({}) => {

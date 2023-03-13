@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Slider} from "@/components/common/slider/Slider";
 import styles from '@/styles/components/weDo.module.scss'
 import Wrapper from "@/components/common/wrapper";
-import {WeDoQA} from "@/components/weDo/WeDoQA";
+import {WeDoQA} from "@/components/common/weDo/WeDoQA";
 import FullButton from "@/components/common/buttons/FullButton";
 
 export type weDoDataType = {
