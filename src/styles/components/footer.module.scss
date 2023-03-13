@@ -24,8 +24,18 @@
     .logo {
       width: 180px;
     }
-    .date{
+
+    .date {
       display: none;
+    }
+
+    .buttonsBlock {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      button {
+      }
     }
   }
 
@@ -64,6 +74,8 @@
 
     .date {
       grid-area: date;
+      display: flex;
+      align-items: end;
       @include Text-FS-FW-LH(16px, 400, 19px);
     }
   }
@@ -71,8 +83,14 @@
 
 @media (max-width: 1439px) {
   .wrapper {
-    .contacts{
+    .contacts {
+      .buttonsBlock {
+        button {
+          width: 220px;
+        }
+      }
     }
+
     .allServices {
       column-gap: 62px;
     }
@@ -83,28 +101,43 @@
   .wrapper {
     padding: 34px 20px;
 
-    .contacts{
+    .contacts {
       @include Text-FS-FW-LH(14px, 400, 28px);
-      .date{
+
+      .date {
         display: inline-block;
       }
+
+      .buttonsBlock {
+        gap: 12px;
+
+        button {
+          width: 175px;
+          min-width: 175px;
+          @include Text-FS-FW-LH(14px, 400, 16px);
+        }
+      }
     }
-    .allServices{
+
+    .allServices {
 
 
       display: flex;
       flex-direction: column;
-      .services1{
-        a{
+
+      .services1 {
+        a {
           @include Text-FS-FW-LH(14px, 400, 28px);
         }
       }
-      .services2{
-        a{
+
+      .services2 {
+        a {
           @include Text-FS-FW-LH(14px, 400, 28px);
         }
       }
-      .date{
+
+      .date {
         display: none;
       }
     }

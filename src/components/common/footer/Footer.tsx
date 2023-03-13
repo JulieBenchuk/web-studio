@@ -4,8 +4,17 @@ import Link from "next/link";
 import Wrapper from "@/components/common/wrapper";
 import Image from 'next/image'
 import logo from '@/assets/svg/Logo.svg'
+import FullButton from "@/components/common/buttons/FullButton";
+import {useRouter} from "next/router";
 
 export const Footer: React.FC = () => {
+
+    const router = useRouter()
+
+    const onTelegramClickHandler = () => {
+        router.push('https://t.me/u11wsia')
+    }
+
     return (
         <footer>
             <Wrapper className={styles.wrapper}>
@@ -14,11 +23,9 @@ export const Footer: React.FC = () => {
                         <Image src={logo} alt={"silevans logo"}/>
                     </div>
                     <Link href={'tel:+79282345678'}>+7 928 234-56-78</Link>
-                    <div className={styles.mail}>Стать клиентом или партнёром
-                        <Link href={'mailto:hello@silevans.com'}>hello@silevans.com</Link>
-                    </div>
-                    <div className={styles.mail}>Присоединиться к команде
-                        <Link href={'mailto:hr@silevans.com'}>hr@silevans.com</Link>
+                    <div className={styles.buttonsBlock}>
+                        <FullButton onClick={onTelegramClickHandler}>Telegram</FullButton>
+                        <FullButton>Заполнить анкету</FullButton>
                     </div>
                     <div className={styles.date}>Ⓒ {new Date().getFullYear()} Silevans. Все права защищены</div>
                 </div>
