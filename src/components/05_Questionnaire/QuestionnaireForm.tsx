@@ -50,17 +50,25 @@ const QuestionnaireForm = () => {
             phone: '',
             email: '',
             companyOrProject: '',
+            site: '',
+            ageOfCompany: '',
             message: '',
             interest: interest
         },
         onSubmit: (values, {resetForm}) => {
             setIsLoading(true)
 
-            axios.post(URI_API, {
+            const mailRequest = axios.post("https://silevans-backend.vercel.app/", {
+                ...values, interest: interest.filter(i => i.checked).map(i => i.title)
+            })
+
+            const tgBotRequest = axios.post(URI_API, {
                 chat_id: CHAT_ID, parse_mode: "html", text: `<b>Заявка с сайта!</b> \n
- <b>Имя: ${values.name}, \nтелефон: ${values.phone}, \nemail: ${values.email}, \nкомпания или проект: ${values.companyOrProject ? values.companyOrProject : "нет данных"}, \nсообщение: ${values.message ? values.message : "не введено дополнительной информации"}.\n</b>
+ <b>Имя: ${values.name}, \nтелефон: ${values.phone}, \nemail: ${values.email}, \nкомпания или проект: ${values.companyOrProject ? values.companyOrProject : "нет данных"}, \nсайт: ${values.site ? values.site : "нет данных"}, \nвозраст компании (в годах): ${values.ageOfCompany ? values.ageOfCompany : "нет данных"}, \nсообщение: ${values.message ? values.message : "не введено дополнительной информации"}.\n</b>
  <b>Интересует: ${values.interest.length > 0 ? values.interest.filter(i => i.checked).map(i => i.title) : "не выбрано"} </b>`
             })
+
+            Promise.all([mailRequest, tgBotRequest])
                 .then(() => {
                     alert("Ваша анкета была успешно отправлена! В ближайшее время наши специалисты с Вами свяжутся.")
                     resetForm()
@@ -71,7 +79,6 @@ const QuestionnaireForm = () => {
                 .finally(() => {
                     setIsLoading(false)
                 });
-
         },
         validationSchema: yup.object({
             name: yup.string().trim().required("Необходимо ввести имя"),
@@ -160,7 +167,27 @@ const QuestionnaireForm = () => {
                         name="projectInfo"
                     >
                         <div className={style.projectInfo}>
+                            <SmallTitle className={style.titles}>Информация о проекте</SmallTitle>
                             <div className={style.projectInputForm}>
+                                <div className={style.row1}>
+                                    <div className={style.formSite}>
+                                        <label className={style.label}>Веб-сайт</label>
+                                        <input type="text" placeholder={"www.ivanovka.com"} name="site"
+                                               onChange={formik.handleChange}
+                                               value={formik.values.site} disabled={isLoading}/>
+                                        {!formik.values.site &&
+                                            <span className={style.fakePlaceholder}>Ссылка на сайт</span>}
+                                    </div>
+                                    <div className={style.formAge}>
+                                        <label className={style.label}>Возраст компании (в годах)</label>
+                                        <input type="text" placeholder={"21 год"} name="ageOfCompany"
+                                               onChange={formik.handleChange}
+                                               value={formik.values.ageOfCompany} disabled={isLoading}/>
+                                        {!formik.values.name &&
+                                            <span className={style.fakePlaceholder}>Возраст компании (в годах)</span>}
+                                    </div>
+                                </div>
+
                                 <div className={style.row2}>
                                     <div className={style.formMessage}>
                                         <label className={style.label}>Сообщение</label>
@@ -178,6 +205,7 @@ const QuestionnaireForm = () => {
                                 </div>
 
                             </div>
+
                         </div>
                     </ScrollElement>
 
