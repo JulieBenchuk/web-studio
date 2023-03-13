@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
     const router = useRouter()
 
     const onTelegramClickHandler = () => {
-        router.push('https://t.me/u11wsia')
+        router.push('https://t.me/julie_benchuk')
     }
 
     return (
@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                     <div className={styles.logo}>
                         <Image src={logo} alt={"silevans logo"}/>
                     </div>
-                    <Link href={'tel:+79282345678'}>+7 928 234-56-78</Link>
+                    <Link href={'tel:+375445590660'}>+375 44 559 06 60</Link>
                     <div className={styles.buttonsBlock}>
                         <FullButton onClick={onTelegramClickHandler}>Telegram</FullButton>
                         <FullButton>Заполнить анкету</FullButton>
