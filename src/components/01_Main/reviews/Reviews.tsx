@@ -1,6 +1,6 @@
 import styles from '@/styles/components/reviews.module.scss'
 import Wrapper from "@/components/common/wrapper";
-import {data} from './moc'
+import {data} from './mock'
 import {Slider} from "@/components/common/slider/Slider";
 import React from "react";
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Head from "next/head";
 import TopBlock from "@/components/common/topBlock/TopBlock";
 import {WeDo} from "@/components/common/weDo/WeDo";
-import {support} from "@/components/01_Main/reviews/moc";
+import {support} from "@/components/01_Main/reviews/mock";
 import bgImage from "@/assets/img/supportBg.png";
 import style from "@/styles/Home.module.scss";
 

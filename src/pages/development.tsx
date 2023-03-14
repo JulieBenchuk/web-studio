@@ -10,7 +10,7 @@ import {Footer} from "@/components/common/footer/Footer";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import Header from "@/components/common/header/Header";
 import {WeDo} from "@/components/common/weDo/WeDo";
-import {development} from "@/components/01_Main/reviews/moc";
+import {development} from "@/components/01_Main/reviews/mock";
 
 const Development: React.FC<{}> = ({}) => {
 

@@ -1,4 +1,4 @@
-import {portfolioData} from "@/components/06_Projects/ourProjects/moc";
+import {portfolioData} from "@/components/06_Projects/ourProjects/mock";
 
 export const Api = {
     portfolioAPI() {//fix any

@@ -1,7 +1,7 @@
 import React from 'react';
 import Wrapper from "@/components/common/wrapper";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
-import {HowDoWeDoItData} from "@/components/04_Desing/howDoWeDoIt/MocData";
+import {HowDoWeDoItData} from "@/components/04_Desing/howDoWeDoIt/MockData";
 import style from '@/styles/components/HowDoWeDoIt.module.scss'
 
 

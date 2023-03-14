@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import FullButton from "@/components/common/buttons/FullButton";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
-import {PortfolioType} from "@/components/06_Projects/ourProjects/moc";
+import {PortfolioType} from "@/components/06_Projects/ourProjects/mock";
 import {useRouter} from "next/router";
 
 

@@ -6,7 +6,7 @@ import style from '@/styles/Home.module.scss'
 import OurProjects from "@/components/06_Projects/ourProjects/OurProjects";
 import {GetStaticProps, NextPage} from 'next'
 import {Api} from "@/pages/api/api";
-import {PortfolioType} from "@/components/06_Projects/ourProjects/moc";
+import {PortfolioType} from "@/components/06_Projects/ourProjects/mock";
 
 export interface PortfolioPageProps {
     data: PortfolioType[];

@@ -2,7 +2,7 @@ import React from 'react';
 import Wrapper from "@/components/common/wrapper";
 import SmallTitle from "@/components/common/Titles/SmallTitle";
 import style from '../../../styles/components/guarantees.module.scss'
-import {guaranteesData, guaranteesPromiseData} from "./MocGuarantees";
+import {guaranteesData, guaranteesPromiseData} from "./MockGuarantees";
 
 
 const Guarantees = () => {

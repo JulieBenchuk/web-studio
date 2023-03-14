@@ -1,5 +1,5 @@
 import React from 'react';
-import {PortfolioType} from "@/components/06_Projects/ourProjects/moc";
+import {PortfolioType} from "@/components/06_Projects/ourProjects/mock";
 import style from '@/styles/components/ourProjects.module.scss'
 import FullButton from "@/components/common/buttons/FullButton";
 

@@ -3,7 +3,7 @@ import style from "@/styles/components/ourProjects.module.scss";
 import MainTitle from "@/components/common/Titles/MainTitle";
 import Wrapper from "@/components/common/wrapper";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
-import {PortfolioType} from "@/components/06_Projects/ourProjects/moc";
+import {PortfolioType} from "@/components/06_Projects/ourProjects/mock";
 import ReactPaginate from "react-paginate";
 import Cards from "@/components/06_Projects/ourProjects/Cards";
 import {useWindowSize} from "@/hooks/useWindowSize";

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import style from "@/styles/components/ourProjects.module.scss";
 import CardModal from "@/components/06_Projects/ourProjects/CardModal";
-import {PortfolioType} from "@/components/06_Projects/ourProjects/moc";
+import {PortfolioType} from "@/components/06_Projects/ourProjects/mock";
 import {useWindowSize} from "@/hooks/useWindowSize";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
 
@@ -9,8 +9,7 @@ const Cards: React.FC<{ portfolio: PortfolioType[], setIdCallBack: (id: string) 
                                                                                                                                                                      portfolio,
                                                                                                                                                                      setIdCallBack,
                                                                                                                                                                      id,
-                                                                                                                                                                     setPageSize,
-                                                                                                                                                                     pageSize
+                                                                                                                                                                     setPageSize
                                                                                                                                                                  }) => {
     const size = useWindowSize();
     const [showModal, setShowModal] = useState(false)

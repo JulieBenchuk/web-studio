@@ -12,7 +12,7 @@ import Guarantees from "@/components/03_Promotion/guarantees/Guarantees";
 import Promo from "@/components/03_Promotion/promo/Promo";
 import Header from "@/components/common/header/Header";
 import {WeDo} from "@/components/common/weDo/WeDo";
-import {promotion} from "@/components/01_Main/reviews/moc";
+import {promotion} from "@/components/01_Main/reviews/mock";
 
 const Promotion: React.FC<{}> = () => {
     return (

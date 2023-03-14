@@ -11,7 +11,7 @@ import HowDoWeDoIt from "@/components/04_Desing/howDoWeDoIt/HowDoWeDoIt";
 import WhatIsDesignFor from "@/components/04_Desing/whatIsDesignFor/WhatIsDesignFor";
 import Header from "@/components/common/header/Header";
 import {WeDo} from "@/components/common/weDo/WeDo";
-import {design} from "@/components/01_Main/reviews/moc";
+import {design} from "@/components/01_Main/reviews/mock";
 import {GetStaticProps, NextPage} from "next";
 import {Api} from "@/pages/api/api";
 import {PortfolioPageProps} from "@/pages/portfolio";
