@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from "next/image";
 
 import Wrapper from "@/components/common/wrapper";
 import MainTitle from "@/components/common/Titles/MainTitle";
@@ -60,7 +59,7 @@ const TopComponent = () => {
 
                 <div className={style.logoForMobile}><img src={vectorLogo.src} alt="logo"/></div>
                 <div className={style.groundBlock}>
-                    <Image src={ground} alt={"ground"} width={1440} height={770} className={style.ground}/>
+                    <img src={ground.src} alt={"ground"} width={1440} height={770} className={style.ground}/>
                 </div>
 
             </Wrapper>
