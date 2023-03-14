@@ -5,7 +5,7 @@ export default function Document() {
     
     return (
         <Html lang="ru">
-            <Head><title></title></Head>
+            <Head></Head>
             <body>
             <Main/>
             <NextScript/>
