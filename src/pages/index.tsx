@@ -30,6 +30,7 @@ const Home: NextPage<PortfolioPageProps> = ({data}) => {
             <Head>
                 <title>Silevans</title>
                 <meta name="description" content="Silevans Web-Studio"/>
+                <meta name="keywords" content="web,web-studio,seo,development,site,website,promotion"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
