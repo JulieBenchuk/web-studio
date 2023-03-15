@@ -9,8 +9,8 @@ const nextConfig = {
         path: './',
     },
     env: {
-        TOKEN: process.env.TOKEN,
-        CHAT_ID: process.env.CHAT_ID
+        TOKEN: process.env.NEXT_PUBLIC_TOKEN,
+        CHAT_ID: process.env.NEXT_PUBLIC_CHAT_ID
     }
 };
 
