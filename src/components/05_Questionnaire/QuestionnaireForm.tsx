@@ -66,7 +66,7 @@ const QuestionnaireForm = () => {
                 chat_id: CHAT_ID, parse_mode: "html", text: `<b>Заявка с сайта!</b> \n
  <b>Имя: ${values.name}, \nтелефон: ${values.phone}, \nemail: ${values.email}, \nкомпания или проект: ${values.companyOrProject ? values.companyOrProject : "нет данных"}, \nсайт: ${values.site ? values.site : "нет данных"}, \nвозраст компании (в годах): ${values.ageOfCompany ? values.ageOfCompany : "нет данных"}, \nсообщение: ${values.message ? values.message : "не введено дополнительной информации"}.\n</b>
  <b>Интересует: ${values.interest.length > 0 ? values.interest.filter(i => i.checked).map(i => i.title) : "не выбрано"} </b>`
-            })
+            }, {withCredentials: true},)
 
             Promise.all([mailRequest, tgBotRequest])
                 .then(() => {
