@@ -80,10 +80,6 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./out
-      - name: Build NextJS
-          run: yarn build
-          env:
-            TOKEN: ${{ secrets.TOKEN }}
 
   # Deployment job
   deploy:
