@@ -7,6 +7,9 @@ const nextConfig = {
     images: {
         loader: 'akamai',
         path: './',
+    },
+    env: {
+        TOKEN: process.env.TOKEN,
     }
 };
 
