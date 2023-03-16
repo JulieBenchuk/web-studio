@@ -8,9 +8,6 @@ const nextConfig = {
         loader: 'akamai',
         path: './',
     },
-    env: {
-        TOKEN: process.env.TOKEN,
-    }
 };
 
 export default nextConfig;
