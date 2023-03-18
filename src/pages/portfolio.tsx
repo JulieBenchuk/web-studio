@@ -1,12 +1,10 @@
 import React from 'react';
-import Head from "next/head";
-import {Footer} from "@/components/common/footer/Footer";
-import Header from "@/components/common/header/Header";
+import {GetStaticProps, NextPage} from 'next'
 import style from '@/styles/Home.module.scss'
 import OurProjects from "@/components/06_Projects/ourProjects/OurProjects";
-import {GetStaticProps, NextPage} from 'next'
-import {Api} from "@/pages/api/api";
+import {MainLayout} from "@/components/layout/MainLayout";
 import {PortfolioType} from "@/components/06_Projects/ourProjects/mock";
+import {Api} from "@/pages/api/api";
 
 export interface PortfolioPageProps {
     data: PortfolioType[];
@@ -25,14 +23,11 @@ export const getStaticProps: GetStaticProps = async () => {
 const Portfolio: NextPage<PortfolioPageProps> = ({data}) => {
     return (
         <>
-            <Head>
-                <title>Portfolio</title>
-            </Head>
-            <main className={style.main}>
-                <Header isMainPage={false} currentPage={'Наши проекты'}/>
-                <OurProjects portfolio={data}/>
-                <Footer/>
-            </main>
+            <MainLayout title={"Portfolio"} isMainPage={false} currentPage={'Наши проекты'}>
+                <main className={style.main}>
+                    <OurProjects portfolio={data}/>
+                </main>
+            </MainLayout>
         </>
     );
 };

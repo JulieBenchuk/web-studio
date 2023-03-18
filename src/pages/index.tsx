@@ -1,19 +1,17 @@
-import Head from 'next/head'
 import React from "react";
+import {GetStaticProps, NextPage} from "next";
 import style from '../styles/Home.module.scss'
+import {MainLayout} from "@/components/layout/MainLayout";
 import TopComponent from "@/components/01_Main/topComponent/TopComponent";
 import Services from "@/components/01_Main/services/Services";
 import StagesSlider from "@/components/01_Main/stagesSlider/StagesSlider";
-import {Footer} from "@/components/common/footer/Footer";
 import RunningString from "@/components/common/runningString/RunningString";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
 import OurWorks from "@/components/common/ourWorks/OurWorks";
 import {Reviews} from "@/components/01_Main/reviews/Reviews";
 import Comfortable from "@/components/01_Main/comfortable/Comfortable";
-import Header from "@/components/common/header/Header";
-import {GetStaticProps, NextPage} from "next";
-import {Api} from "@/pages/api/api";
 import {PortfolioPageProps} from "@/pages/portfolio";
+import {Api} from "@/pages/api/api";
 
 export const getStaticProps: GetStaticProps = async () => {
     const res = await Api.portfolioAPI()
@@ -27,25 +25,18 @@ export const getStaticProps: GetStaticProps = async () => {
 const Home: NextPage<PortfolioPageProps> = ({data}) => {
     return (
         <>
-            <Head>
-                <title>Silevans</title>
-                <meta name="description" content="Silevans Web-Studio"/>
-                <meta name="keywords" content="web,web-studio,seo,development,site,website,promotion"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <link rel="icon" href="/favicon.ico"/>
-            </Head>
-            <main className={style.main}>
-                <Header isMainPage={true} currentPage={"Разработка сайтов"}/>
-                <TopComponent/>
-                <RunningString/>
-                <Services/>
-                <Comfortable/>
-                <OurWorks isButton={true} portfolio={data}/>
-                <StagesSlider/>
-                <Reviews/>
-                <CallBackMe/>
-                <Footer/>
-            </main>
+            <MainLayout title={"Silevans"} isMainPage={true} currentPage={"Разработка сайтов"}>
+                <main className={style.main}>
+                    <TopComponent/>
+                    <RunningString/>
+                    <Services/>
+                    <Comfortable/>
+                    <OurWorks isButton={true} portfolio={data}/>
+                    <StagesSlider/>
+                    <Reviews/>
+                    <CallBackMe/>
+                </main>
+            </MainLayout>
         </>
     )
 }

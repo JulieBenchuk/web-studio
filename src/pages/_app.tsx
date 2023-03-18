@@ -5,9 +5,7 @@ import Head from "next/head";
 
 export default function App({Component, pageProps}: AppProps) {
     return <div>
-        <Head>
-            <title>My new cool app</title>
-        </Head>
+        <Head>{pageProps.children}</Head>
         <Component {...pageProps}/>
     </div>
 }

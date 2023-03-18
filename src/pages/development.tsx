@@ -1,26 +1,19 @@
 import React from 'react';
 import TopBlock from "@/components/common/topBlock/TopBlock";
-import Head from "next/head";
-import style from "@/styles/Home.module.scss";
 import bgImage from "../assets/img/developmentBg.png"
 import StagesOfWork from "@/components/02_Development/stagesOfWork/stagesOfWork";
 import ToolsAndTechnologies from "@/components/02_Development/ToolsAndTechnologies/ToolsAndTechnologies";
 import OurBenefits from "@/components/common/ourBenefits/OurBenefits";
-import {Footer} from "@/components/common/footer/Footer";
 import CallBackMe from "@/components/common/callBackMe/CallBackMe";
-import Header from "@/components/common/header/Header";
 import {WeDo} from "@/components/common/weDo/WeDo";
 import {development} from "@/components/01_Main/reviews/mock";
+import {MainLayout} from "@/components/layout/MainLayout";
 
-const Development: React.FC<{}> = ({}) => {
+const Development = ({}) => {
 
     return (
         <>
-            <Head>
-                <title>Development</title>
-            </Head>
-            <main className={style.main}>
-                <Header isMainPage={false} currentPage={"Разработка сайтов"}/>
+            <MainLayout isMainPage={false} currentPage={"Разработка сайтов"} title={"Development"}>
                 <TopBlock currentPage={"Разработка сайтов"}
                           serviceDescription={"— сайты, построенные на современных технологиях и фреймворках. Понятный\n" +
                               "                frontend для пользователя, который подключается к CMS, и надежный backend для стабильной работы\n" +
@@ -36,9 +29,7 @@ const Development: React.FC<{}> = ({}) => {
                 <StagesOfWork/>
                 <ToolsAndTechnologies/>
                 <CallBackMe/>
-                <Footer/>
-            </main>
-
+            </MainLayout>
         </>
     );
 };
