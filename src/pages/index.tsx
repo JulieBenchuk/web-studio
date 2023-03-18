@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps = async () => {
 const Home: NextPage<PortfolioPageProps> = ({data}) => {
     return (
         <>
-            <MainLayout title={"Silevans"} isMainPage={true} currentPage={"Разработка сайтов"}>
+            <MainLayout title={"WEB STUDIO"} isMainPage={true} currentPage={"Разработка сайтов"}>
                 <main className={style.main}>
                     <TopComponent/>
                     <RunningString/>
