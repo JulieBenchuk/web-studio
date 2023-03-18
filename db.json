@@ -1,0 +1,124 @@
+{
+  "portfolio": [
+    {
+      "id": "1",
+      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "title": "Sela",
+      "request": {"title": "просьба", "description": "Нас попросили добавить страницу \"Новинки\""},
+      "deadlines": {"title": "сроки исполнения", "description": "14 дней разработки и дизайна"},
+      "services": {"title": "услуги", "description": "Интернет-магазин"},
+      "frontEnd": {"title": "фронтенд", "description": "Html, Scss, React"},
+      "backEnd": {"title": "бэкенд", "description": "Node.js"},
+      "design": {"title": "Дизайн", "description": "Figma"},
+      "link": "https://www.sela.ru"
+    },
+    {
+      "id": "2",
+      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "title": "Skysmart Pro",
+      "request": {"title": "просьба", "description": "Разработать сайт для школы программирования"},
+      "deadlines": {"title": "сроки исполнения", "description": "23 дня разработки и дизайна"},
+      "services": {"title": "услуги", "description": "Корпоративный сайт"},
+      "frontEnd": {"title": "фронтенд", "description": "Html, Scss, React"},
+      "backEnd": {"title": "бэкенд", "description": "Node.js"},
+      "design": {"title": "Дизайн", "description": "Figma"},
+      "link": "https://skysmart.ru"
+    },
+    {
+      "id": "3",
+      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "title": "Living Corporate",
+      "request": {"title": "просьба", "description": "Разработать сайт подкастов"},
+      "deadlines": {"title": "сроки исполнения", "description": "25 дней разработки и дизайна"},
+      "services": {"title": "услуги", "description": "Корпоративный сайт"},
+      "frontEnd": {"title": "фронтенд", "description": "Html, Scss, React"},
+      "backEnd": {"title": "бэкенд", "description": "Java"},
+      "design": {"title": "Дизайн", "description": "Figma"},
+      "link": "https://livingcorporate.workshopbuilt.com"
+    },
+    {
+      "id": "4",
+      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "title": "Air company",
+      "request": {"title": "просьба", "description": "Оптимизировать сайт компании"},
+      "deadlines": {"title": "сроки исполнения", "description": "17 дней опитимазиции бэкенда"},
+      "services": {"title": "услуги", "description": "Корпоративный сайт"},
+      "frontEnd": {"title": "фронтенд", "description": "Nuxt, Scss, Vue Js"},
+      "backEnd": {"title": "бэкенд", "description": "Java"},
+      "design": {"title": "Дизайн", "description": "Figma"},
+      "link": "https://www.aircompany.com"
+    },
+    {
+      "id": "5",
+      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "title": "RBT.ru",
+      "request": {"title": "просьба", "description": "Добавить страницу \"Товары для детей\""},
+      "deadlines": {"title": "сроки исполнения", "description": "10 дней разработки и дизайна"},
+      "services": {"title": "услуги", "description": "Интернет-магазин"},
+      "frontEnd": {"title": "фронтенд", "description": "Html, Scss, React"},
+      "backEnd": {"title": "бэкенд", "description": "Node js"},
+      "design": {"title": "Дизайн", "description": "Figma"},
+      "link": "https://www.rbt.ru"
+    },
+    {
+      "id": "6",
+      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "title": "megamarketbu",
+      "request": {"title": "просьба", "description": "Разработать интернет-магазин Б/У техники"},
+      "deadlines": {"title": "сроки исполнения", "description": "26 дней разработки и дизайна"},
+      "services": {"title": "услуги", "description": "Интернет-магазин"},
+      "frontEnd": {"title": "фронтенд", "description": "Html, Scss, React"},
+      "backEnd": {"title": "бэкенд", "description": "Node js"},
+      "design": {"title": "Дизайн", "description": "Figma"},
+      "link": "http://megamarketbu.ru"
+    },
+    {
+      "id": "7",
+      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "title": "1VIP",
+      "request": {"title": "просьба", "description": "Разработать сайт компании 1VIP"},
+      "deadlines": {"title": "сроки исполнения", "description": "23 дня разработки и дизайна"},
+      "services": {"title": "услуги", "description": "Корпоративный сайт"},
+      "frontEnd": {"title": "фронтенд", "description": "Html, Scss, React"},
+      "backEnd": {"title": "бэкенд", "description": "Java"},
+      "design": {"title": "Дизайн", "description": "Figma"},
+      "link": "http://1vip.ru"
+    },
+    {
+      "id": "8",
+      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "title": "Marcoicecream",
+      "request": {"title": "просьба", "description": "Cайт компании по созданию мороженого в США"},
+      "deadlines": {"title": "сроки исполнения", "description": "31 день разработки и дизайна"},
+      "services": {"title": "услуги", "description": "Корпоративный сайт"},
+      "frontEnd": {"title": "фронтенд", "description": "Html, Scss, React"},
+      "backEnd": {"title": "бэкенд", "description": "Node js"},
+      "design": {"title": "Дизайн", "description": "Figma"},
+      "link": "https://www.marcoicecream.com"
+    },"",
+    {
+      "id": "9",
+      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "title": "Counter-Print",
+      "request": {"title": "просьба", "description": "Разработать эксклюзив-книжный интернет-магазин"},
+      "deadlines": {"title": "сроки исполнения", "description": "8 дней разработки и дизайна"},
+      "services": {"title": "услуги", "description": "Интернет-магазин"},
+      "frontEnd": {"title": "фронтенд", "description": "Html, Scss, React"},
+      "backEnd": {"title": "бэкенд", "description": "Node js"},
+      "design": {"title": "Дизайн", "description": "Figma"},
+      "link": "https://www.counter-print.co.uk"
+    },
+    {
+      "id": "10",
+      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "title": "Ventriloc",
+      "request": {"title": "просьба", "description": "Дизайн сайта французкой компании по работе с данными"},
+      "deadlines": {"title": "сроки исполнения", "description": "16 дней дизайна"},
+      "services": {"title": "услуги", "description": "Дизайн"},
+      "frontEnd": {"title": "фронтенд", "description": ""},
+      "backEnd": {"title": "бэкенд", "description": ""},
+      "design": {"title": "Дизайн", "description": "Figma"},
+      "link": "https://ventriloc.ca/en"
+    }
+  ]
+}
