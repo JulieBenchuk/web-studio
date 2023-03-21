@@ -4,18 +4,18 @@ import style from '@/styles/Home.module.scss'
 import OurProjects from "@/components/06_Projects/ourProjects/OurProjects";
 import {MainLayout} from "@/components/layout/MainLayout";
 import {PortfolioType} from "@/components/06_Projects/ourProjects/mock";
-import {Api} from "@/pages/api/api";
 
 export interface PortfolioPageProps {
     data: PortfolioType[];
 }
 
-
 export const getStaticProps: GetStaticProps = async () => {
-    const res = await Api.portfolioAPI()
+    const response = await fetch("http://localhost:4200/portfolio")
+    const data = await response.json()
+
     return {
         props: {
-            data: res
+            data
         }
     };
 };
@@ -31,5 +31,6 @@ const Portfolio: NextPage<PortfolioPageProps> = ({data}) => {
         </>
     );
 };
+
 
 export default Portfolio;

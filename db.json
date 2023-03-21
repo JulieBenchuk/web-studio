@@ -2,7 +2,7 @@
   "portfolio": [
     {
       "id": "1",
-      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "img": "./Sela.jpeg",
       "title": "Sela",
       "request": {"title": "просьба", "description": "Нас попросили добавить страницу \"Новинки\""},
       "deadlines": {"title": "сроки исполнения", "description": "14 дней разработки и дизайна"},
@@ -14,7 +14,7 @@
     },
     {
       "id": "2",
-      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "img": "./SkySmart.jpg",
       "title": "Skysmart Pro",
       "request": {"title": "просьба", "description": "Разработать сайт для школы программирования"},
       "deadlines": {"title": "сроки исполнения", "description": "23 дня разработки и дизайна"},
@@ -26,7 +26,7 @@
     },
     {
       "id": "3",
-      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "img": "./TheGroup.jpg",
       "title": "Living Corporate",
       "request": {"title": "просьба", "description": "Разработать сайт подкастов"},
       "deadlines": {"title": "сроки исполнения", "description": "25 дней разработки и дизайна"},
@@ -38,7 +38,7 @@
     },
     {
       "id": "4",
-      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "img": "./AirCompany.jpg",
       "title": "Air company",
       "request": {"title": "просьба", "description": "Оптимизировать сайт компании"},
       "deadlines": {"title": "сроки исполнения", "description": "17 дней опитимазиции бэкенда"},
@@ -50,7 +50,7 @@
     },
     {
       "id": "5",
-      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "img": "./RBT.jpeg",
       "title": "RBT.ru",
       "request": {"title": "просьба", "description": "Добавить страницу \"Товары для детей\""},
       "deadlines": {"title": "сроки исполнения", "description": "10 дней разработки и дизайна"},
@@ -62,7 +62,7 @@
     },
     {
       "id": "6",
-      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "img": "./Market.jpeg",
       "title": "megamarketbu",
       "request": {"title": "просьба", "description": "Разработать интернет-магазин Б/У техники"},
       "deadlines": {"title": "сроки исполнения", "description": "26 дней разработки и дизайна"},
@@ -74,7 +74,7 @@
     },
     {
       "id": "7",
-      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "img": "./1vip.jpeg",
       "title": "1VIP",
       "request": {"title": "просьба", "description": "Разработать сайт компании 1VIP"},
       "deadlines": {"title": "сроки исполнения", "description": "23 дня разработки и дизайна"},
@@ -86,7 +86,7 @@
     },
     {
       "id": "8",
-      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "img": "./MarcoIce.jpeg",
       "title": "Marcoicecream",
       "request": {"title": "просьба", "description": "Cайт компании по созданию мороженого в США"},
       "deadlines": {"title": "сроки исполнения", "description": "31 день разработки и дизайна"},
@@ -95,10 +95,10 @@
       "backEnd": {"title": "бэкенд", "description": "Node js"},
       "design": {"title": "Дизайн", "description": "Figma"},
       "link": "https://www.marcoicecream.com"
-    },"",
+    },
     {
       "id": "9",
-      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "img": "./YouLook.jpg",
       "title": "Counter-Print",
       "request": {"title": "просьба", "description": "Разработать эксклюзив-книжный интернет-магазин"},
       "deadlines": {"title": "сроки исполнения", "description": "8 дней разработки и дизайна"},
@@ -110,7 +110,7 @@
     },
     {
       "id": "10",
-      "img": "@assets/img/portfolio/AirCompany.jpg",
+      "img": "./Ventriloc.jpeg",
       "title": "Ventriloc",
       "request": {"title": "просьба", "description": "Дизайн сайта французкой компании по работе с данными"},
       "deadlines": {"title": "сроки исполнения", "description": "16 дней дизайна"},

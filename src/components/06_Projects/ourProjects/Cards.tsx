@@ -46,9 +46,9 @@ const Cards: React.FC<{ portfolio: PortfolioType[], setIdCallBack: (id: string) 
                     />
                     <div className={style.glass}>
                         <h5>{el.title}</h5>
-                        <p>{el.services.description}</p>
+                        <p>{el.services && el.services.description}</p>
                         <LinkBtn onClick={() => showModalHandler(true)} className={style.linkBtn}>Подробнее</LinkBtn>
-                        <LinkBtn className={style.linkBtnMobile}><a href={el.link}>Перейти на страницу</a></LinkBtn>
+                        <LinkBtn className={style.linkBtnMobile}><a href={el.link.toString()}>Перейти на страницу</a></LinkBtn>
                     </div>
                     {showModal && id === el.id &&
                         <div className={style.wrapperModal}
