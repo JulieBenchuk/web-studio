@@ -11,13 +11,14 @@ import OurWorks from "@/components/common/ourWorks/OurWorks";
 import {Reviews} from "@/components/01_Main/reviews/Reviews";
 import Comfortable from "@/components/01_Main/comfortable/Comfortable";
 import {PortfolioPageProps} from "@/pages/portfolio";
-import {Api} from "@/pages/api/api";
 
 export const getStaticProps: GetStaticProps = async () => {
-    const res = await Api.portfolioAPI()
+    const response = await fetch("http://localhost:4200/portfolio")
+    const data = await response.json()
+
     return {
         props: {
-            data: res
+            data
         }
     };
 };

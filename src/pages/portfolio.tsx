@@ -3,7 +3,19 @@ import {GetStaticProps, NextPage} from 'next'
 import style from '@/styles/Home.module.scss'
 import OurProjects from "@/components/06_Projects/ourProjects/OurProjects";
 import {MainLayout} from "@/components/layout/MainLayout";
-import {PortfolioType} from "@/components/06_Projects/ourProjects/mock";
+
+export type PortfolioType<T = { title: string, description: string }> = {
+    id: string,
+    img?: string
+    title: string,
+    request: T,
+    deadlines: T,
+    services: T,
+    frontEnd: T,
+    backEnd: T,
+    design: T,
+    link: string
+}
 
 export interface PortfolioPageProps {
     data: PortfolioType[];

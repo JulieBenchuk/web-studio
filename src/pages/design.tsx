@@ -10,15 +10,16 @@ import HowDoWeDoIt from "@/components/04_Desing/howDoWeDoIt/HowDoWeDoIt";
 import WhatIsDesignFor from "@/components/04_Desing/whatIsDesignFor/WhatIsDesignFor";
 import {WeDo} from "@/components/common/weDo/WeDo";
 import {design} from "@/components/01_Main/reviews/mock";
-import {Api} from "@/pages/api/api";
 import {PortfolioPageProps} from "@/pages/portfolio";
 import bgImage from "@/assets/img/designBg.png";
 
 export const getStaticProps: GetStaticProps = async () => {
-    const res = await Api.portfolioAPI()
+    const response = await fetch("http://localhost:4200/portfolio")
+    const data = await response.json()
+
     return {
         props: {
-            data: res
+            data
         }
     };
 };

@@ -1,16 +1,15 @@
 import React from 'react';
-import SmallTitle from "@/components/common/Titles/SmallTitle";
-import Wrapper from "@/components/common/wrapper";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Autoplay} from 'swiper';
-import style from '@/styles/components/ourWorks.module.scss'
-
+import {useRouter} from "next/router";
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import {Autoplay} from 'swiper';
+import {Swiper, SwiperSlide} from "swiper/react";
+import Wrapper from "@/components/common/wrapper";
+import SmallTitle from "@/components/common/Titles/SmallTitle";
 import FullButton from "@/components/common/buttons/FullButton";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
-import {PortfolioType} from "@/components/06_Projects/ourProjects/mock";
-import {useRouter} from "next/router";
+import style from '@/styles/components/ourWorks.module.scss'
+import {PortfolioType} from "@/pages/portfolio";
 
 
 const OurWorks: React.FC<{ isButton: boolean, className?: string, portfolio: PortfolioType[] }> = ({
